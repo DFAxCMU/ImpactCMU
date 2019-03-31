@@ -6,13 +6,13 @@ const organizations = [
     {
         name: "DFA@CMU",
         para: "Design for America @ CMU student-led teams work closely with local community organizations to identify challenging social issues. Through the process of ideating, prototyping, and iterating, we design and develop comprehensive solutions that benefit the broader community.",
-        link: "dfacmu.com",
+        link: "http://www.dfacmu.com/",
         logo: "orange-header.jpg",
     },
     {
         name: "Engineers Without Borders",
         para: "CMU-EWB is dedicated to understanding the challenges that face humanity today and implementing socially conscious and environmentally sustainable technologies to improve quality of life for local, national, and international communities.",
-        link: "cmuewb.org/",
+        link: "http://cmuewb.org/",
         logo: "ewb_logo.png",
     },
     {
@@ -26,12 +26,6 @@ const organizations = [
         para: "Carnegie Mellon University\'s chapter of Global Business Brigades provides financial literacy workshops and business consulting for several local businesses in rural communities in Panama. As a team of 15 students, we prepare workshop materials and language skills before the trip to ensure that we can provide the best services possible in Panama.",
         link: "https://www.globalbrigades.org/empowered/chapter/carnegie-mellon-business-brigades-chapter%20target=",
         logo: "gbb_logo.png",
-    },
-    {
-        name: "College Against Cancer",
-        para: "Colleges Against Cancer is the student arm of the American Cancer Society, with over 300 chapters nationwide. CAC focuses on four strategic directions: advocacy, cancer education, survivorship, and our main event, Relay For Life. All money raised supports cancer research, local cancer patient services, and public education.",
-        link: "https://thebridge.cmu.edu/organization/colleges-against-cancer",
-        logo: "cac_logo.jpg",
     },
     {
         name: "Tech4Society",
@@ -51,13 +45,44 @@ const organizations = [
         link: "https://thebridge.cmu.edu/organization/east-end-youth-project",
         logo: "eeyp_logo.png",
     },
+    {
+        name: "Strong Women Strong Girls",
+        para: "Our goal is to empower girls to imagine a broader future through a curriculum grounded on female role models delivered by college women mentors, who are themselves mentored by professional women. Strong Women, Strong Girls strives to support positive mentoring relationships between college women and pre-adolescent girls in underserved local communities with the vision that every girl realize her inner strengths to dream and do.",
+        link: "http://swsg.org/",
+        logo: ""
+    },
+    {
+        name: "Students for Urban Data Systems (SUDS)",
+        para: "SUDS seeks to elevate and connect the data skills of members with the needs of people and organizations in our community.  We learn tools and techniques, advocate for open data, and work with community organizations to produce impactful data projects. In sum, we connect our members with opportunities to do good with data.",
+        link: "http://suds-cmu.org/",
+        logo: ""
+    },
+    {
+        name: "Global Water Brigades",
+        para: "Global Brigades is the largest student-led sustainable development initiative in the world. Water brigades in part of this larger organization and concerns itself with implementing infrastructure to provide clean water to communities that do not currently have access. In the four years we have been active, CMU's chapter of Global Water Brigades has traveled to Honduras and Nicaragua over spring break to work alongside community members to implement clean water systems.",
+        link: "https://www.waterbrigades.org/",
+        logo: ""
+    },
+    {
+        name: "FORGE",
+        para: "Facilitating Opportunities for Refugee Growth and Empowerment (FORGE) is a student organization that seeks to educate, empower, and enrich the lives of refugees in order to catalyze sustainable social change. FORGE works toward this mission by engaging in direct service with refugees resettled to Pittsburgh and by spreading awareness of refugee issues.",
+        link: "",
+        logo: "",
+    },
+    {
+        name: "Sustainable Earth",
+        para: "Sustainable Earth is the only student-led group on campus focused on environmental initiatives. Some of our past projects include participation in Build18 with a self-watering, arduino-powered garden, bottle cap art statement, supporting initiatives coming out of the Green Practices Committee and participation the annual Sustainability Weekend Conference",
+        link: "http://sustainabilitywknd.wixsite.com/2018",
+        logo: "",
+    }
 ]
 
 class Orgs extends React.Component {
     constructor(props) {
         super(props)
-        this.images = props.data.allFile.edges.reduce((obj, edge) => {
-            obj[edge.node.relativePath] = edge.node.publicURL
+	console.log(props)
+        this.images = props.data.edges.reduce((obj, edge) => {
+            obj[edge.node.relativePath.substring(12)] = edge.node.publicURL
             return obj
         }, {})
         console.log(this.images)
@@ -70,8 +95,8 @@ class Orgs extends React.Component {
                 </SectionTitle>
                 <div className="d-flex justify-content-center flex-wrap">
                     { 
-                        organizations.map((organization) => ( 
-                            <div className="card m-2 position-relative" style={{ width: '18rem', }}>
+                        organizations.map((organization, i) => ( 
+                            <div className="card m-2 position-relative" style={{ width: '18rem', }} key={ i }>
                                 <img className="card-img-top p-2" src={ this.images[organization.logo]} alt="" />
                                 <div className="card-body" style={{ paddingBottom: 52}}>
                                     <h2 className="card-title">{ organization.name}</h2>
@@ -80,6 +105,7 @@ class Orgs extends React.Component {
                                         href={ organization.link } 
                                         className="btn-default btn position-absolute"
                                         style={{ bottom: 0, marginBottom: 20}}
+                                        target="_blank"
                                     >
                                         Read More
                                     </a>

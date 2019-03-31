@@ -1,21 +1,21 @@
 module.exports = {
-    pathPrefix: '/ImpactCMU',
     siteMetadata: {
-        title: 'Gatsby Default Starter',
+        title: 'ImpactCMU',
+        url: 'impactcmu.com'
     },
     plugins: [
         {
+            resolve: `gatsby-plugin-react-helmet`,
+        },
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `orgs`,
-                path: `${__dirname}/src/images/orgs/`,
+                name: `projects`,
+                path: `${__dirname}/src/`,
             },
         },
         {
             resolve: `gatsby-transformer-csv`,
-            options: {
-                noheader: true
-            }
         }
     ],
 };

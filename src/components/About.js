@@ -15,7 +15,7 @@ const About = () => (
             <div className="row">
                 <div className="col-md-6">
                     <p className="subtitle-larger">
-                        Carnegie Mellon students are using their technical, art, business, and social science skills to solve problems at the local, national, and itnernational levels.
+                        Carnegie Mellon students are using their technical, art, business, and social science skills to solve problems at the local, national, and international levels.
                     </p>
                     <p className="subtitle-larger">
                         ImpactCMU is a celebration and exhibition of this achievment.

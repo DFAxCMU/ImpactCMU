@@ -23,8 +23,8 @@ const Logistics = () => (
             <SectionTitle title="Logistics"></SectionTitle>
             <div className="col-md-6 offset-md-3">
                 {
-                    events.map((event) => (
-                        <div className="event-item row">
+                    events.map((event, i) => (
+                        <div className="event-item row" key={ i }>
                             <div className="col-md-3">
                                 <div className="event-time">{ event.time }</div>
                             </div>

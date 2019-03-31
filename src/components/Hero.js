@@ -1,6 +1,6 @@
 import React from 'react';
 
-import backgroundImage from '../images/background.png'
+import backgroundImage from '../images/banner.svg'
 
 const Hero = () => (
     <div 

@@ -2,8 +2,9 @@ import React from 'react'
 
 import smallLogo from '../images/smalllogo.png'
 
-const Navbar = () => ( 
-        <nav className="fixed-top navbar navbar-expand-sm navbar-light bg-light">
+class Navbar extends React.Component {
+    render() {
+        return <nav className="fixed-top navbar navbar-expand-sm navbar-light bg-light">
             <a className="navbar-brand" href="#">
                 <img style={{
                     backgroundColor: '#E84C3D',
@@ -27,38 +28,47 @@ const Navbar = () => (
             <div className="navbar-collapse collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <a href="#" className="nav-link">
+                        <span className="nav-link" onClick={ this.scrollTo("about") }>
                             About
-                        </a>
+                        </span>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link">
+                        <span className="nav-link" onClick={ this.scrollTo("logistics") }>
                             Logistics
-                        </a>
+                        </span>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link">
+                        <span className="nav-link" onClick={ this.scrollTo("rsvp") }>
                             RSVP
-                        </a>
+                        </span>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link">
+                        <span className="nav-link" onClick={ this.scrollTo("orgs") }>
                             Orgs
-                        </a>
+                        </span>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link">
-                            Apply
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#" className="nav-link">
+                        <span className="nav-link" onClick={ this.scrollTo("projects") }>
                             Projects
-                        </a>
+                        </span>
+                    </li>
+                    <li className="nav-item">
+                        <span className="nav-link" onClick={ this.scrollTo("apply") }>
+                            Apply
+                        </span>
                     </li>
                 </ul>
             </div>
         </nav>
-)
+    }
+    scrollTo(id) {
+        return () => {
+            document.getElementById(id).scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    }
+} 
 
 export default Navbar
