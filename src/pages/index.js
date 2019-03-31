@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import graphql from 'graphql'
+import {graphql} from 'gatsby'
 
 import $ from 'jquery'
 //window.$ = $
@@ -35,11 +35,11 @@ const IndexPage = ({ data }) => (
         <Navbar />
         <Hero />
         <About />
+        <Apply />
         <Logistics />
         <RSVP />
         <Orgs data={ data.allFile }/>
         <Projects data={ data.allProjectsCsv } />
-        <Apply />
     </div>
 )
 

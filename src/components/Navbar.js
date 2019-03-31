@@ -1,19 +1,19 @@
 import React from 'react'
-
+import { Navbar as Nav } from 'react-bootstrap';
 import smallLogo from '../images/smalllogo.png'
 
 class Navbar extends React.Component {
     render() {
-        return <nav className="fixed-top navbar navbar-expand-sm navbar-light bg-light">
-            <a className="navbar-brand" href="#">
+        console.log(Nav)
+        return <Nav
+            className="fixed-top navbar navbar-expand-sm navbar-light bg-light">
+            <Nav.Brand className="navbar-brand" href="#">
                 <img style={{
-                    backgroundColor: '#E84C3D',
-                    height: 40,
                     padding: 5,
                 }} 
                 src={ smallLogo } 
                 alt="IMPACT CMU"  />
-            </a>
+            </Nav.Brand>
             <button 
                 className="navbar-toggler" 
                 type="button" 
@@ -59,7 +59,7 @@ class Navbar extends React.Component {
                     </li>
                 </ul>
             </div>
-        </nav>
+        </Nav>
     }
     scrollTo(id) {
         return () => {
