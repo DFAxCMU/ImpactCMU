@@ -1,65 +1,52 @@
 import React from 'react'
-import { Navbar as Nav } from 'react-bootstrap';
+import { 
+    Navbar as N, 
+    Nav
+} from 'react-bootstrap';
 import smallLogo from '../images/smalllogo.png'
 
 class Navbar extends React.Component {
     render() {
-        console.log(Nav)
-        return <Nav
-            className="fixed-top navbar navbar-expand-sm navbar-light bg-light">
-            <Nav.Brand className="navbar-brand" href="#">
-                <img style={{
-                    padding: 5,
-                }} 
-                src={ smallLogo } 
-                alt="IMPACT CMU"  />
-            </Nav.Brand>
-            <button 
-                className="navbar-toggler" 
-                type="button" 
-                data-toggle="collapse" 
-                data-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation"
+        return (
+            <N
+                fixed="bottom"
+                bg="white"
+                expand="sm"
+                collapseOnSelect={ true }
             >
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="navbar-collapse collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav ml-auto">
-                    <li className="nav-item">
-                        <span className="nav-link" onClick={ this.scrollTo("about") }>
+                <N.Brand href="#">
+                    <img
+                        style={{ height: 48 }}
+                        className="navbar-logo"
+                        src={ smallLogo } 
+                        alt="IMPACT CMU"  
+                    />
+                </N.Brand>
+                <N.Toggle aria-controls="basic-navbar-nav" />
+                <N.Collapse >
+                    <Nav className="ml-auto">
+                        <Nav.Link onClick={ this.scrollTo("about") }>
                             About
-                        </span>
-                    </li>
-                    <li className="nav-item">
-                        <span className="nav-link" onClick={ this.scrollTo("logistics") }>
+                        </Nav.Link>
+                        <Nav.Link onClick={ this.scrollTo("logistics") }>
                             Logistics
-                        </span>
-                    </li>
-                    <li className="nav-item">
-                        <span className="nav-link" onClick={ this.scrollTo("rsvp") }>
-                            RSVP
-                        </span>
-                    </li>
-                    <li className="nav-item">
-                        <span className="nav-link" onClick={ this.scrollTo("orgs") }>
-                            Orgs
-                        </span>
-                    </li>
-                    <li className="nav-item">
-                        <span className="nav-link" onClick={ this.scrollTo("projects") }>
-                            Projects
-                        </span>
-                    </li>
-                    <li className="nav-item">
-                        <span className="nav-link" onClick={ this.scrollTo("apply") }>
-                            Apply
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </Nav>
+                        </Nav.Link>
+                        <Nav.Link onClick={ this.scrollTo("rsvp") }>
+                                RSVP
+                        </Nav.Link>
+                        <Nav.Link onClick={ this.scrollTo("orgs") }>
+                                Orgs
+                        </Nav.Link>
+                        <Nav.Link onClick={ this.scrollTo("projects") }>
+                                Projects
+                        </Nav.Link>
+                        <Nav.Link onClick={ this.scrollTo("apply") }>
+                                Apply
+                        </Nav.Link>
+                    </Nav>
+                </N.Collapse>
+            </N>
+        )
     }
     scrollTo(id) {
         return () => {

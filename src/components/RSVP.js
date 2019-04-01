@@ -1,22 +1,20 @@
 import React from 'react'
+import {
+    Jumbotron,
+    Button
+} from 'react-bootstrap'
 
 const RSVP = () => ( 
-    <section id="rsvp" className="section gray-bg">
-        <div className="contianer">
-            <h1 className="title text-center">
-                Interested In Attending?
-            </h1>
-            <div className="text-center">
-                <a 
-                    href="https://www.facebook.com/events/592278967772521/"
-                    className="btn btn-default btn-lg"
-                >
-                    RSVP
-                </a>
-            </div>
-
-        </div>
-    </section>
+    <Jumbotron id="rsvp">
+        <h1 >
+            Interested In Attending?
+        </h1>
+        <Button 
+            href="https://www.facebook.com/events/592278967772521/"
+        >
+            RSVP
+        </Button>
+    </Jumbotron>
 )
 
 export default RSVP
