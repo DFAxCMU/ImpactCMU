@@ -17,21 +17,23 @@ const events = [
     }
 ]
 
-const Logistics = () => (    
+const Logistics = ({ data }) => {
+    console.log(data)
+    return (    
     <section id="logistics" className="main-container">
         <div className="container">
             <SectionTitle title="Logistics"></SectionTitle>
             <div className="col-md-6 offset-md-3">
                 {
-                    events.map((event, i) => (
+                    data.edges.map((event, i) => (
                         <div className="event-item row" key={ i }>
                             <div className="col-md-3">
-                                <div className="event-time">{ event.time }</div>
+                                <div className="event-time">{ event.node.time }</div>
                             </div>
                             <div className="col-md-9">
-                                <div className="event-name">{ event.name }</div>
-                                <div className="event-speaker">{ event.speaker }</div>
-                                <div className="event-location">{ "Location: " + event.location }</div>
+                                <div className="event-name">{ event.node.name }</div>
+                                <div className="event-speaker">{ event.node.detail }</div>
+                                <div className="event-location">{ "Location: " + event.node.location }</div>
                             </div>
                             <div className="event-ball" />
                         </div>
@@ -41,5 +43,6 @@ const Logistics = () => (
         </div>
     </section>
 )
+}
 
 export default Logistics

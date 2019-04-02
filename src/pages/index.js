@@ -30,16 +30,15 @@ const IndexPage = ({ data }) => (
             <title>ImpactCMU</title>
             <link rel="icon" type="image/png" sizes="32x32" href={ favicon32 } />
             <link rel="icon" type="image/png" sizes="16x16" href={ favicon16 } />
-
         </Helmet>
         <Navbar />
         <Hero />
         <About />
         <Apply />
-        <Logistics />
+        <Logistics data={ data.allTimelineCsv }/>
         <RSVP />
         <Orgs data={ data.allFile }/>
-        <Projects data={ data.allProjectsCsv } />
+        <div style={{ height: 52 }}/>
     </div>
 )
 
@@ -55,6 +54,16 @@ export const query = graphql`
                 }
             }
         }
+      allTimelineCsv {
+        edges {
+            node {
+                time
+                name
+                detail
+                location
+            }
+        }
+      }
       allProjectsCsv {
         edges {
           node {

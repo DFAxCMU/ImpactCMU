@@ -8,23 +8,28 @@ section {
 
 .event-item {
     font-size: 18px;
-    border-left: 4px solid #e84c3d;
+    box-shadow: -4px 0 rgba(148, 132, 193, 1),
+                -8px 0 rgba(242, 61, 68, 1),
+                -12px 0 rgba(254, 182, 0, 1),
+                -16px 0 rgba(125, 197, 62, 1);
     position: relative;
-    margin-bottom: 27px;
+    margin-bottom: 17px;
+    padding-bottom: 12px;
+    margin-left: 16px;
 }
 
 .event-time {
-
+    margin-top: -25px;
 }
 
 .event-ball {
     position: absolute;
-    top: -20px;
-    left: -10px;
-    width: 15px;
-    height: 15px;
-    border-radius: 10px;
-    background-color: black;
+    top: -21px;
+    left: -20px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    border: 4px solid black;
 }
 
 .event-name {

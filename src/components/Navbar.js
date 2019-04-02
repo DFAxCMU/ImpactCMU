@@ -28,6 +28,9 @@ class Navbar extends React.Component {
                         <Nav.Link onClick={ this.scrollTo("about") }>
                             About
                         </Nav.Link>
+                        <Nav.Link onClick={ this.scrollTo("apply") }>
+                                Apply
+                        </Nav.Link>
                         <Nav.Link onClick={ this.scrollTo("logistics") }>
                             Logistics
                         </Nav.Link>
@@ -36,12 +39,6 @@ class Navbar extends React.Component {
                         </Nav.Link>
                         <Nav.Link onClick={ this.scrollTo("orgs") }>
                                 Orgs
-                        </Nav.Link>
-                        <Nav.Link onClick={ this.scrollTo("projects") }>
-                                Projects
-                        </Nav.Link>
-                        <Nav.Link onClick={ this.scrollTo("apply") }>
-                                Apply
                         </Nav.Link>
                     </Nav>
                 </N.Collapse>

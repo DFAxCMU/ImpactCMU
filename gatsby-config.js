@@ -10,12 +10,10 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `projects`,
-                path: `${__dirname}/src/`,
+                name: `data`,
+                path: `${__dirname}/src/data`,
             },
         },
-        {
-            resolve: `gatsby-transformer-csv`,
-        }
+        `gatsby-transformer-csv`,
     ],
 };
