@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => (
         <Apply />
         <Logistics data={ data.allTimelineCsv }/>
         <RSVP />
-        <Orgs data={ data.allFile }/>
+        <Orgs images={ data.allFile } data={ data.allOrgsCsv }/>
         <div style={{ height: 52 }}/>
     </div>
 )
@@ -46,7 +46,7 @@ export default IndexPage
 
 export const query = graphql`
     query ImageQuery {
-        allFile(filter:{relativeDirectory:{eq:"images/orgs"}}) {
+        allFile(filter:{relativeDirectory:{eq:"orgs"}}) {
             edges{
                 node{
                     relativePath,
@@ -61,6 +61,14 @@ export const query = graphql`
                 name
                 detail
                 location
+            }
+        }
+      }
+      allOrgsCsv {
+        edges {
+            node {
+                name
+                logo
             }
         }
       }
