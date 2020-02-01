@@ -24,6 +24,16 @@ import Projects from '../components/Projects'
 import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
 
+import logo from '../images/impactLogo_final_trans-tag.png'
+import {
+    Jumbotron,
+    Button,
+    Container,
+    Row,
+    Col,
+
+} from 'react-bootstrap';
+
 const IndexPage = ({ data }) => (
     <div>
         <Helmet>
@@ -31,14 +41,43 @@ const IndexPage = ({ data }) => (
             <link rel="icon" type="image/png" sizes="32x32" href={ favicon32 } />
             <link rel="icon" type="image/png" sizes="16x16" href={ favicon16 } />
         </Helmet>
-        <Navbar />
-        <Hero />
-        <About />
-        <Apply />
-        <Logistics data={ data.allTimelineCsv }/>
-        <RSVP />
-        <Orgs images={ data.allFile } data={ data.allOrgsCsv }/>
-        <div style={{ height: 52 }}/>
+        <Container>
+            <Row>
+                <Col md={ 6 }>
+                    <div style={{ backgroundSize: 'contain', width: '100%', height: '50vh', backgroundImage: 'url(' + logo + ')', minheight: 300, backgroundRepeat: 'no-repeat' }} />
+                </Col>
+                <Col md={ 6 }>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', backgroundPosition: 'center' }}>
+                        <p>
+                            Carnegie Mellon students are using their technical, art, business, and social science skills to solve problems at the local, national, and international levels.
+                        </p>
+                        <p>
+                            ImpactCMU is a celebration and exhibition of this achievment.
+                        </p>
+                        <p>
+                            Join us as we give visibility to the various projects going on around campus that are impacting lives around the world.
+                        </p>
+                    </div>
+                </Col>
+            </Row>
+        </Container>
+        <Jumbotron id="apply">
+            <div className="container">
+                <h1>
+                    Interested in presenting?
+                </h1>
+                <p>
+                    Fill out this form an apply with you and your team!
+                    We love indepedent student social good projects and want them to have a space at ImpactCMU as well.
+                </p>
+                <Button
+                    href="https://forms.gle/UQ4kwWpMi4Bss1Vb8"
+                >
+                    Apply
+                </Button>
+            </div>
+        </Jumbotron>
+
     </div>
 )
 
@@ -86,7 +125,7 @@ export const query = graphql`
 
 /*
             <div
-                style={{ 
+                style={{
                     width: '100%',
                     height: '512',
                     maxHeight: '100vh',
