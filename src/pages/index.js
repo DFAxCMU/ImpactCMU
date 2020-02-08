@@ -47,7 +47,7 @@ const IndexPage = ({ data }) => (
                     <div style={{ backgroundSize: 'contain', width: '100%', height: '50vh', backgroundImage: 'url(' + logo + ')', minheight: 300, backgroundRepeat: 'no-repeat' }} />
                 </Col>
                 <Col md={ 6 }>
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', backgroundPosition: 'center' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center', height: '100%', backgroundPosition: 'center' }}>
                         <p>
                             Carnegie Mellon students are using their technical, art, business, and social science skills to solve problems at the local, national, and international levels.
                         </p>
