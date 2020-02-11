@@ -25,6 +25,10 @@ import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
 
 import logo from '../images/impactLogo_final_trans-tag.png'
+import logo1 from '../images/newLogo1.png'
+import logo2 from '../images/newLogo2.png'
+//import logo3 from '../images/newLogo3.png'
+
 import {
     Jumbotron,
     Button,
@@ -34,17 +38,22 @@ import {
 
 } from 'react-bootstrap';
 
+const custom_blue = '#2b6998'
+//const custom_red = '#f3876f'
+const custom_teal = '#c8e9e6' // original: #79c9c1
+//const custom_orange = '#f1b584'
+
 const IndexPage = ({ data }) => (
     <div>
         <Helmet>
             <title>ImpactCMU</title>
-            <link rel="icon" type="image/png" sizes="32x32" href={ favicon32 } />
-            <link rel="icon" type="image/png" sizes="16x16" href={ favicon16 } />
+            <link rel="icon" type="image/png" sizes="32x32" href={ logo2 } />
+            <link rel="icon" type="image/png" sizes="16x16" href={ logo2 } />
         </Helmet>
         <Container>
             <Row>
                 <Col md={ 6 }>
-                    <div style={{ backgroundSize: 'contain', width: '100%', height: '50vh', backgroundImage: 'url(' + logo + ')', minheight: 300, backgroundRepeat: 'no-repeat' }} />
+                    <div style={{ backgroundSize: 'contain', width: '100%', height: '50vh', backgroundImage: 'url(' + logo1 + ')', minheight: 300, backgroundRepeat: 'no-repeat' }} />
                 </Col>
                 <Col md={ 6 }>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center', height: '100%', backgroundPosition: 'center' }}>
@@ -61,17 +70,18 @@ const IndexPage = ({ data }) => (
                 </Col>
             </Row>
         </Container>
-        <Jumbotron id="apply">
+        <Jumbotron id="apply" style={{ backgroundColor: custom_teal }}>
             <div className="container">
                 <h1>
                     Interested in presenting?
                 </h1>
                 <p>
-                    Fill out this form an apply with you and your team!
-                    We love indepedent student social good projects and want them to have a space at ImpactCMU as well.
+                    Fill out this form and apply with you and your team!
+                    We love independent student social good projects and want them to have a space at ImpactCMU as well.
                 </p>
                 <Button
                     href="https://forms.gle/UQ4kwWpMi4Bss1Vb8"
+		    style={{ backgroundColor: custom_blue }}
                 >
                     Apply
                 </Button>
