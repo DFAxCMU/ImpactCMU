@@ -32,6 +32,7 @@ import logo2 from '../images/newLogo2.png'
 import {
     Jumbotron,
     Button,
+    ButtonGroup,
     Container,
     Row,
     Col,
@@ -39,9 +40,10 @@ import {
 } from 'react-bootstrap';
 
 const custom_blue = '#2b6998'
-//const custom_red = '#f3876f'
+const custom_red = '#f3876f'
 const custom_teal = '#c8e9e6' // original: #79c9c1
-//const custom_orange = '#f1b584'
+const custom_orange = '#f1b584'
+const margin_size = 10;
 
 const IndexPage = ({ data }) => (
     <div>
@@ -58,14 +60,34 @@ const IndexPage = ({ data }) => (
                 <Col md={ 6 }>
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'left', justifyContent: 'center', height: '100%', backgroundPosition: 'center' }}>
                         <p>
-                            Carnegie Mellon students are using their technical, art, business, and social science skills to solve problems at the local, national, and international levels.
+                            Here at Carnegie Mellon, students put their heart into work that matters. Every day, students of all backgrounds are transforming their intentions into actions in order to tackle social challenges on a local, national, and global level.
                         </p>
                         <p>
-                            ImpactCMU is a celebration and exhibition of this achievment.
+                            ImpactCMU is a showcase of this achievment.
                         </p>
                         <p>
-                            Join us as we give visibility to the various projects going on around campus that are impacting lives around the world.
+                            Join us as we celebrate the projects around campus that are impacting lives around the world.
                         </p>
+			<ButtonGroup>
+			    <Button
+			        href=""
+			        style={{ width: '45%', border: 'none', backgroundColor: custom_red }}
+			    >
+			        Schedule
+			    </Button>
+			    <Button
+			        href=""
+			        style={{ width: '30%', border: 'none', backgroundColor: custom_orange }}
+			    >
+			        Prizes
+			    </Button>
+			    <Button
+			        href=""
+			        style={{ width: '25%', border: 'none', backgroundColor: custom_red }}
+			    >
+			        FAQs
+			    </Button>
+			</ButtonGroup>
                     </div>
                 </Col>
             </Row>
@@ -81,13 +103,12 @@ const IndexPage = ({ data }) => (
                 </p>
                 <Button
                     href="https://forms.gle/UQ4kwWpMi4Bss1Vb8"
-		    style={{ backgroundColor: custom_blue }}
+		    style={{ border: 'none', backgroundColor: custom_blue }}
                 >
                     Apply
                 </Button>
             </div>
         </Jumbotron>
-
     </div>
 )
 
