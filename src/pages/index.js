@@ -21,6 +21,8 @@ import Orgs from '../components/Orgs'
 import Apply from '../components/Apply'
 import Projects from '../components/Projects'
 
+//import schedule from '../data/timeline.csv'
+
 import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
 
@@ -35,8 +37,7 @@ import {
     ButtonGroup,
     Container,
     Row,
-    Col,
-
+    Col
 } from 'react-bootstrap';
 
 const custom_blue = '#2b6998'
@@ -70,19 +71,19 @@ const IndexPage = ({ data }) => (
                         </p>
 			<ButtonGroup>
 			    <Button
-			        href=""
+			        href="#timeline"
 			        style={{ width: '45%', border: 'none', backgroundColor: custom_red }}
 			    >
 			        Schedule
 			    </Button>
 			    <Button
-			        href=""
+			        href="#prizes"
 			        style={{ width: '30%', border: 'none', backgroundColor: custom_orange }}
 			    >
 			        Prizes
 			    </Button>
 			    <Button
-			        href=""
+			        href="#faq"
 			        style={{ width: '25%', border: 'none', backgroundColor: custom_red }}
 			    >
 			        FAQs
@@ -109,6 +110,56 @@ const IndexPage = ({ data }) => (
                 </Button>
             </div>
         </Jumbotron>
+    <div id="timeline">
+    </div>
+    <div id="prizes">
+        <Container>
+	    <Row>
+	        <Col md={ 3 }>
+	            <h1>Prizes</h1>
+	        </Col>
+	        <Col md={ 9 }>
+	            <Row style={{backgroundColor: custom_orange}}>
+	                <h4>We will be offering a prize of $250 to a team in 
+			each category:</h4>
+	            </Row>
+	            <Row style={{margin: 10}}>
+	                <Col>
+		            <ul>
+			        <li>Education</li>
+			    </ul>
+		        </Col>
+	                <Col>
+		            <ul>
+			        <li>Health</li>
+			    </ul>
+		        </Col>
+	                <Col>
+		            <ul>
+			        <li>Environment</li>
+			    </ul>
+		        </Col>
+	                <Col>
+		            <ul>
+			        <li>Outreach</li>
+			    </ul>
+		        </Col>
+	            </Row>
+	        </Col>
+	    </Row>
+	</Container>
+    </div>
+    <div id="faq">
+       <Container>
+           <Row>
+	       <Col>
+	           <h1>FAQs</h1>
+	       </Col>
+	   </Row>
+	   <Row>
+	   </Row>
+       </Container>
+    </div>
     </div>
 )
 
