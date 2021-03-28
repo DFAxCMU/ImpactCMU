@@ -5,13 +5,13 @@ export default function Prizes() {
         <section id="prizes">
             <h1>Prizes</h1>
             <p>
-                From May 1st to May 7th, the ImpactCMU gallery will be open for public browsing. Carnegie Mellon students and faculty will also be able to vote for their favorite projects in various categories (TBD).
+                From May 1st to May 7th, the ImpactCMU gallery will be open for public browsing. Carnegie Mellon students and faculty will also be able to vote for their favorite projects in our 5 categories: education, health, technology, outreach, and environment.
             </p>
             <div className="container">
                 <div class="row" style={{ textAlign: 'center' }} >
                     <div class="col">
                         <h2>$5000</h2>
-                        Winning projects will receive $1000 in funds to support your project.
+                        Each winning submission will receive $1000 in funds to support your project.
 </div>
                     <div class="col">
                         <h2>$500</h2>
