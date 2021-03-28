@@ -8,9 +8,9 @@ export default function Prizes() {
                 From May 1st to May 7th, the ImpactCMU gallery will be open for public browsing. Carnegie Mellon students and faculty will also be able to vote for their favorite projects in various categories (TBD).
             </p>
             <div className="container">
-                <div class="row">
+                <div class="row" style={{ textAlign: 'center' }} >
                     <div class="col">
-                        <h2>$1000</h2>
+                        <h2>$5000</h2>
                         Winning projects will receive $1000 in funds to support your project.
 </div>
                     <div class="col">

@@ -13,16 +13,12 @@ import Hero from '../components/Hero'
 import Logistics from '../components/Logistics'
 import Apply from '../components/Apply'
 import Prizes from '../components/Prizes';
+import Contact from '../components/Contact';
 
 //import schedule from '../data/timeline.csv'
 
 import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
-
-import logo from '../images/impactLogo_final_trans-tag.png'
-import logo1 from '../images/newLogo1.png'
-import logo2 from '../images/newLogo2.png'
-//import logo3 from '../images/newLogo3.png'
 
 import {
     Jumbotron,
@@ -43,19 +39,14 @@ const IndexPage = ({ data }) => (
     <div>
         <Helmet>
             <title>ImpactCMU</title>
-            <link rel="icon" type="image/png" sizes="32x32" href={ logo2 } />
-            <link rel="icon" type="image/png" sizes="16x16" href={ logo2 } />
+            <link rel="icon" type="image/png" sizes="32x32" href={ favicon16 } />
+            <link rel="icon" type="image/png" sizes="16x16" href={ favicon32 } />
         </Helmet>
         <Hero />
         <Prizes />
         <Apply />
         <Logistics data={ data.allTimelineCsv } />
-        <section id="contact">
-            <h1>Contact</h1>
-            <p>
-                { "Email us at <dfa email>" }
-            </p>
-        </section>
+        <Contact />
     </div>
 )
 
@@ -77,26 +68,7 @@ export const query = graphql`
                 time
                 name
                 detail
-                location
             }
-        }
-      }
-      allOrgsCsv {
-        edges {
-            node {
-                name
-                logo
-            }
-        }
-      }
-      allProjectsCsv {
-        edges {
-          node {
-            name
-            organization
-            members
-            description
-          }
         }
       }
 }`

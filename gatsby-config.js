@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: 'ImpactCMU',
-        url: 'impactcmu.com'
+        pathPrefix: '/ImpactCMU',
     },
     plugins: [
         {

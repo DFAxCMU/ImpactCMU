@@ -11,7 +11,7 @@ const Apply = () => (
             If you would like to submit a project to ImpactCMU, we ask that you pre-register with a brief description of your project by April 5th.
 
         </p>
-        <a href="">
+        <a href="https://forms.gle/Rk5FmfFnrmScMyJt5">
             <div className="button">
                 Registration Form
             </div>
