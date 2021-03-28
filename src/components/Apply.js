@@ -3,6 +3,7 @@ import {
     Jumbotron, 
     Button 
 } from 'react-bootstrap';
+import Resources from './Resources';
 
 const Apply = () => ( 
     <section id="apply">

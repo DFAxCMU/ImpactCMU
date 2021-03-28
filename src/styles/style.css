@@ -68,14 +68,34 @@ h1 {
     font-weight: 800;
 }
 
-#logistics {
+#gallery {
     background-color: var(--brown);
+    color: var(--yellow);
+}
+
+#prizes {
+    background-color: var(--red);
     color: var(--yellow);
 }
 
 #apply {
     background-color: var(--yellow);
     color: var(--darkblue);
+}
+
+#logistics {
+    background-color: var(--brown);
+    color: var(--yellow);
+}
+
+#resources {
+    background-color: var(--yellow);
+    color: var(--darkblue);
+}
+
+#contact {
+    background-color: var(--darkblue);
+    color: var(--yellow);
 }
 
 .button {
@@ -95,17 +115,12 @@ a:hover {
     text-decoration: none;
 }
 
-#prizes {
-    background-color: var(--red);
-    color: var(--yellow);
+
+.poster {
+    max-width: 1000px;
 }
 
 h2 {
-    color: var(--yellow);
-}
-
-#contact {
-    background-color: var(--darkblue);
     color: var(--yellow);
 }
 

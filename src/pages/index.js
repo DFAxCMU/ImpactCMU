@@ -9,10 +9,12 @@ import '../styles/style.css'
 import '../styles/page.css'
 import { Helmet } from 'react-helmet'
 
-import Hero from '../components/Hero'
-import Logistics from '../components/Logistics'
-import Apply from '../components/Apply'
+import Hero from '../components/Hero';
+import Gallery from '../components/Gallery';
+import Logistics from '../components/Logistics';
+import Apply from '../components/Apply';
 import Prizes from '../components/Prizes';
+import Resources from '../components/Resources';
 import Contact from '../components/Contact';
 
 //import schedule from '../data/timeline.csv'
@@ -43,9 +45,11 @@ const IndexPage = ({ data }) => (
             <link rel="icon" type="image/png" sizes="16x16" href={ favicon32 } />
         </Helmet>
         <Hero />
+	<Gallery />
         <Prizes />
         <Apply />
         <Logistics data={ data.allTimelineCsv } />
+        <Resources />
         <Contact />
     </div>
 )
