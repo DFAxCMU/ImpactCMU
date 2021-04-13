@@ -18,7 +18,7 @@ const Apply = () => (
             </div>
         </a>
         <p>
-The materials for your project’s social media post must be submitted by April 26th. Each project will have 1 dedicated post, in which you may add a carousel of up to 10 photos and videos. Below are some examples of what a post can look like, and templates that you may use. These templates are optional. There are no strict guidelines for what your post should look like- we only ask that it tells a compelling narrative about your project. Feel free to be creative!
+The materials for your project’s social media post must be submitted by April 26th. Each project will have 1 dedicated post, in which you may add a carousel of up to 10 photos and videos. Go to the Resources section to see what a post can look like and access a template that you may use. This template is optional. There are no strict guidelines for what your post should look like- we only ask that it tells a compelling narrative about your project. Feel free to be creative!
 
         </p>
         <a href="https://forms.gle/ztnsPYCcQhiaM4Wq7" target="_blank">
