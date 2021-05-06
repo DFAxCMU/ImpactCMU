@@ -80,7 +80,8 @@ export const query = graphql`
 	    node {
 	        name
 		contact
-	        slides
+                numSlides
+                folder
 	    }
 	}
       }
