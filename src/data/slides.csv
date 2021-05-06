@@ -1,0 +1,3 @@
+name,contact,slides
+project1,project1@gmail.com,'[ {"slide": "test_slide.jpg", "altText": ""}, {"slide": "test_slide.jpg", "altText": ""}, {"slide": "test_slide.jpg", "altText": ""} ]'
+project2,project2@gmail.com,'[ {"slide": "test_slide.jpg", "altText": ""}, {"slide": "test_slide.jpg", "altText": ""} ]'

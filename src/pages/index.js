@@ -45,7 +45,7 @@ const IndexPage = ({ data }) => (
             <link rel="icon" type="image/png" sizes="16x16" href={ favicon32 } />
         </Helmet>
         <Hero />
-	<Gallery />
+	<Gallery data={ data.allSlidesCsv }/>
         <Prizes />
         <Apply />
         <Logistics data={ data.allTimelineCsv } />
@@ -74,5 +74,14 @@ export const query = graphql`
                 detail
             }
         }
+      }
+      allSlidesCsv {
+        edges {
+	    node {
+	        name
+		contact
+	        slides
+	    }
+	}
       }
 }`
