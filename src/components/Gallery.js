@@ -1,16 +1,22 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
 import GalleryItem from './GalleryItem.js';
 
 var slidesArr = [];
-const Gallery = ({ data }) => {
+const Gallery = ({ slideData, slideImages }) => {
+    const images = slideImages.projects.reduce((images, next) => {
+        return { 
+            ...images,
+            [next.dir.substring(8)]: next.edges,
+        }
+    }, {})
+    console.log(images)
     return (<section id="gallery">
-        <h1>Gallery</h1>
-        <div style={{ display: 'flex', flexWrap: 'wrap', width: 848}}>
-            { data.edges.map(({ node }, i) => {
-                return <GalleryItem node={ node } />
+	<h1>Gallery</h1>
+	<div style={{ display: 'flex', flexWrap: 'wrap', width: 848}}>
+	    { slideData.edges.map(({ node }, i) => {
+		return <GalleryItem node={ node } images={ images[node.folder] }/>
 	    })}
-        </div>
+	</div>
     </section>
     );
 }

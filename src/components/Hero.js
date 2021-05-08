@@ -17,6 +17,7 @@ const Hero = () => (
             width: '100%',
             display: 'block',
             position: 'relative',
+            overflow: 'hidden',
         }}>
             <div id="spinner" style={{
                 backgroundImage: `url("${ logoDynamic }")`,

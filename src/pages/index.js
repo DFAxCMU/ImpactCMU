@@ -45,10 +45,10 @@ const IndexPage = ({ data }) => (
             <link rel="icon" type="image/png" sizes="16x16" href={ favicon32 } />
         </Helmet>
         <Hero />
-	<Gallery data={ data.allSlidesCsv } />
+	<Gallery slideData={ data.slides } slideImages={ data.gallery }/>
         <Prizes />
         <Apply />
-        <Logistics data={ data.allTimelineCsv } />
+        <Logistics data={ data.timeline } />
         <Resources />
         <Contact />
     </div>
@@ -58,15 +58,7 @@ export default IndexPage
 
 export const query = graphql`
     query ImageQuery {
-        allFile(filter:{relativeDirectory:{eq:"orgs"}}) {
-            edges{
-                node{
-                    relativePath,
-                    publicURL
-                }
-            }
-        }
-      allTimelineCsv {
+      timeline: allTimelineCsv {
         edges {
             node {
                 time
@@ -75,7 +67,7 @@ export const query = graphql`
             }
         }
       }
-      allSlidesCsv {
+      slides: allSlidesCsv {
         edges {
 	    node {
 	        name
@@ -83,6 +75,20 @@ export const query = graphql`
                 numSlides
                 folder
 	    }
+	}
+      }
+    gallery: allFile(filter:{relativeDirectory:{regex:"/gallery/"}}){
+	projects:group(field: relativeDirectory) {
+	  dir: fieldValue
+	  edges {
+	    node {
+	      childImageSharp {
+		fluid {
+		    ...GatsbyImageSharpFluid
+		}
+	      }
+	    }
+	  }
 	}
       }
   }
