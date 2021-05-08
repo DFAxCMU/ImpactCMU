@@ -15,5 +15,7 @@ module.exports = {
             },
         },
         `gatsby-transformer-csv`,
+	`gatsby-plugin-sharp`,
+	`gatsby-transformer-sharp`,
     ],
 };
