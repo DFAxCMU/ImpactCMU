@@ -17,6 +17,11 @@ const Gallery = ({ slideData, slideImages }) => {
 		return <GalleryItem node={ node } images={ images[node.folder] }/>
 	    })}
 	</div>
+        <a href="https://forms.gle/aV7foVz5zqytMAuT6" target="_blank">
+            <div className="gallery-button">
+	        Vote!
+            </div>
+        </a>
     </section>
     );
 }
