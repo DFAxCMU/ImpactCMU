@@ -1,0 +1,178 @@
+@import url("https://use.typekit.net/mpn6abq.css");
+
+:root {
+    --darkblue: #04285a;
+    --red: #c44536;
+    --yellow: #fce4b5;
+    --brown: #772e25;
+    --lightblue: #2b7095;
+}
+
+
+.navbar {
+    border-top: 1px solid rgba(0, 0, 0, 0.125)
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px
+}
+
+p {
+    width: 100%;
+    max-width: 600px;
+}
+
+.event-item {
+    font-size: 18px;
+    box-shadow: -5px 0 var(--yellow);
+    position: relative;
+    padding-bottom: 48px;
+    margin-left: 16px;
+    color: white;
+}
+
+.event-time {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--yellow);
+}
+
+.event-ball {
+    position: absolute;
+    left: -14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    border: 4px solid var(--yellow);
+    background-color: var(--brown);
+}
+
+.event-name {
+}
+
+.event-speaker {
+    font-size: 14px;
+    color: white;
+}
+
+.event-location {
+}
+
+h1 {
+    padding-bottom: 12px;
+    text-align: center;
+    font-family: gopher, sans-serif;
+    font-weight: 800;
+}
+
+#gallery {
+    background-color: var(--brown);
+    color: var(--yellow);
+}
+
+#prizes {
+    background-color: var(--red);
+    color: var(--yellow);
+}
+
+#apply {
+    background-color: var(--yellow);
+    color: var(--darkblue);
+}
+
+#logistics {
+    background-color: var(--brown);
+    color: var(--yellow);
+}
+
+#resources {
+    background-color: var(--yellow);
+    color: var(--darkblue);
+}
+
+#contact {
+    background-color: var(--darkblue);
+    color: var(--yellow);
+}
+
+.button {
+    padding: 8px;
+    border: 3px solid var(--darkblue);
+    color: var(--darkblue);
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.button:hover {
+    background-color: var(--darkblue);
+    color: var(--yellow);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+.poster {
+    width: 100%;
+}
+
+h2 {
+    color: var(--yellow);
+}
+
+#contact a {
+    color: var(--yellow);
+    margin: 12px
+}
+
+#contact a:hover {
+    color: var(--red);
+}
+
+#spinner {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 40000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 40000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 40000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-transition: rotate(3600deg);
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.poster-row {
+    width: 50%;
+    padding: 24px;
+}
+
+.posters {
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
