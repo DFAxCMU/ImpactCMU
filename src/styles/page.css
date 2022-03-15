@@ -1,7 +1,3 @@
-@font-face {
-    font-family: Norwester;
-    src: url("norwester.otf") format("opentype");
-}
 
 
 .top-img-picture {
@@ -27,9 +23,6 @@
     margin-top: -430px;
 }
 
-.navbar.navbar-default {
-    border: none;
-}
 
 .nav-link {
     cursor: pointer;
@@ -63,4 +56,36 @@
 
 .org-para {
     min-height: 154px;
+}
+
+.green-box {
+    color: var(--text);
+    width: 100px;
+    height: 100px;
+    background-color: var(--accent);
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 20px;
+    transform: rotate(-20deg);
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px 30px;
+    padding: 15px;
+}
+.grid-item {
+    font-size: 18px;
+}
+
+.summary {
+    padding-right: 50px;
+    max-width: 400px;
 }

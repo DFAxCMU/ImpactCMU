@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+// import {graphql} from 'gatsby'
 
 import 'popper.js'
 import '../dist/css/bootstrap.min.css'
@@ -10,25 +10,33 @@ import '../styles/page.css'
 import Logistics from '../components/Logistics';
 import Contact from '../components/Contact';
 
-const TimelinePage = ({ data }) => (
+// const TimelinePage = ({ data }) => (
+//     <div>
+//         <Logistics data={ data.timeline } />
+//         <Contact />
+//     </div>
+// )
+
+const TimelinePage = () => (
     <div>
-        <Logistics data={ data.timeline } />
+        <Logistics />
         <Contact />
     </div>
 )
 
+
 export default TimelinePage
 
-export const query = graphql`
-    query ImageQuery {
-      timeline: allTimelineCsv {
-        edges {
-            node {
-                time
-                name
-                detail
-            }
-        }
-      }
-  }
-`
+// export const query = graphql`
+//     query ImageQuery {
+//       timeline: allTimelineCsv {
+//         edges {
+//             node {
+//                 time
+//                 name
+//                 detail
+//             }
+//         }
+//       }
+//   }
+// `

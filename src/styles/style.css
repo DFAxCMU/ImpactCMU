@@ -1,16 +1,29 @@
 @import url("https://use.typekit.net/mpn6abq.css");
 
 :root {
-    --darkblue: #04285a;
-    --red: #c44536;
-    --yellow: #fce4b5;
-    --brown: #772e25;
-    --lightblue: #2b7095;
+    --background: #F1F3F2;
+    --text: #FFFFFF;
+    --accent: #65B686;
+    --hover: #000;
 }
 
+* {
+    font-family: 'Alegreya', serif;
+    /* outline: 1px solid red; */
+}
 
-.navbar {
-    border-top: 1px solid rgba(0, 0, 0, 0.125)
+#page { 
+    box-sizing: border-box;
+    background-color: var(--background);
+    padding: 50px;
+    height: 100vh;
+}
+
+#page > .body {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 section {
@@ -18,11 +31,6 @@ section {
     flex-direction: column;
     align-items: center;
     padding: 24px
-}
-
-p {
-    width: 100%;
-    max-width: 600px;
 }
 
 .event-item {
@@ -64,8 +72,23 @@ p {
 h1 {
     padding-bottom: 12px;
     text-align: center;
-    font-family: gopher, sans-serif;
     font-weight: 800;
+}
+
+h3 {
+    color: var(--accent);
+    font-size: 24px;
+}
+
+p {
+    max-width: 600px;
+    color: var(--accent);
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #gallery {
@@ -94,8 +117,8 @@ h1 {
 }
 
 #contact {
-    background-color: var(--darkblue);
-    color: var(--yellow);
+    display: flex;
+    flex-direction: row;
 }
 
 .button {
@@ -155,12 +178,12 @@ h2 {
 }
 
 #contact a {
-    color: var(--yellow);
-    margin: 12px
+    padding: 12px;
+    color: var(--accent);
 }
 
 #contact a:hover {
-    color: var(--red);
+    color: var(--hover);
 }
 
 #spinner {
