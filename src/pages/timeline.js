@@ -8,6 +8,7 @@ import '../styles/style.css'
 import '../styles/page.css'
 
 import Logistics from '../components/Logistics';
+import Contact from '../components/Contact';
 
 const TimelinePage = ({ data }) => (
     <div>
