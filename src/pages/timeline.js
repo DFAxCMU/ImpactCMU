@@ -10,25 +10,10 @@ import '../styles/page.css'
 import Logistics from '../components/Logistics';
 import Contact from '../components/Contact';
 
-const TimelinePage = ({ data }) => (
+const TimelinePage = () => (
     <div>
-        <Logistics data={ data.timeline } />
         <Contact />
     </div>
 )
 
 export default TimelinePage
-
-export const query = graphql`
-    query ImageQuery {
-      timeline: allTimelineCsv {
-        edges {
-            node {
-                time
-                name
-                detail
-            }
-        }
-      }
-  }
-`

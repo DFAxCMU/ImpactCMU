@@ -1,5 +1,4 @@
 import React from 'react'
-import {graphql} from 'gatsby'
 
 import 'popper.js'
 import '../dist/css/bootstrap.min.css'
@@ -7,43 +6,13 @@ import '../dist/css/bootstrap.min.css'
 import '../styles/style.css'
 import '../styles/page.css'
 
-import Gallery from '../components/Gallery';
+import Resources from '../components/Resources';
 import Contact from '../components/Contact';
 
-const ProjectsPage = ({ data }) => (
+const PastProjectsPage = () => (
     <div>
-	      <Gallery slideData={ data.slides } slideImages={ data.gallery }/>
         <Contact />
     </div>
 )
 
-export default ProjectsPage
-
-export const query = graphql`
-    query ImageQuery {
-      slides: allSlidesCsv {
-        edges {
-	    node {
-	        name
-		contact
-                numSlides
-                folder
-	    }
-	}
-      }
-    gallery: allFile(filter:{relativeDirectory:{regex:"/gallery/"}}){
-	projects:group(field: relativeDirectory) {
-	  dir: fieldValue
-	  edges {
-	    node {
-	      childImageSharp {
-		fluid {
-		    ...GatsbyImageSharpFluid
-		}
-	      }
-	    }
-	  }
-	}
-      }
-  }
-`
+export default PastProjectsPage
