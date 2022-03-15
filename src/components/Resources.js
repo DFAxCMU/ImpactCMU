@@ -24,13 +24,7 @@ const posters = [
 
 const Resources = () => (
     <section id="resources">
-        <h1>Resources</h1>
-        <a href="https://docs.google.com/presentation/u/1/d/1Zocjg_wUnLIr0VdOZsDVun5q_sSSAa0OEqYIj5TluLw/edit?usp=sharing" target="_blank">
-	    <div className="button">
-	        Start creating your carousel from our template!
-	    </div>
-	</a>
-	<h4>Example Posters from Past Years:</h4>
+        <h1>Example Posters from Past Years:</h1>
         <div className="posters">
             { posters.map(poster => {
                 return <a className="poster-row" href={ poster.image } target="_blank">

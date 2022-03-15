@@ -9,7 +9,7 @@ import '../styles/page.css'
 import Resources from '../components/Resources';
 import Contact from '../components/Contact';
 
-const ResourcesPage = ({ data }) => (
+const ResourcesPage = () => (
     <div>
         <Resources />
         <Contact />
