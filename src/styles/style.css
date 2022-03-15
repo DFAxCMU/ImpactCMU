@@ -4,19 +4,24 @@
     --background: #F1F3F2;
     --text: #FFFFFF;
     --accent: #65B686;
-    --hover: #000;
+    --hover: rgb(64,132,92);
 }
 
 * {
     font-family: 'Alegreya', serif;
     /* outline: 1px solid red; */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
 }
 
 #page { 
-    box-sizing: border-box;
-    background-color: var(--background);
     padding: 50px;
     height: 100vh;
+    max-width: 1000px;
+    margin: auto;
 }
 
 #page > .body {
