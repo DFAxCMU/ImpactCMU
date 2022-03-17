@@ -15,15 +15,15 @@ const IndexPage = () => (
                 Impact CMU is an end-of-the-semester showcase of CMU student-led social impact projects. 
             </h3>
             <div className="nav-grid">
-                <p className="grid-item green-box">About</p>
-                <p className="grid-item green-box">Timeline</p>
+                <a className="grid-item green-box" href="/about">About</a>
+                <a className="grid-item green-box" href="/timeline">Timeline</a>
                 <p className="grid-item green-box"></p>
                 <p className="grid-item green-box"></p>
-                <p className="grid-item green-box">Submit a Project</p>
-                <p className="grid-item green-box">Resources</p>
+                <a className="grid-item green-box" href="https://www.google.com">Submit a Project</a>
+                <a className="grid-item green-box" href="/resources">Resources</a>
                 <p className="grid-item green-box"></p>
                 <p className="grid-item green-box"></p>
-                <p className="grid-item green-box">Past Impact</p>
+                <a className="grid-item green-box" href="/pastprojects">Past Impact</a>
             </div>
         </div>
     </div>

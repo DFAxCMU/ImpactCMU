@@ -11,9 +11,9 @@ class Navbar extends React.Component {
         return (
             <>
                 <div id="navbar">
-                    <div className="logo green-box">
+                    <a className="logo green-box" href="/">
                         IMPACT CMU
-                    </div>
+                    </a>
                     <Contact />
                 </div>
             </>
