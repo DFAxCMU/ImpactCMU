@@ -23,7 +23,7 @@ const IndexPage = () => (
                 <a className="grid-item green-box" href="/resources">Resources</a>
                 <p className="grid-item green-box"></p>
                 <p className="grid-item green-box"></p>
-                <a className="grid-item green-box" href="/pastprojects">Past Impact</a>
+                <a className="grid-item green-box" href="/projects">Past Impact</a>
             </div>
         </div>
     </>

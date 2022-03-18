@@ -9,10 +9,11 @@ import '../styles/page.css'
 import Resources from '../components/Resources';
 import Contact from '../components/Contact';
 
-const PastProjectsPage = () => (
+const ResourcesPage = () => (
     <div>
+        <Resources />
         <Contact />
     </div>
 )
 
-export default PastProjectsPage
+export default ResourcesPage
