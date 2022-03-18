@@ -7,12 +7,12 @@ import '../styles/style.css'
 import '../styles/page.css'
 
 import Resources from '../components/Resources';
-import Contact from '../components/Contact';
+import Navbar from '../components/Navbar';
 
 const ResourcesPage = () => (
     <div>
+        <Navbar />
         <Resources />
-        <Contact />
     </div>
 )
 

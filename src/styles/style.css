@@ -11,13 +11,6 @@
     margin: auto;
 }
 
-:root > .body {
-    padding: 50px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 * {
     font-family: 'Alegreya', serif;
     /* outline: 1px solid red; */
@@ -28,8 +21,11 @@ body {
     background-color: var(--background);
 }
 
+.spacer {
+    padding: 25px;
+}
+
 .body {
-    padding: 50px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,7 +85,7 @@ h3, .large {
     font-size: 24px;
 }
 
-p, .small {
+p, .medium {
     max-width: 600px;
     color: var(--accent);
 }
@@ -118,11 +114,6 @@ p, .small {
 #logistics {
     background-color: var(--brown);
     color: var(--yellow);
-}
-
-#resources {
-    background-color: var(--yellow);
-    color: var(--darkblue);
 }
 
 #contact {
