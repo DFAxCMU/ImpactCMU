@@ -7,12 +7,21 @@ import '../dist/css/bootstrap.min.css'
 import '../styles/style.css'
 import '../styles/page.css'
 
-import Logistics from '../components/Logistics';
-import Contact from '../components/Contact';
+import Navbar from '../components/Navbar';
+import Card from '../components/Card';
+import Timeline from '../components/Timeline';
 
 const TimelinePage = () => (
     <div>
-        <Contact />
+        <Navbar />
+        <div>
+            <Card 
+                title="Timeline"
+                body=""
+                bodyClass="large"
+            />
+            <Timeline />
+        </div>
     </div>
 )
 
