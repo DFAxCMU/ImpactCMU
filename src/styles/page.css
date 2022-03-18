@@ -93,6 +93,20 @@ a.green-box:hover {
     justify-content: center;
 }
 
+.tilt-a {
+    transform: rotate(-20deg);
+}
+.tilt-b {
+    transform: rotate(-10deg);
+}
+.tilt-c {
+    transform: rotate(10deg);
+}
+.tilt-d {
+    transform: rotate(20deg);
+}
+
+
 .card-text {
     text-align: center;
     max-width: 500px;
@@ -104,6 +118,7 @@ a.green-box:hover {
     align-items: center;
     gap: 20px 0;
     padding: 40px;
+    z-index: 999;
 }
 
 .nav-grid {
@@ -124,7 +139,7 @@ a.green-box:hover {
 .timeline {
     display: grid;
     padding: 50px;
-    align-items: center;
+    align-items: top;
 }
 
 .timeline-items {
@@ -139,4 +154,5 @@ a.green-box:hover {
     height: 10px;
     background-color: var(--accent);
     grid-area: 1 / 1;
+    margin-top: 90px;
 }

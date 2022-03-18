@@ -24,7 +24,6 @@ const posters = [
 
 const Resources = () => (
     <section id="resources">
-        <div className="empty-box">Past ImpactCMU Posters</div>
         <div className="posters">
             { posters.map(poster => {
                 return <a className="poster-row" href={ poster.image } target="_blank">

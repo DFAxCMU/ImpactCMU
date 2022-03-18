@@ -19,6 +19,7 @@ const TimelinePage = () => (
                 title="Timeline"
                 body=""
                 bodyClass="large"
+                tilt="tilt-c"
             />
             <Timeline />
         </div>
