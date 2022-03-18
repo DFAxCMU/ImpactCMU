@@ -8,7 +8,7 @@ import '../styles/page.css'
 import Navbar from '../components/Navbar';
 
 const IndexPage = () => (
-    <div id="page">
+    <>
         <Navbar/>
         <div className="body">
             <h3 className="summary">
@@ -26,7 +26,7 @@ const IndexPage = () => (
                 <a className="grid-item green-box" href="/projects">Past Impact</a>
             </div>
         </div>
-    </div>
+    </>
 )
 
 export default IndexPage

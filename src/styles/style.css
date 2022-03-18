@@ -5,6 +5,17 @@
     --text: #FFFFFF;
     --accent: #65B686;
     --hover: rgb(64,132,92);
+    padding: 50px;
+    height: 100vh;
+    max-width: 1000px;
+    margin: auto;
+}
+
+:root > .body {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 * {
@@ -17,19 +28,12 @@ body {
     background-color: var(--background);
 }
 
-#page { 
-    padding: 50px;
-    height: 100vh;
-    max-width: 1000px;
-    margin: auto;
-}
-
-#page > .body {
+.body {
     padding: 50px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+} 
 
 section {
     display: flex;
@@ -80,12 +84,12 @@ h1 {
     font-weight: 800;
 }
 
-h3 {
+h3, .large {
     color: var(--accent);
     font-size: 24px;
 }
 
-p {
+p, .small {
     max-width: 600px;
     color: var(--accent);
 }
