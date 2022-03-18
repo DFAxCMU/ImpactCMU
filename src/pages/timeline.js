@@ -7,11 +7,12 @@ import '../dist/css/bootstrap.min.css'
 import '../styles/style.css'
 import '../styles/page.css'
 
-import Logistics from '../components/Logistics';
+import Timeline from '../components/Timeline';
 import Contact from '../components/Contact';
 
 const TimelinePage = () => (
     <div>
+        <Timeline />
         <Contact />
     </div>
 )
