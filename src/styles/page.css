@@ -120,10 +120,21 @@ a.green-box:hover {
 }
 
 .timeline {
-    width: 100%;
-    height: 10px;
+    display: grid;
+    padding: 50px;
     align-items: center;
+}
+
+.timeline-items {
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    grid-area: 1 / 1;
+}
+
+.timeline-line {
+    width: 100%;
+    height: 10px;
     background-color: var(--accent);
+    grid-area: 1 / 1;
 }

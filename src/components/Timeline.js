@@ -1,11 +1,27 @@
 import React from 'react'
+import Card from './Card'
 
 const Timeline = (props) => {
     return (    
         <div className="timeline">
-            <p className="green-box">March 27</p>
-            <p className="green-box">April 03</p>
-            <p className="green-box">April 22</p>
+            <div className="timeline-items">
+                <Card 
+                    title="March 27"
+                    body="Project Submissions Due"
+                    bodyClass="medium"
+                />
+                <Card 
+                    title="April 03"
+                    body="Poster Submissions Due"
+                    bodyClass="medium"
+                />
+                <Card 
+                    title="April 22"
+                    body="In-person ImpactCMU event!"
+                    bodyClass="medium"
+                />
+            </div>
+            <div className="timeline-line"></div>
         </div>
     )
 }
