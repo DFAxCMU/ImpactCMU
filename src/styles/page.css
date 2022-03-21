@@ -1,61 +1,10 @@
 
-
-.top-img-picture {
-    background-color: red;
-    transition: background-color 2s ease;
-}
-
-.top-img-container {
-    background-color: red;
-    transition: background-color 2s ease;
-}
-
-.slider-banner-container {
-    /*height: 100% !important;*/
-}
-
-.cover-photo {
-    width: 70%;
-    top: 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -430px;
-}
-
-
-.nav-link {
-    cursor: pointer;
-}
-
-.dark-overlay {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-
-.subtitle-larger {
-    font-size: 20px;
-}
-
-.org-box {
-    /*min-height: 477px;*/
-}
-
-.org-title {
-    min-height: 66px;
-}
-
+/* box styles */
 .logo-box-img {
     height: 100px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.org-para {
-    min-height: 154px;
 }
 
 .green-box {
@@ -93,6 +42,8 @@ a.green-box:hover {
     justify-content: center;
 }
 
+/* Card component/styling */
+/* different angles to tilt components differently */
 .tilt-a {
     transform: rotate(-20deg);
 }
@@ -105,7 +56,6 @@ a.green-box:hover {
 .tilt-d {
     transform: rotate(20deg);
 }
-
 
 .card-text {
     text-align: center;
@@ -121,6 +71,7 @@ a.green-box:hover {
     z-index: 999;
 }
 
+/* Index styling */
 .nav-grid {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -136,6 +87,7 @@ a.green-box:hover {
     max-width: 400px;
 }
 
+/* Timeline component */
 .timeline {
     display: grid;
     padding: 50px;
@@ -155,4 +107,31 @@ a.green-box:hover {
     background-color: var(--accent);
     grid-area: 1 / 1;
     margin-top: 90px;
+}
+
+/* Contact component */
+#contact a {
+    padding: 12px;
+    color: var(--accent);
+}
+
+#contact a:hover {
+    transform: rotate(20deg);
+}
+
+/* Resources component */
+.poster {
+    width: 100%;
+}
+
+.poster-row {
+    width: 50%;
+    padding: 24px;
+}
+
+.posters {
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
