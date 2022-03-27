@@ -24,11 +24,6 @@ a.green-box:hover {
     transform: rotate(-10deg);
 }
 
-.logo {
-    font-size: 20px;
-    transform: rotate(-20deg);
-}
-
 .empty-box {
     color: var(--accent);
     background-color: var(--background);
@@ -40,6 +35,17 @@ a.green-box:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Nav bar styling */
+.logo {
+    font-size: 20px;
+    transform: rotate(-20deg);
+}
+
+.hamburger {
+    width: 36px;
+    height: 36px;
 }
 
 /* Card component/styling */
