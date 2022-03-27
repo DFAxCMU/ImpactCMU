@@ -4,7 +4,7 @@
     --background: #F1F3F2;
     --text: #FFFFFF;
     --accent: #65B686;
-    --hover: rgb(64,132,92);
+    --light: #65b68536;
     padding: 50px;
     height: 100vh;
     max-width: 1000px;
@@ -48,6 +48,7 @@ h4, .large {
 }
 
 p, .medium {
+    font-size: 16px;
     max-width: 600px;
     color: var(--accent);
 }
@@ -69,3 +70,25 @@ a:hover {
     flex-direction: row;
 }
 
+
+@media screen and (max-width: 688px) {
+    h3 {
+        color: var(--accent);
+        font-size: 20px;
+    }
+    
+    h4, .large {
+        color: var(--accent);
+        font-size: 16px;
+    }
+
+    p, .medium {
+        font-size: 14px;
+        max-width: 600px;
+        color: var(--accent);
+    }
+
+    .body {
+        display: block;
+    }
+}

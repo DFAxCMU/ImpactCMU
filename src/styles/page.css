@@ -82,7 +82,7 @@ a.green-box:hover {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 20px 30px;
-    padding: 15px;
+    padding: 30px 0;
 }
 .grid-item {
     font-size: 18px;
@@ -140,4 +140,81 @@ a.green-box:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 688px) {
+    /* box styling */
+    .green-box {
+        color: var(--text);
+        width: 85px;
+        height: 85px;
+        background-color: var(--accent);
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    a.green-box:hover {
+        color: var(--text);
+        transform: rotate(-10deg);
+    }
+    
+    .logo {
+        font-size: 16px;
+        transform: rotate(-20deg);
+    }
+    
+    .empty-box {
+        color: var(--accent);
+        font-size: 14px;
+        background-color: var(--background);
+        border: 2px solid var(--accent);
+        width: 85px;
+        height: 85px;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grid-item {
+        font-size: 14px;
+    }
+
+    /* Card component */
+    .card-container {
+        padding: 20px;
+    }
+    
+    /* Timeline component */
+    .timeline {
+        display: grid;
+        padding: 25px;
+    }
+
+    .timeline-items {
+        display: block;
+    }
+
+    .timeline-line {
+        grid-area: 1 / 1 / 4 / 1;
+        width: 10px;
+        height: 100%;
+        margin: auto;
+        background-color: var(--light);
+    }
+
+    /* Resources component */
+    .poster {
+        width: 100%;
+    }
+
+    .poster-row {
+        width: 100%;
+        padding: 15px 0;
+    }
+
 }
