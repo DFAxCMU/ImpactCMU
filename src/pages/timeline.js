@@ -13,6 +13,11 @@ import Timeline from '../components/Timeline';
 
 const TimelinePage = () => (
     <div>
+        <Helmet>
+            <title>ImpactCMU</title>
+            <link rel="icon" type="image/png" sizes="32x32" href={ favicon16 } />
+            <link rel="icon" type="image/png" sizes="16x16" href={ favicon32 } />
+        </Helmet>
         <Navbar />
         <div>
             <Card 

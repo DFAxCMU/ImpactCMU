@@ -10,6 +10,11 @@ import Card from '../components/Card'
 
 const AboutPage = () => (
     <div>
+        <Helmet>
+            <title>ImpactCMU</title>
+            <link rel="icon" type="image/png" sizes="32x32" href={ favicon16 } />
+            <link rel="icon" type="image/png" sizes="16x16" href={ favicon32 } />
+        </Helmet>
         <Navbar />
         <div className="body-about">
             <Card 
