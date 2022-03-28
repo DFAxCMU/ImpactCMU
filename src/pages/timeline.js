@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 // import {graphql} from 'gatsby'
 
 import 'popper.js'
@@ -10,6 +11,10 @@ import '../styles/page.css'
 import Navbar from '../components/Navbar';
 import Card from '../components/Card';
 import Timeline from '../components/Timeline';
+
+import favicon16 from '../images/favicon-16x16.png'
+import favicon32 from '../images/favicon-32x32.png'
+
 
 const TimelinePage = () => (
     <div>

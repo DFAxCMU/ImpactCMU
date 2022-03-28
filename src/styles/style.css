@@ -32,9 +32,16 @@ body {
     align-items: center;
 } 
 
-/* currently don't use */
-h1 {
+h1, .menu-item {
     color: var(--accent);
+    font-size: 48px;
+    padding: 10px 0;
+    display: block;
+    z-index: 200;
+    width:fit-content;
+    margin-right: 0;
+    margin-left: auto;
+    position:relative;
 }
 
 h3 {
@@ -55,10 +62,17 @@ p, .medium {
 
 a:hover {
     text-decoration: none;
+    transform: rotate(20deg);
+    color: var(--accent);
+}
+
+svg {
+    color: var(--accent);
 }
 
 /* Navbar component */
 #navbar {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,6 +86,11 @@ a:hover {
 
 
 @media screen and (max-width: 688px) {
+    h1, .menu-item {
+        color: var(--accent);
+        font-size: 36px;
+    }
+
     h3 {
         color: var(--accent);
         font-size: 20px;
