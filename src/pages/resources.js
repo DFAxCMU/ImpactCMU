@@ -9,6 +9,8 @@ import '../styles/page.css'
 
 import Card from '../components/Card';
 import Navbar from '../components/Navbar';
+import Contact from '../components/Contact.js'
+
 
 import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
@@ -26,6 +28,7 @@ const ResourcesPage = () => (
             title='Coming Soon!'
             tilt='tilt-c'
         />
+        <Contact/>
     </div>
 )
 

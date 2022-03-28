@@ -9,6 +9,8 @@ import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
 
 import Navbar from '../components/Navbar';
+import Contact from '../components/Contact.js'
+
 
 const IndexPage = () => (
     <>
@@ -35,6 +37,8 @@ const IndexPage = () => (
                 <a className="grid-item green-box" href="/projects">Past Impact</a>
             </div>
         </div>
+        <Contact/>
+
     </>
 )
 

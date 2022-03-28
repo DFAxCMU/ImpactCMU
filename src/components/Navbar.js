@@ -25,8 +25,8 @@ function Navbar() {
                     <div className="cover"></div>
                     <a className="menu-item" href="/about">About</a>
                     <a className="menu-item" href="/timeline">Timeline</a>
-                    <a className="menu-item" href="/resources">Resources</a>
                     <a className="menu-item" href="https://forms.gle/LMyKcb1ctstv5XUN6">Submit a Project</a>
+                    <a className="menu-item" href="/resources">Resources</a>
                     <a className="menu-item" href="/projects">Past Impact</a>
                 </div>
                 :

@@ -8,6 +8,7 @@ import '../styles/style.css'
 import '../styles/page.css'
 import Navbar from '../components/Navbar';
 import Card from '../components/Card'
+import Contact from '../components/Contact.js'
 
 import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
@@ -49,7 +50,7 @@ const AboutPage = () => (
                 />
             </div>
         </div>
-        <div className="spacer"></div>
+        <Contact/>
     </div>
 )
 

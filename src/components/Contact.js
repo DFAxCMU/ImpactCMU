@@ -3,6 +3,7 @@ import SectionTitle from './SectionTitle';
 
 export default function Contact() {
     return (
+        <>
         <div id="contact">
             <a href="https://www.facebook.com/Impact-CMU-2021-103085725200503/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16">
@@ -20,5 +21,7 @@ export default function Contact() {
                 </svg>
             </a>
         </div>
+        <div className="spacer"></div>
+        </>
     )
 }

@@ -172,6 +172,19 @@ a.green-box:hover {
     flex-wrap: wrap;
 }
 
+/* Align component */
+.align {
+    display: flex;
+}
+.left {
+    width: 40%;
+    text-align: right;
+}
+.right {
+    padding-left: 30px;
+    width: 60%;
+}
+
 
 @media screen and (max-width: 688px) {
     /* box styling */
@@ -246,6 +259,15 @@ a.green-box:hover {
     .poster-row {
         width: 100%;
         padding: 15px 0;
+    }
+
+    /* Align component */
+    .left {
+        width: 25%;
+    }
+    .right {
+        padding-left: 10px;
+        width: 75%;
     }
 
 }
