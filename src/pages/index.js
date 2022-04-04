@@ -27,7 +27,7 @@ const IndexPage = () => (
             </h3>
             <div className="nav-grid">
                 <a className="grid-item green-box" href="/about">About</a>
-                <a className="grid-item green-box" href="/timeline">Timeline</a>
+                <a className="grid-item green-box" href="/timeline">Event Schedule</a>
                 <p className="grid-item green-box"></p>
                 <p className="grid-item green-box"></p>
                 <a className="grid-item green-box" href="https://forms.gle/LMyKcb1ctstv5XUN6" target="_blank">Submit a Project</a>
