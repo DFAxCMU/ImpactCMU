@@ -12,6 +12,9 @@ import Contact from '../components/Contact.js'
 
 import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
+import plush1 from '../images/plush1.png'
+import plush2 from '../images/plush2.png'
+import plush3 from '../images/plush3.png'
 
 
 const AboutPage = () => (
@@ -38,16 +41,23 @@ const AboutPage = () => (
             <div className="body">
                 <Card 
                     title="Project Prizes"
-                    body="Each of the top 5 project submissions will receive $500 in funds to support the project."
+                    body="Each of the top 3 project submissions will receive $500 in funds to support the project."
                     bodyClass="medium"
                     tilt="tilt-a"
                 />
+                <div>
                 <Card 
                     title="Voter Prizes"
                     body="Voters will be automatically entered in a raffle for a variety of prizes (bluetooth speaker, plushies, etc)."
                     bodyClass="medium"
                     tilt="tilt-d"
                 />
+                <div style={{display: "flex", justifyContent: "space-around"}}>
+               <img className="tilt-c empty-box" src={plush1}/> 
+               <img className="tilt-b empty-box" src={plush2}/> 
+               <img className="tilt-c empty-box" src={plush3}/> 
+                </div>
+                </div>
             </div>
         </div>
         <Contact/>
