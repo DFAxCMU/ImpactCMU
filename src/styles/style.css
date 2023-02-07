@@ -1,0 +1,161 @@
+@import url('https://use.typekit.net/yop4tcm.css');
+
+:root {
+    --darkblue: #0B1C4F;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px
+}
+
+p {
+    max-width: 500px;
+    font-family: "degular", sans-serif;
+    font-weight: 500;
+}
+
+.big-header {
+    font-size: 80px;
+    font-family: "swear-display-cilati", sans-serif;
+    font-weight: 500;
+}
+
+h1 {
+    padding-bottom: 12px;
+    font-family: "swear-display-cilati", sans-serif;
+    font-weight: 500;
+}
+
+h2 {
+    padding-bottom: 12px;
+    font-family: "swear-display-cilati", sans-serif;
+    font-weight: 500;
+}
+
+button {
+    border: 2px solid var(--darkblue);
+    border-image: url('../images/ButtonBorder.svg');
+    border-image-slice: 10;
+    border-image-width: 5;
+    border-image-outset: 1;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: var(--darkblue);
+    font-family: "degular", sans-serif;
+    padding: 14px 28px;
+    font-size: 16px;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: white;
+}
+
+a {
+    color: var(--dark-blue)
+}
+
+.content {
+    color: var(--darkblue);
+    margin: auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+.center > * {
+    text-align: center;
+}
+
+.two-col {
+    display: flex;
+}
+.two-col > h2 {
+    min-width: 110px;
+}
+
+.footer-col {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col > a {
+    width: 200px;
+}
+
+#hero {
+    background: url('../images/background/HeroBackground.png');
+}
+
+#about {
+    background: url('../images/background/AboutBackground.png');
+}
+
+#timeline {
+    background: url('../images/background/TimelineBackground.png');
+}
+
+#gallery {
+    background: url('../images/background/GalleryBackground.png');
+}
+
+#footer {
+    background: url('../images/background/FooterBackground.png');
+}
+
+#hero, #about, #timeline, #gallery, #footer {
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    position: block;
+    color: var(--darkblue);
+}
+
+#footer {
+    min-height: 50vh;
+}
+
+.poster {
+    width: 100%;
+}
+
+.poster-row {
+    flex: 25%;
+    padding: 12px;
+}
+
+.posters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 500px) {
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .big-header {
+        font-size: 60px;
+    }
+    .footer-col > a {
+        flex-basis: 30%;
+    }
+    .poster-row {
+        flex: 50%;
+        padding: 6px;
+    }
+}
