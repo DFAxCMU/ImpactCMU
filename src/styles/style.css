@@ -151,8 +151,8 @@ a {
     .big-header {
         font-size: 60px;
     }
-    .footer-col > a{
-        flex-basis: 50%;
+    .footer-col > a {
+        flex-basis: 30%;
     }
     .poster-row {
         flex: 50%;
