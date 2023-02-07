@@ -1,51 +1,27 @@
 import React from 'react';
-import {
-    Container,
-    Row,
-    Col,
-} from 'react-bootstrap';
-
-import SectionTitle from './SectionTitle';
-import dfaLogo from '../images/orange-header.jpg'
 
 const About = () => ( 
-    <section 
-        id="about"
-        className="main-container"
-    >
-        <Container>
-            <SectionTitle title="About">
-                We are showcasing the power Carnegie Mellon students have to make a positive change towards social good.
-            </SectionTitle>
-            <Row>
-                <Col md={ 6 }>
-                    <p>
-                        Carnegie Mellon students are using their technical, art, business, and social science skills to solve problems at the local, national, and international levels.
-                    </p>
-                    <p>
-                        ImpactCMU is a celebration and exhibition of this achievment.
-                    </p>
-                    <p>
-                        Join us as we give visibility to the various projects going on around campus that are impacting lives around the world.
-                    </p>
-                </Col>
-                <Col md={ 6 }>
-                    <h2 className="text-center">Hosted By</h2>
-                    <div className="container">
-                        <a href="http://dfacmu.com">
-                            <img
-                                src={ dfaLogo } 
-                                alt="DFAxCMU" 
-                                style={{
-                                    width: '100%',
-                                    marginBottom: 24,
-                                }}
-                            />
-                        </a>
-                    </div>
-                </Col>
-            </Row>
-        </Container>
+    <section id="about">
+        <div className="content">
+            <div className="center">
+                <h1>General</h1>
+            </div>
+            <div className="two-col">
+                <h2>Who</h2>
+                <p>Impact CMU invites undergrad and graduate students at Carnegie Mellon to showcase how they have worked with a community. <strong>Student organizations and research, personal, and hackathon projects</strong> are all welcome to contribute their work!</p>
+            </div>
+            <div className="two-col">
+                <h2>What</h2>
+                <p><strong>You will be showcasing your work through a poster</strong> and optional demos. Attendees will view different teams, talk to you about your work, and vote to win prizes! Faculty judges will also take part in viewing work and discussing your creations! This is a great opportunity to talk to your peers, get feedback from your professors, and for student organizations to promote to a large audience.</p>
+            </div>
+            <div className='two-col'>
+                <h2>Where</h2>
+                <p>Impact CMU will be hosted in the UC during Carnival!</p>
+            </div>
+        </div>
+        <br></br>
+        <br></br>
+
     </section>
 )
 
