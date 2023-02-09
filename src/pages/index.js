@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
 import ImpactCMU from './impactcmu.js'
+import { SEO } from "../components/seo"
 
 const IndexPage = ({ data }) => (
     <div>
@@ -16,3 +17,7 @@ const IndexPage = ({ data }) => (
 )
 
 export default IndexPage
+
+export const Head = () => (
+    <SEO />
+  )
