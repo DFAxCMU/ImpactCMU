@@ -21,6 +21,6 @@ export default IndexPage
 export const Head = () => (
     <>
       <title>Hello World</title>
-      <meta name="description" content="Hello World" />
+      <meta name="description" content="Impact CMU 2023 is an annual showcase of CMU student-led social impact projects." />
     </>
   )
