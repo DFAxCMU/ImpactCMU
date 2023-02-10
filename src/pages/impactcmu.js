@@ -23,3 +23,7 @@ const ImpactCMU = () => (
 )
 
 export default ImpactCMU
+
+export const Head = () => (
+    <SEO />
+  )
