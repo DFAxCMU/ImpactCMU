@@ -19,6 +19,5 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const Head = () => (
-    <SEO title="ImpactCMU" description="Impact CMU 2023 is an annual showcase of CMU student-led social impact projects. Organized by Design for America, the goal of Impact CMU is to celebrate our successes and to create a culture of social good on campus.">
-    </SEO>
+    <SEO title="ImpactCMU" description="Impact CMU 2023 is an annual showcase of CMU student-led social impact projects. Organized by Design for America, the goal of Impact CMU is to celebrate our successes and to create a culture of social good on campus." />
   )
