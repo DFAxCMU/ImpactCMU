@@ -7,15 +7,15 @@ const Timeline = () => (
                 <h1>Timeline</h1>
             </div>
             <div className="two-col">
-                <h2>2/26</h2>
+                <h2>3/3</h2>
                 <p><a href="https://forms.gle/YTnNBSFBfKpLqC8Y8" target="_blank">Project submission form</a> due!</p>
             </div>
             <div className="two-col">
-                <h2>3/3</h2>
+                <h2>3/26 @ 2-3PM</h2>
                 <p>Mandatory information session</p>
             </div>
             <div className='two-col'>
-                <h2>4/2</h2>
+                <h2>4/2 @ 1-2PM</h2>
                 <p>Optional poster session</p>
             </div>
             <div className='two-col'>
