@@ -13,6 +13,7 @@ const IndexPage = ({ data }) => (
             <link rel="icon" type="image/png" sizes="16x16" href={ favicon32 } />
             <meta name="description" content="Impact CMU 2023 is an annual showcase of CMU student-led social impact projects." />
             <meta name="google-site-verification" content="FKG5n1dQ9rDOxQ8T1zeBgF6BHPwzjBepMsnfc3YCI2o" />
+            <meta name="keywords" content="impact, carnegie mellon, CMU, DFA, design for dmerica, impactcmu" />
         </Helmet>
         <ImpactCMU/>
     </div>
