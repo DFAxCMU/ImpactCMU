@@ -11,16 +11,11 @@ const IndexPage = ({ data }) => (
             <title>ImpactCMU</title>
             <link rel="icon" type="image/png" sizes="32x32" href={ favicon16 } />
             <link rel="icon" type="image/png" sizes="16x16" href={ favicon32 } />
+            <meta name="description" content="Impact CMU 2023 is an annual showcase of CMU student-led social impact projects." />
+            <meta name="google-site-verification" content="FKG5n1dQ9rDOxQ8T1zeBgF6BHPwzjBepMsnfc3YCI2o" />
         </Helmet>
         <ImpactCMU/>
     </div>
 )
 
 export default IndexPage
-
-export const Head = () => (
-    <>
-      <title>Hello World</title>
-      <meta name="description" content="Impact CMU 2023 is an annual showcase of CMU student-led social impact projects." />
-    </>
-  )
