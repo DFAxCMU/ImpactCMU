@@ -28,7 +28,7 @@ const Footer = () => (
                     <p>Add our calendar</p>
                 </div>
             </a>
-            <a href="https://forms.gle/YTnNBSFBfKpLqC8Y8" target="_blank">
+            {/* <a href="https://forms.gle/YTnNBSFBfKpLqC8Y8" target="_blank">
                 <div className="col">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
                         <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
@@ -36,7 +36,7 @@ const Footer = () => (
                     </svg>
                     <p>Register a project!</p>
                 </div>
-            </a>
+            </a> */}
             <a href="mailto:impactcmu.dfa@gmail.com">
                 <div className="col">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-open-heart" viewBox="0 0 16 16">
