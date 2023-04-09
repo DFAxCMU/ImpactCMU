@@ -50,4 +50,4 @@ const Gallery = () => (
     </section>
 )
 
-export default Gallery
+export default Gallery;

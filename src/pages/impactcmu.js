@@ -12,11 +12,12 @@ import Timeline from '../components/Timeline';
 import Gallery from '../components/Gallery';
 import Footer from '../components/Footer';
 import Projects from '../components/Projects';
-
+import Prizes from '../components/Prizes';
 
 const ImpactCMU = () => (
     <div>
         <Hero />
+        <Prizes />
         <Timeline />
         <Projects />
         <Gallery />

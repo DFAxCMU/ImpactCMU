@@ -7,34 +7,34 @@ const Timeline = () => (
                 <h1>Events</h1>
             </div>
             <div className="container">
-                <div className="item">
+                <div className="item itemEvent">
                     <div className="item2">
-                        <h2 class="item">Project Showcase</h2>
-                        <div className="contents"><p class="item">- - - - - - - - - - - - - - - - - - - - - - -</p></div>
-                        <h2 class="item">12-5PM</h2>
+                        <h2 class="event">Project Showcase</h2>
+                        <hr></hr>
+                        <h2 class="event">12-5PM</h2>
                     </div>
-                    <p> <strong>Enter into raffles to earn prizes and eat free pizza and popcorn!</strong> <br></br>View impactful projects from our participants and learn about their work.</p>
+                    <p class="event"> <strong>Enter into raffles to earn prizes and eat free pizza and popcorn!</strong> <br></br>View impactful projects from our participants and learn about their work.</p>
                 </div>
-                <div className="item">
+                <div className="item itemEvent">
                     <div className="item2">
-                        <h2 class="item">Kickoff Ceremony</h2>
-                        <div className="contents"><p class="item">- - - - - - - - - - - - - - - - - - - - - - - - -</p></div>
-                        <h2 class="item">12PM</h2>
+                        <h2 class="event">Kickoff Ceremony</h2>
+                        <hr></hr>
+                        <h2 class="event">12PM</h2>
                     </div>
-                    <p class="item">Listen to the opening ceremony with a special guest speaker. Project voting starts.</p>
+                    <p class="event">Listen to the opening ceremony with a special guest speaker. Project voting starts.</p>
                 </div>
-                <div className="item">
+                <div className="item itemEvent">
                     <div className="item2">
-                        <h2 class="item">Voting Ends</h2>
-                        <div className="contents"><p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p></div>
-                        <h2 class="item">4:30PM</h2>
+                        <h2 class="event">Voting Ends</h2>
+                        <hr></hr>
+                        <h2 class="event">4:30PM</h2>
                     </div>
                 </div>
-                <div className="item">
+                <div className="item itemEvent">
                     <div className="item2">
-                        <h2 class="item">Closing Ceremony</h2>
-                        <div className="contents"><p>- - - - - - - - - - - - - - - - - - - - - - - - -</p></div>
-                        <h2 class="item">5PM</h2>
+                        <h2 class="event">Closing Ceremony</h2>
+                        <hr></hr>
+                        <h2 class="event">5PM</h2>
                     </div>
                 </div>
             </div>

@@ -12,9 +12,17 @@ section {
 }
 
 p {
-    max-width: 500px;
+    max-width: 520px;
     font-family: "degular", sans-serif;
     font-weight: 500;
+}
+
+hr {
+    height: 1px;
+    display: block;
+    flex: 1;
+    border-top: 2px dashed var(--darkblue);
+    margin: 1.25rem 1rem;
 }
 
 .big-header {
@@ -94,6 +102,16 @@ a {
     width: 200px;
 }
 
+h2.event {
+    padding: 0;
+    margin: 0;
+}
+
+p.event {
+    padding: 0;
+    margin: 0;
+}
+
 h2.item {
     padding: 0;
     margin: 0;
@@ -104,25 +122,46 @@ p.item {
     margin: 0;
 }
 
+/* .half {
+    flex: 50%;
+} */
+
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: stretch;
     align-items: flex-start;
     padding: 0 .5rem 0 0;
+    flex: 1;
+}
+
+.container-border {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 2rem 0;
+    border-bottom: 1.5px solid var(--darkblue);
+    flex-grow: 1;
+    flex: 1;
 }
 
 .item{
     display: flex;
     flex-direction: column;
-    padding: 0 0 1rem 0;
+    padding: 0 1rem 1rem 0;
+    align-items: stretch;
+}
+
+.itemEvent {
+    width: 100%;
 }
 
 .item2 {
     display: flex;
-    flex-grow: 1;
     flex-direction: row;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .contents {
@@ -130,9 +169,16 @@ p.item {
 }
 
 .four-col {
-    max-width: 850px;
+    max-width: 600px;
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+}
+
+.two-colV2 {
+    max-width: 672px;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
 }
 
@@ -145,11 +191,11 @@ p.item {
 }
 
 #about {
-    background: url('../images/background/AboutBackground.png');
+    background: url('../images/background/AboutBackgroundLong.png');
 }
 
 #timeline {
-    background: url('../images/background/TimelineBackground.png');
+    background: url('../images/background/TimelineBackgroundLong.png');
 }
 
 #gallery {
@@ -160,7 +206,7 @@ p.item {
     background: url('../images/background/FooterBackground.png');
 }
 
-#hero, #about, #timeline, #gallery, #footer {
+#hero, #timeline, #gallery, #footer {
     width: 100%;
     min-height: 100vh;
     background-position: center;
@@ -168,6 +214,27 @@ p.item {
     background-size: auto 100%;
     position: block;
     color: var(--darkblue);
+}
+
+#about{
+    width: 100%;
+    min-height: 116vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    position: block;
+    color: var(--darkblue);
+}
+
+#timeline{
+    width: 100%;
+    min-height: 133vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    position: block;
+    color: var(--darkblue);
+    align-items: start;
 }
 
 #footer {
@@ -189,7 +256,32 @@ p.item {
     flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 500px) {
+.prizes {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+.prize {
+    padding: 0px 12px 12px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 126px;
+  }
+
+.prize-img {
+    width: 78px;
+    height: 78px;
+  }
+
+.prize-text {
+    margin-bottom: 15px;
+  }
+
+
+@media only screen and (max-width: 600px) {
     h1{
         font-size: 36px;
     }
