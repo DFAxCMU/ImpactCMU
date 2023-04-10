@@ -33,19 +33,19 @@ const Prizes = () => (
                     <h1>Project Awards</h1>
                     <div className="item">
                         <div className="item2">
-                            <h2 class="item">Most Impactful: $500</h2>
+                            <h2 class="item">Most Impactful: $250</h2>
                         </div>
                         <p>General student Vote</p>
                     </div>
                     <div className="item">
                         <div className="item2">
-                            <h2 class="item">Board Award: $500</h2>
+                            <h2 class="item">Board Award: $250</h2>
                         </div>
                         <p>Decided by the DFA executive board</p>
                     </div>
                     <div className="item">
                         <div className="item2">
-                            <h2 class="item">Faculty Favorite: $500</h2>
+                            <h2 class="item">Faculty Favorite: $250</h2>
                         </div>
                         <p>Decided by our guest faculty judges</p>
                     </div>
