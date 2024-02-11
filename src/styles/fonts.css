@@ -1,0 +1,20 @@
+/* src/fonts.css */
+@font-face {
+    font-family: 'ExtraLight';
+    src: url('../components/fonts/Spectral-ExtraLight.ttf') format('truetype');
+    /* font-weight: normal;
+    font-style: normal; */
+  }
+
+@font-face {
+  font-family: 'Light Italic';
+  src: url('../components/fonts/Spectral-LightItalic.ttf') format('truetype');
+  /* font-weight: normal;
+  font-style: italic; */
+}
+
+@font-face {
+  font-family: 'Pixel';
+  src: url('../components/fonts/ArgentPixelCF-Italic.woff2') format('woff2');
+  font-style: italic;
+}

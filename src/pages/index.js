@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
-import ImpactCMU from './impactcmu.js'
+import ImpactCMU from './ImpactCMU.js'
 
 const IndexPage = ({ data }) => (
     <div>

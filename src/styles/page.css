@@ -1,11 +1,11 @@
 @import url('https://use.typekit.net/yop4tcm.css');
 
-@font-face {
+/* @font-face {
     font-family: "swear-display-cilati", sans-serif;
     font-weight: 500;
     font-style: normal;
-}
-
+} */
+/* 
 .top-img-picture {
     background-color: red;
     transition: background-color 2s ease;
@@ -14,20 +14,20 @@
 .top-img-container {
     background-color: red;
     transition: background-color 2s ease;
-}
+} */
 
-.slider-banner-container {
+/* .slider-banner-container { */
     /*height: 100% !important;*/
-}
+/* } */
 
-.cover-photo {
+/* .cover-photo {
     width: 70%;
     top: 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: -430px;
-}
+} */
 
 .navbar.navbar-default {
     border: none;
@@ -48,9 +48,9 @@
     font-size: 20px;
 }
 
-.org-box {
+/* .org-box { */
     /*min-height: 477px;*/
-}
+/* } */
 
 .org-title {
     min-height: 66px;
