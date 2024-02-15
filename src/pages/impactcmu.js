@@ -14,16 +14,6 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Submit from '../components/Submit';
 import Schedule from '../components/Schedule';
-// import Timeline from '../components/Timeline';
-// const ImpactCMU = () => (
-//     <div>
-//         <Hero />
-//         <About />
-//         <Timeline />
-//         <Gallery />
-//         <Footer />
-//     </div>
-// )
 
 function ImpactCMU() {
     return (

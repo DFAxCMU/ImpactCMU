@@ -232,6 +232,13 @@ a {
     padding-right: 10px;
 }
 
+.sketch-iframe {
+    position: fixed;
+    left: 0;
+    top: -200px;
+    z-index: 0;
+}
+
 .draggable-box {
     width: 350px;
     height: 145px; 
@@ -240,6 +247,7 @@ a {
     border: 1px solid black; 
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /*shadowwwww*/
     cursor: move; /*cool drag cursor B)*/
+    z-index: 1;
   }
 
   .box-text {
