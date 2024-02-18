@@ -1,6 +1,8 @@
 import React from 'react';
 import { Nav, NavItem} from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+
+import {Link} from 'gatsby';
 import logo from './2024img/logo.png';
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
