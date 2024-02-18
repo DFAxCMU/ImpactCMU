@@ -21,8 +21,6 @@ const Hero = () => (
                         <h3 class = "time">4:30PM</h3>
                         <p>Enter into raffles to earn prizes and eat free pizza and popcorn!</p>
                     </div>
-                </div>
-                <div class="row2">
                     <div className="box1">
                         <h3>Kickoff Ceremony</h3>
                         <h3 class = "time">12PM</h3>
@@ -34,6 +32,9 @@ const Hero = () => (
                         <p>Listen to the opening ceremony with a special guest speaker. Project voting starts.</p>
                     </div>
                 </div>
+                {/* <div class="row2">
+
+                </div> */}
             </div>
         </div>
     </section>
