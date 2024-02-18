@@ -2,8 +2,9 @@ import React from 'react';
 import submit from './2024img/Submit.png';
 
 const Submit = () => {
-    const handleButtonClick = (boxName) => {
-        console.log(`${boxName} button clicked`);
+    const handleButtonClick = (url) => {
+        // console.log(`${boxName} button clicked`);
+        window.open(url, '_blank');
         // Perform actions based on the boxName or specific logic for the button
     };
 
@@ -57,7 +58,8 @@ const Submit = () => {
                 </div>
                 <center>
                     <div>
-                        <button onClick={() => handleButtonClick('aboutBox')} class = "submit-button">Submit a project</button>
+                        <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSdXLtbzD7CaYo_54JB5bKdsDMDsQTxrx_Bg5YPVCwCc8WtdZQ/viewform?usp=sf_link')} class = "submit-button">Submit a project
+                        </button>
                     </div>
                 </center>
             </div>

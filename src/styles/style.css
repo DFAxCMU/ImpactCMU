@@ -14,32 +14,32 @@ section {
 
 p {
     max-width: 500px;
-    font-family: 'ExtraLight', sans-serif;
+    font-family: 'InUL';
     color: black;
     font-weight: 500;
 }
 
 .big-header {
     font-size: 80px;
-    font-family: "swear-display-cilati", sans-serif;
+    font-family: 'Impact';
     font-weight: 500;
 }
 
 h1 {
     padding-bottom: 12px;
-    font-family: "swear-display-cilati", sans-serif;
+    font-family: 'Impact';
     font-weight: 500;
 }
 
 h2 {
-    font-family: 'ExtraLight', sans-serif;
+    font-family: 'InL';
     font-weight: 500;
     font-size: 18px;    
     color: black;
 }
 
 h3 {
-    font-family: 'ExtraLight', sans-serif;
+    font-family: 'InL';
     font-weight: 500;
     font-size: 18px;    
     color: black;
@@ -194,9 +194,14 @@ a {
     display: inline-block;
     position: relative;
     color: black;
-    font-family: 'Light Italic', sans-serif;
+    font-family: 'InLI';
     font-size: 20px;
   }
+
+h4 {
+    font-family: 'InLI';
+    size: 20px;
+}
   
 .hover-underline-animation::after {
     content: '';
@@ -236,7 +241,6 @@ a {
     position: fixed;
     left: 0;
     top: -200px;
-    z-index: 0;
 }
 
 .draggable-box {
@@ -248,10 +252,11 @@ a {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /*shadowwwww*/
     cursor: move; /*cool drag cursor B)*/
     z-index: 1;
+    position: relative;
   }
 
   .box-text {
-    font-family: 'ExtraLight', sans-serif;
+    font-family: 'InUL';
     margin-bottom: 0px;
   }
 
@@ -261,7 +266,7 @@ a {
 
   .draggable-box button {
     width: 140px;
-    font-family: 'ExtraLight', sans-serif;
+    font-family: 'InL';
     padding: 6px 10px;
     margin-top: 15px;
     border-color: black;
@@ -280,7 +285,7 @@ a {
 
 .submit-button {
     width: 175px;
-    font-family: 'ExtraLight', sans-serif;
+    font-family: 'InL';
     padding: 6px 10px;
     margin-top: 15px;
     border-color: black;

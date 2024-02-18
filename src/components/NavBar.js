@@ -17,7 +17,7 @@ const tabs = [{
     route: "/Schedule",
     label: "schedule"
   },{
-    route: "/Schedule",
+    route: "https://dfaxcmu.notion.site/ecfaf84847754757bf0809df74a3253c?v=087d30146f574a93bc8b935ecb0f4560&pvs=4",
     label: "2023 impact archive"
   }]
   

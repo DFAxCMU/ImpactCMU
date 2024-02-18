@@ -3,8 +3,9 @@ import Draggable from "react-draggable";
 import '../dist/css/bootstrap.min.css';
 
 const Hero = () => {
-    const handleButtonClick = (boxName) => {
-        console.log(`${boxName} button clicked`);
+    const handleButtonClick = (url) => {
+        // console.log(`${boxName} button clicked`);
+        window.open(url, '_blank');
         // Perform actions based on the boxName or specific logic for the button
     };
 
@@ -24,7 +25,7 @@ const Hero = () => {
             <div className="draggable-box">
               <p class = "box-text">Enter in your social good project for a change to win $250!</p>
               <center>
-                <button onClick={() => handleButtonClick('aboutBox')}>Submit</button>
+                <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSdXLtbzD7CaYo_54JB5bKdsDMDsQTxrx_Bg5YPVCwCc8WtdZQ/closedform')}>Submit</button>
               </center>
             </div>
           </Draggable>

@@ -18,3 +18,19 @@
   src: url('../components/fonts/ArgentPixelCF-Italic.woff2') format('woff2');
   font-style: italic;
 }
+
+
+@font-face {
+  font-family: 'InLI';
+  src: url('../components/fonts/InferiLightItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'InUL';
+  src: url('../components/fonts/InferiUltraLight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'InL';
+  src: url('../components/fonts/InferiLight.otf') format('opentype');
+}
