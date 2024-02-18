@@ -329,7 +329,7 @@ h4 {
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
-#submit .boxKMS, #submit .box1 .box2{
+#submit .boxKMS, #submit .box1 .box2, .box3{
     max-width: 300px !important; 
     /* margin: 0px auto !important; */
     display: block !important;
@@ -342,7 +342,7 @@ h4 {
     animation-delay: 0.3s; 
 } */
 
- .box, .boxKMS, .box2, .boxes1, h4{
+ .box, .boxKMS, .box2, .boxes1, h4, .box3{
     opacity: 0; 
     animation: slideFadeIn 1s ease-in-out forwards; 
     animation-delay: 0.2s;
@@ -415,6 +415,16 @@ h4 {
     position: relative;
 }
 
+.box3 {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;   
+    background-color: white;
+    border: 1px solid black; 
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    position: relative;
+}
+
 .boxes, .boxes1 {
     display: flex;
     justify-content: center;
@@ -447,6 +457,15 @@ h4 {
 }
 
 .box2 {
+    flex: 0 0 auto; 
+    width: 250px; 
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.box3 {
     flex: 0 0 auto; 
     width: 250px; 
     padding: 20px;
