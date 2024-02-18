@@ -16,9 +16,6 @@ const Hero = () => {
             <div className="draggable-box">
               <h2 class = "box-title">About</h2>
               <p class = "box-text">Impact CMU 2024 is an end of year showcase of CMU student-led social impact projects.</p>
-              <div className="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
-              </div>
             </div>
           </Draggable>
           <Draggable defaultPosition={{x: -400, y: 100}}>
@@ -30,7 +27,7 @@ const Hero = () => {
             </div>
           </Draggable>
           <div className="sketch-iframe">
-            <iframe src="https://openprocessing.org/sketch/2178953/embed/" width="2000px" height="1200px"></iframe>
+            <iframe src="https://openprocessing.org/sketch/2178967/embed/" width="2400px" height="1224px"></iframe>
           </div>
         </div>
       </section>
