@@ -26,7 +26,7 @@ const Hero = () => {
             </Draggable>
             <Draggable defaultPosition={{x: -400, y: 100}}>
               <div className="draggable-box">
-                <p class = "box-text">Enter in your social good project for a change to win $250!</p>
+                <p class = "box-text">Enter in your social good project for a chance to win $250!</p>
                 <center>
                   <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSdXLtbzD7CaYo_54JB5bKdsDMDsQTxrx_Bg5YPVCwCc8WtdZQ/closedform')}>Submit</button>
                 </center>
