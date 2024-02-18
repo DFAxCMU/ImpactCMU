@@ -9,50 +9,54 @@ const Submit = () => {
     };
 
     return (
-        <section id="submit">
+        <section id="submit" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <div className="container-fluid">
                 <div className=" text-center">
                     <a className="navbar-brand" href="/home">
                         <img src={submit} alt="title-img" class="title-img"/>
                     </a>
                 </div>
-                <div class="boxes">
-                    <div class="inner d-flex flex-row justify-content-between w-100 container-fluid">
-                        <h4>Project Awards</h4>
-                        <div class="box">
-                            <h3>Board Award: $250</h3>
-                            <p>Decided by DFA board</p>
-                        </div>
-                        <div class="box">
-                            <h3>Most Impactful: $250</h3>
-                            <p>General student vote</p>
-                        </div>
-                        <div class="box">
-                            <h3>Faculty Favorite: $250</h3>
-                            <p>Decided by guest faculty judges</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="boxes1" style={{ display: 'flex'}}> 
-                    <h4>Timeline</h4>
-                    <div class="row1">
-                        <div className="box1">
-                            <h3>March 3</h3>
-                            <p>Project submission form due</p>
-                        </div>
-                        <div className="box1">
-                            <h3>March 26</h3>
-                            <p>Mandatory information session</p>
+                <div class="OMG">
+                    <div class="boxes">
+                    {/* <h4 className="left-aligned-title">Project Awards</h4> */}
+                        <div class="inner d-flex flex-row justify-content-between w-100 container-fluid">
+                            <div class="boxKMS">
+                                <h5>Board Award: $250</h5>
+                                <p>Decided by DFA board</p>
+                            </div>
+                            <div class="boxKMS">
+                                <h5>Most Impactful: $250</h5>
+                                <p>General student vote</p>
+                            </div>
+                            <div class="boxKMS">
+                                <h5>Faculty Favorite: $250</h5>
+                                <p>Decided by guest faculty judges</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="row2">
-                        <div className="box1">
-                            <h3>April 2</h3>
-                            <p>Optional poster session</p>
-                        </div>
-                        <div className="box1">
-                            <h3>April 9</h3>
-                            <p>Poster submission due</p>
+                    <div className="timeline-container">
+                    {/* <h4 className="timeline-title">Timeline</h4> */}
+                        <div className="boxes" style={{ display: 'flex'}}> 
+                            <div class="row1">
+                                <div className="box2">
+                                    <h5>March 3</h5>
+                                    <p>Project submission form due</p>
+                                </div>
+                                <div className="box2">
+                                    <h5>March 26</h5>
+                                    <p>Mandatory information session</p>
+                                </div>
+                            </div>
+                            <div class="row2">
+                                <div className="box2">
+                                    <h5>April 2</h5>
+                                    <p>Optional poster session</p>
+                                </div>
+                                <div className="box2">
+                                    <h5>April 9</h5>
+                                    <p>Poster submission due</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

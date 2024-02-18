@@ -10,7 +10,7 @@ const About = () => (
                 </a>
             </div>
             <div class="boxes">
-                <div class="inner d-flex flex-row justify-content-between w-100 container-fluid">
+                <div class="inner-box">
                     <div class="box">
                         <h3>Who</h3>
                         <p>Impact CMU invites undergrad and graduate students at Carnegie Mellon to showcase how they have worked with a community. Student organizations and research, personal, and hackathon projects are all welcome to contribute their work!</p>
