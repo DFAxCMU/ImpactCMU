@@ -1,9 +1,10 @@
 import React from 'react'
 
-import NavBar from "../components/NavBar";
+// import NavBar from "../components/NavBar";
 
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import { createBrowserHistory } from "history";
+
 
 import 'popper.js'
 import '../dist/css/bootstrap.min.css';
@@ -21,7 +22,7 @@ const history = createBrowserHistory();
 function ImpactCMU() {
     return (
         <BrowserRouter history={history}>
-            <NavBar />
+            {/* <NavBar /> */}
             <Routes>
                 <Route exact path="/" element={<Hero />} />
                 <Route path="/About" element={<About />} />
