@@ -2,7 +2,7 @@ import React from 'react'
 
 // import NavBar from "../components/NavBar";
 
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {HashRouter as Router, Routes, Route} from "react-router-dom";
 import { createBrowserHistory } from "history";
 
 
@@ -21,15 +21,14 @@ const history = createBrowserHistory();
 
 function ImpactCMU() {
     return (
-        <BrowserRouter history={history}>
-            {/* <NavBar /> */}
+        <Router baseline="/">
             <Routes>
                 <Route exact path="/" element={<Hero />} />
                 <Route path="/About" element={<About />} />
                 <Route path="/Schedule" element={<Schedule />} />
                 <Route path="/Submit" element={<Submit />} />
             </Routes>
-        </BrowserRouter>
+        </Router>
     );
 }
 
