@@ -546,11 +546,11 @@ h4 {
 /* style sheet for TopBar */
 
 .navContainer {
-    background-color: var(--accent-color);
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    z-index: 1;
+    /* margin-bottom: 10px; */
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:0px;
 }
 
 .top-bar {
