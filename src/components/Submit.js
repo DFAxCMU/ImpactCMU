@@ -15,9 +15,9 @@ const Submit = () => {
             <section id="submit" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
                 <div className="container-fluid">
                     <div className=" text-center">
-                        <a className="navbar-brand" href="/home">
+                        <div className="navbar-brand">
                             <img src={submit} alt="title-img" class="title-img"/>
-                        </a>
+                        </div>
                     </div>
                     <div class="OMG">
                         {/* <div class="boxes"> */}

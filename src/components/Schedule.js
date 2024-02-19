@@ -8,9 +8,9 @@ const Hero = () => (
         <section id="schedule" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <div className="container-fluid">
                 <div className=" text-center">
-                    <a className="navbar-brand" href="/home">
+                    <div className="navbar-brand">
                         <img src={schedule} alt="title-img" class="title-img"/>
-                    </a>
+                    </div>
                 </div>
                 <div className="boxes1" style={{ display: 'flex'}}> 
                     {/* <div class="row1"> */}

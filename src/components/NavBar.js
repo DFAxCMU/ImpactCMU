@@ -63,14 +63,6 @@ return (
                   </div>
                 </a>
               </div>
-                {/* <NavLink to="/search" className="nav-link">
-                  Search
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/login" className="nav-link">
-                  Login
-                </NavLink> */}
               </NavItem>
             </Nav>
         </div>
@@ -84,7 +76,6 @@ return (
             <NavItem key={`tab-${index}`}>
               <NavLink to={tab.route} className="nav-link" activeClassName="active">
                 <div className="row d-flex flex-column justify-content-center align-items-center">
-                  {/* <FontAwesomeIcon size="lg" icon={tab.icon}/> */}
                   <div class="hover-underline-animation">{tab.label}</div>
                 </div>
               </NavLink>
