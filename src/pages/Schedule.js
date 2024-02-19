@@ -2,6 +2,12 @@ import React from 'react';
 import schedule from '../components/2024img/Schedule.png';
 import NavBar from "../components/NavBar";
 
+import 'popper.js'
+import '../dist/css/bootstrap.min.css';
+import '../styles/style.css';
+import '../styles/page.css';
+import '../styles/fonts.css';
+
 const Hero = () => (
     <>
         <NavBar />

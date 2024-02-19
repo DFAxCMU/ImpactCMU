@@ -3,6 +3,12 @@ import Draggable from "react-draggable";
 import '../dist/css/bootstrap.min.css';
 import NavBarHero from "../components/NavBarHero";
 
+import 'popper.js'
+import '../dist/css/bootstrap.min.css';
+import '../styles/style.css';
+import '../styles/page.css';
+import '../styles/fonts.css';
+
 const Hero = () => {
     const handleButtonClick = (url) => {
         // console.log(`${boxName} button clicked`);

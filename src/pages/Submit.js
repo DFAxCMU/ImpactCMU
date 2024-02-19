@@ -2,6 +2,12 @@ import React from 'react';
 import submit from '../components/2024img/Submit.png';
 import NavBar from "../components/NavBar";
 
+import 'popper.js'
+import '../dist/css/bootstrap.min.css';
+import '../styles/style.css';
+import '../styles/page.css';
+import '../styles/fonts.css';
+
 const Submit = () => {
     const handleButtonClick = (url) => {
         // console.log(`${boxName} button clicked`);

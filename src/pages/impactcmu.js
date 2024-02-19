@@ -25,7 +25,6 @@ function ImpactCMU() {
     return (
         <div>
             <Hero/>
-            <NavBar/>
         </div>
         
 

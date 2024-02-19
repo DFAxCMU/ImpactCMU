@@ -13,7 +13,6 @@ const IndexPage = ({ data }) => (
             <link rel="icon" type="image/png" sizes="32x32" href={ favicon16 } />
             <link rel="icon" type="image/png" sizes="16x16" href={ favicon32 } />
         </Helmet>
-        <NavBar/>
         <Hero/>
         {/* <ImpactCMU/> */}
     </div>

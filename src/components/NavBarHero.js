@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-const logo = "./2024img/logo.png";
+// const logo = "./2024img/logo.png";
+import logo from './2024img/logo.png';
 
 /*  TopBar is the navigation bar at the top of every page */
 
@@ -13,9 +14,9 @@ export default function TopBar(props) {
             <Navbar>
                 <div className="top navbar navbar-expand-md navbar-light fixed-top">
                     <div className="container-fluid">
-                        {/* <a className="navbar-brand" href="/Hero">
-                            <img src={logo} alt="logo" class="logo"/>
-                        </a> */}
+                        {/* <a className="navbar-brand" href="/Hero"> */}
+                        <img src={logo} alt="logo" className="logo" style={{ visibility: 'hidden' }}/>
+                        {/* </a> */}
                         <Nav className="ml-auto">
                             <div className="row">
                                 <a href="https://www.instagram.com/impact.cmu/" target="_blank">
@@ -51,17 +52,14 @@ export default function TopBar(props) {
                         </Nav>
                     </div>
                 </div>
-            </Navbar>
-
-            <Navbar>
-                <div className="navbar fixed-bottom navbar-light">
+                <div className="navbar fixed-bottom navbar-light min96px">
                     <div className="w-100">
                         <Nav className="inner d-flex flex-row justify-content-between w-100 container-fluid">
-                            <Nav.Link href="/About" className="hover-underline-animation">About</Nav.Link>
-                            <Nav.Link href="/Submit" className="hover-underline-animation">Submit</Nav.Link>
-                            <Nav.Link href="/Schedule" className="hover-underline-animation">Schedule</Nav.Link>
+                            <Nav.Link href="/About" className="hover-underline-animation">about</Nav.Link>
+                            <Nav.Link href="/Submit" className="hover-underline-animation">submit</Nav.Link>
+                            <Nav.Link href="/Schedule" className="hover-underline-animation">schedule</Nav.Link>
                             <Nav.Link href="https://dfaxcmu.notion.site/ecfaf84847754757bf0809df74a3253c?v=087d30146f574a93bc8b935ecb0f4560&pvs=4" className="hover-underline-animation" target="_blank_">
-                                Impact Archive
+                                2023 impact archive
                             </Nav.Link>
                         </Nav>
                     </div>
