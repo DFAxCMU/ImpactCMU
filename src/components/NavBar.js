@@ -27,7 +27,7 @@ return (
     <div>
     <nav className="top navbar navbar-expand-md navbar-light fixed-top" 	role="navigation">
         <div className="container-fluid">
-            <a className="navbar-brand" href="/home">
+            <a className="navbar-brand" href="/">
               <img src={logo} alt="logo" class="logo"/>
             </a>
             <Nav className="ml-auto">
