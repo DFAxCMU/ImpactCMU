@@ -1,5 +1,5 @@
 import React from 'react';
-import submit from './2024img/Submit.png';
+import submit from '../components/2024img/Submit.png';
 import NavBar from "../components/NavBar";
 
 const Submit = () => {

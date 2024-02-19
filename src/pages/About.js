@@ -1,5 +1,5 @@
 import React from 'react';
-import about from './2024img/About.png';
+import about from '../components/2024img/About.png';
 import NavBar from "../components/NavBar";
 
 const About = () => ( 

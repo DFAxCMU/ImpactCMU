@@ -1,5 +1,5 @@
 import React from 'react';
-import schedule from './2024img/Schedule.png';
+import schedule from '../components/2024img/Schedule.png';
 import NavBar from "../components/NavBar";
 
 const Hero = () => (

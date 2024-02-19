@@ -541,6 +541,151 @@ h4 {
     justify-content: center; 
 } */
 
+/* ------------ */
+
+/* style sheet for TopBar */
+
+.navContainer {
+    background-color: var(--accent-color);
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    z-index: 1;
+}
+
+.top-bar {
+    background-color: var(--accent-color);
+    max-width: var(--max-width);
+    padding: 20px;
+}
+
+.top-bar-wide {
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 24px;
+    font-family: var(--title), var(--title-fallback);
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;    
+    color: var(--lightText-color);
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.name {
+    width: 139px;
+    color: var(--lightText-color);
+    margin: 0px;
+    margin-left: 20px;
+}
+
+.name .h4 {
+    margin: 0px;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+}
+
+.nav-pages {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 30px;
+}
+
+/* mobile version: */
+.top-bar-small {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.dropdown-item {
+    text-decoration: none;
+    color: black;
+    font-family: var(--title), var(--title-fallback);
+}
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 25px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.hamburger:hover {
+    color: var(--accent-color);
+}
+
+.nav-menu { 
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--accent-color);
+    border: none;
+    padding: 120px 70px;
+    margin: 0px;
+    font-family: var(--title), var(--title-fallback);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.active {
+    display: block;
+    transition: all 2s ease-in;
+    z-index: 1;
+}
+
+.nav-vertical {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* override bootstrap default styling */
+.top-bar .nav-pages .nav-link {
+    color: var(--lightText-color);
+    text-decoration: none;
+}
+.top-bar .nav-pages .nav-link:hover{
+    color: var(--secondary-color);
+}
+
+.nav-menu .nav-vertical .nav-link {
+    color: var(--lightText-color);
+    text-decoration: none;
+}
+
+
+.dropdown-small { 
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: rgb(99, 99, 99);
+}
+
+.nav-close {
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    color: white;
+}
+
+.nav-close:hover {
+    color: var(--accent-color);
+}
 
 
 
