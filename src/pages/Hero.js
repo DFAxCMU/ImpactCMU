@@ -22,13 +22,13 @@ const Hero = () => {
         <NavBarHero />
         <section id="about">
           <div className="content">
-            <Draggable defaultPosition={{x: 350, y: 75}}>
+            <Draggable defaultPosition={{x: 350, y: -36}}>
               <div className="draggable-box">
                 <h2 class = "box-title">About</h2>
                 <p class = "box-text">Impact CMU 2024 is an end of year showcase of CMU student-led social impact projects.</p>
               </div>
             </Draggable>
-            <Draggable defaultPosition={{x: -400, y: 100}}>
+            <Draggable defaultPosition={{x: -400, y: 64}}>
               <div className="draggable-box">
                 <p class = "box-text">Enter in your social good project for a chance to win $250!</p>
                 <center>

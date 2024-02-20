@@ -243,10 +243,10 @@ h4 {
 
 .sketch-iframe {
     position: absolute;
-    top: -200px;
+    top: -224px;
     left: 50%;
     transform: translateX(-50%); 
-    height: 100vh;
+    min-height: 100vh;
     overflow: clip;
 }
 
