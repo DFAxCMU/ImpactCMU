@@ -80,7 +80,7 @@ const Submit = () => {
                                 </div>
                                 <div className="box2">
                                     <h7>April 11</h7>
-                                    <h6 class="time2">12-5PM</h6>
+                                    <h6 class="time2">12-4PM</h6>
                                     <small><p>Cohon University Center</p></small>
                                     <spacer></spacer>
                                     <p>Impact CMU Date!!</p>

@@ -24,25 +24,25 @@ const Hero = () => (
                     <div className="timeline-container">
                         <div className="box3">
                             <h3>Kickoff Ceremony</h3>
-                            <h3 class = "time">12PM</h3>
+                            <h3 class = "time">12-12:30PM</h3>
                             <p>Listen to the opening ceremony with a special guest speaker. Project voting starts.</p>
                         </div>
                         <div className="box3">
                             <h3>Project Showcase</h3>
-                            <h3 class = "time">12-4PM</h3>
+                            <h3 class = "time">12:30-3PM</h3>
                             <p>Eat free popcorn as you view impactful projects from our participants and learn about their work.</p>
                         </div>
                     {/* </div> */}
                     {/* <div class="row2"> */}
                         <div className="box3">
                             <h3>Voting Closes</h3>
-                            <h3 class = "time">4PM</h3>
+                            <h3 class = "time">3PM</h3>
                             <p>Vote for your favorite project and enter into raffles to earn prizes!</p>
                         </div>
                         <div className="box3">
                             <h3>Closing Ceremony</h3>
-                            <h3 class = "time">4:30PM</h3>
-                            <p>Listen to the closing ceremony. Project voting ends.</p>
+                            <h3 class = "time">3:30-4PM</h3>
+                            <p>Listen to the closing ceremony. Find out who the project and raffle winner are!</p>
                         </div>
                     </div>
                     {/* </div> */}

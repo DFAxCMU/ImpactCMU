@@ -30,7 +30,7 @@ const About = () => (
                         </div>
                         <div class="box">
                             <h3>Where</h3>
-                            <p>April 11 @ Cohon University Center, 12-5PM</p>
+                            <p>April 11 @ Cohon University Center, 12-4PM</p>
                         </div>
                     </div>
                 </div>
