@@ -33,7 +33,7 @@ export default function TopBar(props) {
                                         </svg>
                                     </div>
                                 </a>
-                                <a href="https://calendar.google.com/calendar/u/1?cid=Y181NjI5MGVmNTYxOWZjYjEwM2ZjYzA5ZDBmZTNiODk4MzY0NzIwODNmODlmYmExNjk5NGI4NDg5ZWM4NDlkZWNlQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank">
+                                <a href="https://calendar.google.com/calendar/u/4?cid=NWM4ODhhNDZmZmNiNjY0N2VlYTNjZDk2OWIyN2I3NzRiMzMwOTVkNDQ0YmMzYWI5YzI0MjM3ZmY4YzEwMTc2N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank">
                                     <div className="col-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-plus" viewBox="0 0 16 16">
                                             <path d="M8 7a.5.5 0 0 1 .5.5V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5A.5.5 0 0 1 8 7z"/>
@@ -58,7 +58,7 @@ export default function TopBar(props) {
                             <Nav.Link href="/About" className="hover-underline-animation">about</Nav.Link>
                             <Nav.Link href="/Submit" className="hover-underline-animation">submit</Nav.Link>
                             <Nav.Link href="/Schedule" className="hover-underline-animation">schedule</Nav.Link>
-                            <Nav.Link href="https://dfaxcmu.notion.site/ecfaf84847754757bf0809df74a3253c?v=087d30146f574a93bc8b935ecb0f4560&pvs=4" className="hover-underline-animation" target="_blank_">
+                            <Nav.Link href="https://dfaxcmu.notion.site/ecfaf84847754757bf0809df74a3253c?v=add87e99dd0642ab9ed56d15d2c77924&pvs=4" className="hover-underline-animation" target="_blank_">
                                 2023 impact archive
                             </Nav.Link>
                         </Nav>
