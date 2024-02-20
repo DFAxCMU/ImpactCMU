@@ -63,7 +63,18 @@ h5 {
     font-size: 18px;    
     color: black;
     padding-bottom: 15px;
+}
 
+h7 {
+    font-family: 'InL';
+    font-weight: 500;
+    font-size: 18px;    
+    color: black;
+    padding-bottom: 0px;
+}
+
+spacer {
+    padding: 15px;
 }
 
 button:hover {
@@ -71,6 +82,15 @@ button:hover {
 }
 
 a {
+    color: var(--dark-blue)
+}
+
+a p {
+    text-decoration: underline;
+    color: rgba(0,0,0,.7);
+}
+
+a p:hover {
     color: var(--dark-blue)
 }
 
@@ -352,6 +372,11 @@ h4 {
     opacity: 0; 
     animation: slideFadeIn 1s ease-in-out forwards; 
     animation-delay: 0.2s;
+}
+
+.boxSection {
+    gap: 0;
+
 }
 
 .title-img {

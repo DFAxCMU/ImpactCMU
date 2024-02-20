@@ -48,33 +48,43 @@ const Submit = () => {
                         <center><h4 className="timeline-title">Timeline</h4></center>
                         <div className="timeline-container">
                             <div className="boxes33" style={{ display: 'flex'}}> 
-                                {/* <div class="row1"> */}
-                                    <div className="box2">
-                                        <h5>March 17</h5>
-                                        <h6 class="time2">2-3PM</h6>
-                                        <p>Information Session</p>
-                                    </div>
-                                    <div className="box2">
-                                        <h5>March 24</h5>
-                                        <p>Project Registration Due</p>
-                                    </div>
-                                {/* </div> */}
-                                {/* <div class="row2"> */}
-                                    <div className="box2">
-                                        <h5>March 31</h5>
-                                        <h6 class="time2">1-3PM</h6>
-                                        <p>Impact Poster Office Hours/Make-up Info Session</p>
-                                    </div>
-                                    <div className="box2">
-                                        <h5>April 7</h5>
-                                        <h6 class="time2">1-3PM</h6>
-                                        <p>Impact Poster Office Hours (optional)</p>
-                                    </div>
-                                    <div className="box2">
-                                        <h5>April 11</h5>
-                                        <p>Impact CMU Date!! (first day of Carnival)</p>
-                                    </div>
-                                {/* </div> */}
+                                <div className="box2">
+                                    <h7>March 17</h7>
+                                    <h6 class="time2">2-3PM</h6>
+                                    <small><p>Tepper 2700</p></small>
+                                    <spacer></spacer>
+                                    <p>Information Session</p>
+                                    <a href="https://docs.google.com/forms/d/1O4bAKdea37MeLood33SRPoDxVhQg_HnvssN0jZ5c6dU/edit"><small><p>Join our Slack for reminders</p></small></a>
+
+                                </div>
+                                <div className="box2">
+                                    <h7>March 24</h7>
+                                    <h6 class="time2">11:59PM</h6>
+                                    <a href="https://join.slack.com/t/impactcmu/shared_invite/zt-2d9yxiqk0-l0NwYeY6tqH2IcXoa98p8Q"><small><p>Registration Form</p></small></a>
+                                    <spacer></spacer>
+                                    <p>Project Registration Due</p>
+                                </div>
+                                <div className="box2">
+                                    <h7>March 31</h7>
+                                    <h6 class="time2">1-3PM</h6>
+                                    <small><p>Tepper 2700</p></small>
+                                    <spacer></spacer>
+                                    <p>Impact Poster Office Hours / Make-up Info Session</p>
+                                </div>
+                                <div className="box2">
+                                    <h7>April 7</h7>
+                                    <h6 class="time2">1-3PM</h6>
+                                    <small><p>Tepper 2700</p></small>
+                                    <spacer></spacer>
+                                    <p>Impact Poster Office Hours</p>
+                                </div>
+                                <div className="box2">
+                                    <h7>April 11</h7>
+                                    <h6 class="time2">12-5PM</h6>
+                                    <small><p>Cohon University Center</p></small>
+                                    <spacer></spacer>
+                                    <p>Impact CMU Date!!</p>
+                                </div>
                             </div>
                         </div>
                     </div>

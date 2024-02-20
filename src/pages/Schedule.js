@@ -18,6 +18,7 @@ const Hero = () => (
                         <img src={schedule} alt="title-img" class="title-img"/>
                     </div>
                 </div>
+                <center><h4 className="timeline-title">April 11 @ Cohon University Center</h4></center>
                 <div className="boxes1" style={{ display: 'flex'}}> 
                     {/* <div class="row1"> */}
                     <div className="timeline-container">
@@ -29,14 +30,14 @@ const Hero = () => (
                         <div className="box3">
                             <h3>Project Showcase</h3>
                             <h3 class = "time">12-4PM</h3>
-                            <p>View impactful projects from our participants and learn about their work.</p>
+                            <p>Eat free popcorn as you view impactful projects from our participants and learn about their work.</p>
                         </div>
                     {/* </div> */}
                     {/* <div class="row2"> */}
                         <div className="box3">
                             <h3>Voting Closes</h3>
                             <h3 class = "time">4PM</h3>
-                            <p>Enter into raffles to earn prizes and eat free pizza and popcorn!</p>
+                            <p>Vote for your favorite project and enter into raffles to earn prizes!</p>
                         </div>
                         <div className="box3">
                             <h3>Closing Ceremony</h3>
