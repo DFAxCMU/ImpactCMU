@@ -2,6 +2,7 @@ import React from 'react';
 import Draggable from "react-draggable";
 import '../dist/css/bootstrap.min.css';
 import NavBarHero from "../components/NavBarHero";
+import Nav from "react-bootstrap/Nav";
 
 import 'popper.js'
 import '../dist/css/bootstrap.min.css';
@@ -31,7 +32,7 @@ const Hero = () => {
               <div className="draggable-box">
                 <p class = "box-text">Enter in your social good project for a chance to win $250!</p>
                 <center>
-                  <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSdXLtbzD7CaYo_54JB5bKdsDMDsQTxrx_Bg5YPVCwCc8WtdZQ/closedform')}>Submit</button>
+                  <button><Nav.Link href="/Submit">Submit</Nav.Link></button>
                 </center>
               </div>
             </Draggable>

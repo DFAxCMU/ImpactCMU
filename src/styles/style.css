@@ -85,6 +85,10 @@ a {
     color: var(--dark-blue)
 }
 
+button a:hover {
+    color: white
+}
+
 a p {
     text-decoration: underline;
     color: rgba(0,0,0,.7);
