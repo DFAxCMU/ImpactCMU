@@ -246,7 +246,7 @@ h4 {
     top: -224px;
     left: 50%;
     transform: translateX(-50%); 
-    min-height: 100vh;
+    max-height: 100vh;
     overflow: clip;
 }
 
