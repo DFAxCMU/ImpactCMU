@@ -584,6 +584,90 @@ h4 {
 
 
 
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 70px; 
+        padding-bottom: 70px;
+        background-color: #EBEBEB;
+    }
+
+    .navbar.fixed-top {
+        z-index: 1030; 
+    }
+
+    /* footer styles */
+    .navbar.fixed-bottom {
+        z-index: 1030; 
+    }
+
+
+    .boxes33 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; 
+    }
+
+    .box2 {
+        width: 100%; 
+        margin-bottom: 15px; 
+    }
+/* 
+    .submit-button {
+        padding: 15px;
+        border-radius: 40px;
+    } */
+
+    #submit, #schedule, #about {
+        padding-top: 600px; 
+    }
+
+    h4.date-title {
+        font-size: 18px;
+        padding-top: 0px;
+    }
+
+    h4.proj-awards-title {
+        padding-top: 0px;
+    }
+
+    .title-img {
+        padding-bottom: 35px;
+    }
+
+    .box p {
+        display: none;
+        /* transition: max-height 0.3s ease;
+        max-height: 0;
+        overflow: hidden; */
+    }
+
+    .box.active p {
+        display: block;
+        /* max-height: 1000px;  */
+    }
+
+    .box h3:after {
+        content: '\25bc';
+        float: right;
+        padding-left: 8px;
+        /* transition: transform 0.3s ease; */
+    }
+
+    /* rotate the triangle */
+    .box.active h3:after {
+        transform: rotate(180deg);
+    }
+        
+}
+
+
+
+
+
+
+
 
 
 

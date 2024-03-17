@@ -14,7 +14,6 @@ const Hero = () => {
     const handleButtonClick = (url) => {
         // console.log(`${boxName} button clicked`);
         window.open(url, '_blank');
-        // Perform actions based on the boxName or specific logic for the button
     };
 
     return (
