@@ -49,13 +49,13 @@ const Submit = () => {
                         <div className="timeline-container">
                             <div className="boxes33" style={{ display: 'flex'}}> 
                                 <div className="box2">
-                                    <h7>March 17</h7>
-                                    <h6 class="time2">2-3PM</h6>
-                                    <small><p>Tepper 2700</p></small>
+                                    <h7>Important Links</h7>
+                                    <a href="https://docs.google.com/presentation/d/15YQqN-r2izFn0XULLUpGix7AEn2SNAvM6uAaPI4aUnc/edit?usp=sharing"><small><p>Google Slides Template</p></small></a>
+                                    <a href="https://www.figma.com/file/mfdoOWE3afaPEkxm8JPPRm/Poster-Template-2024?type=design&node-id=0%3A1&mode=design&t=Lc18MaRvxX3ONLPu-1"><small><p>Figma Template</p></small></a>
                                     <spacer></spacer>
-                                    <p>Information Session</p>
+                                    <p>Poster Templates</p>
                                     <a href="https://join.slack.com/t/impactcmu/shared_invite/zt-2d9yxiqk0-l0NwYeY6tqH2IcXoa98p8Q"><small><p>Join our Slack for reminders</p></small></a>
-
+                                    <a href="https://drive.google.com/file/d/1dPr3J99kGOLjPJIUQJsZv2nI_3VU-W-l/view?usp=sharing"><small><p>Information Session Slides</p></small></a>
                                 </div>
                                 <div className="box2">
                                     <h7>March 24</h7>
@@ -75,8 +75,13 @@ const Submit = () => {
                                     <h7>April 7</h7>
                                     <h6 class="time2">1-3PM</h6>
                                     <small><p>Tepper 2700</p></small>
-                                    <spacer></spacer>
                                     <p>Impact Poster Office Hours</p>
+                                    <spacer></spacer>
+
+                                    <h6 class="time3">11:59PM</h6>
+                                    <p>Deadline for Poster Submissions</p>
+                                    <a href="https://drive.google.com/drive/folders/1-KZ0eXliaa2ia_h_EX6i8c_sRmZsD93R?usp=sharing"><small><p>Poster Submissions Drive</p></small></a>
+                                    
                                 </div>
                                 <div className="box2">
                                     <h7>April 11</h7>

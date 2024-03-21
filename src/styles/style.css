@@ -531,6 +531,13 @@ h4 {
     padding: 20px;
 }
 
+.time3 {
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    padding: 14px;
+}
+
 .navbar-brand {
     margin-right: 0px;
 }
