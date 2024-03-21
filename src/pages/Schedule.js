@@ -18,7 +18,7 @@ const Hero = () => (
                         <img src={schedule} alt="title-img" class="title-img"/>
                     </div>
                 </div>
-                <center><h4 className="date-title">April 11 @ Cohon University Center</h4></center>
+                <center><h4 className="timeline-title">April 11 @ Cohon University Center</h4></center>
                 <div className="boxes1" style={{ display: 'flex'}}> 
                     {/* <div class="row1"> */}
                     <div className="timeline-container">

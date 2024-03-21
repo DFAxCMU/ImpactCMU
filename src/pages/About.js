@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import about from '../components/2024img/About.png';
 import NavBar from "../components/NavBar";
 
@@ -8,19 +8,7 @@ import '../styles/style.css';
 import '../styles/page.css';
 import '../styles/fonts.css';
 
-const About = () => {
-    const [openDropdown, setOpenDropdown] = useState(null);
-
-    const toggleDropdown = (dropdownId) => {
-        if (openDropdown === dropdownId) {
-            setOpenDropdown(null);
-        } else {
-            setOpenDropdown(dropdownId);
-        }
-        console.log(openDropdown);
-    };
-    
-    return ( 
+const About = () => ( 
     <>
         <NavBar/>
         <section id="about" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
@@ -32,9 +20,9 @@ const About = () => {
                 </div>
                 <div class="boxes">
                     <div class="inner-box">
-                        <div className="box" onClick={() => toggleDropdown('who')}>
+                        <div class="box">
                             <h3>Who</h3>
-                            <p className={`content ${openDropdown === 'who' ? 'open' : ''}`}>Impact CMU invites undergrad and graduate students at Carnegie Mellon to showcase how they have worked with a community. Student organizations and research, personal, and hackathon projects are all welcome to contribute their work!</p>
+                            <p>Impact CMU invites undergrad and graduate students at Carnegie Mellon to showcase how they have worked with a community. Student organizations and research, personal, and hackathon projects are all welcome to contribute their work!</p>
                         </div>
                         <div class="box">
                             <h3>What</h3>
@@ -49,7 +37,6 @@ const About = () => {
             </div>
         </section>
     </>
-    )
-}
+)
 
 export default About;
