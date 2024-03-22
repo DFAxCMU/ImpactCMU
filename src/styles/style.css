@@ -78,7 +78,7 @@ spacer {
 }
 
 button:hover {
-    background-color: white;
+    background-color: transparent;
 }
 
 a {
@@ -99,7 +99,7 @@ a p:hover {
 }
 
 .content {
-    color: var(--darkblue);
+    color: black;
     margin: auto;
 }
 
@@ -193,6 +193,66 @@ a p:hover {
     padding-right: 20px;
     padding-top:0px;
 }
+
+/* ----------------------------------------- */
+
+.top-bar-small {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-menu { 
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--accent-color);
+    border: none;
+    padding: 120px 70px;
+    margin: 0px;
+    font-family: var(--title), var(--title-fallback);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.active {
+    display: block;
+    transition: all 2s ease-in;
+    z-index: 2000;
+    background: #EBEBEB;
+    padding: 48px 16px;
+}
+
+.nav-vertical {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 96%;
+}
+
+.bottom {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-icon {
+    width: 36px;
+    height: 36px;
+    padding: 4px 0px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* ----------------------------------------- */
 
 .hover-underline-animation {
     display: inline-block;
@@ -542,6 +602,11 @@ h4 {
     margin-right: 0px;
 }
 
+.navbar-brand-mobile {
+    margin-top: auto;
+    margin-right: 0px;
+}
+
 .nav-link{
     padding: 0rem 1rem;
 }
@@ -588,4 +653,149 @@ h4 {
     justify-content: center; 
 } */
 
-/* ------------ */
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 70px; 
+        padding-bottom: 70px;
+        background-color: #EBEBEB;
+    }
+
+    .navbar.fixed-top {
+        z-index: 1030; 
+    }
+
+    /* footer styles */
+    .navbar.fixed-bottom {
+        z-index: 1030; 
+    }
+
+
+    .boxes33 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; 
+    }
+
+    .box2 {
+        width: 100%; 
+        margin-bottom: 15px; 
+    }
+
+    .submit-button {
+        padding: 10px;
+        width: 130px;
+        /* font-family: 'InL';
+        font-size: 20px; */
+        /* padding: 6px 10px; */
+        border-color: black;
+        border-width: 1px;
+        color: black;
+        cursor: pointer;
+        margin: 5px;
+        margin-top: 15px;
+        border-radius: 25px;
+        transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    #submit, #schedule, #about {
+        padding-top: 600px; 
+    }
+
+    h4.date-title {
+        font-size: 18px;
+        padding-top: 0px;
+    }
+
+    h4.proj-awards-title {
+        padding-top: 0px;
+    }
+
+    .title-img {
+        padding-bottom: 35px;
+    }
+
+    .box p {
+        display: none;
+        /* transition: max-height 0.3s ease;
+        max-height: 0;
+        overflow: hidden; */
+    }
+
+    .box.active p {
+        display: block;
+        /* max-height: 1000px;  */
+    }
+
+    .box h3:after {
+        content: '\25bc';
+        float: right;
+        padding-left: 8px;
+        /* transition: transform 0.3s ease; */
+    }
+
+    /* rotate the triangle */
+    .box.active h3:after {
+        transform: rotate(180deg);
+    }
+
+    .draggable-box1 {
+        width: 175px;
+        height: 160px; 
+        padding: 20px;
+        background-color: white; 
+        border: 1px solid black; 
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /*shadowwwww*/
+        cursor: move; /*cool drag cursor B)*/
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        bottom: 350px;
+        right: 220px;
+    }
+
+    .draggable-box2 {
+        width: 195px;
+        height: 175px; 
+        padding: 20px;
+        background-color: white; 
+        border: 1px solid black; 
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /*shadowwwww*/
+        cursor: move; /*cool drag cursor B)*/
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        bottom: 100px;
+        left: 200px;
+    }
+
+    .sketch-iframe {
+        position: absolute;
+        top: -30vh;
+        left: 50%;
+        /* transform: translateX(-50%); */
+        height: 150vh;
+        min-height: 10vh;
+        overflow: clip;
+    }
+        
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

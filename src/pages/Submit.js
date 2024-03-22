@@ -28,6 +28,7 @@ const Submit = () => {
                     <div class="OMG">
                         {/* <div class="boxes"> */}
                         {/* <h4 className="left-aligned-title">Project Awards</h4> */}
+                        <center><h4 className="proj-awards-title">Project Awards</h4></center>
                             <div class = "award-boxes">
                                 {/* <div class="inner d-flex flex-row justify-content-between w-100 container-fluid"> */}
                                     <div class="boxKMS">
@@ -57,6 +58,14 @@ const Submit = () => {
                                     <a href="https://join.slack.com/t/impactcmu/shared_invite/zt-2d9yxiqk0-l0NwYeY6tqH2IcXoa98p8Q"><small><p>Join our Slack for reminders</p></small></a>
                                     <a href="https://drive.google.com/file/d/1dPr3J99kGOLjPJIUQJsZv2nI_3VU-W-l/view?usp=sharing"><small><p>Information Session Slides</p></small></a>
                                 </div>
+                                {/* <div className="box2">
+                                    <h7>March 17</h7>
+                                    <h6 class="time2">2-3PM</h6>
+                                    <small><p>Tepper 2700</p></small>
+                                    <spacer></spacer>
+                                    <p>Information Session</p>
+                                    <a href="https://join.slack.com/t/impactcmu/shared_invite/zt-2d9yxiqk0-l0NwYeY6tqH2IcXoa98p8Q"><small><p>Join our Slack for reminders</p></small></a>
+                                </div> */}
                                 <div className="box2">
                                     <h7>March 24</h7>
                                     <h6 class="time2">11:59PM</h6>
