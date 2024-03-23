@@ -18,7 +18,7 @@ const Submit = () => {
     return (
         <>
         <NavBar />
-            <section id="submit" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <section id="submit">
                 <div className="container-fluid">
                     <div className=" text-center">
                         <div className="navbar-brand">

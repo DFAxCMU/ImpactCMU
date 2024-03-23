@@ -11,7 +11,7 @@ import '../styles/fonts.css';
 const Hero = () => (
     <>
         <NavBar />
-        <section id="schedule" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <section id="schedule">
             <div className="container-fluid">
                 <div className=" text-center">
                     <div className="navbar-brand">

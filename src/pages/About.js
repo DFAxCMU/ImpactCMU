@@ -23,7 +23,7 @@ const About = () => {
     return ( 
     <>
         <NavBar/>
-        <section id="about" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <section id="about">
             <div className="container-fluid">
                 <div className=" text-center">
                     <div className="navbar-brand">
