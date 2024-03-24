@@ -42,7 +42,7 @@ const Hero = () => (
                         <div className="box3">
                             <h3>Closing Ceremony</h3>
                             <h3 class = "time">3:30-4PM</h3>
-                            <p>Listen to the closing ceremony. Find out who the project and raffle winner are!</p>
+                            <p>Listen to the closing ceremony. Find out who the project and raffle winners are!</p>
                         </div>
                     </div>
                     {/* </div> */}

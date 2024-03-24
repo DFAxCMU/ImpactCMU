@@ -48,10 +48,13 @@ const Hero = () => {
             </Draggable>
             <Draggable defaultPosition={{x: -400, y: 64}}>
               <div className="draggable-box">
-                <p class = "box-text">Enter in your social good project for a chance to win $250!</p>
-                <center>
+                <h2 class = "box-title1"><bold>COME SEE IMPACT!!!</bold></h2>
+                <p class = "box-text">April 11 @ Cohon University, 12-4 PM</p>
+                <p class = "box-text">Free popcorn and raffle prizes!</p>
+                {/* <p class = "box-text">FREE FOOD PROVIDED</p> */}
+                {/* <center>
                   <button><Nav.Link href="/Submit">Submit</Nav.Link></button>
-                </center>
+                </center> */}
               </div>
             </Draggable>
             <div className="sketch-iframe">
@@ -70,10 +73,13 @@ const Hero = () => {
             </div>
 
             <div className="draggable-box2">
-                <p class = "box-text">Enter in your social good project for a chance to win $250!</p>
-                <center>
+                {/* <p class = "box-text">Enter in your social good project for a chance to win $250!</p> */}
+                <h2 class = "box-title1"><bold>COME SEE IMPACT!!!</bold></h2>
+                <p class = "box-text">April 11 @ Cohon University, 12-4 PM</p>
+                <p class = "box-text">Free popcorn and raffle prizes!</p>
+                {/* <center>
                   <button class="submit-button"><Nav.Link href="/Submit">Submit</Nav.Link></button>
-                </center>
+                </center> */}
             </div>
 
             <div className="sketch-iframe">
