@@ -734,11 +734,11 @@ h4 {
         padding-bottom: 35px;
     }
 
-    .content {
+    .content1 {
         display: none;
     }
     
-    .content.open {
+    .content1.open {
         display: block;
     }
 
@@ -783,6 +783,45 @@ h4 {
         padding-bottom: 0px;
     }
 
+    .draggable-box1 {
+        width: 175px;
+        height: 160px; 
+        padding: 20px;
+        background-color: white; 
+        border: 1px solid black; 
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /*shadowwwww*/
+        cursor: move; /*cool drag cursor B)*/
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        bottom: 350px;
+        right: 220px;
+    }
+
+    .draggable-box2 {
+        width: 195px;
+        height: 175px; 
+        padding: 20px;
+        background-color: white; 
+        border: 1px solid black; 
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /*shadowwwww*/
+        cursor: move; /*cool drag cursor B)*/
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        bottom: 100px;
+        left: 200px;
+    }
+
+    .sketch-iframe {
+        position: absolute;
+        top: -30vh;
+        left: 50%;
+        /* transform: translateX(-50%); */
+        height: 150vh;
+        min-height: 10vh;
+        /* overflow: clip; */
+    }
         
 }
 
