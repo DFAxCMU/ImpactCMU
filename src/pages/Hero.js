@@ -75,8 +75,7 @@ const Hero = () => {
             <div className="draggable-box2">
                 {/* <p class = "box-text">Enter in your social good project for a chance to win $250!</p> */}
                 <h2 class = "box-title1"><bold>COME SEE IMPACT!!!</bold></h2>
-                <p class = "box-text">April 11 @ Cohon University, 12-4 PM</p>
-                <p class = "box-text">Free popcorn and raffle prizes!</p>
+                <p class = "box-text">April 11 @ Cohon University, 12-4 PM; Free popcorn and raffle prizes!</p>
                 {/* <center>
                   <button class="submit-button"><Nav.Link href="/Submit">Submit</Nav.Link></button>
                 </center> */}

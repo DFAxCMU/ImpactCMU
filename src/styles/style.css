@@ -827,6 +827,11 @@ h4 {
         min-height: 10vh;
         /* overflow: clip; */
     }
+
+    .box-title1 {
+        font-size:15px;
+        font-weight: bold;
+      }
         
 }
 
