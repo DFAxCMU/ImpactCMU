@@ -446,6 +446,12 @@ h4 {
     
 }
 
+#schedule .boxKMS{
+    max-width: 200px !important; 
+    /* margin: 0px auto !important; */
+    display: block !important;
+}
+
 /* .box, .boxKMS, .box2, .boxes1, h4, .submit-button, .title-img {
     opacity: 0; 
     animation: slideFadeIn 0.5s ease-in-out forwards;
@@ -704,7 +710,7 @@ h4 {
 
     .submit-button {
         padding: 10px;
-        width: 200px;
+        width: 100%;
         /* font-family: 'InL';
         font-size: 20px; */
         /* padding: 6px 10px; */
@@ -712,7 +718,7 @@ h4 {
         border-width: 1px;
         color: black;
         cursor: pointer;
-        margin: 20px;
+        margin: 0px;
         margin-top: 15px;
         border-radius: 25px;
         transition: background-color 0.5s ease, color 0.5s ease;
@@ -805,7 +811,7 @@ h4 {
 
     .draggable-box2 {
         width: 195px;
-        height: 175px; 
+        height: min-content; 
         padding: 20px;
         background-color: white; 
         border: 1px solid black; 
