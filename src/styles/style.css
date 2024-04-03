@@ -73,6 +73,32 @@ h7 {
     padding-bottom: 0px;
 }
 
+h10 {
+    font-family: 'InL';
+    font-weight: 500;
+    font-size: 20px;    
+    color: black;
+    padding-bottom: 0px;
+    margin-bottom: 0px !important;
+}
+
+h8 {
+    font-family: 'InL';
+    font-weight: 500;
+    font-size: 16px;    
+    color: black;
+    padding-top: 10px;
+    margin-bottom: 0px !important;
+}
+
+h9 {
+    font-family: 'InL';
+    font-weight: 500;
+    font-size: 14px;    
+    color: black;
+    padding-top: 10px;
+}
+
 spacer {
     padding: 15px;
 }
@@ -138,6 +164,10 @@ a p:hover {
     background-color: #EBEBEB;
 }
 
+#projects {
+    background-color: #EBEBEB;
+}
+
 #about {
     background-color: #EBEBEB;
 }
@@ -155,7 +185,7 @@ a p:hover {
     background: url('../images/background/FooterBackground.png');
 } */
 
-#hero, #about, #timeline, #submit, #footer {
+#hero, #about, #timeline, #submit, #footer, #schedule {
     width: 100%;
     min-height: 100vh;
     background-position: center;
@@ -166,7 +196,7 @@ a p:hover {
         /* padding-top: 600px;  */
 }
 
-#hero, #about, #timeline, #submit, #schedule {
+#hero, #about, #timeline, #submit, #projects, #schedule {
     display: flex;
     align-items:center;
     height: 100vh;
@@ -479,7 +509,78 @@ h4 {
     opacity: 0; 
     animation: slideFadeIn 1s ease-in-out forwards; 
     animation-delay: 0.3s;
-} 
+}
+
+#projects .boxKMS {
+    padding: 12px;
+}
+
+#projects .boxKMS:hover {
+    cursor: pointer;
+    transform: scale(1.03) !important;
+    z-index: 10; 
+    transition: transform 0.2s ease-in-out; 
+}
+
+#projects .boxKMS {
+    transition: transform 0.2s ease-in-out;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(89, 89, 89, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+  
+.modal-content {
+    max-width: 600px; 
+    max-height: 80vh; 
+    margin: auto; 
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 0;
+    position: relative;
+    z-index: 100; 
+    overflow-y: auto; 
+    box-sizing: border-box; 
+}
+  
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}  
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: #000; 
+    margin: 8px 0; 
+}
+
+/* .row {
+    margin: -15px;
+  } */
+
+.mb-4 {
+    margin-bottom: 0 !important; 
+}
+
+.col-md-3 {
+    padding: 0px !important;
+}
+
 
 /* @keyframes fadeIn {
     from {
@@ -670,6 +771,18 @@ h4 {
     /* gap: 10px;   */
 }
 
+h5 {
+    font-size: 14px;
+    padding-bottom: 3px;
+}
+
+h6 {
+    font-size: 14px;
+    padding: 0px;
+}
+
+
+
 
 
 /* .project-awards-container {
@@ -724,7 +837,7 @@ h4 {
         transition: background-color 0.5s ease, color 0.5s ease;
     }
 
-    #submit, #schedule, #about {
+    #submit, #schedule, #about, #projects{
         /* padding-top: 600px;  */
         display: flex;
         align-items:center;
@@ -837,8 +950,28 @@ h4 {
     .box-title1 {
         font-size:15px;
         font-weight: bold;
-      }
-        
+    }
+
+    .modal-content {
+        max-width: 90%; 
+        max-height: 90vh; 
+    }
+
+    .col-md-3 {
+        margin: 0 auto; 
+        float: none; 
+        display: flex; 
+        justify-content: center; 
+    }
+
+    #projects .boxKMS {
+        max-width: 100vw;
+    }
+
+    #projects .boxKMS:hover {
+        z-index: 0; 
+    }
+    
 }
 
 
