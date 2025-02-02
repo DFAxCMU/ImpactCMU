@@ -30,6 +30,7 @@ const About = () => {
                 <div className="yellowcircle-section">
                     <img src={yellowcircle} alt="title-img" class="yellowcircle"/>  
                     <div className="yellowcircle-text">
+                        <h3>YO WTF</h3>
                         <h3 classname="aboutHDR">WHO WE ARE</h3>  
                         <p>Impact CMU invites undergrad and graduate students at Carnegie Mellon
                             to showcase how they have worked with a community. Student organizations and research, 
