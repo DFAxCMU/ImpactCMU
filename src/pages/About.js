@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import about from '../components/2024img/About.png';
+import yellowcircle from '../components/2025img/yellowcircle.svg';
+import redcircle from '../components/2025img/redcircle.svg';
 import NavBar from "../components/NavBar";
 
 import 'popper.js'
@@ -24,8 +26,30 @@ const About = () => {
     <>
         <NavBar/>
         <section id="about">
-            <div className="container-fluid">
-                <div className=" text-center">
+            <div className="container-about">
+                <div className="yellowcircle-section">
+                    <img src={yellowcircle} alt="title-img" class="yellowcircle"/>  
+                    <div className="yellowcircle-text">
+                        <h3 classname="aboutHDR">WHO WE ARE</h3>  
+                        <p>Impact CMU invites undergrad and graduate students at Carnegie Mellon
+                            to showcase how they have worked with a community. Student organizations and research, 
+                            personal, and hackathon projects are all welcome to contribute their work!</p>
+                    </div>
+                </div>
+                <div className="redcircle-section">
+                    <img src={redcircle} alt="title-img" class="redcircle"/>  
+                    <div className="redcircle-text"> 
+                        <h3 classname="aboutHDR">WHAT IS IMPACT?</h3>  
+                        <p>You will be showcasing your work through a poster and optional demos. 
+                            Attendees will view different teams, talk to you about your work, and vote to win prizes!
+                            Faculty judges will also take part in viewing work and discussing your creations! This is a
+                            great opportunity to talk to your peers, get feedback from your professors, and for student 
+                            organizations to promote to a large audience.</p> 
+                        <h3 classname="aboutHDR">WHERE IS IT?</h3> 
+                        <p>March 3rd @ LOCATION, TIME</p> 
+                        </div>
+                </div>
+                {/* <div className=" text-center">
                     <div className="navbar-brand">
                         <img src={about} alt="title-img" class="title-img"/>
                     </div>
@@ -34,7 +58,7 @@ const About = () => {
                     <div class="inner-box">
                         <div className="box" onClick={() => toggleDropdown('who')}>
                             <h3>Who</h3>
-                            <p className={`content1 ${openDropdown === 'who' ? 'open' : ''}`}>Impact CMU invites undergrad and graduate students at Carnegie Mellon to showcase how they have worked with a community. Student organizations and research, personal, and hackathon projects are all welcome to contribute their work!</p>
+                            <p className={`content1 ${openDropdown === 'who' ? 'open' : ''}`}>HI CMU invites undergrad and graduate students at Carnegie Mellon to showcase how they have worked with a community. Student organizations and research, personal, and hackathon projects are all welcome to contribute their work!</p>
                         </div>
                         <div class="box" onClick={() => toggleDropdown('what')}> 
                             <h3>What</h3>
@@ -45,7 +69,7 @@ const About = () => {
                             <p className={`content1 ${openDropdown === 'where' ? 'open' : ''}`}>April 11 @ Cohon University Center, 12-4PM</p>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     </>

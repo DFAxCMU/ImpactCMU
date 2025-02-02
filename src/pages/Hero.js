@@ -1,6 +1,6 @@
 import React from 'react';
 import Draggable from "react-draggable";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef} from "react";
 
 import '../dist/css/bootstrap.min.css';
 import NavBarHero from "../components/NavBarHero";
@@ -14,31 +14,68 @@ import '../styles/fonts.css';
 
 
 const Hero = () => {
-    const handleButtonClick = (url) => {
-        // console.log(`${boxName} button clicked`);
-        window.open(url, '_blank');
-    };
+  const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
+  const boxRef = useRef(null);
 
-    // Event listener to record the user's screen dimensions
-    const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
+  useEffect(() => {
+      function handleResize() {
+          const { innerWidth: width, innerHeight: height } = window;
+          setWindowDimensions({ width, height });
+      };
+
+      window.addEventListener('resize', handleResize);
+      handleResize();
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handleDrag = (e) => {
+      const box = boxRef.current;
+      const { clientX, clientY } = e;
+      const { width, height } = windowDimensions;
+
+      // Ensure the box stays within the screen dimensions
+      const boxWidth = box.offsetWidth;
+      const boxHeight = box.offsetHeight;
+
+      let newLeft = clientX - boxWidth / 2;
+      let newTop = clientY - boxHeight / 2;
+
+      if (newLeft < 0) newLeft = 0;
+      if (newTop < 0) newTop = 0;
+      if (newLeft + boxWidth > width) newLeft = width - boxWidth;
+      if (newTop + boxHeight > height) newTop = height - boxHeight;
+
+      box.style.left = `${newLeft}px`;
+      box.style.top = `${newTop}px`;
+  };
+
+
+// const Hero = () => {
+//     const handleButtonClick = (url) => {
+//         // console.log(`${boxName} button clicked`);
+//         window.open(url, '_blank');
+//     };
+
+//     // Event listener to record the user's screen dimensions
+//     const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
     
-    useEffect(() => {
-        function handleResize() {
-            const { innerWidth: width, innerHeight: height } = window;
-            setWindowDimensions({ width, height });
-        };
+//     useEffect(() => {
+//         function handleResize() {
+//             const { innerWidth: width, innerHeight: height } = window;
+//             setWindowDimensions({ width, height });
+//         };
 
-        window.addEventListener('resize', handleResize);
-        handleResize();
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+//         window.addEventListener('resize', handleResize);
+//         handleResize();
+//         return () => window.removeEventListener('resize', handleResize);
+//     }, []);
 
     return (
       <>
         { (windowDimensions.width > 768) ? 
         <div>
-          <NavBarHero />
-        <section id="about">
+        <NavBarHero />
+        <section id="hero">
           <div className="content">
             <Draggable defaultPosition={{x: 350, y: -36}}>
               <div className="draggable-box">
@@ -57,9 +94,12 @@ const Hero = () => {
                 </center> */}
               </div>
             </Draggable>
-            <div className="sketch-iframe">
+            {/* <div className="sphere">
+              <iframe src="https://openprocessing.org/sketch/2529022/embed/" width="400" height="400"></iframe>
+            </div> */}
+            {/* <div className="sketch-iframe">
               <iframe src="https://openprocessing.org/sketch/2185428/embed/" width="2400px" height="1224px"></iframe>
-            </div>
+            </div> */}
           </div>
         </section>
         </div>

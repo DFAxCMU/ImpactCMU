@@ -7,16 +7,18 @@
 
 section {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     padding: 24px
 }
 
 p {
-    max-width: 500px;
-    font-family: 'InUL';
+    /* max-width: 500px; */
+    font-family: "IS";
     color: black;
-    font-weight: 500;
+    font-size: 85%;
+    word-spacing: 50%;
+    /* font-weight: 500; */
     margin-bottom: 0px;
 }
 
@@ -35,17 +37,110 @@ h1 {
 h2 {
     font-family: 'InL';
     font-weight: 500;
-    font-size: 18px;    
+    font-size: 9%;    
     color: black;
 }
 
 h3 {
-    font-family: 'InL';
+    font-family: 'thabit';
     font-weight: 500;
-    font-size: 18px;    
+    font-size: 160%;    
     color: black;
-    padding-bottom: 30px;
+    padding-bottom: 1%;
+    padding-top: 3%;
 
+}
+
+/* ABOUT 2025 */
+.container-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    /* flex-wrap: wrap; Allows content to wrap to the next line if needed */
+    gap: 1rem; /* Adds space between sections */
+    justify-content: center; /* Centers content horizontally */
+    padding: 2rem;
+  }
+  
+  .yellowcircle-section,
+  .redcircle-section {
+    display: flex;
+    flex-direction: column; /* Stacks image and text vertically */
+    align-items: center; /* Centers content horizontally */
+    /* text-align: center; Centers text */
+    flex: 1 1 45%; /* Each section takes up to 45% of the row's width on large screens */
+    max-width: 400px; /* Restricts the maximum width of each section */
+  }
+  
+    .yellowcircle-section img,
+    .redcircle-section img {
+        height: auto; /* Maintain the natural height of the images */
+        width: 100%; /* Let the width adjust based on the aspect ratio */
+        object-fit: contain; /* Ensures the image fits within the container while preserving aspect ratio */
+    }
+
+  .yellowcircle-text,
+  .redcircle-text {
+    width: 100%; /* Text adjusts to image width */
+    /* padding: 0.5rem; */
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.5;
+    color: #555;
+  }
+
+
+/* SUBMIT 2025 */
+
+.grids_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 0px; /* Adjust spacing between elements */
+}
+
+/* Style each grid item */
+.grids_container > div {
+    /* border: 3px solid black; */
+    padding: 10px;
+}
+
+.line1 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.awardsub1 {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.awardsub2 {
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.awardsub3 {
+    display: grid;
+    grid-column-start: 4;
+    grid-column-end: -1;
+}
+
+hr {
+    margin: 0px;
+}
+
+.vector {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.vector2 {
+    padding-top: 50px;
+}
+
+.autop {
+    display: flex;
+    align-items: center;
 }
 
 h6 {
@@ -157,27 +252,51 @@ a p:hover {
 }
 
 #hero {
-    background-color: #EBEBEB;
+    background-color: #FFF;
+    background: 
+        radial-gradient(50% 50% at 50% 110%, #FF7878 0%, rgba(255, 255, 255, 0.00) 100%, transparent),
+        radial-gradient(50% 50% at 75% 65%, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 100%, transparent);
+    
 }
 
 #schedule {
-    background-color: #EBEBEB;
+    background-color: #FFF;
+    background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 40%, transparent 100%);
 }
 
 #projects {
-    background-color: #EBEBEB;
+    background-color: #FFF;
+    background: radial-gradient(circle, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 40%, transparent 100%);
 }
 
 #about {
-    background-color: #EBEBEB;
+    background-color: #FFF;
+    /* background: 
+        radial-gradient(50% 50% at 50% 110%, #FF7878 0%, rgba(255, 255, 255, 0.00) 100%, transparent),
+        radial-gradient(50% 50% at 75% 65%, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
 }
 
+.aboutHDR {
+    font-family: "thabit";
+}
+
+/* .aboutP {
+    font-family: "thabit";
+} */
+
 #timeline {
-    background-color: #EBEBEB;
+    background-color: #FFF;
 }
 
 #submit {
-    background-color: #EBEBEB;
+    gap: 3%;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    background-color: #FFF;
+    background: radial-gradient(30% 40% at 50% 95%, #f5d394 0%, rgba(255, 255, 255, 0.00) 100%, transparent);
+    /* background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
+    /* background: radial-gradient(50% 50% at 50% 50%, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
 }
 
 
@@ -193,7 +312,11 @@ a p:hover {
     background-size: auto 100%;
     position: block;
     color: var(--darkblue);
-        /* padding-top: 600px;  */
+    /* border-radius: 0px; */
+    /* background: 
+        radial-gradient(50% 50% at 50% 110%, #FF7878 0%, rgba(255, 255, 255, 0.00) 100%, transparent),
+        radial-gradient(50% 50% at 75% 65%, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
+    /* filter: blur(0px); */
 }
 
 #hero, #about, #timeline, #submit, #projects, #schedule {
@@ -226,13 +349,165 @@ a p:hover {
 /*NEW EDITS*/
 .navbar {
     /* margin-bottom: 10px; */
-    padding-bottom: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top:0px;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+}
+
+.defaultCanvas0 {
+    overflow: hidden;
+}
+
+.socials {
+    gap: 1rem;
+    padding-bottom: 8px;
 }
 
 /* ----------------------------------------- */
+
+/* projects 2025 */
+/* Scrollable Project Container */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to make text readable */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+.projects-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  /* Scrollable Wrapper */
+  .scroll-wrapper {
+    display: flex;
+    width: calc(100% * 8); /*Make the container 8 times the width of one project */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 10px;
+    gap: 20px; /* For spacing between projects */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    flex-wrap: nowrap;
+  }
+  
+  /* Hides scrollbar */
+  .scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  .project-box {
+    width: 250px;  /* Adjust size as needed */
+    height: 250px; /* Keep it a perfect square */
+    border-radius: 50%; /* Ensures circular shape */
+    background-size: cover;  /* Ensures the image fills the circle */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0; /* Prevent shrinking */
+    position: relative; /* Needed for absolute positioning of text */
+    overflow: hidden;
+  }
+  
+  /* Overlay to hold the text */
+  .project-name-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    width: 80%; /* Keeps text contained */
+    text-align: center;
+    background: white; /* Optional: Slight background for readability */
+    padding: 10px;
+    /* border-radius: 10px; */
+  }
+  
+  .project-name-overlay h5, 
+  .project-name-overlay h6 {
+    color: black; /* Ensure visibility on images */
+    font-size: 16px;
+    margin: 5px 0;
+  }
+    
+  
+  
+  .project-box:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Scroll Buttons */
+  .scroll-button {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+  }
+  
+  .scroll-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .scroll-button.left {
+    left: 0;
+  }
+  
+  .scroll-button.right {
+    right: 0;
+  }
+  
+  /* Modal Styles */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
 
 .top-bar-small {
     display: flex;
@@ -293,17 +568,27 @@ a p:hover {
 /* ----------------------------------------- */
 
 .hover-underline-animation {
+    /* color: black; */
     display: inline-block;
     position: relative;
-    color: black;
-    font-family: 'InLI';
-    font-size: 20px;
+    font-family: "IS";
+    font-size: 15px;
   }
 
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
 h4 {
-    font-family: 'InLI';
-    size: 20px;
-    /* padding-top: 35px; */
+    font-family: 'thabit';
+    font-weight: 500;
+    font-size: 160%;    
+    color: black;
+
+}
+
+.omega {
+    padding: 1%;
 }
 
 .timeline-title {
@@ -345,15 +630,17 @@ h4 {
     padding-right: 10px;
 }
 
-.sketch-iframe {
+.sphere {
     position: absolute;
-    top: -30vh;
+    top: 20vh;
     left: 50%;
-    transform: translateX(-50%);
-    height: 130vh;
-    min-height: 130vh;
-    overflow: clip;
+    transform: translateX(-10%);
+    height: 42vh;
+    min-height: 42vh;
+    overflow: hidden; /* This hides any content that overflows the iframe */
+    width: 38%; /* Adjust width if needed */
 }
+
 
 .draggable-box {
     width: 350px;
@@ -361,7 +648,7 @@ h4 {
     padding: 20px;
     background-color: white; 
     border: 1px solid black; 
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /*shadowwwww*/
+    /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); shadowwwww */
     cursor: move; /*cool drag cursor B)*/
     position: relative;
     z-index: 1;
@@ -402,14 +689,15 @@ h4 {
 
 .submit-button {
     width: 180px;
-    font-family: 'InL';
-    font-size: 20px;
+    font-family: 'IS';
+    font-size: 14px;
     padding: 6px 10px;
     border-color: black;
     border-width: 1px;
     color: black;
+    background-color: white;
     cursor: pointer;
-    margin: 25px;
+    margin: 10px;
     border-radius: 25px; /* ROUNDED */
     transition: background-color 0.5s ease, color 0.5s ease;
   }
@@ -420,9 +708,9 @@ h4 {
 }
 
 .logo {
-    width: 300px; 
+    width: 100px; 
     height: auto;
-    padding-top: 15px;
+    /* padding-top: 15px; */
 }
 
 /*ABOUT*/ 
@@ -444,6 +732,22 @@ h4 {
     margin-right: auto;
     margin-left: 5%; 
     margin-right: 5%;  
+}
+
+.navbar-text { /* navbar text top of the screen about, submit, stuff.. */
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.inner {
+    display: flex;
+    justify-content: flex-end; /* Distribute items evenly */
+    gap: 1.5rem; /* Adjust spacing between items */
 }
 
 .box {
@@ -488,11 +792,11 @@ h4 {
     animation-delay: 0.3s; 
 } */
 
- .box, .boxKMS, .box2, .boxes1, h4, .box3{
+ /* .box, .boxKMS, .box2, .boxes1, h4, .box3, .box4, h5{
     opacity: 0; 
     animation: slideFadeIn 1s ease-in-out forwards; 
-    animation-delay: 0.2s;
-}
+    animation-delay: 0.1s;
+} */
 
 .boxSection {
     gap: 0;
@@ -645,7 +949,7 @@ h4 {
     margin: 10px;   
     background-color: white;
     border: 1px solid black; 
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); */
     position: relative;
 }
 
@@ -691,12 +995,22 @@ h4 {
 
 .box3 {
     flex: 0 0 auto; 
-    width: 300px; 
+    width: 250px; 
     padding: 20px;
     background-color: white;
     border: 1px solid black;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); */
 }
+
+.box4 {
+    flex: 0 0 auto; 
+    /* position: relative; */
+    width: clamp(300px, 750px, 100%); 
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+}
+
 
 .row1 {
     display: flex;
@@ -726,6 +1040,8 @@ h4 {
 
 .navbar-brand {
     margin-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .navbar-brand-mobile {
@@ -735,6 +1051,11 @@ h4 {
 
 .nav-link{
     padding: 0rem 1rem;
+}
+
+.navbar-expand .navbar-nav .nav-link { /* makes sure animation line is not too long  */
+    padding-right: 0rem;
+    padding-left: 0rem;
 }
 
 .inner-box {
@@ -774,11 +1095,14 @@ h4 {
 h5 {
     font-size: 14px;
     padding-bottom: 3px;
+    font-family: "thabit";
 }
 
 h6 {
     font-size: 14px;
     padding: 0px;
+    font-family: "thabitbold";
+    margin-bottom: 30px;
 }
 
 
@@ -793,10 +1117,23 @@ h6 {
 
 @media (max-width: 768px) {
 
+    /* ABOUT 2025 */
+    .container-about {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .yellowcircle-section,
+    .redcircle-section {
+        flex: 1 1 100%; /* Make each section take up 100% of the container width */
+        max-width: 100%; /* Remove max-width restriction */
+    }
+
     body {
         /* padding-top: 70px;  */
         padding-bottom: 70px;
-        background-color: #EBEBEB;
+        background-color: #FFF;
     }
 
     .navbar.fixed-top {
@@ -913,7 +1250,7 @@ h6 {
         padding: 20px;
         background-color: white; 
         border: 1px solid black; 
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /*shadowwwww*/
+        /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); shadowwwww */
         cursor: move; /*cool drag cursor B)*/
         position: absolute;
         z-index: 1;
@@ -928,7 +1265,7 @@ h6 {
         padding: 20px;
         background-color: white; 
         border: 1px solid black; 
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /*shadowwwww*/
+        /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); shadowwwww */
         cursor: move; /*cool drag cursor B)*/
         position: absolute;
         z-index: 1;

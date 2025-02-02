@@ -34,3 +34,18 @@
   font-family: 'InL';
   src: url('../components/fonts/InferiLight.otf') format('opentype');
 }
+
+@font-face {
+  font-family: 'IS';
+  src: url('../components/fonts/IS.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'thabit';
+  src: url('../components/fonts/Thabit.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'thabitbold';
+  src: url('../components/fonts/Thabit-Bold.ttf') format('truetype');
+}

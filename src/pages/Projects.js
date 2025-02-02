@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from "react";
 import NavBar from "../components/NavBar";
-import projectimg from '../components/2024img/Projects.png';
-
-import 'popper.js';
-import '../dist/css/bootstrap.min.css';
-import '../styles/style.css';
-import '../styles/page.css';
-import '../styles/fonts.css';
 import { graphql } from "gatsby";
+import "../dist/css/bootstrap.min.css";
+import "../styles/style.css";
+import "../styles/page.css";
+import "../styles/fonts.css";
+import vector3 from '../components/2025img/Vector-3.svg';
 
 const Projects = ({ data }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({});
+  const projects = data.allProjectInfoCsv.edges.map((edge) => edge.node);
 
-  const projects = data.allProjectInfoCsv.edges.map(edge => edge.node);
+  const containerRef = useRef(null); // Reference for scrollable container
 
   const openModal = (project) => {
     setModalContent(project);
@@ -24,45 +23,69 @@ const Projects = ({ data }) => {
     setModalOpen(false);
   };
 
-  const linksArray = modalContent.link ? modalContent.link.split(',') : [];
-  // const linksArray = modalContent.link.split(','); //for links
+  // Scroll to the next or previous "page"
+  const scrollProjects = (direction) => {
+    if (containerRef.current) {
+      // const projectWidth = 250 + 20;
+      // const scrollAmount = projectWidth * 4;
+      const containerWidth = containerRef.current.offsetWidth;
+      const projectWidth = containerRef.current.querySelector(".project-box").offsetWidth; // Get project box width
+    
+      const projectsPerPage = Math.floor(containerWidth / projectWidth); // Calculate how many fit
+      const scrollAmount = projectWidth * projectsPerPage; 
+      // const projectWidth = containerRef.current.querySelector(".project-box").offsetWidth; // Get width of a project box
+      // const projectsPerPage = 8; // Show 8 projects at a time
+      // const scrollAmount = projectWidth * projectsPerPage; // Calculate scroll amount (width of 8 projects)
+      if (direction === "right") {
+        containerRef.current.scrollLeft += scrollAmount; // Move scroll position to the right
+      } else if (direction === "left") {
+        containerRef.current.scrollLeft -= scrollAmount; // Move scroll position to the left
+      }
+      // containerRef.current.scrollBy({
+      //   left: direction === "right" ? scrollAmount : -scrollAmount,
+      //   behavior: "smooth",
+      // });
+    }
+  };
 
   return (
     <>
       <NavBar />
       <section id="projects">
         <div className="container-fluid">
-          <div className="text-center">
-            <div className="navbar-brand">
-                <img src={projectimg} alt="title-img" class="title-img"/>
-            </div>
+          <div className="text-center omega">
+            <h4>PROJECTS</h4>
           </div>
-          <div className = "allProjectBoxes">
-            <div className="row">
-                {projects.map(project => (
-                <div className="col-md-3 mb-4">
-                    {/* <div className="card h-100"> */}
-                    <div 
-                        className="boxKMS" 
-                        onClick={() => openModal(project)}
-                        role="button" 
-                        tabIndex={0} 
-                    >
-                        <h5 className="card-title">{project.title}</h5>
-                        <h6 className="card-subtitle text-muted">{project.org}</h6>
-                        {/* <p className="card-text">{project.problem}</p> */}
-                        {/* Add other project details here */}
+
+          {/* Scrollable container */}
+          <div className="projects-container">
+            <button className="scroll-button left" onClick={() => scrollProjects("left")}>
+              &#9665;
+            </button>
+
+            <button className="scroll-button right" onClick={() => scrollProjects("right")}>
+              &#9655;
+            </button>
+
+            <div className="scroll-wrapper" ref={containerRef}>
+              {projects.map((project, index) => (
+                <div key={index} className="project-box" onClick={() => openModal(project)} style={{ backgroundImage: `url(${vector3})` }}>
+                  <div className="project-image-container">
+                    <div className="project-name-overlay">
+                      <h5 className="card-title">{project.title}</h5>
+                      <h6 className="card-subtitle text-muted">{project.org}</h6>
                     </div>
-                    {/* <div className="card-footer">
-                        {project.link && (
-                        <a href={project.link.startsWith('http') ? project.link : `http://${project.link}`} target="_blank" rel="noopener noreferrer">Learn More</a>
-                        )}
-                    </div> */}
-                    {/* </div> */}
+                  </div>
+                  {/* <h5 className="card-title">{project.title}</h5>
+                  <h6 className="card-subtitle text-muted">{project.org}</h6> */}
                 </div>
-                ))}
+              ))}
             </div>
-            </div>
+
+            <button className="scroll-button right" onClick={() => scrollProjects("right")}>
+              &#9655;
+            </button>
+          </div>
         </div>
       </section>
 
@@ -75,31 +98,16 @@ const Projects = ({ data }) => {
             <h9 className="card-subtitle text-muted">{modalContent.members}</h9>
             <h9 className="card-subtitle text-muted">{modalContent.timeframe}</h9>
             <div className="divider"></div>
-            {/* ... more content here */}
             <h8 className="card-title">Problem Space</h8>
             <h9 className="card-subtitle text-muted">{modalContent.problem}</h9>
             <h8 className="card-title">Solution</h8>
             <h9 className="card-subtitle text-muted">{modalContent.solution}</h9>
-            <h8 className="card-title">
-                Learn more: {" "}
-                {linksArray && linksArray.map((link, index) => (
-                    <React.Fragment key={index}>
-                        {index > 0 && ", "}
-                        <h9 className="card-subtitle text-muted">
-                          <a href={link.trim()} target="_blank" rel="noopener noreferrer">
-                              {link.trim()}
-                          </a>
-                        </h9>
-                    </React.Fragment>
-                ))}
-        </h8>
-
           </div>
         </div>
       )}
     </>
   );
-}
+};
 
 export default Projects;
 
@@ -114,9 +122,8 @@ export const query = graphql`
           timeframe
           problem
           solution
-          link
         }
       }
     }
   }
-`
+`;
