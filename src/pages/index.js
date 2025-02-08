@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import favicon16 from '../images/favicon-16x16.png'
-import favicon32 from '../images/favicon-32x32.png'
+import favicon16 from '../components/2025img/16.svg';
+import favicon32 from '../components/2025img/32.svg';
 import Hero from './Hero';
 
 const IndexPage = ({ data }) => (
