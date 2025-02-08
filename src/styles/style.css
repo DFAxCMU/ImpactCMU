@@ -157,6 +157,7 @@ h8 {
     font-family: 'thabit';
     font-weight: 500;
     font-size: 120%;  
+    color: black;
 
 }
 
@@ -1293,7 +1294,7 @@ h6 {
     #submit {
         height: 100%;
         background-color: #FFF;
-        background: radial-gradient(30% 15% at 50% 100%, #f5d394 0%, rgba(255, 255, 255, 0.00) 100%, #FFF);
+        background: radial-gradient(30% 15% at 50% 100%, #f5d394 0%, rgba(255, 255, 255, 0.00) 99%, #FFF);
         /* background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
         /* background: radial-gradient(50% 50% at 50% 50%, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
     }
