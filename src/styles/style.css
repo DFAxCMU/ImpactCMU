@@ -49,13 +49,12 @@
   }
   
   .column-2 {
-    /* position: absolute; Positioning the second column behind */
+    /* absolute makes for layering */
     position: absolute;
     left: 520px;
     /* top: 10px;   */
     z-index: 0;  /* Send the second column behind the first one */
   }
-
 
 .herosphere {
     width: 500px;
@@ -1293,7 +1292,7 @@ h6 {
 
     #submit {
         height: 100%;
-        /* background-color: #FFF; */
+        background-color: #FFF;
         background: radial-gradient(30% 15% at 50% 100%, #f5d394 0%, rgba(255, 255, 255, 0.00) 100%, #FFF);
         /* background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
         /* background: radial-gradient(50% 50% at 50% 50%, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
