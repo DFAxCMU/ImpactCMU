@@ -1,5 +1,80 @@
 /* @import url('https://use.typekit.net/yop4tcm.css'); */
 
+/* Center the draggable container on the screen */
+/* .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; Make the container fill the entire height of the viewport
+  } */
+  
+  /* Position heroBack relative to its parent container */
+  /* .heroBack {
+    display: flex;
+    position: absolute;
+  } */
+
+  .content {
+    /* color: black; */
+    /* margin: auto; */
+    display: grid;
+    grid-template-columns: auto auto;
+    /* width: fit-content; */
+    height: fit-content;
+    /* align-items: stretch; */
+    /* position: absolute; */
+    justify-content: center;
+    align-items: center;
+}
+
+/* .centercontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+#hero h3 {
+    font-family:"thabitbold";
+    padding-top: 20px !important;
+    font-size: 28px;
+    width: 450px;
+    line-height: 40px;
+}
+
+.column {
+    padding: 20px;
+    /* background-color: #f4f4f4; */
+    z-index: 1; /* Ensure columns are on the same stacking context */
+  }
+  
+  .column-2 {
+    /* position: absolute; Positioning the second column behind */
+    position: absolute;
+    left: 520px;
+    /* top: 10px;   */
+    z-index: 0;  /* Send the second column behind the first one */
+  }
+
+
+.herosphere {
+    width: 500px;
+}
+
+.wordmark {
+    width: 600px;
+}
+ 
+
+
+  /* Ensure the draggable container takes the full screen size */
+  .draggable-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Take up full viewport height */
+  }
+
+
 :root {
     --darkblue: #0B1C4F;
 }
@@ -274,11 +349,6 @@ a p:hover {
     color: var(--dark-blue)
 }
 
-.content {
-    color: black;
-    margin: auto;
-}
-
 .center {
     display: flex;
     justify-content: center;
@@ -311,6 +381,7 @@ a p:hover {
     background: 
         radial-gradient(50% 50% at 50% 110%, #FF7878 0%, rgba(255, 255, 255, 0.00) 100%, transparent),
         radial-gradient(50% 50% at 75% 65%, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 100%, transparent);
+    overflow: hidden;
     
 }
 
@@ -1222,10 +1293,14 @@ h6 {
 
     #submit {
         height: 100%;
-        background-color: #FFF;
-        background: radial-gradient(30% 15% at 50% 100%, #f5d394 0%, rgba(255, 255, 255, 0.00) 100%, transparent);
+        /* background-color: #FFF; */
+        background: radial-gradient(30% 15% at 50% 100%, #f5d394 0%, rgba(255, 255, 255, 0.00) 100%, #FFF);
         /* background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
         /* background: radial-gradient(50% 50% at 50% 50%, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
+    }
+
+    #submit h8 {
+        color: black;
     }
 
     h8 {
@@ -1250,9 +1325,9 @@ h6 {
         padding-right: 0px !important;
         padding-bottom: 40px !important;
     }
-/* 
-    .submit-button {
-        margin-bottom: 30px !important;
+
+    /* .submit-button {
+        display
     } */
 
     .vector, .vector2 {
@@ -1354,6 +1429,15 @@ h6 {
         margin-bottom: 30px;
         border-radius: 25px;
         transition: background-color 0.5s ease, color 0.5s ease;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+
+    .buttoncenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #submit, #schedule, #about, #projects{
@@ -1363,7 +1447,7 @@ h6 {
         min-height: 100vh;
         justify-content: unset;
         padding-top: 50px;
-        align-items: flex-start;
+        /* align-items: flex-start; */
     }
 
     h4.date-title {
