@@ -122,9 +122,9 @@ const Hero = () => {
                 </center> */}
             </div>
 
-            <div className="sketch-iframe">
+            {/* <div className="sketch-iframe">
               <iframe src="https://openprocessing.org/sketch/2187973/embed/" width="800px" height="1224px"></iframe>
-            </div>
+            </div> */}
           </div>
         </section>
         </div>

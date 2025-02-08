@@ -1,6 +1,5 @@
 /* @import url('https://use.typekit.net/yop4tcm.css'); */
 
-
 :root {
     --darkblue: #0B1C4F;
 }
@@ -20,6 +19,34 @@ p {
     word-spacing: 50%;
     /* font-weight: 500; */
     margin-bottom: 0px;
+}
+
+.bearlist {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    gap: 30px; /* Adds spacing between the items */
+    padding: 10px;
+}
+
+.bearlist p {
+    font-size: 110%;
+}
+
+.bearimg {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cutie {
+    width: 50px;
+}
+
+.box3 p {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .big-header {
@@ -46,21 +73,42 @@ h3 {
     font-weight: 500;
     font-size: 160%;    
     color: black;
-    padding-bottom: 1%;
-    padding-top: 3%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 0px;
+
+}
+
+h8 {
+    font-family: 'thabit';
+    font-weight: 500;
+    font-size: 120%;  
 
 }
 
 /* ABOUT 2025 */
 .container-about {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: 1fr 1.75fr; 
+    /* grid-template-rows: 200px 100px; */
     /* flex-wrap: wrap; Allows content to wrap to the next line if needed */
     gap: 1rem; /* Adds space between sections */
     justify-content: center; /* Centers content horizontally */
     padding: 2rem;
-  }
+    width: 100%;
+    max-width: 900px;
+}
+
+.container-about img {
+    max-width: 100%; /* Ensure images don't exceed grid cell width */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
   
+/* ABOUT 2025 DESKTOP */
+
+
   .yellowcircle-section,
   .redcircle-section {
     display: flex;
@@ -130,12 +178,19 @@ hr {
 }
 
 .vector {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 70px;
 }
 
+.submitline {
+    width: 100%; /* Makes it stretch to full width of parent */  
+    max-width: none; /* Ensures it doesn%E2%80%99t shrink unexpectedly */  
+    display: relative;
+}
+
+
 .vector2 {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .autop {
@@ -177,14 +232,14 @@ h10 {
     margin-bottom: 0px !important;
 }
 
-h8 {
+/* h8 {
     font-family: 'InL';
     font-weight: 500;
     font-size: 16px;    
     color: black;
     padding-top: 10px;
     margin-bottom: 0px !important;
-}
+} */
 
 h9 {
     font-family: 'InL';
@@ -278,6 +333,11 @@ a p:hover {
 
 .aboutHDR {
     font-family: "thabit";
+    padding-top: 0px;
+}
+
+#about p {
+    padding-bottom: 15px;
 }
 
 /* .aboutP {
@@ -294,7 +354,7 @@ a p:hover {
     /* align-items: center; */
     flex-direction: column;
     background-color: #FFF;
-    background: radial-gradient(30% 40% at 50% 95%, #f5d394 0%, rgba(255, 255, 255, 0.00) 100%, transparent);
+    background: radial-gradient(20% 20% at 50% 95%, #f5d394 0%, rgba(255, 255, 255, 0.00) 100%, transparent);
     /* background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
     /* background: radial-gradient(50% 50% at 50% 50%, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
 }
@@ -353,6 +413,7 @@ a p:hover {
     padding-left: 1%;
     padding-right: 1%;
     padding-top: 1%;
+    position: fixed;
 }
 
 .defaultCanvas0 {
@@ -539,20 +600,23 @@ a p:hover {
     display: block;
     transition: all 2s ease-in;
     z-index: 2000;
-    background: #EBEBEB;
-    padding: 48px 16px;
+    background: #FFF;
+    padding: 0px;
+    height: 215px;
+    /* outline: 3px solid black; */
 }
 
 .nav-vertical {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
-    gap: 20px;
-    min-height: 96%;
+    gap: 15px;
+    min-height: 100%;
+    outline: 1px solid black;
 }
 
 .bottom {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     display: flex;
     flex-direction: column;
 }
@@ -774,7 +838,7 @@ h4 {
 }
 
 #submit .boxKMS, #submit .box1 .box2, .box3{
-    max-width: 300px !important; 
+    max-width: 225px !important; 
     /* margin: 0px auto !important; */
     display: block !important;
     
@@ -1009,6 +1073,9 @@ h4 {
     padding: 20px;
     background-color: white;
     border: 1px solid black;
+    flex-direction: column;
+    max-height: 100%;
+    margin-bottom: 24px;
 }
 
 
@@ -1116,12 +1183,100 @@ h6 {
 } */
 
 @media (max-width: 768px) {
+    .navtext {
+        /* color: black; */
+        display: inline-block;
+        position: relative;
+        font-family: "IS";
+        font-size: 15px;
+        font-weight: normal;
+      }
+
+
+    .top-bar-small {
+        padding-top: 10px;
+    }
+
+    .aboutHDR {
+        font-family: "thabit";
+        padding-top: 15px;
+    }
+
+    .bearlist {
+        /* display: flex;
+        justify-content: center; 
+        align-items: center; 
+        gap: 30px; 
+        padding: 10px; */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    /* SUBMIT 2025 */
+    .grids_container {
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* Change to column layout */
+    }
+
+    #submit {
+        height: 100%;
+        background-color: #FFF;
+        background: radial-gradient(30% 15% at 50% 100%, #f5d394 0%, rgba(255, 255, 255, 0.00) 100%, transparent);
+        /* background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
+        /* background: radial-gradient(50% 50% at 50% 50%, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
+    }
+
+    h8 {
+        font-size: 160%; 
+        padding-top: 15px; 
+    }
+
+    #submit p {
+        font-size: 110%;
+    }
+
+    .pSubmit {
+        padding-top: 15px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    .pSubmit2 {
+        padding-top: 20px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-bottom: 40px !important;
+    }
+/* 
+    .submit-button {
+        margin-bottom: 30px !important;
+    } */
+
+    .vector, .vector2 {
+        width: 125px;
+        padding-top: 0px;
+        padding-bottom: 70px !important;
+    }
+
+    .submit_desc {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-top: 20px !important;
+        padding-bottom: 40px !important;
+    }
 
     /* ABOUT 2025 */
     .container-about {
         display: flex;
         flex-direction: column; 
         align-items: center;
+        padding-top: 65px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 24px;
     }
 
     .yellowcircle-section,
@@ -1130,9 +1285,35 @@ h6 {
         max-width: 100%; /* Remove max-width restriction */
     }
 
+    /* schedule 2025 */
+    .timeline-container {
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow-x: auto; /* Enables horizontal scrolling */
+        /* white-space: nowrap; Prevents wrapping of elements */
+        /* padding: 10px; Adds some padding for better appearance */
+        /* scrollbar-width: thin;  */
+        -ms-overflow-style: none; /* Hides the scrollbar on IE/Edge */
+        justify-content: unset !important;
+      }
+
+      /* .timeline-container {
+        flex-wrap: no-wrap !important;
+      } */
+
+      .timeline-container::-webkit-scrollbar {
+        display: none;
+      }
+
+    .box3 {
+        margin-left: 0px !important;
+        margin-right: 20px !important;
+        margin-top: 30px !important;
+    }
+
     body {
         /* padding-top: 70px;  */
-        padding-bottom: 70px;
+        /* padding-bottom: 70px; */
         background-color: #FFF;
     }
 
@@ -1169,7 +1350,8 @@ h6 {
         color: black;
         cursor: pointer;
         margin: 0px;
-        margin-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 30px;
         border-radius: 25px;
         transition: background-color 0.5s ease, color 0.5s ease;
     }
@@ -1178,8 +1360,10 @@ h6 {
         /* padding-top: 600px;  */
         display: flex;
         align-items:center;
-        height: 100vh;
+        min-height: 100vh;
         justify-content: unset;
+        padding-top: 50px;
+        align-items: flex-start;
     }
 
     h4.date-title {

@@ -16,3 +16,17 @@ const IndexPage = ({ data }) => (
 )
 
 export default IndexPage
+
+// import React from "react";
+// import { Helmet } from "react-helmet";
+// import fav16 from '../components/2025img/16.svg';
+// import fav32 from '../components/2025img/32.svg';
+
+// export const onRenderBody = ({ setHeadComponents }) => {
+//     setHeadComponents([
+//         <Helmet key="helmet">
+//             <link rel="icon" type="image/png" sizes="32x32" href={fav32} />
+//             <link rel="icon" type="image/png" sizes="16x16" href={fav16} />
+//         </Helmet>
+//     ]);
+// };

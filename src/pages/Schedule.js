@@ -1,6 +1,10 @@
 import React from 'react';
 import schedule from '../components/2024img/Schedule.png';
+import submitline from '../components/2025img/submitline.svg';
 import NavBar from "../components/NavBar";
+import scarf from '../components/2025img/scarf.svg';
+import light from '../components/2025img/light.svg';
+import plushie from '../components/2025img/plushie.svg';
 
 import 'popper.js'
 import '../dist/css/bootstrap.min.css';
@@ -15,7 +19,7 @@ const Hero = () => (
             <div className="container-fluid">
                 <div className="text-center omega">
                     <h4>EVENT SCHEDULE</h4>
-                    <h5>DATE, TIME, LOCATION</h5>
+                    <h5>April 3rd, TIME, LOCATION</h5>
                     {/* <div className="navbar-brand">
                         <img src={schedule} alt="title-img" class="title-img"/>
                     </div> */}
@@ -26,36 +30,49 @@ const Hero = () => (
                         {/* <div class="row1"> */}
                         <div className="timeline-container">
                             <div className="box3">
-                                <h6>Event</h6>
-                                <h5 class = "time">time</h5>
-                                <p>desc</p>
+                                <h6>Kickoff Ceremony</h6>
+                                <h5 class = "time">TBD</h5>
+                                <p>Get introduced to our projects and faculty judges. Project voting starts.</p>
                             </div>
                             <div className="box3">
-                                <h6>Event</h6>
-                                <h5 class = "time">time</h5>
-                                <p>desc</p>
+                                <h6>Project Showcase</h6>
+                                <h5 class = "time">TBD</h5>
+                                <p>Enjoy free food as you view impactful projects from our participants and learn more about their work.</p>
                             </div>
                         {/* </div> */}
                         {/* <div class="row2"> */}
                             <div className="box3">
-                                <h6>Event</h6>
-                                <h5 class = "time">time</h5>
-                                <p>desc</p>
+                                <h6>Voting Closes</h6>
+                                <h5 class = "time">TBD</h5>
+                                <p>Vote for your favorite project and enter into our raffles to earn special prizes!</p>
                             </div>
                             <div className="box3">
-                                <h6>Event</h6>
-                                <h5 class = "time">time</h5>
-                                <p>desc</p>
+                                <h6>Closing Ceremony</h6>
+                                <h5 class = "time">TBD</h5>
+                                <p>Find out who the project and raffle winners are.</p>
                             </div>
+                            {/* <center>
+                                <img src={submitline} alt="title-img" class="submitline"/>  
+                            </center> */}
                         </div>
                         {/* </div> */}
-
                         
                     </div>
                     <center>
                         <div className="box4">
                             <h4>RAFFLE PRIZES</h4>
-                            <p>desc</p>
+                            <div class="bear">
+                                <div class="bearlist">
+                                    <p>1. Bear Scarf</p>
+                                    <p>2. Bear Light</p>
+                                    <p>3. Giant Bear Plushie</p>
+                                </div>
+                                <div class="bearimg">
+                                    <img src={scarf} alt="title-img" class="cutie"/>  
+                                    <img src={light} alt="title-img" class="cutie"/> 
+                                    <img src={plushie} alt="title-img" class="cutie"/> 
+                                </div>
+                            </div>
                         </div>
                     </center>
                     {/* <center><h4 className="proj-awards-title">Raffle Prizes</h4></center>
