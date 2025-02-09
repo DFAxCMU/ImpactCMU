@@ -3,6 +3,8 @@ import Draggable from "react-draggable";
 import { useState, useEffect, useRef} from "react";
 import herosphere from '../components/2025img/herosphere.svg';
 import wordmark from '../components/2025img/wordmark.svg';
+import imlazy from '../components/2025img/imlazy.svg';
+import slice from '../components/2025img/slice.svg';
 
 import '../dist/css/bootstrap.min.css';
 import NavBarHero from "../components/NavBarHero";
@@ -16,6 +18,12 @@ import '../styles/fonts.css';
 
 
 const Hero = () => {
+  const handleButtonClick = (url) => {
+    // console.log(`${boxName} button clicked`);
+    window.open(url, '_blank');
+    // Perform actions based on the boxName or specific logic for the button
+  };
+
   const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
   const boxRef = useRef(null);
 
@@ -105,15 +113,16 @@ const Hero = () => {
         <section id="hero">
           {/* <div className="centercontent"> */}
             <div className="content">
+              <img src={imlazy} alt="title-img" className="imlazy" />
               {/* <div className="draggable-container" style={{ position: "relative", width: "100%", height: "100vh" }}> */}
                 {/* <div className="heroBack"> */}
-                  <div class="column column-1">
+                  {/* <div class="column column-1">
                     <img src={wordmark} alt="title-img" className="wordmark" />
                     <div><h3>is an end of year showcase of CMU student-led social impact projects.</h3></div>
                   </div>
                   <div class="column column-2">
                     <img src={herosphere} alt="title-img" className="herosphere" />
-                  </div>
+                  </div> */}
 
                   {/* <Draggable bounds="parent">
                     <div className="draggable-box">
@@ -126,15 +135,22 @@ const Hero = () => {
             {/* </div> */}
               
               <Draggable bounds="parent">
-                <div className="draggable-box">
-                  <h2 className="box-title">About</h2>
-                  <p className="box-text">Impact CMU 2024 is an end-of-year showcase of CMU student-led social impact projects.</p>
+                <div className="draggable-box poop1" style={{ position: "absolute", left: "53vw", top: "60vh" }}>
+                  {/* <h2 className="box-title">About</h2> */}
+                  <p className="box-text boxy">Come join us!</p>
+                  <p className="box-text">Date @ Location, Time. Free (food) and enter our raffle for prizes!</p>
                 </div>
               </Draggable>
               <Draggable bounds="parent">
-                <div className="draggable-box">
-                  <h2 className="box-title">About</h2>
-                  <p className="box-text">Impact CMU 2024 is an end-of-year showcase of CMU student-led social impact projects.</p>
+                <div className="draggable-box poop2" style={{ position: "absolute", left: "66vw", top: "41vh" }}>
+                  {/* <h2 className="box-title">About</h2> */}
+                  <p className="box-text"><center>Submit your work!</center></p>
+                  <div>
+                    <center>
+                      <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSdXLtbzD7CaYo_54JB5bKdsDMDsQTxrx_Bg5YPVCwCc8WtdZQ/viewform?usp=sf_link')} class = "herobutton">Submit
+                      </button>
+                    </center>
+                  </div>
                 </div>
               </Draggable>
             {/* </div> */}
@@ -167,22 +183,34 @@ const Hero = () => {
         :
         <div>
         <NavBarHero />
-        <section id="about">
+        <section id="hero">
+          {/* <img src={herosphere} alt="title-img" className="herosphere" /> */}
           <div className="content">
-             <div className="draggable-box1">
-                <p class = "box-text">Impact CMU 2024 is an end of year showcase of CMU student-led social impact projects.</p>
+            {/* <img src={herosphere} alt="title-img" className="herosphere" /> */}
+            {/* <img src={slice} alt="title-img" className="slice" /> */}
+            <div className="heromobcontent">
+              {/* <img src={herosphere} alt="title-img" className="herosphere" /> */}
+              <div className="slicemove"><img src={slice} alt="title-img" className="slice" /></div>
+              <div className="imtired">
+                <img src={wordmark} alt="title-img" className="wordmark" />
+                <p className="heromaintxt">is an end-of-year showcase of CMU student-led social impact projects.</p>
+                <div className="draggable-box poop2">
+                  {/* <h2 className="box-title">About</h2> */}
+                  <p className="box-text"><center>Submit your work!</center></p>
+                  <div>
+                    <center>
+                      <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSdXLtbzD7CaYo_54JB5bKdsDMDsQTxrx_Bg5YPVCwCc8WtdZQ/viewform?usp=sf_link')} class = "herobutton">Submit
+                      </button>
+                    </center>
+                  </div>
+                </div>
+                <div className="draggable-box poop1">
+                  {/* <h2 className="box-title">About</h2> */}
+                  <p className="box-text boxy">Come join us!</p>
+                  <p className="box-text">Date @ Location, Time. Free (food) and enter our raffle for prizes!</p>
+                </div>
+              </div>
             </div>
-
-            <div className="draggable-box2">
-                {/* <p class = "box-text">Enter in your social good project for a chance to win $250!</p> */}
-                <h2 class = "box-title1"><bold>COME SEE IMPACT!!!</bold></h2>
-                <p class = "box-text">April 11 @ Cohon University, 12-4 PM</p>
-                <p class = "box-text">Free popcorn and enter raffles for prizes!</p>
-                {/* <center>
-                  <button class="submit-button"><Nav.Link href="/Submit">Submit</Nav.Link></button>
-                </center> */}
-            </div>
-
             {/* <div className="sketch-iframe">
               <iframe src="https://openprocessing.org/sketch/2187973/embed/" width="800px" height="1224px"></iframe>
             </div> */}

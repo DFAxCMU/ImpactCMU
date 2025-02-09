@@ -18,15 +18,17 @@
   .content {
     /* color: black; */
     /* margin: auto; */
-    display: grid;
-    grid-template-columns: auto auto;
+    /* display: grid;
+    grid-template-columns: auto auto; */
     /* width: fit-content; */
-    height: fit-content;
+    /* height: fit-content; */
     /* align-items: stretch; */
     /* position: absolute; */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
+ 
 
 /* .centercontent {
     display: flex;
@@ -56,15 +58,54 @@
     z-index: 0;  /* Send the second column behind the first one */
   }
 
-.herosphere {
-    width: 500px;
-}
+  .imlazy {
+    width: 85%;
+  }
+
 
 .wordmark {
-    width: 600px;
+    width: 100%;
+    margin-bottom: 15px;
+} 
+
+.heromaintxt {
+    font-family: "thabitbold";
+    font-size: 100%;
+    margin-bottom: 15px;
+
+}
+
+/* .herosphere {
+    width: 85vw;
+    position: absolute;
+    float: right;
+    left: 45vw;
+    top: -130px;
+} */
+
+.slice {
+    width: 50vw;
+    margin-bottom: 40px;
+}
+
+.slicemove {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.heromobcontent {
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 24px;
+    padding-right: 24px; */
+    /* margin-top: 120px; */
+}
+
+.imtired {
+    padding-left: 24px;
+    padding-right: 24px;
 }
  
-
 
   /* Ensure the draggable container takes the full screen size */
   .draggable-container {
@@ -778,19 +819,37 @@ h4 {
 
 
 .draggable-box {
-    width: 350px;
-    height: 145px; 
-    padding: 20px;
+    /* width: 350px;
+    height: 145px;  */
+    padding: 1.4vw;
     background-color: white; 
     border: 1px solid black; 
     /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); shadowwwww */
     cursor: move; /*cool drag cursor B)*/
-    position: relative;
+    position: absolute;
     z-index: 1;
   }
 
+  .poop1 {
+    width: 25vw;
+    /* height: 145px;  */ 
+    /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5);  */
+  }
+
+  .poop2 {
+    width: 17vw;
+    margin-bottom: 15px;
+    /* height: 145px;  */ 
+    /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5);  */
+  }
+
+  .boxy {
+    padding-bottom: 0.75vw;
+  }
+
   .box-text {
-    font-family: 'InUL';
+    font-family: 'thabit';
+    font-size: 1vw;
     margin-bottom: 0px;
   }
 
@@ -803,7 +862,28 @@ h4 {
     padding-bottom: 10px;
   }
 
-  .draggable-box button {
+  .herobutton {
+    width: 8vw;
+    font-family: 'IS';
+    font-size: 0.7vw;
+    padding: 0.5vw 1vw;
+    border-color: black;
+    border-width: 1px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    margin: 1vw;
+    margin-bottom: 0px;
+    border-radius: 25px; /* ROUNDED */
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  .herobutton:hover {
+    background-color: black; 
+    color: white; 
+    }
+
+  /* .draggable-box button {
     width: 140px;
     font-family: 'InL';
     padding: 6px 10px;
@@ -813,14 +893,14 @@ h4 {
     background-color: white;
     color: black;
     cursor: pointer;
-    border-radius: 20px; /* ROUNDED */
+    border-radius: 20px; 
     transition: background-color 0.5s ease, color 0.5s ease;
-  }
+  } */
 
-.draggable-box button:hover {
+/* .draggable-box button:hover {
     background-color: black; 
     color: white; 
-}
+} */
 
 .submit-button {
     width: 180px;
@@ -1266,7 +1346,10 @@ h6 {
 
     .top-bar-small {
         padding-top: 10px;
+        background-color: #FFF; /* FOR HERO PAGE BUT APPLIED TO ALL */
     }
+
+    
 
     .aboutHDR {
         font-family: "thabit";
@@ -1512,19 +1595,95 @@ h6 {
         padding-bottom: 0px;
     }
 
+    /* PEPPA */
+    .draggable-box {
+        /* width: 350px;
+        height: 145px;  */
+        padding: 12px;
+        background-color: white; 
+        border: 1px solid black; 
+        /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); shadowwwww */
+        cursor: move; /*cool drag cursor B)*/
+        position: static;
+        z-index: 1;
+      }
+    
+      .poop1 {
+        width: 100%;
+        /* height: 145px;  */ 
+        /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5);  */
+      }
+    
+      .poop2 {
+        width: 100%;
+        /* height: 145px;  */ 
+        /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5);  */
+      }
+
+      .boxy {
+        padding-bottom: 10px;
+      }
+    
+      .box-text {
+        font-family: 'thabit';
+        font-size: 75%;
+        margin-bottom: 0px;
+      }
+    
+      .box-title {
+        padding-bottom: 15px;
+      }
+    
+      .box-title1 {
+        font-size:25px;
+        padding-bottom: 10px;
+      }
+    
+      .herobutton {
+        width: auto;
+        font-family: 'IS';
+        font-size: 60%;
+        padding: 5px 20px;
+        border-color: black;
+        border-width: 1px;
+        color: black;
+        background-color: white;
+        cursor: pointer;
+        margin: 10px;
+        margin-bottom: 0px;
+        border-radius: 25px; /* ROUNDED */
+        transition: background-color 0.5s ease, color 0.5s ease;
+      }
+
+    .content {
+        justify-content: unset;
+        align-items: unset;
+    }
+
+    #hero {
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        justify-content: unset;
+        align-items: unset;
+        background:radial-gradient(50% 50% at 50% 110%, #FF7878 0%, rgba(255, 255, 255, 0.00) 99%, transparent);
+    }
+
+    /* DEAD CODE */
+
     .draggable-box1 {
-        width: 175px;
+        width: 100%;
         height: 160px; 
         padding: 20px;
         background-color: white; 
         border: 1px solid black; 
         /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); shadowwwww */
         cursor: move; /*cool drag cursor B)*/
-        position: absolute;
+        position: relative;
         z-index: 1;
         text-align: center;
-        bottom: 350px;
-        right: 220px;
+        /* bottom: 350px;
+        right: 220px; */
     }
 
     .draggable-box2 {
@@ -1535,11 +1694,11 @@ h6 {
         border: 1px solid black; 
         /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); shadowwwww */
         cursor: move; /*cool drag cursor B)*/
-        position: absolute;
-        z-index: 1;
+        /* position: absolute; */
+        /* z-index: 1; */
         text-align: center;
-        bottom: 100px;
-        left: 200px;
+        /* bottom: 100px;
+        left: 200px; */
     }
 
     .sketch-iframe {
@@ -1551,6 +1710,8 @@ h6 {
         min-height: 10vh;
         /* overflow: clip; */
     }
+
+    /* DEAD CODE */
 
     .box-title1 {
         font-size:15px;
