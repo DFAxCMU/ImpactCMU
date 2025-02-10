@@ -147,7 +147,7 @@ const Hero = () => {
                   <p className="box-text"><center>Submit your work!</center></p>
                   <div>
                     <center>
-                      <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSdXLtbzD7CaYo_54JB5bKdsDMDsQTxrx_Bg5YPVCwCc8WtdZQ/viewform?usp=sf_link')} class = "herobutton">Submit
+                      <button onClick={() => handleButtonClick('https://forms.gle/z4EY2FSj4785bZYG6')} class = "herobutton">Submit
                       </button>
                     </center>
                   </div>
@@ -199,7 +199,7 @@ const Hero = () => {
                   <p className="box-text"><center>Submit your work!</center></p>
                   <div>
                     <center>
-                      <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSdXLtbzD7CaYo_54JB5bKdsDMDsQTxrx_Bg5YPVCwCc8WtdZQ/viewform?usp=sf_link')} class = "herobutton">Submit
+                      <button onClick={() => handleButtonClick('https://forms.gle/z4EY2FSj4785bZYG6')} class = "herobutton">Submit
                       </button>
                     </center>
                   </div>

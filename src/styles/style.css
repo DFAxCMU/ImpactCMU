@@ -256,8 +256,10 @@ h8 {
 
 .grids_container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    /* grid-template-columns: repeat(5, 15%); 4 equal columns */
+    grid-template-columns: repeat(5, minmax(150px, 15%)); /* Items have at least 100px width */
     gap: 0px; /* Adjust spacing between elements */
+    justify-content: center;
 }
 
 /* Style each grid item */
@@ -286,7 +288,19 @@ h8 {
 .awardsub3 {
     display: grid;
     grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.awardsub4 {
+    display: grid;
+    grid-column-start: 5;
     grid-column-end: -1;
+}
+
+.timelineposition {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
 hr {
@@ -312,6 +326,11 @@ hr {
 .autop {
     display: flex;
     align-items: center;
+}
+
+.changefont {
+    font-family: 'thabitbold' !important;
+    /* font-weight: bold; */
 }
 
 h6 {
@@ -743,14 +762,6 @@ a p:hover {
 
 /* ----------------------------------------- */
 
-.hover-underline-animation {
-    /* color: black; */
-    display: inline-block;
-    position: relative;
-    font-family: "IS";
-    font-size: 15px;
-  }
-
 .navbar-light .navbar-nav .nav-link {
     color: black;
 }
@@ -772,6 +783,14 @@ h4 {
     size: 20px;
     padding-top: 35px;
 }
+
+.hover-underline-animation {
+    display: inline-block; /*makes sure words are next to other another*/
+    position: relative; /*spaces the words out*/
+    font-family: "IS";
+    font-size: 15px;
+    /* height: 2px; DO NOT NEED THIS. LOCATE nav-bar for fixed height*/
+  }
   
 .hover-underline-animation::after {
     content: '';
@@ -925,6 +944,7 @@ h4 {
 .logo {
     width: 100px; 
     height: auto;
+    /* display: block; */
     /* padding-top: 15px; */
 }
 
@@ -949,6 +969,18 @@ h4 {
     margin-right: 5%;  
 }
 
+/*NAVBAR FIXES*/
+.navbar, .navbar>.container, .navbar>.container-fluid {
+    align-items: unset; /* fixes logo*/
+}
+
+.navbar-nav .nav-link {
+    height: 20px;
+    /* background-color: pink; */
+}
+
+/*need to fix underline spacing*/
+
 .navbar-text { /* navbar text top of the screen about, submit, stuff.. */
     padding-left: 0px;
     padding-right: 0px;
@@ -963,6 +995,9 @@ h4 {
     display: flex;
     justify-content: flex-end; /* Distribute items evenly */
     gap: 1.5rem; /* Adjust spacing between items */
+    /* align-items: center;
+    padding: 0;
+    position: fixed; */
 }
 
 .box {
@@ -1269,7 +1304,12 @@ h4 {
 
 .nav-link{
     padding: 0rem 1rem;
+    /* display: inline-block; */
 }
+
+/* .navbar-nav {
+    display: flex;
+} */
 
 .navbar-expand .navbar-nav .nav-link { /* makes sure animation line is not too long  */
     padding-right: 0rem;
@@ -1402,11 +1442,25 @@ h6 {
         padding-bottom: 0px !important;
     }
 
+    .changef {
+        font-family:"thabitbold" !important;
+    }
+
+    .changef1 {
+        font-family:"thabitbold" !important;
+        font-size: 140% !important;
+    }
+
     .pSubmit2 {
-        padding-top: 20px !important;
+        padding-top: 0px !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
-        padding-bottom: 40px !important;
+        padding-bottom:15px !important;
+        font-size: 85% !important;
+    }
+
+    .pSubmit3 {
+        font-size: 95% !important;
     }
 
     /* .submit-button {
@@ -1414,16 +1468,16 @@ h6 {
     } */
 
     .vector, .vector2 {
-        width: 125px;
-        padding-top: 0px;
-        padding-bottom: 70px !important;
+        width: 100px;
+        padding-top: 15px;
+        padding-bottom: 30px !important;
     }
 
     .submit_desc {
         padding-left: 0px !important;
         padding-right: 0px !important;
-        padding-top: 20px !important;
-        padding-bottom: 40px !important;
+        padding-top: 5px !important;
+        padding-bottom: 15px !important;
     }
 
     /* ABOUT 2025 */

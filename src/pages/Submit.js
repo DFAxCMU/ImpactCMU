@@ -42,19 +42,19 @@ const Submit = () => {
                 <div class="grids_container">
                     <h3>PROJECT AWARDS</h3>
                     <hr class="line1" width="100%" color="black" size="5"></hr>
-                    <h8>Board Award</h8>
+                    <div class="pSubmit"><p class="changef1">Board Award</p></div>
                     <div class="submit_desc">
-                        <p>Decided by DFA Board</p>
+                        <p class="pSubmit3">Decided by DFA Board</p>
                         <h8>$250</h8>
                     </div>
-                    <h8>Most Impactful</h8>
+                    <div class="pSubmit"><p class="changef1">Most Impactful</p></div>
                     <div class="submit_desc">
-                        <p>General Student Vote</p>
+                        <p class="pSubmit3">General Student Vote</p>
                         <h8>$250</h8>
                     </div>
-                    <h8>Faculty Favorite</h8>
+                    <div class="pSubmit"><p class="changef1">Faculty Favorite</p></div>
                     <div class="submit_desc">
-                        <p>Decided by guest faculty judges</p>
+                        <p class="pSubmit3">Decided by guest faculty judges</p>
                         <h8>$250</h8>
                     </div>
                     <center>
@@ -62,17 +62,21 @@ const Submit = () => {
                     </center>
                     <h3>TIMELINE</h3>
                     <hr class="line1" width="100%" color="black" size="5"></hr>
-                    <div class="pSubmit"><p>Date Time Location</p></div>
-                    <p class="pSubmit2">desc.</p>
-                    <div class="pSubmit"><p>Date Time Location</p></div>
-                    <p class="pSubmit2">desc.</p>
+                    <div class="pSubmit"><p class="changef">Kickoff Ceremony, TBD</p></div>
+                    <p class="pSubmit2">Get introduced to our projects and faculty judges. Project voting starts.</p>
+                    <div class="pSubmit"><p class="changef">Project Showcase, TBD</p></div>
+                    <p class="pSubmit2">Enjoy free food as you view impactful projects from our participants and learn more about their work.</p>
+                    <div class="pSubmit"><p class="changef">Voting Closes, TBD</p></div>
+                    <p class="pSubmit2">Vote for your favorite project and enter into our raffles to earn special prizes!</p>
+                    <div class="pSubmit"><p class="changef">Closing Ceremony, TBD</p></div>
+                    <p class="pSubmit2">Find out who the project and raffle winners are.</p>
                     <center>
                         <img src={vector2} alt="title-img" class="vector2"/>  
                     </center>
                 </div>
                     <center>
                         <div class="buttoncenter">
-                            <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSdXLtbzD7CaYo_54JB5bKdsDMDsQTxrx_Bg5YPVCwCc8WtdZQ/viewform?usp=sf_link')} class = "submit-button">Submit your project
+                            <button onClick={() => handleButtonClick('https://forms.gle/z4EY2FSj4785bZYG6')} class = "submit-button">Submit your project
                             </button>
                         </div>
                     </center>
@@ -139,25 +143,29 @@ const Submit = () => {
                         <div><p>Decided by guest faculty judges</p>
                         <h8>$250</h8></div>
                     </div>
-                    <div><h8>TIMELINE</h8></div>
-                    <div class="autop"><p>Date Time Location</p></div>
-                    <div class="autop"><p>Date Time Location</p></div>
-                    <div class="autop"><p>Date Time Location</p></div>
+                    <div class="timelineposition"><h8>TIMELINE</h8></div>
+                    <div class="autop"><p className="changefont">Kickoff Ceremony, TBD</p></div>
+                    <div class="autop"><p className="changefont">Project Showcase, TBD</p></div>
+                    <div class="autop"><p className="changefont">Voting Closes, TBD</p></div>
+                    <div class="autop"><p className="changefont">Closing Ceremony, TBD</p></div>
                     <hr class="line1" width="100%" color="black" size="5"></hr>
                     <img src={vector2} alt="title-img" class="vector2"/>  
                     <div class="awardsub1">
-                        <div><p>desc.</p></div>
+                        <div><p>Get introduced to our projects and faculty judges. Project voting starts.</p></div>
                     </div>
                     <div class="awardsub2">
-                        <div><p>desc.</p></div>
+                        <div><p>Enjoy free food as you view impactful projects from our participants and learn more about their work.</p></div>
                     </div>
                     <div class="awardsub3">
-                        <div><p>desc.</p></div>
+                        <div><p>Vote for your favorite project and enter into our raffles to earn special prizes!</p></div>
+                    </div>
+                    <div class="awardsub4">
+                        <div><p>Find out who the project and raffle winners are.</p></div>
                     </div>
                 </div>
                     <center>
                         <div>
-                            <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSdXLtbzD7CaYo_54JB5bKdsDMDsQTxrx_Bg5YPVCwCc8WtdZQ/viewform?usp=sf_link')} class = "submit-button">Submit your project
+                            <button onClick={() => handleButtonClick('https://forms.gle/z4EY2FSj4785bZYG6')} class = "submit-button">Submit your project
                             </button>
                         </div>
                     </center>
