@@ -138,7 +138,7 @@ const Hero = () => {
                 <div className="draggable-box poop1" style={{ position: "absolute", left: "53vw", top: "60vh" }}>
                   {/* <h2 className="box-title">About</h2> */}
                   <p className="box-text boxy">Come join us!</p>
-                  <p className="box-text">Date @ Location, Time. Free (food) and enter our raffle for prizes!</p>
+                  <p className="box-text">April 3rd @ the UC, 12-4 PM. Free (food) and enter our raffle for prizes!</p>
                 </div>
               </Draggable>
               <Draggable bounds="parent">
@@ -207,7 +207,7 @@ const Hero = () => {
                 <div className="draggable-box poop1">
                   {/* <h2 className="box-title">About</h2> */}
                   <p className="box-text boxy">Come join us!</p>
-                  <p className="box-text">Date @ Location, Time. Free (food) and enter our raffle for prizes!</p>
+                  <p className="box-text">April 3rd @ the UC, 12-4 PM. Free (food) and enter our raffle for prizes!</p>
                 </div>
               </div>
             </div>

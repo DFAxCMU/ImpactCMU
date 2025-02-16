@@ -55,7 +55,7 @@ const About = () => {
                                 organizations to promote to a large audience.
                             </p>
                             <h3 className="aboutHDR">WHERE IS IT?</h3>
-                            <p>March 3rd @ LOCATION, TIME</p>
+                            <p>April 3rd @ the UC, 12-4 PM</p>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@ const About = () => {
                                     student organizations to promote to a large audience.
                                 </p>
                                 <h3 className="aboutHDR">WHERE IS IT?</h3>
-                                <p>March 3rd @ LOCATION, TIME</p>
+                                <p>April 3rd @ the UC, 12-4 PM</p>
                             {/* </div> */}
                         {/* </div> */}
                         {/* <div className="redcircle-section"> */}
