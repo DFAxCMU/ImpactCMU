@@ -253,6 +253,20 @@ h8 {
 
 
 /* SUBMIT 2025 */
+.locationfont {
+    font-family: thabit;
+    padding-bottom: 8px;
+}
+
+/* .miniBox {
+    display: flex;    
+    flex-direction: column;    
+    height: 100%;
+}
+
+.miniBox p:last-child {
+    margin-top: auto;
+} */
 
 .grids_container {
     display: grid;
@@ -309,7 +323,7 @@ hr {
 
 .vector {
     padding-top: 30px;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
 }
 
 .submitline {
@@ -321,6 +335,7 @@ hr {
 
 .vector2 {
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .autop {
@@ -1408,6 +1423,15 @@ h6 {
 
 
     /* SUBMIT 2025 */
+    /* .location {
+        font-family: thabit;
+    } */
+/* 
+    .lFont {
+        font-family: thabit;
+        font-size: 10%;
+    } */
+
     .grids_container {
         width: 100%;
         display: flex;
@@ -1452,10 +1476,18 @@ h6 {
     }
 
     .pSubmit2 {
-        padding-top: 0px !important;
+        padding-top: 5px !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
-        padding-bottom:15px !important;
+        padding-bottom:20px !important;
+        font-size: 85% !important;
+    }
+
+    .pSubmit2point5 {
+        padding-top: 5px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-bottom:10px !important;
         font-size: 85% !important;
     }
 
@@ -1477,7 +1509,7 @@ h6 {
         padding-left: 0px !important;
         padding-right: 0px !important;
         padding-top: 5px !important;
-        padding-bottom: 15px !important;
+        padding-bottom: 0px !important;
     }
 
     /* ABOUT 2025 */

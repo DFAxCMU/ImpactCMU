@@ -62,14 +62,21 @@ const Submit = () => {
                     </center>
                     <h3>TIMELINE</h3>
                     <hr class="line1" width="100%" color="black" size="5"></hr>
-                    <div class="pSubmit"><p class="changef">Kickoff Ceremony, TBD</p></div>
-                    <p class="pSubmit2">Get introduced to our projects and faculty judges. Project voting starts.</p>
-                    <div class="pSubmit"><p class="changef">Project Showcase, TBD</p></div>
-                    <p class="pSubmit2">Enjoy free food as you view impactful projects from our participants and learn more about their work.</p>
-                    <div class="pSubmit"><p class="changef">Voting Closes, TBD</p></div>
-                    <p class="pSubmit2">Vote for your favorite project and enter into our raffles to earn special prizes!</p>
-                    <div class="pSubmit"><p class="changef">Closing Ceremony, TBD</p></div>
-                    <p class="pSubmit2">Find out who the project and raffle winners are.</p>
+                    <div class="pSubmit"><p class="changef">March 16, 2-3 PM @ TEP 3801</p></div>
+                    {/* <p className="lFont">Tepper 3801</p> */}
+                    <p class="pSubmit2point5">Impact CMU Info Session (Project Registration Due Friday 3/21, 11:59 PM)</p>
+
+                    <div class="pSubmit"><p class="changef">March 23, 3-4 PM @ TEP 3801</p></div>
+                    {/* <p className="lFont">Tepper 3801</p> */}
+                    <p class="pSubmit2point5">Make-up Info Session</p>
+
+                    <div class="pSubmit"><p class="changef">March 30, 1-3 PM @ TEP 3801</p></div>
+                    {/* <p className="lFont">Tepper 3801</p> */}
+                    <p class="pSubmit2point5">Impact Poster Workshop (Poster Submissions Due Sunday 3/30, 11:59 PM)</p>
+
+                    <div class="pSubmit"><p class="changef">April 3, 12-4 PM @ CUC</p></div>
+                    {/* <p className="lFont">Cohon University Center</p> */}
+                    <p class="pSubmit2">Impact CMU Date!</p>
                     <center>
                         <img src={vector2} alt="title-img" class="vector2"/>  
                     </center>
@@ -144,23 +151,36 @@ const Submit = () => {
                         <h8>$250</h8></div>
                     </div>
                     <div class="timelineposition"><h8>TIMELINE</h8></div>
-                    <div class="autop"><p className="changefont">Kickoff Ceremony, TBD</p></div>
-                    <div class="autop"><p className="changefont">Project Showcase, TBD</p></div>
-                    <div class="autop"><p className="changefont">Voting Closes, TBD</p></div>
-                    <div class="autop"><p className="changefont">Closing Ceremony, TBD</p></div>
+                    <div class="autop"><p className="changefont">March 16, 2-3 PM</p></div>
+                    <div class="autop"><p className="changefont">March 23, 3-4 PM</p></div>
+                    <div class="autop"><p className="changefont">March 30, 1-3 PM</p></div>
+                    <div class="autop"><p className="changefont">April 3, 12-4 PM</p></div>
                     <hr class="line1" width="100%" color="black" size="5"></hr>
                     <img src={vector2} alt="title-img" class="vector2"/>  
                     <div class="awardsub1">
-                        <div><p>Get introduced to our projects and faculty judges. Project voting starts.</p></div>
+                        <div class="miniBox">
+                            <p className="locationfont">Tepper 3801</p>
+                            <p>Impact CMU Info Session (Project Registration Due Friday 3/21, 11:59 PM)</p>
+                            {/* <p></p> */}
+                        </div>
                     </div>
                     <div class="awardsub2">
-                        <div><p>Enjoy free food as you view impactful projects from our participants and learn more about their work.</p></div>
+                        <div>
+                            <p className="locationfont">Tepper 3801</p>
+                            <p>Make-up Info Session</p>
+                        </div>
                     </div>
                     <div class="awardsub3">
-                        <div><p>Vote for your favorite project and enter into our raffles to earn special prizes!</p></div>
+                        <div>
+                            <p className="locationfont">Tepper 3801</p>
+                            <p>Impact Poster Workshop (Poster Submissions Due Sunday 3/30, 11:59 PM)</p>
+                        </div>
                     </div>
                     <div class="awardsub4">
-                        <div><p>Find out who the project and raffle winners are.</p></div>
+                        <div>
+                            <p className="locationfont">Cohon University Center</p>
+                            <p>Impact CMU Date!</p>
+                        </div>
                     </div>
                 </div>
                     <center>
