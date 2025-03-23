@@ -19,7 +19,7 @@ const Hero = () => (
             <div className="container-fluid">
                 <div className="text-center omega">
                     <h4>EVENT SCHEDULE</h4>
-                    <h5>April 3rd @ the UC, 12-4 PM</h5>
+                    <h5>April 3rd @ the UC (Danforth Lounge), 11-4 PM</h5>
                     {/* <div className="navbar-brand">
                         <img src={schedule} alt="title-img" class="title-img"/>
                     </div> */}
@@ -30,25 +30,25 @@ const Hero = () => (
                         {/* <div class="row1"> */}
                         <div className="timeline-container">
                             <div className="box3">
-                                <h6>Kickoff Ceremony</h6>
-                                <h5 class = "time">TBD</h5>
-                                <p>Get introduced to our projects and faculty judges. Project voting starts.</p>
+                                <h6>Lunch</h6>
+                                <h5 class = "time">11AM - 12PM</h5>
+                                <p>Enjoy free food and connect with other presenting teams.</p>
                             </div>
                             <div className="box3">
-                                <h6>Project Showcase</h6>
-                                <h5 class = "time">TBD</h5>
-                                <p>Enjoy free food as you view impactful projects from our participants and learn more about their work.</p>
+                                <h6>Kickoff Ceremony</h6>
+                                <h5 class = "time">12 - 12:30PM</h5>
+                                <p>Get introduced to our projects and faculty judges. Project voting starts.</p>
                             </div>
                         {/* </div> */}
                         {/* <div class="row2"> */}
                             <div className="box3">
-                                <h6>Voting Closes</h6>
-                                <h5 class = "time">TBD</h5>
+                                <h6>Open House + Voting</h6>
+                                <h5 class = "time">12:30 - 3:30PM</h5>
                                 <p>Vote for your favorite project and enter into our raffles to earn special prizes!</p>
                             </div>
                             <div className="box3">
                                 <h6>Closing Ceremony</h6>
-                                <h5 class = "time">TBD</h5>
+                                <h5 class = "time">3:45 - 4PM</h5>
                                 <p>Find out who the project and raffle winners are.</p>
                             </div>
                             {/* <center>

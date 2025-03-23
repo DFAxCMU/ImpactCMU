@@ -74,7 +74,7 @@ const Submit = () => {
                     {/* <p className="lFont">Tepper 3801</p> */}
                     <p class="pSubmit2point5">Impact Poster Workshop (Poster Submissions Due Sunday 3/30, 11:59 PM)</p>
 
-                    <div class="pSubmit"><p class="changef">April 3, 12-4 PM @ CUC</p></div>
+                    <div class="pSubmit"><p class="changef">April 3, 11-4 PM @ Danforth Lounge</p></div>
                     {/* <p className="lFont">Cohon University Center</p> */}
                     <p class="pSubmit2">Impact CMU Date!</p>
                     <center>
@@ -154,7 +154,7 @@ const Submit = () => {
                     <div class="autop"><p className="changefont">March 16, 2-3 PM</p></div>
                     <div class="autop"><p className="changefont">March 23, 3-4 PM</p></div>
                     <div class="autop"><p className="changefont">March 30, 1-3 PM</p></div>
-                    <div class="autop"><p className="changefont">April 3, 12-4 PM</p></div>
+                    <div class="autop"><p className="changefont">April 3, 11-4 PM</p></div>
                     <hr class="line1" width="100%" color="black" size="5"></hr>
                     <img src={vector2} alt="title-img" class="vector2"/>  
                     <div class="awardsub1">
@@ -178,7 +178,7 @@ const Submit = () => {
                     </div>
                     <div class="awardsub4">
                         <div>
-                            <p className="locationfont">Cohon University Center</p>
+                            <p className="locationfont">Cohon University Center (Danforth Lounge)</p>
                             <p>Impact CMU Date!</p>
                         </div>
                     </div>

@@ -159,8 +159,8 @@ p {
     width: 50px;
 }
 
-.box3 p {
-    padding-top: 20px;
+.box3 p { /* HERE HERE */
+    padding-top: 10px;
     padding-bottom: 20px;
 }
 
@@ -1285,11 +1285,11 @@ h4 {
     flex-direction: row;
 }
 
-.time {
-    position: absolute; 
+.time { /* change position bruh */
+    position: relative; 
     top: 0; 
     right: 0; 
-    padding: 20px;
+    /* padding: 20px; */
   }
 
 .time2 {
@@ -1375,7 +1375,7 @@ h6 {
     font-size: 14px;
     padding: 0px;
     font-family: "thabitbold";
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 
