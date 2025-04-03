@@ -44,7 +44,7 @@ export default function TopBar(props) {
                         <Nav.Link href="/About" className="hover-underline-animation">ABOUT</Nav.Link>
                         <Nav.Link href="/Submit" className="hover-underline-animation">SUBMIT</Nav.Link>
                         <Nav.Link href="/Schedule" className="hover-underline-animation">SCHEDULE</Nav.Link>
-                        {/* <Nav.Link href="/Projects" className="hover-underline-animation">PROJECTS</Nav.Link> */}
+                        <Nav.Link href="/Projects" className="hover-underline-animation">PROJECTS</Nav.Link>
                         <Nav.Link href="https://dfaxcmu.notion.site/ecfaf84847754757bf0809df74a3253c?v=087d30146f574a93bc8b935ecb0f4560&pvs=4" className="hover-underline-animation" target="_blank_">
                             2024 ARCHIVE
                         </Nav.Link>
@@ -135,8 +135,8 @@ export default function TopBar(props) {
                         </a> */}
                         <Nav.Link href="/About" className="navtext">ABOUT</Nav.Link>
                         <Nav.Link href="/Submit" className="navtext">SUBMIT</Nav.Link>
-                        {/* <Nav.Link href="/Projects">PROJECTS</Nav.Link> */}
                         <Nav.Link href="/Schedule" className="navtext">SCHEDULE</Nav.Link>
+                        <Nav.Link href="/Projects" className="navtext">PROJECTS</Nav.Link>
                         <Nav.Link href="https://dfaxcmu.notion.site/ecfaf84847754757bf0809df74a3253c?v=087d30146f574a93bc8b935ecb0f4560&pvs=4" className="navtext" target="_blank_">
                             2024 ARCHIVE
                         </Nav.Link>

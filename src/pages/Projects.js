@@ -5,14 +5,14 @@ import "../dist/css/bootstrap.min.css";
 import "../styles/style.css";
 import "../styles/page.css";
 import "../styles/fonts.css";
-import vector3 from '../components/2025img/Vector-3.svg';
+import vector3 from "../components/2025img/Vector-3.svg";
 
 const Projects = ({ data }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({});
   const projects = data.allProjectInfoCsv.edges.map((edge) => edge.node);
 
-  const containerRef = useRef(null); // Reference for scrollable container
+  const containerRef = useRef(null);
 
   const openModal = (project) => {
     setModalContent(project);
@@ -23,28 +23,18 @@ const Projects = ({ data }) => {
     setModalOpen(false);
   };
 
-  // Scroll to the next or previous "page"
   const scrollProjects = (direction) => {
     if (containerRef.current) {
-      // const projectWidth = 250 + 20;
-      // const scrollAmount = projectWidth * 4;
       const containerWidth = containerRef.current.offsetWidth;
-      const projectWidth = containerRef.current.querySelector(".project-box").offsetWidth; // Get project box width
-    
-      const projectsPerPage = Math.floor(containerWidth / projectWidth); // Calculate how many fit
-      const scrollAmount = projectWidth * projectsPerPage; 
-      // const projectWidth = containerRef.current.querySelector(".project-box").offsetWidth; // Get width of a project box
-      // const projectsPerPage = 8; // Show 8 projects at a time
-      // const scrollAmount = projectWidth * projectsPerPage; // Calculate scroll amount (width of 8 projects)
+      const projectWidth = containerRef.current.querySelector(".project-box").offsetWidth;
+      const projectsPerRow = Math.floor(containerWidth / projectWidth);
+      const scrollAmount = projectWidth * projectsPerRow;
+
       if (direction === "right") {
-        containerRef.current.scrollLeft += scrollAmount; // Move scroll position to the right
+        containerRef.current.scrollLeft += scrollAmount;
       } else if (direction === "left") {
-        containerRef.current.scrollLeft -= scrollAmount; // Move scroll position to the left
+        containerRef.current.scrollLeft -= scrollAmount;
       }
-      // containerRef.current.scrollBy({
-      //   left: direction === "right" ? scrollAmount : -scrollAmount,
-      //   behavior: "smooth",
-      // });
     }
   };
 
@@ -63,21 +53,15 @@ const Projects = ({ data }) => {
               &#9665;
             </button>
 
-            <button className="scroll-button right" onClick={() => scrollProjects("right")}>
-              &#9655;
-            </button>
-
             <div className="scroll-wrapper" ref={containerRef}>
               {projects.map((project, index) => (
                 <div key={index} className="project-box" onClick={() => openModal(project)} style={{ backgroundImage: `url(${vector3})` }}>
                   <div className="project-image-container">
                     <div className="project-name-overlay">
                       <h5 className="card-title">{project.title}</h5>
-                      <h6 className="card-subtitle text-muted">{project.org}</h6>
+                      {/* <h11 className="card-subtitle text-muted">{project.org}</h11> */}
                     </div>
                   </div>
-                  {/* <h5 className="card-title">{project.title}</h5>
-                  <h6 className="card-subtitle text-muted">{project.org}</h6> */}
                 </div>
               ))}
             </div>
@@ -94,14 +78,15 @@ const Projects = ({ data }) => {
         <div className="modal-backdrop">
           <div className="modal-content">
             <span className="close-button" onClick={closeModal}>&times;</span>
-            <h10 className="card-title">{modalContent.title}</h10>
-            <h9 className="card-subtitle text-muted">{modalContent.members}</h9>
-            <h9 className="card-subtitle text-muted">{modalContent.timeframe}</h9>
+            <h5 className="card-title">{modalContent.title}</h5>
+            <h11 className="card-subtitle text-muted">{modalContent.org}</h11>
+            <h12 className="card-subtitle text-muted">{modalContent.members}</h12>
+            {/* <h11 className="card-subtitle text-muted">{modalContent.timeframe}</h11> */}
             <div className="divider"></div>
-            <h8 className="card-title">Problem Space</h8>
-            <h9 className="card-subtitle text-muted">{modalContent.problem}</h9>
-            <h8 className="card-title">Solution</h8>
-            <h9 className="card-subtitle text-muted">{modalContent.solution}</h9>
+            {/* <h5 className="card-title">Problem Space</h5> */}
+            <p className="card-subtitle">{modalContent.problem}</p>
+            {/* <h5 className="card-title">Solution</h5>
+            <p className="card-subtitle text-muted">{modalContent.solution}</p> */}
           </div>
         </div>
       )}
@@ -119,9 +104,7 @@ export const query = graphql`
           title
           org
           members
-          timeframe
           problem
-          solution
         }
       }
     }
