@@ -36,6 +36,21 @@
     align-items: center;
 } */
 
+/* Gradient */
+.gradient {
+    position: absolute;
+    width: 1920px;
+    height: 856px;
+    left: 2562px;
+    top: -725px;
+
+    background: url(src/components/2026img/gradient.png);
+    opacity: 0.5;
+    filter: blur(100px);
+    border-radius: 500px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
 #hero h3 {
     font-family:"thabitbold";
     padding-top: 20px !important;
@@ -1203,7 +1218,7 @@ h4 {
     padding: 20px;
     margin: 15px;
     background-color: white;
-    border: 1px solid black; 
+    /* border: 1px solid black;  */
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     position: relative;
 }
@@ -1219,22 +1234,33 @@ h4 {
     position: relative;
 }
 
+/* event schedule boxes */
 .box3 {
     flex: 1;
-    padding: 20px;
+    padding: 30px;
     margin: 10px;   
     background-color: white;
-    border: 1px solid black; 
-    /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); */
+    /* border: 1px solid black;  */
+    border-radius: 24px; 
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     position: relative;
 }
 
-.boxes, .boxes1 {
+.boxes {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     /* gap: 5px; control the space between the boxes */
+    margin-bottom: 20px; /* add some bottom margin */
+}
+
+.boxes1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /* gap: 20px; control the space between the boxes */
     margin-bottom: 20px; /* add some bottom margin */
 }
 
@@ -1274,7 +1300,7 @@ h4 {
     width: 250px; 
     padding: 20px;
     background-color: white;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); */
 }
 
@@ -1358,7 +1384,7 @@ h4 {
 .timeline-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     /* align-items: center; */
     width: 100%;
     /* gap: 20px; */
