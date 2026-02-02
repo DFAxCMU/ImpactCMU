@@ -117,6 +117,74 @@
 
 :root {
     --darkblue: #0B1C4F;
+    --blue: rgba(61, 203, 243, 1);
+    --body-font-family: "Switzer", Helvetica;
+    --body-font-size: 16px;
+    --body-font-style: normal;
+    --body-font-weight: 300;
+    --body-letter-spacing: 0px;
+    --body-line-height: 24px;
+    --button-label-font-family: "Switzer", Helvetica;
+    --button-label-font-size: 16px;
+    --button-label-font-style: normal;
+    --button-label-font-weight: 500;
+    --button-label-letter-spacing: 0px;
+    --button-label-line-height: normal;
+    --drop-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+    --green: rgba(192, 246, 112, 1);
+    --heading-font-family: "iA Writer Duospace", Helvetica;
+    --heading-font-size: 24px;
+    --heading-font-style: normal;
+    --heading-font-weight: 400;
+    --heading-letter-spacing: 0px;
+    --heading-line-height: normal;
+    --neutralblack: rgba(0, 0, 0, 1);
+    --neutralgray: rgba(217, 217, 217, 1);
+    --neutraloff-white: rgba(250, 248, 246, 1);
+    --orange: rgba(250, 117, 50, 1);
+    --pink: rgba(249, 135, 161, 1);
+    --socials-body-font-family: "Switzer", Helvetica;
+    --socials-body-font-size: 48px;
+    --socials-body-font-style: normal;
+    --socials-body-font-weight: 300;
+    --socials-body-letter-spacing: 0px;
+    --socials-body-line-height: normal;
+    --socials-body-small-font-family: "Switzer", Helvetica;
+    --socials-body-small-font-size: 40px;
+    --socials-body-small-font-style: normal;
+    --socials-body-small-font-weight: 300;
+    --socials-body-small-letter-spacing: 0px;
+    --socials-body-small-line-height: normal;
+    --socials-button-font-family: "Switzer", Helvetica;
+    --socials-button-font-size: 32px;
+    --socials-button-font-style: normal;
+    --socials-button-font-weight: 500;
+    --socials-button-letter-spacing: 0px;
+    --socials-button-line-height: normal;
+    --socials-heading-font-family: "Cy", Helvetica;
+    --socials-heading-font-size: 100px;
+    --socials-heading-font-style: normal;
+    --socials-heading-font-weight: 400;
+    --socials-heading-letter-spacing: 0px;
+    --socials-heading-line-height: normal;
+    --socials-note-font-family: "iA Writer Duospace", Helvetica;
+    --socials-note-font-size: 36px;
+    --socials-note-font-style: normal;
+    --socials-note-font-weight: 400;
+    --socials-note-letter-spacing: 0px;
+    --socials-note-line-height: normal;
+    --socials-subhead-font-family: "iA Writer Duospace", Helvetica;
+    --socials-subhead-font-size: 60px;
+    --socials-subhead-font-style: normal;
+    --socials-subhead-font-weight: 400;
+    --socials-subhead-letter-spacing: 0px;
+    --socials-subhead-line-height: normal;
+    --wordmark-font-family: "Cy", Helvetica;
+    --wordmark-font-size: 96px;
+    --wordmark-font-style: normal;
+    --wordmark-font-weight: 400;
+    --wordmark-letter-spacing: 0px;
+    --wordmark-line-height: normal;
 }
 
 section {
@@ -553,14 +621,13 @@ a p:hover {
 
 
 /*NEW EDITS*/
-.navbar {
-    /* margin-bottom: 10px; */
+/* .navbar {
     padding-bottom: 1%;
     padding-left: 1%;
     padding-right: 1%;
     padding-top: 1%;
     position: fixed;
-}
+} */
 
 .defaultCanvas0 {
     overflow: hidden;
@@ -1878,7 +1945,169 @@ h12 {
 
 
 
+/* Navbar container */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    padding: 12px 24px;
+    background: transparent;
+    gap: 16px;
+    position: relative;
+    z-index: 3;
+    padding: 2%;
+  }
+  
+  /* frame for nav items */
+  .frame {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+    ),
+    linear-gradient(
+        0deg,
+        rgba(250, 248, 246, 1) 0%,
+        rgba(250, 248, 246, 1) 100%
+    );
+    border-radius: 500px;
+    display: inline-flex;
+    padding: 12px;
+  }
+  
+  /* Logo wrapper */
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+  }
+  
+  /* Nav item styling */
+  .nav-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 500px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: transparent;
+  }
+  
+  .nav-item:hover {
+    background-color: #f5f5f5; /* subtle hover effect */
+  }
+  
+  /* Active nav item */
+  .nav-item.active {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px #00000040;
+  }
+  
+  /* Text inside nav items */
+  .text-wrapper {
+    font-family: var(--button-label-font-family);
+    font-size: var(--button-label-font-size);
+    font-weight: var(--button-label-font-weight);
+    color: var(--neutralblack);
+    line-height: var(--button-label-line-height);
+  }
+  
+
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+    ),
+    linear-gradient(
+        0deg,
+        rgba(250, 248, 246, 1) 0%,
+        rgba(250, 248, 246, 1) 100%
+    );
+    border-radius: 500px;
+    display: inline-flex;
+    padding: 12px;
+    z-index: 3;
+  }
+  
+  /* .logo-wrapper img.logo {
+    height: 50px;
+  } */
+  
+  /* .nav-links {
+    display: flex;
+    gap: 32px;
+  } */
+  
+  /* .nav-item {
+    text-decoration: none;
+    color: var(--neutralblack);
+    font-family: var(--button-label-font-family);
+    font-weight: var(--button-label-font-weight);
+  } */
+  
+  /* .nav-item.active {
+    font-weight: 600;
+  } */
+  
+  .nav-socials {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .nav-socials img {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .navbar-mobile {
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+  }
+  
+  .navbar-mobile .logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-toggle .hamburger {
+    width: 24px;
+    height: 2px;
+    background-color: var(--neutralblack);
+  }
+  
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background-color: #faf8f6;
+  }
+  
 
 
 
