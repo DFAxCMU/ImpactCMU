@@ -127,6 +127,160 @@
 }
 
 
+/* projects */
+
+
+#projects {
+    background-color: #FFF;
+    /* background: radial-gradient(circle, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 40%, transparent 100%); */
+    display: flex;
+    align-items:center;
+    height: 100vh;
+    justify-content: center;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to make text readable */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+.projects-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  /* Scrollable Wrapper */
+  .scroll-wrapper {
+    display: flex;
+    width: calc(100% * 8); /*Make the container 8 times the width of one project */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 10px;
+    gap: 20px; /* For spacing between projects */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    flex-wrap: nowrap;
+  }
+  
+  /* Hides scrollbar */
+  .scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  .project-box {
+    width: 250px;  /* Adjust size as needed */
+    height: 250px; /* Keep it a perfect square */
+    border-radius: 50%; /* Ensures circular shape */
+    background-size: cover;  /* Ensures the image fills the circle */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0; /* Prevent shrinking */
+    position: relative; /* Needed for absolute positioning of text */
+    overflow: hidden;
+  }
+  
+  /* Overlay to hold the text */
+  .project-name-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    width: 80%; /* Keeps text contained */
+    text-align: center;
+    background: white; /* Optional: Slight background for readability */
+    /* padding: 10px; */
+    /* border-radius: 10px; */
+  }
+  
+  .project-name-overlay h5, 
+  .project-name-overlay h6 {
+    color: black; /* Ensure visibility on images */
+    font-size: 16px;
+    margin: 5px 0;
+  }
+    
+  
+  
+  .project-box:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Scroll Buttons */
+  .scroll-button {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+  }
+  
+  .scroll-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .scroll-button.left {
+    left: 0;
+  }
+  
+  .scroll-button.right {
+    right: 0;
+  }
+  
+  /* Modal Styles */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    gap: 10px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+
 
 
 
