@@ -2062,7 +2062,7 @@ h12 {
     font-weight: 600;
   } */
   
-  .nav-socials {
+  /* .nav-socials {
     display: flex;
     gap: 16px;
   }
@@ -2107,9 +2107,29 @@ h12 {
     padding: 16px;
     background-color: #faf8f6;
   }
+   */
+
+
+   .menu-icon {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+  }
   
-
-
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(250, 248, 246, 0.98);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    z-index: 10;
+  }
+  
 
 
 
