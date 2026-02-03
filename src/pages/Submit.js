@@ -10,10 +10,15 @@ import group3 from "../components/2026img/group-3.svg";
 import slack from "../components/2026img/streamline-logos_slack-logo.svg";
 import instagram from "../components/2026img/instagram-logo-2-solid.svg";
 import email from "../components/2026img/fontisto_email.svg";
-import calendar from "../components/2026img/quill_calendar.svg";
+import calendar from "../components/2026img/quill_calendars.svg";
 import NavBar from "../components/NavBar";
 
 const Submit = () => {
+    const handleButtonClick = (url) => {
+        // console.log(`${boxName} button clicked`);
+        window.open(url, '_blank');
+        // Perform actions based on the boxName or specific logic for the button
+    };
     const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     useEffect(() => {
@@ -32,7 +37,7 @@ const Submit = () => {
             <img className="card-gradient" src={gradient} alt="" />
             <h3>{title}</h3>
             <p>{subtitle}</p>
-            <strong>{amount}</strong>
+            <p>{amount}</p>
         </div>
         );
         
@@ -49,16 +54,30 @@ const Submit = () => {
         <img className="bg-group" src={group3} alt="" />
         <img className="bg-gradient" src={gradient} alt="" />
         <NavBar />
-        {/* awards */}
+        {/* awards */}       
         <section className="submit-section">
             <h2 className="section-title">Project Awards</h2>
 
-            <div className={isSmallScreen ? "card-column" : "card-row"}>
+            <div className={isSmallScreen ? "awards-stack" : "awards-row"}>
+                <div className={isSmallScreen ? "card-column" : "card-row"}>
                 <Award gradient={image} title="Board Award" subtitle="Decided by DFA Board" amount="$250" />
                 <Award gradient={gradient2} title="Most Impactful" subtitle="General Student Vote" amount="$250" />
                 <Award gradient={gradient3} title="Faculty Favorite" subtitle="Decided by faculty judges" amount="$250" />
+                </div>
+
+                {/* <div className="submit-button submit-spacing"> */}
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoFSey-Qw9FLO94pDdfiV8q0ep1UMHhQ5xgxVllzyUVbiZlA/viewform?usp=header" target="_blank" className="submit-button submit-spacing">
+                    <span className="submit-text">SUBMIT YOUR PROJECT</span>
+                </a>
+                {/* <div className="submit-text">SUBMIT YOUR PROJECT</div> */}
+                {/* <div className="submit-button submit-spacing"> */}
+                {/* <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSfoFSey-Qw9FLO94pDdfiV8q0ep1UMHhQ5xgxVllzyUVbiZlA/viewform?usp=header')} className="submit-text">SUBMIT YOUR PROJECT</button> */}
+                {/* </div> */}
+                {/* </div> */}
+                {/* </div> */}
             </div>
         </section>
+
 
         {/* <h2 className="section-title">Timeline</h2> */}
         <section className="submit-section">
@@ -91,10 +110,20 @@ const Submit = () => {
 
         {/* footer icons */}
         <footer className="footer">
-            <img src={instagram} alt="Instagram" />
-            <img src={calendar} alt="Calendar" />
-            <img src={email} alt="Email" />
-            <img src={slack} alt="Slack" />
+            <a href="https://www.instagram.com/impact.cmu/" target="_blank">
+                <img src={instagram} alt="Instagram" />
+            </a>
+            <a href="https://calendar.google.com/calendar/u/4?cid=Y2FybmVnaWVtZWxsb25AZGVzaWduZm9yYW1lcmljYS5jb20" target="_blank">
+                <div className="col">
+                    <img src={calendar} alt="Calendar" id="quill-calendar" />
+                </div>
+            </a>
+            <a href="mailto:impactcmu.dfa@gmail.com">
+                <img src={email} alt="Email" />
+            </a>
+            <a href="https://join.slack.com/t/impactcmu/shared_invite/zt-2d9yxiqk0-l0NwYeY6tqH2IcXoa98p8Q" target="_blank">
+                <img src={slack} alt="Slack" />
+            </a>
         </footer>
     </div>
     );
