@@ -1,6 +1,11 @@
 import React from "react";
 import unionStroke from "../components/2026img/union-stroke.svg";
 
+import slack from "../components/2026img/streamline-logos_slack-logo.svg";
+import instagram from "../components/2026img/instagram-logo-2-solid.svg";
+import email from "../components/2026img/fontisto_email.svg";
+import calendar from "../components/2026img/quill_calendars.svg";
+
 const NAV_ITEMS = [
   { label: "ABOUT", href: "/About" },
   { label: "SUBMIT", href: "/Submit" },
@@ -14,29 +19,29 @@ export default function NavBarSimple() {
     typeof window !== "undefined" ? window.location.pathname : "";
 
   return (
-    <nav className="navbar">
-      <div className="frame">
-        <a href="/Hero" className="logo-wrapper">
-          <img src={unionStroke} alt="Union stroke" />
-        </a>
+    <><nav className="navbar">
+          <div className="frame">
+              <a href="/Hero" className="logo-wrapper">
+                  <img src={unionStroke} alt="Union stroke" />
+              </a>
 
-        {NAV_ITEMS.map((item) => {
-          const isActive =
-            !item.external && currentPath.startsWith(item.href);
+              {NAV_ITEMS.map((item) => {
+                  const isActive = !item.external && currentPath.startsWith(item.href);
 
-          return (
-            <a
-              key={item.label}
-              href={item.href}
-              className={`nav-item ${isActive ? "active" : ""}`}
-              target={item.external ? "_blank" : undefined}
-              rel={item.external ? "noopener noreferrer" : undefined}
-            >
-              <span className="text-wrapper">{item.label}</span>
-            </a>
-          );
-        })}
-      </div>
-    </nav>
+                  return (
+                      <a
+                          key={item.label}
+                          href={item.href}
+                          className={`nav-item ${isActive ? "active" : ""}`}
+                          target={item.external ? "_blank" : undefined}
+                          rel={item.external ? "noopener noreferrer" : undefined}
+                      >
+                          <span className="text-wrapper">{item.label}</span>
+                      </a>
+                  );
+              })}
+          </div>
+      </nav>
+    </>
   );
 }

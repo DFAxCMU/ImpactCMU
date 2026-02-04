@@ -12,6 +12,7 @@ import instagram from "../components/2026img/instagram-logo-2-solid.svg";
 import email from "../components/2026img/fontisto_email.svg";
 import calendar from "../components/2026img/quill_calendars.svg";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const Submit = () => {
     const handleButtonClick = (url) => {
@@ -109,7 +110,7 @@ const Submit = () => {
 
 
         {/* footer icons */}
-        <footer className="footer">
+        {/* <footer className="footer">
             <a href="https://www.instagram.com/impact.cmu/" target="_blank">
                 <img src={instagram} alt="Instagram" />
             </a>
@@ -124,7 +125,8 @@ const Submit = () => {
             <a href="https://join.slack.com/t/impactcmu/shared_invite/zt-2d9yxiqk0-l0NwYeY6tqH2IcXoa98p8Q" target="_blank">
                 <img src={slack} alt="Slack" />
             </a>
-        </footer>
+        </footer> */}
+        <Footer />
     </div>
     );
 };
