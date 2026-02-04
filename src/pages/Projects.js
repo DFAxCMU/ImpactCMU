@@ -50,10 +50,16 @@ const Projects = ({ data }) => {
 
   const containerRef = useRef(null);
 
-  const openModal = (project) => {
-    setModalContent(project);
+  // const openModal = (project, cubeImage) => {
+  //   setModalContent(project);
+  //   setModalOpen(true);
+  // };
+
+  const openModal = (project, cubeImage) => {
+    setModalContent({ ...project, cubeImage });
     setModalOpen(true);
   };
+  
 
   const closeModal = () => {
     setModalOpen(false);
@@ -83,42 +89,42 @@ const Projects = ({ data }) => {
             <h4>PROJECTS</h4>
       </div>
       <section id="projects">
-        <div className="container-fluid">
 
-          {/* Scrollable container */}
-          <div className="projects-container">
-            <button className="scroll-button left" onClick={() => scrollProjects("left")}>
-              {/* &#9665; */}
-              <img src={leftarrow} className="leftarrow" alt="" />
-            </button>
+        {/* Scrollable container */}
+        <div className="projects-container">
+          <button className="scroll-button left" onClick={() => scrollProjects("left")}>
+            {/* &#9665; */}
+            <img src={leftarrow} alt="" />
+          </button>
 
-            <div className="scroll-wrapper" ref={containerRef}>
-              {projects.map((project, index) => {
-                const cubeImage = cubeImages[index % cubeImages.length];
+          <div className="scroll-wrapper" ref={containerRef}>
+            {projects.map((project, index) => {
+              const cubeImage = cubeImages[index % cubeImages.length];
 
-                return (
-                  <div
-                    key={index}
-                    className="project-box"
-                    onClick={() => openModal(project)}
-                  >
-                    {/* Cube image */}
-                    <div className="project-image">
-                      <img src={cubeImage} alt="" />
-                    </div>
-
-                    {/* Title BELOW image */}
-                    <h5 className="project-title">{project.title}</h5>
+              return (
+                <div
+                  key={index}
+                  className="project-box"
+                  // onClick={() => openModal(project)}
+                  onClick={() => openModal(project, cubeImage)}
+                >
+                  {/* Cube image */}
+                  <div className="project-image">
+                    <img src={cubeImage} alt="" />
                   </div>
-                );
-              })}
-            </div>
-            <button className="scroll-button right" onClick={() => scrollProjects("right")}>
-              {/* &#9655; */}
-              <img src={rightarrow} className="leftarrow" alt="" />
-            </button>
+
+                  {/* Title BELOW image */}
+                  <h5 className="project-title">{project.title}</h5>
+                </div>
+              );
+            })}
           </div>
+          <button className="scroll-button right" onClick={() => scrollProjects("right")}>
+            {/* &#9655; */}
+            <img src={rightarrow} alt="" />
+          </button>
         </div>
+
       </section>
       {/* footer icons */}
       {/* <div>
@@ -128,20 +134,45 @@ const Projects = ({ data }) => {
       {/* Modal */}
       {isModalOpen && (
         <div className="modal-backdrop">
-          <div className="modal-content">
-            <span className="close-button" onClick={closeModal}>&times;</span>
-            <h5 className="card-title">{modalContent.title}</h5>
-            <h11 className="card-subtitle text-muted">{modalContent.org}</h11>
-            <h12 className="card-subtitle text-muted">{modalContent.members}</h12>
-            {/* <h11 className="card-subtitle text-muted">{modalContent.timeframe}</h11> */}
-            <div className="divider"></div>
-            {/* <h5 className="card-title">Problem Space</h5> */}
-            <p className="card-subtitle">{modalContent.problem}</p>
-            {/* <h5 className="card-title">Solution</h5>
-            <p className="card-subtitle text-muted">{modalContent.solution}</p> */}
+          <div className="modal-frame">
+            
+            {/* Header and close button*/}
+            <div className="modal-header">
+              <div className="modal-project-name">
+                {modalContent.title}
+              </div>
+              <button
+                className="modal-close"
+                onClick={closeModal}
+                aria-label="Close modal"
+              >
+                &times;
+              </button>
+            </div>
+            {/* Cube gradient picture*/}
+            <div className="modal-cube-wrapper">
+              <img
+                src={modalContent.cubeImage}
+                alt=""
+                className="modal-cube"
+              />
+            </div>
+            {/* Org name*/}
+            <div className="modal-org">
+              {modalContent.org}
+            </div>
+            {/* Members */}
+            <div className="modal-members">
+              {modalContent.members}
+            </div>
+            {/* Problem */}
+            <div className="modal-problem">
+              {modalContent.problem}
+            </div>
           </div>
         </div>
       )}
+
       {/* <Footer /> */}
     </>
   );
