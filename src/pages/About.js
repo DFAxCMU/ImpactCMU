@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import yellowcircle from '../components/2025img/yellowcircle.svg';
-import redcircle from '../components/2025img/redcircle.svg';
+import yellowcircle from '../components/2026img/who-are-we.svg';
+import redcircle from '../components/2026img/what-is-impact.svg';
 import NavBar from "../components/NavBar";
 
 import 'popper.js';
