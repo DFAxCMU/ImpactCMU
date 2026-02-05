@@ -1876,6 +1876,122 @@ h12 {
     
 }
 
+/* Navbar container IMPACT 2026*/
+  .navbar {
+    display: flex;
+    justify-content: center;
+    padding: 12px 24px;
+    background: transparent;
+    gap: 16px;
+    position: relative;
+    z-index: 3;
+    padding: 2%;
+  }
+  
+  /* frame for nav items */
+  .frame {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+    ),
+    linear-gradient(
+        0deg,
+        rgba(250, 248, 246, 1) 0%,
+        rgba(250, 248, 246, 1) 100%
+    );
+    border-radius: 500px;
+    display: inline-flex;
+    padding: 12px;
+  }
+  
+  /* Logo wrapper */
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+  }
+  
+  /* Nav item styling */
+  .nav-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 500px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: transparent;
+  }
+  
+  .nav-item:hover {
+    background-color: #f5f5f5; /* subtle hover effect */
+  }
+  
+  /* Active nav item */
+  .nav-item.active {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px #00000040;
+  }
+  
+  /* Text inside nav items */
+  .text-wrapper {
+    font-family: var(--button-label-font-family);
+    font-size: var(--button-label-font-size);
+    font-weight: var(--button-label-font-weight);
+    color: var(--neutralblack);
+    line-height: var(--button-label-line-height);
+  }
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+    ),
+    linear-gradient(
+        0deg,
+        rgba(250, 248, 246, 1) 0%,
+        rgba(250, 248, 246, 1) 100%
+    );
+    border-radius: 500px;
+    display: inline-flex;
+    padding: 12px;
+    z-index: 3;
+  }
+  
+   /* .menu-icon {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(250, 248, 246, 0.98);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    z-index: 10;
+  }
+   */
+
 
 
 
