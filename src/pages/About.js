@@ -55,7 +55,7 @@ const About = () => {
                                 organizations to promote to a large audience.
                             </p>
                             <h3 className="aboutHDR">WHERE IS IT?</h3>
-                            <p>April 3rd @ the UC (Danforth Lounge), 11-4 PM</p>
+                            <p>April 3rd @ Danforth Lounge & Conference Room, 11-4 PM</p>
                         </div>
                     </div>
                 </div>
