@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import yellowcircle from '../components/2026img/who-are-we.svg';
 import redcircle from '../components/2026img/what-is-impact.svg';
 import NavBar from "../components/NavBar";
+import aboutBg from "../components/2026img/about-background-gradient.png";
+
 
 import 'popper.js';
 import '../dist/css/bootstrap.min.css';
@@ -29,6 +31,7 @@ const About = () => {
 
     return (
         <>
+            <img src={aboutBg} alt="background" className="background"/>
             <NavBar />
             {isSmallScreen ? (
                 <div className="container-about">
