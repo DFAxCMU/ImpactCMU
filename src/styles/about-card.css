@@ -46,6 +46,14 @@
   mask-repeat: no-repeat;
 }
 
+.about-card-image {
+  max-width: 70%;
+  max-height: 70%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
 .about-card-title {
   font-family: "iA Writer Duospace", monospace;
   font-size: 24px;

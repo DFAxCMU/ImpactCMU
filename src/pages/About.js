@@ -41,6 +41,7 @@ const About = () => {
                     <AboutCard 
                         title="Who Are We?" 
                         text="Impact CMU invites undergrad and graduate students at Carnegie Mellon to showcase how they have worked with a community. Student organizations and research, personal, and hackathon projects are all welcome to contribute their work!"
+                        imageSrc={who_are_we}
                     />
                     <div className="what_is_impact-section">
                         <img src={what_is_impact} alt="title-img" className="what_is_impact" />
@@ -62,31 +63,33 @@ const About = () => {
                 <section id="about">
                     <div className="container-about">
                         {/* <div className="who_are_we-section"> */}
-                            <div><img src={who_are_we} alt="title-img" className="who_are_we" /></div>
-                            <div><img src={what_is_impact} alt="title-img" className="what_is_impact" /></div>
                             <AboutCard 
                                 title="Who Are We?" 
                                 text="Impact CMU invites undergrad and graduate students at Carnegie Mellon to showcase how they have worked with a community. Student organizations and research, personal, and hackathon projects are all welcome to contribute their work!"
+                                imageSrc={who_are_we}
                             />
                             <AboutCard
                                 title="What is Impact?"
                                 text="You will be showcasing your work through a poster and optional demos. Attendees will view different teams, talk to you about your work, and vote to win prizes! Faculty judges will also take part in viewing work and discussing your creations! This is a great opportunity to talk to your peers, get feedback from your professors, and for student organizations to promote to a large audience!"
+                                imageSrc={what_is_impact}
                             />
-                            <AboutCard
-                                title="Where is it?"
-                                text="April 3rd @ the UC (Danforth Lounge), 11-4 PM."
-                            />
-                            <AboutCard>
-                                <>
-                                    <strong>Logistics:</strong> Chloe Xu, Sara Laman, Inseo Kim, Eunice Lee, Rebecca Sucgang<br/>
-                                    <strong>Communications:</strong> Beverly Zheng, Bach Ha Lan Vu, Tiffany Liu, Katie Wen<br/>
-                                    <strong>Design:</strong> Kyla Anderson, Bach Ha Lan Vu, Beverly Zheng, Katie Wen<br/>
-                                    <strong>PR:</strong> Sulli Yatabe<br/>
-                                    <strong>Tech:</strong> Karen Gonzalez, Saanvi Kandala<br/>
-                                    <strong>Finance:</strong> Amanda Witt<br/>
-                                    <strong>Management:</strong> Anna Mathews, Sophie Hao, Gryphon Chong
-                                </>
-                            </AboutCard>
+                            <div className="logistics-section">
+                                <AboutCard
+                                    title="Where is it?"
+                                    text="April 3rd @ the UC (Danforth Lounge), 11-4 PM."
+                                />
+                                <AboutCard>
+                                    <>
+                                        <strong>Logistics:</strong> Chloe Xu, Sara Laman, Inseo Kim, Eunice Lee, Rebecca Sucgang<br/>
+                                        <strong>Communications:</strong> Beverly Zheng, Bach Ha Lan Vu, Tiffany Liu, Katie Wen<br/>
+                                        <strong>Design:</strong> Kyla Anderson, Bach Ha Lan Vu, Beverly Zheng, Katie Wen<br/>
+                                        <strong>PR:</strong> Sulli Yatabe<br/>
+                                        <strong>Tech:</strong> Karen Gonzalez, Saanvi Kandala<br/>
+                                        <strong>Finance:</strong> Amanda Witt<br/>
+                                        <strong>Management:</strong> Anna Mathews, Sophie Hao, Gryphon Chong
+                                    </>
+                                </AboutCard>
+                            </div> 
                     </div>
                 </section>
             )}
