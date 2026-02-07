@@ -46,7 +46,13 @@ const Projects = ({ data }) => {
     cube9, cube10, cube11, cube12, cube13, cube14, cube15, cube16, 
     cube17, cube18, cube19, cube20, cube21, cube22, cube23, cube24
   ];
-  
+
+  //display only 6 at a time
+  const ITEM_COUNT = 6;
+  const [startIndex, setStartIndex] = useState(0);
+  const visibleProjects = projects.slice(startIndex, startIndex + ITEM_COUNT);
+
+  // ^added this
 
   const containerRef = useRef(null);
 
@@ -65,20 +71,35 @@ const Projects = ({ data }) => {
     setModalOpen(false);
   };
 
-  const scrollProjects = (direction) => {
-    if (containerRef.current) {
-      const containerWidth = containerRef.current.offsetWidth;
-      const projectWidth = containerRef.current.querySelector(".project-box").offsetWidth;
-      const projectsPerRow = Math.floor(containerWidth / projectWidth);
-      const scrollAmount = projectWidth * projectsPerRow;
+  //trying new scrollProjects for 6 items:
+  const maxStart = Math.max(projects.length - ITEM_COUNT, 0);
 
-      if (direction === "right") {
-        containerRef.current.scrollLeft += scrollAmount;
-      } else if (direction === "left") {
-        containerRef.current.scrollLeft -= scrollAmount;
-      }
+  /* gray out arrows */
+  const canGoLeft = startIndex > 0;
+  const canGoRight = startIndex < maxStart;
+
+  const scrollProjects = (direction) => {
+    if (direction === "right") {
+      setStartIndex((prev) => Math.min(prev + ITEM_COUNT, maxStart));
+    } else if (direction === "left") {
+      setStartIndex((prev) => Math.max(prev - ITEM_COUNT, 0));
     }
   };
+
+  // const scrollProjects = (direction) => {
+  //   if (containerRef.current) {
+  //     const containerWidth = containerRef.current.offsetWidth;
+  //     const projectWidth = containerRef.current.querySelector(".project-box").offsetWidth;
+  //     const projectsPerRow = Math.floor(containerWidth / projectWidth);
+  //     const scrollAmount = projectWidth * projectsPerRow;
+
+  //     if (direction === "right") {
+  //       containerRef.current.scrollLeft += scrollAmount;
+  //     } else if (direction === "left") {
+  //       containerRef.current.scrollLeft -= scrollAmount;
+  //     }
+  //   }
+  // };
 
   return (
     <>
@@ -92,11 +113,36 @@ const Projects = ({ data }) => {
 
         {/* Scrollable container */}
         <div className="projects-container">
-          <button className="scroll-button left" onClick={() => scrollProjects("left")}>
+          <button className="scroll-button left" onClick={() => scrollProjects("left")}
+            disabled={!canGoLeft}>
             {/* &#9665; */}
-            <img src={leftarrow} alt="" />
+            <img src={leftarrow} alt="Previous projects" />
           </button>
 
+
+          {/* New scroll-wrapper */}
+          <div className="scroll-wrapper">
+            {visibleProjects.map((project, i) => {
+              const index = startIndex + i;
+              const cubeImage = cubeImages[index % cubeImages.length];
+
+              return (
+                <div
+                  key={index}
+                  className="project-box"
+                  onClick={() => openModal(project, cubeImage)}
+                >
+                  <div className="project-image">
+                    <img src={cubeImage} alt="" />
+                  </div>
+                  <h5 className="project-title">{project.title}</h5>
+                </div>
+              );
+            })}
+          </div>
+          
+          {/* Old scroll-wrapper */}
+          {/*
           <div className="scroll-wrapper" ref={containerRef}>
             {projects.map((project, index) => {
               const cubeImage = cubeImages[index % cubeImages.length];
@@ -108,28 +154,31 @@ const Projects = ({ data }) => {
                   // onClick={() => openModal(project)}
                   onClick={() => openModal(project, cubeImage)}
                 >
-                  {/* Cube image */}
+                 
                   <div className="project-image">
                     <img src={cubeImage} alt="" />
                   </div>
 
-                  {/* Title BELOW image */}
+                  
                   <h5 className="project-title">{project.title}</h5>
                 </div>
               );
-            })}
+            })} 
           </div>
-          <button className="scroll-button right" onClick={() => scrollProjects("right")}>
+          */}
+          
+          <button className="scroll-button right" onClick={() => scrollProjects("right")}
+            disabled={!canGoRight}>
             {/* &#9655; */}
-            <img src={rightarrow} alt="" />
+            <img src={rightarrow} alt="Next projects" />
           </button>
         </div>
 
       </section>
       {/* footer icons */}
-      {/* <div>
+      <div>
         <Footer />
-      </div> */}
+      </div>
 
       {/* Modal */}
       {isModalOpen && (
