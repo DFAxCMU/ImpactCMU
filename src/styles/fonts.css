@@ -49,3 +49,54 @@
   font-family: 'thabitbold';
   src: url('../components/fonts/Thabit-Bold.ttf') format('truetype');
 }
+
+
+/* ---------- Switzer (body/UI font) ---------- */
+@font-face {
+  font-family: "Switzer";
+  src: url("../components/fonts/Switzer-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("../components/fonts/Switzer-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("../components/fonts/Switzer-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Cy";
+  src: url("../components/fonts/Cy-Regular-iF6673e73706204.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cy";
+  src: url("../components/fonts/Cy-SemiBold-iF6673e736f094d.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cy";
+  src: url("../components/fonts/Cy-Bold-iF6673e737316f8.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
