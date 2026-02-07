@@ -107,7 +107,7 @@ const Projects = ({ data }) => {
         <img className="bg-gradient" src={gradient} alt="" />
       <NavBar />
       <div className="project-header">
-            <h4>PROJECTS</h4>
+            <h4>Projects</h4>
       </div>
       <section id="projects">
 
@@ -223,6 +223,11 @@ const Projects = ({ data }) => {
       )}
 
       {/* <Footer /> */}
+
+      <div>
+        <br></br>
+        <Footer />
+      </div>
     </>
   );
 };
