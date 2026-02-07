@@ -470,22 +470,27 @@ a p:hover {
     background: radial-gradient(circle, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 40%, transparent 100%);
 }
 
-#about .background {
-    position: fixed;
+.background {
+    position: fixed; /* Takes it out of the document flow */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -1;
+    z-index: -1; /* Puts it behind the Nav and Content */
+    pointer-events: none; /* Ensures you can still click things 'through' the image */
+}
+#about {
+    background-color: transparent;
 }
 
 .aboutHDR {
-    font-family: "thabit";
+    font-family: "iA Writer Duospace";
     padding-top: 0px;
 }
 
 #about p {
+    font-family: "Switzer";
     padding-bottom: 15px;
 }
 
