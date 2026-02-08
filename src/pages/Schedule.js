@@ -1,6 +1,4 @@
 import React from 'react';
-import schedule from '../components/2024img/Schedule.png';
-import submitline from '../components/2025img/submitline.svg';
 import NavBar from "../components/NavBar";
 import lamp from '../components/2026img/cat-lamp.png';
 import plush from '../components/2026img/cat-plush.png';
@@ -12,9 +10,13 @@ import '../styles/style.css';
 import '../styles/page.css';
 import '../styles/fonts.css';
 import gradient from '../components/2026img/gradient-bg.png';
+import group3 from '../components/2026img/group-3.svg';
+
 
 const Hero = () => (
     <>
+        <img className="bg-group" src={group3} alt="" />
+        <img className="bg-gradient" src={gradient} alt="" />
         <NavBar />
         <section id="schedule">
             <div className="container-fluid">
