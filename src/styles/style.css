@@ -104,6 +104,13 @@
     /* margin-top: 60px;  */
   }
 
+  .about-page .footer {
+    position: relative !important;
+    bottom: 65px !important;
+    left: 60px;
+    /* margin-top: 60px;  */
+  }
+
 
 
   /* Text inside nav items */
@@ -163,13 +170,33 @@
   z-index: 0;
 }
 
-<<<<<<< HEAD
 .bg-gradient {
   height: 350px;
   object-fit: cover;
-=======
+
+}
+
+.bg-group-about,
+.bg-gradient-about {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  max-width: none;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-gradient-about {
+  height: 350px;
+  object-fit: cover;
+
+}
+
 /* ABOUT 2025 */
-.container-about {
+  .container-about {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     /* grid-template-rows: 200px 100px; */
@@ -302,7 +329,6 @@ hr {
     width: 100%; /* Makes it stretch to full width of parent */  
     max-width: none; /* Ensures it doesn%E2%80%99t shrink unexpectedly */  
     display: relative;
->>>>>>> 2026-about-inseo
 }
 
 
@@ -314,27 +340,6 @@ hr {
 }
 
 /* projects */
-  /* #projects {
-    background-color: #FFF;
-<<<<<<< HEAD
-=======
-    background: 
-        radial-gradient(50% 50% at 50% 110%, #FF7878 0%, rgba(255, 255, 255, 0.00) 100%, transparent),
-        radial-gradient(50% 50% at 75% 65%, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 100%, transparent);
-    overflow: hidden;
-    
-}
-
-#schedule {
-    background-color: #FFF;
-    background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 40%, transparent 100%);
-}
-
-#projects {
-    background-color: #FFF;
-    background: radial-gradient(circle, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 40%, transparent 100%);
-}
-
 .background {
     position: fixed; /* Takes it out of the document flow */
     top: 0;
@@ -359,31 +364,7 @@ hr {
     padding-bottom: 15px;
 }
 
-/* .aboutP {
-    font-family: "thabit";
-} */
-
-#timeline {
-    background-color: #FFF;
-}
-
-#submit {
-    gap: 3%;
-    display: flex;
-    /* align-items: center; */
-    flex-direction: column;
-    background-color: #FFF;
-    background: radial-gradient(20% 20% at 50% 95%, #f5d394 0%, rgba(255, 255, 255, 0.00) 100%, transparent);
-    /* background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
-    /* background: radial-gradient(50% 50% at 50% 50%, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
-}
-
-
-/* #footer {
-    background: url('../images/background/FooterBackground.png');
-} */
-
-#hero, #about, #timeline, #submit, #footer, #schedule {
+#hero, #about {
     width: 100%;
     min-height: 100vh;
     background-position: center;
@@ -391,47 +372,23 @@ hr {
     background-size: auto 100%;
     position: block;
     color: var(--darkblue);
-    /* border-radius: 0px; */
-    /* background: 
-        radial-gradient(50% 50% at 50% 110%, #FF7878 0%, rgba(255, 255, 255, 0.00) 100%, transparent),
-        radial-gradient(50% 50% at 75% 65%, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
-    /* filter: blur(0px); */
 }
 
-#hero, #about, #timeline, #submit, #projects, #schedule {
->>>>>>> 2026-about-inseo
+#hero, #about, #schedule {
     display: flex;
     align-items:center;
     justify-content: center;
     padding-bottom: 100px;
-  } */
+  } 
 
-<<<<<<< HEAD
+/* end of change */
+
+
+
+
   #projects {
     width: 100vw;
     height: 90vh;
-=======
-#footer {
-    min-height: 50vh;
-}
-
-.poster {
-    width: 100%;
-}
-
-.poster-row {
-    flex: 25%;
-    padding: 12px;
-}
-
-.posters {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.defaultCanvas0 {
->>>>>>> 2026-about-inseo
     overflow: hidden;
 
     position: relative;
