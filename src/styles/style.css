@@ -143,30 +143,34 @@ section {
 
 p {
     /* max-width: 500px; */
-    font-family: "IS";
+    font-family: "switzer-variable";
+    font-weight: 300;
     color: black;
     font-size: 85%;
     word-spacing: 50%;
     /* font-weight: 500; */
     margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.bearlist {
+.catlist {
     display: flex;
-    justify-content: center; /* Centers the items horizontally */
+    justify-content: space-around; /* Centers the items horizontally */
     align-items: center; /* Centers the items vertically */
     gap: 30px; /* Adds spacing between the items */
     padding: 10px;
 }
 
-.bearlist p {
+.catlist p {
     font-size: 110%;
 }
 
-.bearimg {
+.catimg {
     margin-top: 8px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 15px;
 }
 
@@ -177,6 +181,9 @@ p {
 .box3 p { /* HERE HERE */
     padding-top: 10px;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .big-header {
@@ -364,17 +371,17 @@ hr {
 }
 
 h6 {
-    font-family: 'InL';
+    font-family: 'iawriter-regular';
     font-weight: 500;
-    font-size: 18px;    
+    font-size: 140%;    
     color: black;
     padding-bottom: 15px;
 
 }
 
 h5 {
-    font-family: 'InL';
-    font-weight: 500;
+    font-family: 'switzer-variable';
+    font-weight: 300;
     font-size: 18px;    
     color: black;
     padding-bottom: 15px;
@@ -617,7 +624,7 @@ a p:hover {
 
 .card-title, h4 {
     font-family: "thabit";
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .card-title, h5 {
@@ -832,9 +839,9 @@ a p:hover {
 }
 
 h4 {
-    font-family: 'ia';
+    font-family: 'iawriter-regular';
     font-weight: 500;
-    font-size: 160%;    
+    font-size: 140%;    
     color: black;
 
 }
@@ -1336,10 +1343,10 @@ h4 {
 .box4 {
     flex: 0 0 auto; 
     /* position: relative; */
-    width: clamp(300px, 750px, 100%); 
+    width: clamp(300px, 90vw, 100%); 
     padding: 20px;
-    background-color: white;
-    border: 1px solid black;
+    /* background-color: white; */
+    /* border: 1px solid black; */
     flex-direction: column;
     max-height: 100%;
     margin-bottom: 24px;
@@ -1434,13 +1441,13 @@ h4 {
 h5 {
     font-size: 14px;
     padding-bottom: 3px;
-    font-family: "thabit";
+    font-family: "switzer-variable";
 }
 
 h6 {
-    font-size: 14px;
+    font-size: 140%;
     padding: 0px;
-    font-family: "thabitbold";
+    font-family: "iawriter-regular";
     margin-bottom: 5px;
 }
 

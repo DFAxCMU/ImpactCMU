@@ -63,7 +63,7 @@ const Hero = () => (
                     </div>
                     <center>
                         <div className="box4">
-                            <h4>RAFFLE PRIZES</h4>
+                            <h4>Raffle Prizes</h4>
                             <div class="cat">
                                 <div class="catlist">
                                     <p>1. Cat Lamp</p>
