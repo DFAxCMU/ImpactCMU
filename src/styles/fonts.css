@@ -49,23 +49,3 @@
   font-family: 'thabitbold';
   src: url('../components/fonts/Thabit-Bold.ttf') format('truetype');
 }
-
-@font-face {
-  font-family: 'iA Writer Duospace';
-  src: url('../components/fonts/iAWriterDuospace-Regular.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'switzer';
-  src: url('../components/fonts/Switzer-Regular.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'switzer-bold';
-  src: url('../components/fonts/Switzer-Bold.otf') format('truetype');
-}
-
-@font-face {
-  font-family: 'switzerbold';
-  src: url('../components/fonts/Switzer-Bold.otf') format('truetype');
-}
