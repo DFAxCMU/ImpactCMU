@@ -49,3 +49,34 @@
   font-family: 'thabitbold';
   src: url('../components/fonts/Thabit-Bold.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'iawriter-regular';
+  src: url('../components/fonts/iAWriterDuospace-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'iawriter-regular-italic';
+  src: url('../components/fonts/iAWriterDuospace-RegularItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'iawriter-bold';
+  src: url('../components/fonts/iAWriterDuospace-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'iawriter-bold-italic';
+  src: url('../components/fonts/iAWriterDuospace-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'switzer-variable';
+  src: url('../components/fonts/Switzer-Variable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'switzer-variable-italic';
+  src: url('../components/fonts/Switzer-VariableItalic.ttf') format('truetype');
+}
+

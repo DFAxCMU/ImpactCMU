@@ -37,7 +37,7 @@
 } */
 
 /* Gradient */
-.gradient {
+/* .gradient {
     position: absolute;
     width: 1920px;
     height: 856px;
@@ -49,7 +49,7 @@
     filter: blur(100px);
     border-radius: 500px;
     transform: matrix(-1, 0, 0, 1, 0, 0);
-}
+} */
 
 #hero h3 {
     font-family:"thabitbold";
@@ -476,8 +476,32 @@ a p:hover {
 }
 
 #schedule {
-    background-color: #FFF;
-    background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 40%, transparent 100%);
+    /* background-color: #FFF; */
+    /* background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 40%, transparent 100%); */
+    position: relative;
+}
+
+/* Background images for schedule section */
+.bg-group {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 1;
+}
+
+.bg-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height:auto;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 1;
 }
 
 #projects {
@@ -808,7 +832,7 @@ a p:hover {
 }
 
 h4 {
-    font-family: 'thabit';
+    font-family: 'ia';
     font-weight: 500;
     font-size: 160%;    
     color: black;
@@ -1030,6 +1054,11 @@ h4 {
 .container-fluid {
     padding-left: 0px;
     padding-right: 0px;
+}
+
+#schedule .container-fluid {
+    position: relative;
+    z-index: 10;
 }
 
 .inner {
