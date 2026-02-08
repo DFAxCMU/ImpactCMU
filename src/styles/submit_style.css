@@ -198,7 +198,7 @@
   }
 
   .award-title {
-    font-family: var(--heading-font);
+    font-family: var(--heading-font-family);
     font-size: 24px;
     font-weight: 500;
     line-height: 1.2;
@@ -235,10 +235,30 @@
     gap: 24px;
   }
 
-  .location {
+  /* .location {
     font-weight: bold;
     margin-bottom: 0 !important;
-  }
+  } */
+
+  /* Award styling */
+    .award-subtitle,
+    .award-amount {
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 300; /* light */
+    }
+
+    /* Timeline styling */
+    .timeline-location {
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 700; /* medium/bold */
+    margin-bottom: 0 !important;
+    }
+
+    .timeline-description {
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 300; /* light */
+    }
+
 
   /* .section-title {
     font-family: var(--heading-font-family);
@@ -315,8 +335,8 @@
   /* footer icons */
   .footer {
     position: absolute;
-    bottom: 40px;
-    left: 40px;
+    bottom: 15px;
+    left: 60px;
     display: flex;
     gap: 24px;
     z-index: 2;

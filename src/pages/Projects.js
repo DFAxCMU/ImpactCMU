@@ -177,7 +177,7 @@ const Projects = ({ data }) => {
       </section>
       {/* footer icons */}
       <div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
 
       {/* Modal */}
@@ -226,7 +226,7 @@ const Projects = ({ data }) => {
 
       <div>
         <br></br>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

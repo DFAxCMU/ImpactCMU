@@ -54,6 +54,14 @@
 /* ---------- Switzer (body/UI font) ---------- */
 @font-face {
   font-family: "Switzer";
+  src: url("../components/fonts/Switzer-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
   src: url("../components/fonts/Switzer-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
@@ -100,5 +108,51 @@
   font-style: normal;
   font-display: swap;
 }
-/* @import url('https://fonts.googleapis.com/css2?family=iA+Writer+Duospace:ital,wght@0,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Switzer:ital,wght@0,300;0,500&display=swap'); */
+
+/* Regular */
+@font-face {
+  font-family: "iA Writer Duospace";
+  src: url("../components/fonts/iAWriterDuospace-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: "iA Writer Duospace";
+  src: url("../components/fonts/iAWriterDuospace-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Regular */
+@font-face {
+  font-family: "iA Writer Duospace";
+  src: url("../components/fonts/iAWriterDuospace-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: "iA Writer Duospace";
+  src: url("../components/fonts/iAWriterDuospace-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular Italic */
+@font-face {
+  font-family: "iA Writer Duospace";
+  src: url("../components/fonts/iAWriterDuospace-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=iA+Writer+Duospace:ital,wght@0,400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Switzer:ital,wght@0,300;0,500&display=swap'); */

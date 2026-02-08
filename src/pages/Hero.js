@@ -7,21 +7,15 @@ import Footer from "../components/Footer";
 import "../styles/style.css";
 // import "../styles/submit_style.css";
 
-import dots from "../components/2026img/landing.svg";
+import dots from "../components/2026img/landing_page.svg";
 import blobTL from "../components/2026img/blob-top-left.svg";
 import blobTR from "../components/2026img/blob-top-right.svg";
 import blobBL from "../components/2026img/blob-bottom-left.svg";
 import blobBR from "../components/2026img/blob-bottom-right.svg";
 
-
-import insta from "../components/2024img/insta.svg";
-import cal from "../components/2024img/cal.svg";
-import mail from "../components/2024img/mail.svg";
-import slack from "../components/2024img/slack.svg";
-
 export default function Landing2026() {
   return (
-    <main>
+    <main className="landing2026">
       {/* Background layers */}
       <img className="bg-group-hero" src={dots} alt="" />
       <NavBar />
@@ -46,11 +40,9 @@ export default function Landing2026() {
         </div>
 
         <div className="landing2026__card landing2026__card--right">
-          <h3 className="landing2026__cardTitle">Free Food!</h3>
+          <h3 className="landing2026__cardTitle">10th Anniversary!</h3>
           <p className="landing2026__cardBody">
-            And enter our raffle for the
-            <br />
-            chance to win prizes!
+            Free food and a chance to win prizes!
           </p>
         </div>
 
@@ -67,14 +59,10 @@ export default function Landing2026() {
               <span className="hero-submit-text">SUBMIT YOUR PROJECT</span>
           </a>
         </div>
-        {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoFSey-Qw9FLO94pDdfiV8q0ep1UMHhQ5xgxVllzyUVbiZlA/viewform?usp=header" target="_blank" className="hero-submit-button hero-submit-spacing">
-          <span className="hero-submit-text">SUBMIT YOUR PROJECT</span>
-        </a> */}
 
         {/* Social icons (bottom-left) */}
-        <div>
           <Footer />
-        </div>
+          <br></br>
       </section>
     </main>
   );
