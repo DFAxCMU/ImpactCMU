@@ -56,10 +56,6 @@ const Projects = ({ data }) => {
 
   const containerRef = useRef(null);
 
-  // const openModal = (project, cubeImage) => {
-  //   setModalContent(project);
-  //   setModalOpen(true);
-  // };
 
   const openModal = (project, cubeImage) => {
     setModalContent({ ...project, cubeImage });
@@ -86,23 +82,9 @@ const Projects = ({ data }) => {
     }
   };
 
-  // const scrollProjects = (direction) => {
-  //   if (containerRef.current) {
-  //     const containerWidth = containerRef.current.offsetWidth;
-  //     const projectWidth = containerRef.current.querySelector(".project-box").offsetWidth;
-  //     const projectsPerRow = Math.floor(containerWidth / projectWidth);
-  //     const scrollAmount = projectWidth * projectsPerRow;
-
-  //     if (direction === "right") {
-  //       containerRef.current.scrollLeft += scrollAmount;
-  //     } else if (direction === "left") {
-  //       containerRef.current.scrollLeft -= scrollAmount;
-  //     }
-  //   }
-  // };
-
   return (
     <>
+    <div className="projects-page">
         <img className="bg-group" src={group3} alt="" />
         <img className="bg-gradient" src={gradient} alt="" />
       <NavBar />
@@ -141,44 +123,15 @@ const Projects = ({ data }) => {
             })}
           </div>
           
-          {/* Old scroll-wrapper */}
-          {/*
-          <div className="scroll-wrapper" ref={containerRef}>
-            {projects.map((project, index) => {
-              const cubeImage = cubeImages[index % cubeImages.length];
-
-              return (
-                <div
-                  key={index}
-                  className="project-box"
-                  // onClick={() => openModal(project)}
-                  onClick={() => openModal(project, cubeImage)}
-                >
-                 
-                  <div className="project-image">
-                    <img src={cubeImage} alt="" />
-                  </div>
-
-                  
-                  <h5 className="project-title">{project.title}</h5>
-                </div>
-              );
-            })} 
-          </div>
-          */}
-          
           <button className="scroll-button right" onClick={() => scrollProjects("right")}
             disabled={!canGoRight}>
-            {/* &#9655; */}
             <img src={rightarrow} alt="Next projects" />
           </button>
         </div>
 
       </section>
-      {/* footer icons */}
-      <div>
-        {/* <Footer /> */}
-      </div>
+      <Footer />
+     </div>
 
       {/* Modal */}
       {isModalOpen && (
@@ -221,13 +174,6 @@ const Projects = ({ data }) => {
           </div>
         </div>
       )}
-
-      {/* <Footer /> */}
-
-      <div>
-        <br></br>
-        {/* <Footer /> */}
-      </div>
     </>
   );
 };
