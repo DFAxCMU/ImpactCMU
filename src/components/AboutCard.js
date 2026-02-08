@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/about.css';
+import '../styles/about-card.css';
 
 const AboutCard = ({ title, text, children, imageSrc, imageMask }) => {
   return (

@@ -12,7 +12,7 @@ import '../dist/css/bootstrap.min.css';
 import '../styles/style.css';
 import '../styles/page.css';
 import '../styles/fonts.css';
-import '../styles/about.css';
+import '../styles/about-card.css';
 
 const About = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -84,7 +84,7 @@ const About = () => {
                                         <strong>Communications:</strong> Beverly Zheng, Bach Ha Lan Vu, Tiffany Liu, Katie Wen<br/>
                                         <strong>Design:</strong> Kyla Anderson, Bach Ha Lan Vu, Beverly Zheng, Katie Wen<br/>
                                         <strong>PR:</strong> Sulli Yatabe<br/>
-                                        <strong>Tech:</strong> Karen Gonzalez, Saanvi Kandala<br/>
+                                        <strong>Tech:</strong> Karen Gonzalez, Saanvi Kandala, Inseo Kim, Helen Zhang, Eunice Lee<br/>
                                         <strong>Finance:</strong> Amanda Witt<br/>
                                         <strong>Management:</strong> Anna Mathews, Sophie Hao, Gryphon Chong
                                     </>

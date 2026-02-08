@@ -163,9 +163,146 @@
   z-index: 0;
 }
 
+<<<<<<< HEAD
 .bg-gradient {
   height: 350px;
   object-fit: cover;
+=======
+/* ABOUT 2025 */
+.container-about {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* grid-template-rows: 200px 100px; */
+    /* flex-wrap: wrap; Allows content to wrap to the next line if needed */
+    gap: 1rem; /* Adds space between sections */
+    justify-content: center; /* Centers content horizontally */
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logistics-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container-about img {
+    max-width: 100%; /* Ensure images don't exceed grid cell width */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+  
+/* ABOUT 2025 DESKTOP */
+
+
+  .yellowcircle-section,
+  .redcircle-section {
+    display: flex;
+    flex-direction: column; /* Stacks image and text vertically */
+    align-items: center; /* Centers content horizontally */
+    /* text-align: center; Centers text */
+    flex: 1 1 45%; /* Each section takes up to 45% of the row's width on large screens */
+    max-width: 400px; /* Restricts the maximum width of each section */
+  }
+  
+    .yellowcircle-section img,
+    .redcircle-section img {
+        height: auto; /* Maintain the natural height of the images */
+        width: 100%; /* Let the width adjust based on the aspect ratio */
+        object-fit: contain; /* Ensures the image fits within the container while preserving aspect ratio */
+    }
+
+  .yellowcircle-text,
+  .redcircle-text {
+    width: 100%; /* Text adjusts to image width */
+    /* padding: 0.5rem; */
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.5;
+    color: #555;
+  }
+
+
+/* SUBMIT 2025 */
+.locationfont {
+    font-family: thabit;
+    padding-bottom: 8px;
+}
+
+/* .miniBox {
+    display: flex;    
+    flex-direction: column;    
+    height: 100%;
+}
+
+.miniBox p:last-child {
+    margin-top: auto;
+} */
+
+.grids_container {
+    display: grid;
+    /* grid-template-columns: repeat(5, 15%); 4 equal columns */
+    grid-template-columns: repeat(5, minmax(150px, 15%)); /* Items have at least 100px width */
+    gap: 0px; /* Adjust spacing between elements */
+    justify-content: center;
+}
+
+/* Style each grid item */
+.grids_container > div {
+    /* border: 3px solid black; */
+    padding: 10px;
+}
+
+.line1 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.awardsub1 {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.awardsub2 {
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.awardsub3 {
+    display: grid;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.awardsub4 {
+    display: grid;
+    grid-column-start: 5;
+    grid-column-end: -1;
+}
+
+.timelineposition {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+hr {
+    margin: 0px;
+}
+
+.vector {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.submitline {
+    width: 100%; /* Makes it stretch to full width of parent */  
+    max-width: none; /* Ensures it doesn%E2%80%99t shrink unexpectedly */  
+    display: relative;
+>>>>>>> 2026-about-inseo
 }
 
 
@@ -179,15 +316,122 @@
 /* projects */
   /* #projects {
     background-color: #FFF;
+<<<<<<< HEAD
+=======
+    background: 
+        radial-gradient(50% 50% at 50% 110%, #FF7878 0%, rgba(255, 255, 255, 0.00) 100%, transparent),
+        radial-gradient(50% 50% at 75% 65%, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 100%, transparent);
+    overflow: hidden;
+    
+}
+
+#schedule {
+    background-color: #FFF;
+    background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 40%, transparent 100%);
+}
+
+#projects {
+    background-color: #FFF;
+    background: radial-gradient(circle, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 40%, transparent 100%);
+}
+
+.background {
+    position: fixed; /* Takes it out of the document flow */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Puts it behind the Nav and Content */
+    pointer-events: none; /* Ensures you can still click things 'through' the image */
+}
+#about {
+    background-color: transparent;
+}
+
+.aboutHDR {
+    font-family: "iA Writer Duospace";
+    padding-top: 0px;
+}
+
+#about p {
+    font-family: "Switzer";
+    padding-bottom: 15px;
+}
+
+/* .aboutP {
+    font-family: "thabit";
+} */
+
+#timeline {
+    background-color: #FFF;
+}
+
+#submit {
+    gap: 3%;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    background-color: #FFF;
+    background: radial-gradient(20% 20% at 50% 95%, #f5d394 0%, rgba(255, 255, 255, 0.00) 100%, transparent);
+    /* background: radial-gradient(circle, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
+    /* background: radial-gradient(50% 50% at 50% 50%, #C0E1A2 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
+}
+
+
+/* #footer {
+    background: url('../images/background/FooterBackground.png');
+} */
+
+#hero, #about, #timeline, #submit, #footer, #schedule {
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    position: block;
+    color: var(--darkblue);
+    /* border-radius: 0px; */
+    /* background: 
+        radial-gradient(50% 50% at 50% 110%, #FF7878 0%, rgba(255, 255, 255, 0.00) 100%, transparent),
+        radial-gradient(50% 50% at 75% 65%, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
+    /* filter: blur(0px); */
+}
+
+#hero, #about, #timeline, #submit, #projects, #schedule {
+>>>>>>> 2026-about-inseo
     display: flex;
     align-items:center;
     justify-content: center;
     padding-bottom: 100px;
   } */
 
+<<<<<<< HEAD
   #projects {
     width: 100vw;
     height: 90vh;
+=======
+#footer {
+    min-height: 50vh;
+}
+
+.poster {
+    width: 100%;
+}
+
+.poster-row {
+    flex: 25%;
+    padding: 12px;
+}
+
+.posters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.defaultCanvas0 {
+>>>>>>> 2026-about-inseo
     overflow: hidden;
 
     position: relative;
