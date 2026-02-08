@@ -1,5 +1,9 @@
 /* Navbar container IMPACT 2026*/
+<<<<<<< HEAD
 .navbar {
+=======
+  .navbar {
+>>>>>>> 2026-project-saanvi/karen
     display: flex;
     justify-content: center;
     padding: 12px 24px;
@@ -602,6 +606,18 @@
     justify-content: center;
     pointer-events: none; /* allow only children to be clickable */
   }
+
+  /* Project Fonts */
+  .project-header h4 {
+  font-family: 'iA Writer Duospace', monospace;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: none;
+}
+
+
+
   
   /* .landing2026__navWrap {
     pointer-events: auto;
@@ -841,3 +857,5 @@
     .landing2026__blob--br { width: 420px; }
   }
   
+
+
