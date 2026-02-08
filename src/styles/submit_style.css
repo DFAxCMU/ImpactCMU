@@ -151,7 +151,7 @@
   }
 
   .section-title {
-    font-family: "iA Writer Duospace", Helvetica;
+    font-family: 'iA Writer Duospace', monospace;
     font-size: var(--heading-font-size);
     font-weight: var(--heading-font-weight);
     color: var(--neutralblack);
@@ -235,6 +235,10 @@
     gap: 24px;
   }
 
+  .location {
+    font-weight: bold;
+    margin-bottom: 0 !important;
+  }
 
   /* .section-title {
     font-family: var(--heading-font-family);

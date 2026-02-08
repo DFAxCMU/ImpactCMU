@@ -4,7 +4,7 @@ import favicon16 from "../components/2025img/16.svg";
 import favicon32 from "../components/2025img/32.svg";
 
 import "../styles/fonts.css";
-import Landing2026 from "./Landing2026";
+import Landing2026 from "./Hero.js";
 
 const IndexPage = () => (
   <div>

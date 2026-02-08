@@ -70,12 +70,6 @@ const Submit = () => {
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoFSey-Qw9FLO94pDdfiV8q0ep1UMHhQ5xgxVllzyUVbiZlA/viewform?usp=header" target="_blank" className="submit-button submit-spacing">
                     <span className="submit-text">SUBMIT YOUR PROJECT</span>
                 </a>
-                {/* <div className="submit-text">SUBMIT YOUR PROJECT</div> */}
-                {/* <div className="submit-button submit-spacing"> */}
-                {/* <button onClick={() => handleButtonClick('https://docs.google.com/forms/d/e/1FAIpQLSfoFSey-Qw9FLO94pDdfiV8q0ep1UMHhQ5xgxVllzyUVbiZlA/viewform?usp=header')} className="submit-text">SUBMIT YOUR PROJECT</button> */}
-                {/* </div> */}
-                {/* </div> */}
-                {/* </div> */}
             </div>
         </section>
 
@@ -102,7 +96,7 @@ const Submit = () => {
                 />
                 <TimelineItem
                 date="April 3, 11-4 PM"
-                location="Cohon University Center (Danforth Lounge)"
+                location="Cohon University Center (Danforth Lounge & Conference Room)"
                 description="Impact CMU Date!"
                 />
             </div>
