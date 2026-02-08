@@ -22,7 +22,7 @@ const Hero = () => (
             <div className="container-fluid">
                 <div className="text-center omega">
                     <h4>Event Schedule</h4>
-                    <h5>April 3rd @ the UC (Danforth Lounge), 11-4 PM</h5>
+                    <h5 style={{fontWeight: 300}}>April 3rd @ the UC (Danforth Lounge), 11-4 PM</h5>
                     {/* <div className="navbar-brand">
                         <img src={schedule} alt="title-img" class="title-img"/>
                     </div> */}
