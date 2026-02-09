@@ -106,9 +106,9 @@
     object-fit: cover;
   }
   
-  .bg-group {
+  /* .bg-group {
     top: 60px;
-  }
+  } */
 
   .bg-group img,
   .bg-gradient img {

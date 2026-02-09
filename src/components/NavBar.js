@@ -7,12 +7,13 @@ import email from "../components/2026img/fontisto_email.svg";
 import calendar from "../components/2026img/quill_calendars.svg";
 
 const NAV_ITEMS = [
-  { label: "ABOUT", href: "/About" },
-  { label: "SUBMIT", href: "/Submit" },
-  { label: "SCHEDULE", href: "/Schedule" },
-  { label: "PROJECTS", href: "/Projects" },
-  { label: "2025 ARCHIVE", href: "https://dfaxcmu.notion.site/", external: true },
-]
+    { label: "ABOUT", href: "/About" },
+    { label: "SUBMIT", href: "/Submit" },
+    { label: "SCHEDULE", href: "/Schedule" },
+    { label: "PROJECTS", disabled: true },
+    { label: "2025 ARCHIVE", href: "https://dfaxcmu.notion.site/", external: true },
+  ];
+  
 export default function NavBarSimple() {
     const currentPath =
       typeof window !== "undefined" ? window.location.pathname : "";
@@ -35,20 +36,31 @@ export default function NavBarSimple() {
   
           {NAV_ITEMS.map((item) => {
             const isActive =
-              !item.external && currentPath.startsWith(item.href);
-  
+                !item.external && item.href && currentPath.startsWith(item.href);
+
+            if (item.disabled) {
+                return (
+                <span
+                    key={item.label}
+                    className="nav-item nav-item-disabled"
+                >
+                    <span className="text-wrapper">{item.label}</span>
+                </span>
+                );
+            }
+
             return (
-              <a
+                <a
                 key={item.label}
                 href={item.href}
                 className={`nav-item ${isActive ? "active" : ""}`}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noopener noreferrer" : undefined}
-              >
+                >
                 <span className="text-wrapper">{item.label}</span>
-              </a>
+                </a>
             );
-          })}
+            })}
         </div>
       </nav>
     );

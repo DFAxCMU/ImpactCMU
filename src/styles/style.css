@@ -73,6 +73,13 @@
     box-shadow: 0px 4px 12px #00000040;
   }
 
+  /* PROJECTS PAGE DISABLED UNTIL REGISTRATION */
+  .nav-item-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  
+
 /* Logo-specific nav item */
   .socials {
     gap: 1rem;
