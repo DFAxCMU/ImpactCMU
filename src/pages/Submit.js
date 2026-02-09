@@ -76,23 +76,23 @@ const Submit = () => {
 
             <div className={isSmallScreen ? "timeline-column" : "timeline-row"}>
                 <TimelineItem
-                date="March 16, 2-3 PM"
-                location="Tepper 3801"
-                description="Impact CMU Info Session (Project Registration Due Friday 3/21, 11:59 PM)"
+                date="March 15, 2-3 PM"
+                location="Tepper 3808"
+                description="Impact CMU Info Session (Project Registration Due Saturday 3/21, 11:59PM)"
                 />
                 <TimelineItem
-                date="March 23, 3-4 PM"
-                location="Tepper 3801"
+                date="March 22, 12-1 PM"
+                location="Tepper 3808"
                 description="Make-up Info Session"
                 />
                 <TimelineItem
-                date="March 30, 1-3 PM"
+                date="March 29, 3 PM"
                 location="Tepper 3801"
-                description="Impact Poster Workshop (Poster Submissions Due Sunday 3/30, 11:59 PM)"
+                description="Impact Poster Workshop (Poster Submissions Due Sunday 3/29, 11:59PM)"
                 />
                 <TimelineItem
                 date="April 3, 11-4 PM"
-                location="Cohon University Center (Danforth Lounge & Conference Room)"
+                location="Danforth Lounge & Conference Room"
                 description="Impact CMU Date!"
                 />
             </div>
