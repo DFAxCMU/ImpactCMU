@@ -14,19 +14,23 @@ const NAV_ITEMS = [
     { label: "2025 ARCHIVE", href: "https://dfaxcmu.notion.site/", external: true },
   ];
   
-export default function NavBarSimple() {
+  export default function NavBarSimple() {
     const currentPath =
       typeof window !== "undefined" ? window.location.pathname : "";
   
+    const normalizePath = (path) =>
+      path.replace(/\/$/, "").toLowerCase();
+  
+    const normalizedPath = normalizePath(currentPath);
+  
     const isHome =
-      currentPath === "/" ||
-      currentPath === "/Hero/" ||
-      currentPath === "/Landing2026";
+      normalizedPath === "" ||
+      normalizedPath === "/hero" ||
+      normalizedPath === "/landing2026";
   
     return (
       <nav className="navbar">
         <div className="frame">
-          {/* Logo */}
           <a
             href="/Hero"
             className={`nav-item nav-logo ${isHome ? "active" : ""}`}
@@ -35,34 +39,39 @@ export default function NavBarSimple() {
           </a>
   
           {NAV_ITEMS.map((item) => {
-            const isActive =
-                !item.external && item.href && currentPath.startsWith(item.href);
-
             if (item.disabled) {
-                return (
+              return (
                 <span
-                    key={item.label}
-                    className="nav-item nav-item-disabled"
+                  key={item.label}
+                  className="nav-item nav-item-disabled"
                 >
-                    <span className="text-wrapper">{item.label}</span>
+                  <span className="text-wrapper">{item.label}</span>
                 </span>
-                );
+              );
             }
-
+  
+            const isActive =
+              !item.external &&
+              item.href &&
+              normalizedPath.startsWith(
+                normalizePath(item.href)
+              );
+  
             return (
-                <a
+              <a
                 key={item.label}
                 href={item.href}
                 className={`nav-item ${isActive ? "active" : ""}`}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noopener noreferrer" : undefined}
-                >
+              >
                 <span className="text-wrapper">{item.label}</span>
-                </a>
+              </a>
             );
-            })}
+          })}
         </div>
       </nav>
     );
   }
+  
   
