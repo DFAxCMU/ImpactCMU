@@ -83,7 +83,7 @@ const About = () => {
                                 <div className="logistics-section">
                                     <AboutCard
                                         title="Where is it?"
-                                        text="April 3rd @ the UC (Danforth Lounge), 11-4 PM." />
+                                        text="April 3rd @ Danforth Lounge & Conference Room, 11-4 PM" />
                                     <AboutCard>
                                         <>
                                             <strong>Logistics:</strong> Chloe Xu, Sara Laman, Inseo Kim, Eunice Lee, Rebecca Sucgang<br />
