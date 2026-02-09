@@ -16,15 +16,18 @@ const NAV_ITEMS = [
   
   export default function NavBarSimple() {
     const currentPath =
-      typeof window !== "undefined" ? window.location.pathname : "";
+      typeof window !== "undefined" ? window.location.pathname : "/";
   
-    const normalizePath = (path) =>
-      path.replace(/\/$/, "").toLowerCase();
+    const normalizePath = (path) => {
+      if (!path) return "/";
+      const cleaned = path.replace(/\/+$/, "").toLowerCase();
+      return cleaned === "" ? "/" : cleaned;
+    };
   
     const normalizedPath = normalizePath(currentPath);
   
     const isHome =
-      normalizedPath === "" ||
+      normalizedPath === "/" ||
       normalizedPath === "/hero" ||
       normalizedPath === "/landing2026";
   
@@ -62,8 +65,6 @@ const NAV_ITEMS = [
                 key={item.label}
                 href={item.href}
                 className={`nav-item ${isActive ? "active" : ""}`}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noopener noreferrer" : undefined}
               >
                 <span className="text-wrapper">{item.label}</span>
               </a>
@@ -73,5 +74,6 @@ const NAV_ITEMS = [
       </nav>
     );
   }
+  
   
   
