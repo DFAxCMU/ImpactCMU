@@ -90,7 +90,7 @@
 
   .bg-group,
   .bg-gradient {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
   

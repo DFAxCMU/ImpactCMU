@@ -157,8 +157,7 @@
 
 /* background */
 
-.bg-group-hero,
-.bg-gradient {
+.bg-group-hero {
   position: absolute;
   top: 0;
   left: 0;
@@ -178,7 +177,20 @@
 
 .bg-group-about,
 .bg-gradient-about {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  max-width: none;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-group,
+.bg-gradient {
+  position: fixed;
   top: 0;
   left: 0;
 
