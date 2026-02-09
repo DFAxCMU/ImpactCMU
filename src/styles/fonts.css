@@ -1,51 +1,158 @@
 /* src/fonts.css */
 @font-face {
-    font-family: 'ExtraLight';
-    src: url('../components/fonts/Spectral-ExtraLight.ttf') format('truetype');
-    /* font-weight: normal;
-    font-style: normal; */
-  }
-
-@font-face {
-  font-family: 'Light Italic';
-  src: url('../components/fonts/Spectral-LightItalic.ttf') format('truetype');
+  font-family: 'ExtraLight';
+  src: url('../components/fonts/Spectral-ExtraLight.ttf') format('truetype');
   /* font-weight: normal;
-  font-style: italic; */
+  font-style: normal; */
 }
 
 @font-face {
-  font-family: 'Pixel';
-  src: url('../components/fonts/ArgentPixelCF-Italic.woff2') format('woff2');
-  font-style: italic;
+font-family: 'Light Italic';
+src: url('../components/fonts/Spectral-LightItalic.ttf') format('truetype');
+/* font-weight: normal;
+font-style: italic; */
+}
+
+@font-face {
+font-family: 'Pixel';
+src: url('../components/fonts/ArgentPixelCF-Italic.woff2') format('woff2');
+font-style: italic;
 }
 
 
 @font-face {
-  font-family: 'InLI';
-  src: url('../components/fonts/InferiLightItalic.otf') format('opentype');
+font-family: 'InLI';
+src: url('../components/fonts/InferiLightItalic.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'InUL';
-  src: url('../components/fonts/InferiUltraLight.otf') format('opentype');
+font-family: 'InUL';
+src: url('../components/fonts/InferiUltraLight.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'InL';
-  src: url('../components/fonts/InferiLight.otf') format('opentype');
+font-family: 'InL';
+src: url('../components/fonts/InferiLight.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'IS';
-  src: url('../components/fonts/IS.ttf') format('truetype');
+font-family: 'IS';
+src: url('../components/fonts/IS.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'thabit';
-  src: url('../components/fonts/Thabit.ttf') format('truetype');
+font-family: 'thabit';
+src: url('../components/fonts/Thabit.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'thabitbold';
-  src: url('../components/fonts/Thabit-Bold.ttf') format('truetype');
+font-family: 'thabitbold';
+src: url('../components/fonts/Thabit-Bold.ttf') format('truetype');
 }
+
+
+/* ---------- Switzer (body/UI font) ---------- */
+@font-face {
+font-family: "Switzer";
+src: url("../components/fonts/Switzer-Light.otf") format("opentype");
+font-weight: 300;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: "Switzer";
+src: url("../components/fonts/Switzer-Regular.otf") format("opentype");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: "Switzer";
+src: url("../components/fonts/Switzer-Medium.otf") format("opentype");
+font-weight: 500;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: "Switzer";
+src: url("../components/fonts/Switzer-Bold.otf") format("opentype");
+font-weight: 700;
+font-style: normal;
+font-display: swap;
+}
+
+
+@font-face {
+font-family: "Cy";
+src: url("../components/fonts/Cy-Regular-iF6673e73706204.ttf") format("truetype");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: "Cy";
+src: url("../components/fonts/Cy-SemiBold-iF6673e736f094d.ttf") format("truetype");
+font-weight: 600;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: "Cy";
+src: url("../components/fonts/Cy-Bold-iF6673e737316f8.ttf") format("truetype");
+font-weight: 700;
+font-style: normal;
+font-display: swap;
+}
+
+/* Regular */
+@font-face {
+font-family: "iA Writer Duospace";
+src: url("../components/fonts/iAWriterDuospace-Regular.otf") format("opentype");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+/* Bold Italic */
+@font-face {
+font-family: "iA Writer Duospace";
+src: url("../components/fonts/iAWriterDuospace-BoldItalic.otf") format("opentype");
+font-weight: 700;
+font-style: italic;
+font-display: swap;
+}
+
+/* Regular */
+@font-face {
+font-family: "iA Writer Duospace";
+src: url("../components/fonts/iAWriterDuospace-Regular.otf") format("opentype");
+font-weight: 400;
+font-style: normal;
+font-display: swap;
+}
+
+/* Bold */
+@font-face {
+font-family: "iA Writer Duospace";
+src: url("../components/fonts/iAWriterDuospace-Bold.otf") format("opentype");
+font-weight: 700;
+font-style: normal;
+font-display: swap;
+}
+
+/* Regular Italic */
+@font-face {
+font-family: "iA Writer Duospace";
+src: url("../components/fonts/iAWriterDuospace-RegularItalic.otf") format("opentype");
+font-weight: 400;
+font-style: italic;
+font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=iA+Writer+Duospace:ital,wght@0,400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Switzer:ital,wght@0,300;0,500&display=swap'); */
