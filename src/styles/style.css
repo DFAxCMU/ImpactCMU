@@ -147,13 +147,116 @@
    h3 {
     font-family: "iA Writer Duospace", monospace;
     font-weight: 400;
-    font-size: 24px;    
+    font-size: 24px;   
+   }
+/* NEW SCHEDULE CODE */
+
+  #schedule {
+    position: relative;
+  }
+
+  #schedule .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+    z-index: 10;
+  }
+
+  h4.date-title {
+    font-size: 18px;
+    padding-top: 0px;
+  }
+
+  h4.proj-awards-title {
+    padding-top: 0px;
+  }
+
+  .timeline-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    width: 100%;
+    /* gap: 20px; */
+    flex-wrap: wrap; /* Allow the boxes to wrap if needed */ 
+  }
+
+
+  p {
+    /* max-width: 500px; */
+    font-family: "switzer-variable";
+    font-weight: 300;
+    color: black;
+    font-size: 85%;
+    word-spacing: 50%;
+    /* font-weight: 500; */
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.catlist {
+    display: flex;
+    justify-content: space-around; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    gap: 30px; /* Adds spacing between the items */
+    padding: 10px;
+}
+
+.catlist p {
+    font-size: 110%;
+}
+
+.catimg {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.cutie {
+    width: 50px;
+}
+
+.box3 p { /* HERE HERE */
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.big-header {
+    font-size: 80px;
+    font-family: 'Impact';
+    font-weight: 500;
+}
+
+h1 {
+    padding-bottom: 12px;
+    font-family: 'Impact';
+    font-weight: 500;
+}
+
+h2 {
+    font-family: 'InL';
+    font-weight: 500;
+    font-size: 9%;    
+    color: black;
+}
+
+h3 {
+    font-family: 'thabit';
+    font-weight: 500;
+    font-size: 160%;    
     color: black;
     padding-bottom: 15px;
     padding-top: 15px;
     margin-bottom: 0px;
 
-}
+} 
+/* END OF NEW SCHEDULE CODE */
 
 /* background */
 
@@ -386,7 +489,7 @@ hr {
     color: var(--darkblue);
 }
 
-#hero, #about, #schedule {
+#hero, #about {
     display: flex;
     align-items:center;
     justify-content: center;
@@ -1155,3 +1258,115 @@ hr {
     font-family: "Switzer";
     padding-bottom: 15px;
   }
+
+
+  
+  /* extra from schedule styling */
+
+  .box3 {
+    flex: 1;
+    padding: 30px;
+    margin: 10px;   
+    background-color: white;
+    /* border: 1px solid black;  */
+    border-radius: 24px; 
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+    position: relative;
+  }
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* gap: 5px; control the space between the boxes */
+    margin-bottom: 20px; /* add some bottom margin */
+}
+
+.boxes1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /* gap: 20px; control the space between the boxes */
+    margin-bottom: 20px; /* add some bottom margin */
+}
+
+.boxes33 {
+    /* align-items: flex-start; */
+    display: block;
+    
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px; 
+}
+
+.boxes2 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.box2 {
+    flex: 0 0 auto; 
+    width: 250px; 
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.box3 {
+    flex: 0 0 auto; 
+    width: 250px; 
+    padding: 20px;
+    background-color: white;
+    /* border: 1px solid black; */
+    /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); */
+}
+
+.box4 {
+    flex: 0 0 auto; 
+    /* position: relative; */
+    width: clamp(300px, 90vw, 100%); 
+    padding: 20px;
+    /* background-color: white; */
+    /* border: 1px solid black; */
+    flex-direction: column;
+    max-height: 100%;
+    margin-bottom: 24px;
+}
+
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.time { /* change position bruh */
+    position: relative; 
+    top: 0; 
+    right: 0; 
+    /* padding: 20px; */
+  }
+
+.time2 {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    padding: 20px;
+}
+
+.time3 {
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    padding: 14px;
+}
