@@ -1,5 +1,5 @@
 /* Navbar container IMPACT 2026*/
-  .navbar {
+.navbar {
     display: flex;
     justify-content: center;
     padding: 12px 24px;
@@ -147,120 +147,18 @@
    h3 {
     font-family: "iA Writer Duospace", monospace;
     font-weight: 400;
-    font-size: 24px;   
-   }
-/* NEW SCHEDULE CODE */
-
-  #schedule {
-    position: relative;
-  }
-
-  #schedule .container-fluid {
-    padding-left: 0px;
-    padding-right: 0px;
-    position: relative;
-    z-index: 10;
-  }
-
-  h4.date-title {
-    font-size: 18px;
-    padding-top: 0px;
-  }
-
-  h4.proj-awards-title {
-    padding-top: 0px;
-  }
-
-  .timeline-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    /* align-items: center; */
-    width: 100%;
-    /* gap: 20px; */
-    flex-wrap: wrap; /* Allow the boxes to wrap if needed */ 
-  }
-
-
-  p {
-    /* max-width: 500px; */
-    font-family: "switzer-variable";
-    font-weight: 300;
-    color: black;
-    font-size: 85%;
-    word-spacing: 50%;
-    /* font-weight: 500; */
-    margin-bottom: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.catlist {
-    display: flex;
-    justify-content: space-around; /* Centers the items horizontally */
-    align-items: center; /* Centers the items vertically */
-    gap: 30px; /* Adds spacing between the items */
-    padding: 10px;
-}
-
-.catlist p {
-    font-size: 110%;
-}
-
-.catimg {
-    margin-top: 8px;
-    display: flex;
-    justify-content: space-around;
-    gap: 15px;
-}
-
-.cutie {
-    width: 50px;
-}
-
-.box3 p { /* HERE HERE */
-    padding-top: 10px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.big-header {
-    font-size: 80px;
-    font-family: 'Impact';
-    font-weight: 500;
-}
-
-h1 {
-    padding-bottom: 12px;
-    font-family: 'Impact';
-    font-weight: 500;
-}
-
-h2 {
-    font-family: 'InL';
-    font-weight: 500;
-    font-size: 9%;    
-    color: black;
-}
-
-h3 {
-    font-family: 'thabit';
-    font-weight: 500;
-    font-size: 160%;    
+    font-size: 24px;    
     color: black;
     padding-bottom: 15px;
     padding-top: 15px;
     margin-bottom: 0px;
 
-} 
-/* END OF NEW SCHEDULE CODE */
+}
 
 /* background */
 
-.bg-group-hero {
+.bg-group-hero,
+.bg-gradient {
   position: absolute;
   top: 0;
   left: 0;
@@ -280,20 +178,7 @@ h3 {
 
 .bg-group-about,
 .bg-gradient-about {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100vw;
-  max-width: none;
-
-  pointer-events: none;
-  z-index: -1;
-}
-
-.bg-group,
-.bg-gradient {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
 
@@ -308,6 +193,19 @@ h3 {
   height: 350px;
   object-fit: cover;
 
+}
+
+.bg-group-schedule, 
+.bg-gradient-schedule {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    max-width: none;
+
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* ABOUT 2025 */
@@ -489,7 +387,8 @@ hr {
     color: var(--darkblue);
 }
 
-#hero, #about {
+#hero, #about, #schedule {
+    min-height: 100vh;
     display: flex;
     align-items:center;
     justify-content: center;
@@ -1259,103 +1158,168 @@ hr {
     padding-bottom: 15px;
   }
 
+  /* SCHEDULE PAGE */
 
-  
-  /* extra from schedule styling */
-
-  .box3 {
-    flex: 1;
-    padding: 30px;
-    margin: 10px;   
-    background-color: white;
-    /* border: 1px solid black;  */
-    border-radius: 24px; 
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
-    position: relative;
-  }
-
-.boxes {
+#schedule{
+    /* padding-top: 600px;  */
     display: flex;
+    align-items:center;
+    min-height: 100vh;
+    justify-content: unset;
+    padding-top: 50px;
+    align-items: flex-start;
+}
+
+#schedule {
+    position: relative;
+}
+
+#schedule {
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    position: block;
+    color: var(--darkblue);
+    /* border-radius: 0px; */
+    /* background: 
+        radial-gradient(50% 50% at 50% 110%, #FF7878 0%, rgba(255, 255, 255, 0.00) 100%, transparent),
+        radial-gradient(50% 50% at 75% 65%, #CBC2E5 0%, rgba(255, 255, 255, 0.00) 100%, transparent); */
+    /* filter: blur(0px); */
+}
+
+#schedule {
+    display: flex;
+    align-items:center;
+    height: 100vh;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    /* gap: 5px; control the space between the boxes */
-    margin-bottom: 20px; /* add some bottom margin */
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#schedule .container-fluid {
+    position: relative;
+    z-index: 10;
+}
+
+#schedule .boxKMS{
+    max-width: 200px !important; 
+    /* margin: 0px auto !important; */
+    display: block !important;
+}
+
+#schedule {
+    /* padding-top: 600px;  */
+    display: flex;
+    align-items:center;
+    min-height: 100vh;
+    justify-content: unset;
+    padding-top: 50px;
+    align-items: flex-start;
+}
+
+.omega {
+    padding: 1%;
 }
 
 .boxes1 {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     /* gap: 20px; control the space between the boxes */
     margin-bottom: 20px; /* add some bottom margin */
 }
 
-.boxes33 {
-    /* align-items: flex-start; */
-    display: block;
-    
-}
+/* .box3 {
+    margin-left: 0px !important;
+    margin-right: 20px !important;
+    margin-top: 30px !important;
+} */
 
-.boxes {
+/* .box3 p { 
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 20px; 
-}
+    flex-direction: column;
+    justify-content: flex-end;
+} */
 
-.boxes2 {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap; 
-    align-items: center; 
-    gap: 20px; 
-}
-
-.box2 {
+/* .box3 {
     flex: 0 0 auto; 
     width: 250px; 
     padding: 20px;
     background-color: white;
-    border: 1px solid black;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
 
 .box3 {
-    flex: 0 0 auto; 
-    width: 250px; 
-    padding: 20px;
-    background-color: white;
-    /* border: 1px solid black; */
-    /* box-shadow: 2px 2px 5px rgba(0,0,0,0.5); */
+    margin: 10px;   
+    border-radius: 24px; 
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.5);
+    position: relative;
 }
 
-.box4 {
+.box3{
+    max-width: 280px !important; 
+    display: block !important;
+    
+} */
+
+.box3 {
+    display: flex;
+    flex-direction: column;
+  
+    width: 280px;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow:  0 4px 12px rgba(0,0,0,0.1);
+  
+    /* EXACT spacing */
+    padding: 48px 32px;
+  
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  
+
+
+/* .box4 {
     flex: 0 0 auto; 
-    /* position: relative; */
     width: clamp(300px, 90vw, 100%); 
     padding: 20px;
-    /* background-color: white; */
-    /* border: 1px solid black; */
     flex-direction: column;
     max-height: 100%;
     margin-bottom: 24px;
-}
+} */
+
+.box4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto 24px;
+  }
+  
 
 
-.row1 {
+.timeline-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
 }
+
 
 .time { /* change position bruh */
     position: relative; 
     top: 0; 
     right: 0; 
     /* padding: 20px; */
-  }
+}
 
 .time2 {
     position: absolute; 
@@ -1370,3 +1334,139 @@ hr {
     right: 0; 
     padding: 14px;
 }
+
+
+/* .catlist {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    gap: 30px;
+    padding: 10px;
+}
+
+.catlist p {
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 300; 
+}
+
+.catimg {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-around;
+    gap: 240px;
+} */
+
+.cat {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 240px;
+    row-gap: 12px;
+    align-items: start;
+}
+
+.catlist {
+    display: contents; /* lets <p> participate in grid */
+}
+
+.catimg {
+    display: contents;
+}
+
+.catlist p {
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 300;
+    text-align: left;
+    margin-left: 8px;
+}
+
+
+
+.title-img {
+    width: 85%; 
+    height: auto;
+    padding-bottom: 35px;
+}
+
+.cutie {
+    width: 50px;
+}
+/* 
+h6 {
+    font-family: "iA Writer Duospace";
+    font-weight: 400;
+    font-size: 24px;    
+    color: black;
+    padding-bottom: 21px;
+    margin-bottom: 0 !important;
+
+} */
+
+.box3 h6 {
+    margin: 0 0 21px 0; /* 21px to time */
+    font-family: "iA Writer Duospace";
+    font-weight: 400;
+    font-size: 24px;
+  }
+  
+  
+
+/* .schedule-time {
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 500; 
+    margin-bottom: 0 !important;
+} */
+
+.schedule-time {
+    margin: 0 0 12px 0; /* small breathing room before description */
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 500;
+}
+  
+
+/* .schedule-desc {
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 300;
+} */
+.schedule-desc {
+    margin: 0; /* no extra bottom margin */
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 300;
+}
+
+.schedule h4 {
+    font-family: 'iA Writer Duospace', monospace;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+  }
+
+  .box4 h4 {
+    padding-bottom: 44px;
+    padding-top: 46px;
+
+  }
+
+  .schedule-page .footer {
+    position: relative !important;
+    bottom: 65px !important;
+    left: 60px;
+    margin-top: 110px; 
+  }
+
+  .newcatimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 240px;
+    margin: 0 auto;
+  }
+  
+
+  @media (max-width: 900px) {
+    .newcatimg {
+      gap: 48px;
+      flex-wrap: wrap;        /* allows stacking if needed */
+    }
+  }
+  
