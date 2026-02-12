@@ -19,7 +19,7 @@ import group3 from '../components/2026img/group-3.svg';
 import Footer from "../components/Footer";
 
 
-const Hero = () => (
+const Schedule = () => (
     <>
         <img className="bg-group-schedule" src={group3} alt="" />
         <img className="bg-gradient-schedule" src={gradient} alt="" />
@@ -85,4 +85,4 @@ const Hero = () => (
     </>
 )
 
-export default Hero;
+export default Schedule;

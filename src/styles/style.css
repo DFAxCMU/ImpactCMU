@@ -98,6 +98,20 @@
   z-index: 3;
 
 }
+
+.footer .col {
+    padding-left: 6.32px;
+    padding-right: 6.32px;
+}
+
+.footer .insta-f {
+    padding: 1px;
+}
+
+.footer .islack-f {
+    padding: 2px;
+}
+  
   
   .footer img {
     width: 32px;
@@ -757,6 +771,7 @@ hr {
     height: 900px;
     margin: 0 auto;
     z-index: 1;
+
   }
   
   
@@ -778,10 +793,17 @@ hr {
     top: 330px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; /* controls space between subtitle and button */
+    
     text-align: center;
     width: 1200px;
     max-width: calc(100% - 80px);
+    margin-top: 250px;
   }
   
   .landing2026__title {
@@ -856,16 +878,10 @@ hr {
   
     cursor: pointer;
     white-space: nowrap;
-
-    width: fit-content;
-    flex-shrink: 0;
-
-    position: absolute;
-    top: 400px;
-    left: 493px;
-
+  
     box-shadow: 0px 4px 12px #00000040;
   }
+  
 
   /* .hero-submit {
     margin-left: 0 !important;
@@ -882,6 +898,7 @@ hr {
     border: 1px solid rgba(0,0,0,0.06);
     padding: 48px 32px;
     backdrop-filter: blur(8px);
+    cursor: move;
   }
   
   .landing2026__cardTitle {
@@ -1227,4 +1244,141 @@ hr {
     margin: 0 auto;
   }
   
+  
+
+  /* MOBILE NAV BAR STYLING */
+
+  /* ------------------ Desktop Navbar ------------------ */
+
+  
+  .logo-link .logo {
+    height: 60px;
+  }
+  
+  .nav-links-desktop {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .nav-link-item {
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .nav-link-item:hover {
+    text-decoration: underline;
+  }
+  
+  /* mobile-nav-pill */
+  /* ------------------ Mobile Navbar ------------------ */
+  .topbar-mobile {
+    padding: 11px 20px;
+  }
+  .mobile-nav-pill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 11px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+    position: relative;
+    z-index: 1000;
+    height: 84px;
+  }
+  
+  .mobile-nav-pill .logo {
+    height: 40px;
+    padding: 24px 12px; /* inside the circle */
+  }
+  
+  .menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 40px;
+    padding: 24px 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-button .bar {
+    height: 4px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 2px;
+  }
+  
+  /* Mobile dropdown menu */
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
+    padding: 12px 0;
+    gap: 16px;
+  }
+  
+  .nav-links-mobile .nav-link-item {
+    padding: 12px 20px;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  .nav-links-mobile .nav-link-item:hover {
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 8px;
+  }
+  
+
+  /* MOBILE STYLING FOR HERO/LANDING2026 PAGE */
+
+/* ------------------ Mobile Hero ------------------ */
+.hero-mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* vertical centering */
+    min-height: 100vh; /* full viewport height */
+    padding: 20px 11px 40px; /* top, horizontal, bottom */
+    box-sizing: border-box;
+  }
+  
+  .hero-mobile-submit-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 73px; /* distance to the cards */
+  }
+  
+  .hero-mobile-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* gap between cards */
+    align-items: center;
+  }
+  
+  .mobile-card {
+    width: 380px;
+    height: 150px;
+    max-width: 90%;
+    padding: 32px;
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  
+  .mobile-card .landing2026__cardTitle {
+    margin-bottom: 9px; /* gap between header and body */
+  }
+  
+  /* .mobile-card .landing2026__cardBody {
+    text-align: center;
+  } */
   

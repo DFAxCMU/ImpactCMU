@@ -8,7 +8,9 @@ const Footer = () => (
     <section id="footer">
         <footer className="footer">
             <a href="https://www.instagram.com/impact.cmu/" target="_blank">
-                <img src={instagram} alt="Instagram" />
+                <div className="insta-f">
+                    <img src={instagram} alt="Instagram" />
+                </div>
             </a>
             <a href="https://calendar.google.com/calendar/u/4?cid=Y2FybmVnaWVtZWxsb25AZGVzaWduZm9yYW1lcmljYS5jb20" target="_blank">
                 <div className="col">
@@ -19,7 +21,9 @@ const Footer = () => (
                 <img src={email} alt="Email" />
             </a>
             <a href="https://join.slack.com/t/impactcmu/shared_invite/zt-2d9yxiqk0-l0NwYeY6tqH2IcXoa98p8Q" target="_blank">
-                <img src={slack} alt="Slack" />
+                <div className="slack-f">
+                    <img src={slack} alt="Slack" />
+                </div>
             </a>
         </footer>
     </section>
