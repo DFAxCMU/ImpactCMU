@@ -1,63 +1,110 @@
-// src/pages/Landing2026.js
 import React from "react";
+import { useState, useEffect, useRef} from "react";
 import "../styles/fonts.css";
-// import "../styles/landing2026.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../styles/style.css";
-// import "../styles/submit_style.css";
+import Draggable from "react-draggable";
 
 import dots from "../components/2026img/landing_page.svg";
-import blobTL from "../components/2026img/blob-top-left.svg";
-import blobTR from "../components/2026img/blob-top-right.svg";
-import blobBL from "../components/2026img/blob-bottom-left.svg";
-import blobBR from "../components/2026img/blob-bottom-right.svg";
 
-export default function Landing2026() {
-  return (
-    <main className="landing2026">
-      {/* Background layers */}
-      <img className="bg-group-hero" src={dots} alt="" />
-      <NavBar />
 
-      <section>
 
-        {/* Blobs */}
-        {/* <img className="landing2026__blob landing2026__blob--tl" src={blobTL} alt="" />
-        <img className="landing2026__blob landing2026__blob--tr" src={blobTR} alt="" />
-        <img className="landing2026__blob landing2026__blob--bl" src={blobBL} alt="" />
-        <img className="landing2026__blob landing2026__blob--br" src={blobBR} alt="" /> */}
+
+
+const Hero = () => {
+  const handleButtonClick = (url) => {
+    // console.log(`${boxName} button clicked`);
+    window.open(url, '_blank');
+    // Perform actions based on the boxName or specific logic for the button
+  };
+
+  const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+      function handleResize() {
+          const { innerWidth: width, innerHeight: height } = window;
+          setWindowDimensions({ width, height });
+      };
+
+      window.addEventListener('resize', handleResize);
+      handleResize();
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
+  const handleDrag = (e) => {
+    const box = boxRef.current;
+    const { clientX, clientY } = e;
+    const { width, height } = windowDimensions;
+  
+    // Ensure the box stays within the screen dimensions
+    const boxWidth = box.offsetWidth;
+    const boxHeight = box.offsetHeight;
+  
+    let newLeft = clientX - boxWidth / 2;
+    let newTop = clientY - boxHeight / 2;
+  
+    // Prevent the box from going beyond the left or top edges
+    if (newLeft < 0) newLeft = 0;
+    if (newTop < 0) newTop = 0;
+  
+    // Prevent the box from going beyond the right or bottom edges
+    if (newLeft + boxWidth > width) newLeft = width - boxWidth;
+    if (newTop + boxHeight > height) newTop = height - boxHeight;
+  
+    box.style.left = `${newLeft}px`;
+    box.style.top = `${newTop}px`;
+  };
+  
+
+
+    return (
+      <>
+      <main className="landing2026">
+        <img className="bg-group-hero" src={dots} alt="" />
+        <NavBar />
+
+        <div className="landing2026__stage">
 
         {/* Cards */}
-        <div className="landing2026__card landing2026__card--left">
-          <h3 className="landing2026__cardTitle">Come Join Us!</h3>
-          <p className="landing2026__cardBody">
-            Info sessions on March 15th
-            <br />
-            2-3PM &amp; March 22nd 12-1PM
-            <br />@ Tepper 3808
-          </p>
-        </div>
+          <Draggable bounds="parent" defaultPosition={{ x: 190, y: 200 }}>
+            <div className="landing2026__card">
+              <h3 className="landing2026__cardTitle">Come Join Us!</h3>
+              <p className="landing2026__cardBody">
+                Info sessions on March 15th
+                <br />
+                2-3PM & March 22nd 12-1PM
+                <br />@ Tepper 3808
+              </p>
+            </div>
+          </Draggable>
 
-        <div className="landing2026__card landing2026__card--right">
-          <h3 className="landing2026__cardTitle">10th Anniversary!</h3>
-          <p className="landing2026__cardBody">
-            Free food and a chance to win prizes!
-          </p>
-        </div>
+          <Draggable bounds="parent" defaultPosition={{ x: 969, y: 163 }}>
+            <div className="landing2026__card">
+              <h3 className="landing2026__cardTitle">10th Anniversary!</h3>
+                <p className="landing2026__cardBody">
+                  Free food and a chance to win prizes!
+                </p>
+              </div>
+          </Draggable>
+      
 
         {/* Wordmark */}
-        <div className="landing2026__wordmark">
+          <div className="landing2026__wordmark">
 
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoFSey-Qw9FLO94pDdfiV8q0ep1UMHhQ5xgxVllzyUVbiZlA/viewform?usp=header" target="_blank" className="hero-submit-button hero-submit-spacing">
-              <span className="hero-submit-text">SUBMIT YOUR PROJECT</span>
-          </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoFSey-Qw9FLO94pDdfiV8q0ep1UMHhQ5xgxVllzyUVbiZlA/viewform?usp=header" target="_blank" className="hero-submit-button hero-submit-spacing">
+                <span className="hero-submit-text">SUBMIT YOUR PROJECT</span>
+            </a>
+          </div>
         </div>
 
         {/* Social icons (bottom-left) */}
           <Footer />
-          <br></br>
-      </section>
-    </main>
-  );
-}
+      </main>
+      </>
+    );
+  };
+
+export default Hero;

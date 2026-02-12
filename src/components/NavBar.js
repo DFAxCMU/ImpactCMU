@@ -1,5 +1,4 @@
-import React from "react";
-import Nav from "react-bootstrap/Nav";
+import React, { useState, useEffect } from "react";
 import unionStroke from "../components/2026img/union-stroke.svg";
 
 const NAV_ITEMS = [
@@ -11,37 +10,48 @@ const NAV_ITEMS = [
 ];
 
 export default function NavBarSimple() {
-  const currentPath =
-    typeof window !== "undefined"
-      ? window.location.pathname.replace(/\/+$/, "").toLowerCase()
-      : "/";
-
-  const normalizePath = (path) => {
+  const normalize = (path) => {
     if (!path) return "/";
-    const cleaned = path.replace(/\/+$/, "").toLowerCase();
-    return cleaned === "" ? "/" : cleaned;
+    return path.replace(/\/+$/, "") || "/";
   };
 
-  const normalizedPath = normalizePath(currentPath);
+  const [currentPath, setCurrentPath] = useState(
+    typeof window !== "undefined"
+      ? normalize(window.location.pathname)
+      : "/"
+  );
+
+  useEffect(() => {
+    const handleLocationChange = () => {
+      setCurrentPath(normalize(window.location.pathname));
+    };
+
+    window.addEventListener("popstate", handleLocationChange);
+
+    // also update after clicks
+    handleLocationChange();
+
+    return () => {
+      window.removeEventListener("popstate", handleLocationChange);
+    };
+  }, []);
 
   const isHome =
-    normalizedPath === "/" ||
-    normalizedPath === "/hero" ||
-    normalizedPath === "/landing2026";
+    currentPath === "/" ||
+    currentPath === "/Hero" ||
+    currentPath === "/Landing2026";
 
   return (
     <nav className="navbar">
       <div className="frame">
-        
-        {/* Logo */}
-        <Nav.Link
+
+        <a
           href="/Hero"
           className={`nav-item nav-logo ${isHome ? "active" : ""}`}
         >
           <img src={unionStroke} alt="Home" />
-        </Nav.Link>
+        </a>
 
-        {/* Nav Items */}
         {NAV_ITEMS.map((item) => {
           if (item.disabled) {
             return (
@@ -56,33 +66,18 @@ export default function NavBarSimple() {
 
           const isActive =
             !item.external &&
-            item.href &&
-            normalizedPath.startsWith(
-              normalizePath(item.href)
-            );
-
-          if (item.external) {
-            return (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nav-item"
-              >
-                <span className="text-wrapper">{item.label}</span>
-              </a>
-            );
-          }
+            normalize(item.href) === currentPath;
 
           return (
-            <Nav.Link
+            <a
               key={item.label}
               href={item.href}
               className={`nav-item ${isActive ? "active" : ""}`}
+              target={item.external ? "_blank" : undefined}
+              rel={item.external ? "noopener noreferrer" : undefined}
             >
               <span className="text-wrapper">{item.label}</span>
-            </Nav.Link>
+            </a>
           );
         })}
       </div>
