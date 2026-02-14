@@ -5,7 +5,19 @@ import Footer from "../components/Footer";
 import "../styles/style.css";
 import Draggable from "react-draggable";
 
-import dots from "../components/2026img/landing_page.svg";
+
+// import dots from "../components/2026img/landing_page.svg";
+// import dots from "../components/2026img/landing_page_bg.svg";
+import dots from "../components/2026img/landing_bg_v5_text.svg";
+import dotsm from "../components/2026img/landing_mobile_bg.svg";
+import titleimg from "../components/2026img/impact_title.png";
+// landing_bg_v3_text.svg
+// landing_mobile_bg.svg
+// landing_page_bg.svg
+// mobile_subtitle_grad.svg
+// landing_bg_v5_text.svg
+// landing_bg_v6.svg
+// landing_bg_v7.svg
 
 const Hero = () => {
   const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
@@ -24,7 +36,13 @@ const Hero = () => {
 
   return (
     <main className="landing2026">
-      <img className="bg-group-hero" src={dots} alt="" />
+      {/* <img className="bg-group-hero" src={dots} alt="" /> */}
+      {/* {windowDimensions.width > 768 ? (
+        // <img className="bg-group-hero" src={dots} alt="" />
+        <img className="bg-group-hero" src={dotsm} alt="" />
+      ) : (
+          <img className="bg-group-hero" src={dotsm} alt="" />
+      )} */}
       <NavBar />
 
       <div className="landing2026__stage">
@@ -32,6 +50,7 @@ const Hero = () => {
         {/* -------- Desktop Version -------- */}
         {windowDimensions.width > 768 && (
           <>
+            {/* <img className="bg-group-hero" src={dots} alt="" /> */}
             <Draggable bounds="parent" defaultPosition={{ x: 171, y: 61 }}>
               <div className="landing2026__card">
                 <h3 className="landing2026__cardTitle">Come Join Us!</h3>
@@ -54,7 +73,16 @@ const Hero = () => {
               </div>
             </Draggable>
 
+            {/* <h2 className="landing2026_impact_title">IMPACT 2026</h2> */}
+
+            {/* <img src={titleimg} alt="Impact 2026" className="landing2026_impact_title"/> */}
+
+
             <div className="landing2026__wordmark">
+              {/* <img src={titleimg} alt="Impact 2026" className="landing2026_impact_title"/> */}
+              <div className="landing2026_subtitlebox">
+                <p className="subtitle_gradient">building a better future with CMU's annual showcase for social impact projects by Design for America.</p>
+              </div>
               <a
                 href={submitUrl}
                 target="_blank"
@@ -68,16 +96,22 @@ const Hero = () => {
 
         {/* -------- Mobile Version -------- */}
         {windowDimensions.width <= 768 && (
+          // <img className="bg-group-hero" src={dots} alt="" />
           <div className="hero-mobile-wrapper">
             {/* Submit button centered */}
-            <div className="hero-mobile-submit-wrapper">
-              <a
-                href={submitUrl}
-                target="_blank"
-                className="hero-submit-button hero-submit-spacing"
-              >
-                <span className="hero-submit-text">SUBMIT YOUR PROJECT</span>
-              </a>
+            <div className="landing2026-mobile-subtitle-submit">
+              <div className="landing2026_subtitlebox">
+                  <p className="subtitle_gradient_mobile">building a better future with CMU's annual showcase for social impact projects by Design for America.</p>
+              </div>
+              <div className="hero-mobile-submit-wrapper">
+                <a
+                  href={submitUrl}
+                  target="_blank"
+                  className="hero-submit-button hero-submit-spacing"
+                >
+                  <span className="hero-submit-text">SUBMIT YOUR PROJECT</span>
+                </a>
+              </div>
             </div>
 
             {/* Two stacked mobile cards */}
@@ -101,7 +135,8 @@ const Hero = () => {
 
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
+      {windowDimensions.width > 768 && <Footer />}
     </main>
   );
 };

@@ -756,11 +756,18 @@ hr {
   /* page wrapper */
   .landing2026 {
     /* min-height: 139vh; */
+
+    background-image: url("../components/2026img/landing_bg_v7.svg");
+    /* background-image: url("../components/2026img/v8.svg"); */
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
     min-height: 100vh;
-    background: var(--bg);
+    /* background: var(--bg); */
     position: relative;
     overflow: hidden;
-    font-family: "Switzer", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-family: "Switzer", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;      
   
   }
       
@@ -803,7 +810,7 @@ hr {
     text-align: center;
     width: 1200px;
     max-width: calc(100% - 80px);
-    margin-top: 250px;
+    margin-top: 150px;
   }
   
   .landing2026__title {
@@ -941,13 +948,15 @@ hr {
   
   
   /* responsive scaling for smaller screens */
-  @media (max-width: 900px) {
+  /* @media (max-width: 900px) {
     .landing2026__stage { height: 900px; }
     .landing2026__title { font-size: 86px; }
     .landing2026__card--left { left: 20px; }
     .landing2026__card--right { right: 20px; top: 520px; }
     .landing2026__blob--br { width: 420px; }
-  }
+  } */
+
+  
   
 /* ABOUT 2026 */
 
@@ -1339,31 +1348,144 @@ hr {
   /* MOBILE STYLING FOR HERO/LANDING2026 PAGE */
 
 /* ------------------ Mobile Hero ------------------ */
-.hero-mobile-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* vertical centering */
-    min-height: 100vh; /* full viewport height */
-    padding: 20px 11px 40px; /* top, horizontal, bottom */
-    box-sizing: border-box;
+
+
+@media (max-width: 768px) {
+    .landing2026 {
+      background-image: url("../components/2026img/landing_mobile_bg.svg");
+      background-size: 100% auto;
+      /* background-size: 102% auto; */
+      /* background-size: cover; */
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+
+    /* body {
+        margin: 0;
+    } */
+
+
+    .hero-mobile-wrapper {
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+        /* justify-content: center; vertical centering */
+        /* min-height: 100vh; full viewport height */
+        /* padding: 20px 11px 40px; top, horizontal, bottom */
+        /* box-sizing: border-box; */
+
+        /* position: relative;
+        min-height: 100vh;
+        padding: 0 20px 40px;
+        box-sizing: border-box;   */
+        
+        position: relative;
+        width: 100%;
+        aspect-ratio: 402 / 873;   /* match Figma */
+        padding: 0 20px;
+        box-sizing: border-box;
+
+      }
+
+      .landing2026-mobile-subtitle-submit {
+        position: absolute;
+        top: 186px;  
+        /* <-- adjust this until subtitle sits 44px below IMPACT text */
+        /* top: 21.3%; */
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+
+        width: 100%;
+        max-width: 360px;
+    
+    }
+
+    .subtitle_gradient_mobile {
+
+        /* Apply the PNG image as the background */
+        background-image: url('../components/2026img/mobile_subtitle_grad.svg');
+        /* Optional: Adjust background size/repeat as needed */
+        background-size: cover; 
+    
+        /* Clip the background to the text characters */
+        -webkit-background-clip: text;
+        background-clip: text;
+    
+        /* Make the text transparent so the background image shows through */
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        font-family: "Switzer", system-ui, sans-serif;
+        font-weight: 700;
+        opacity: 0.75;
+        margin-bottom:0;
+        max-width: 316px;
+        text-align: center;
+        /* margin-top: 44px; */
+      }
+
+      .hero-mobile-submit-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /* margin-bottom: 73px; */
+      }
+
+      .hero-mobile-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 24px; /* gap between cards */
+        align-items: center;
+
+        position: absolute;
+        bottom: 130px; /* distance from bottom of screen */
+        left: 50%;
+        transform: translateX(-50%);
+        /* width: 100%; not adding*/
+      }
+
+      .mobile-card {
+        width: 380px;
+        height: 150px;
+        max-width: 100%;
+        padding: 32px;
+        background: var(--card);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .hero-submit-button {      
+        padding: 18px 24px;
+        border-radius: 68.33px;
+      }
+
+      .hero-submit-button .hero-submit-text {
+        white-space: nowrap;
+        line-height: 1.875;
+        color: black;
+      }
   }
   
-  .hero-mobile-submit-wrapper {
+  /* .hero-mobile-submit-wrapper {
     display: flex;
     justify-content: center;
-    width: 100%;
-    margin-bottom: 73px; /* distance to the cards */
-  }
+    width: 100%; */
+    /* margin-bottom: 73px; distance to the cards */
+  /* } */
   
-  .hero-mobile-cards {
+  /* .hero-mobile-cards {
     display: flex;
     flex-direction: column;
-    gap: 24px; /* gap between cards */
+    gap: 24px; 
     align-items: center;
-  }
+  } */
   
-  .mobile-card {
+  /* .mobile-card {
     width: 380px;
     height: 150px;
     max-width: 90%;
@@ -1372,13 +1494,112 @@ hr {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     border: 1px solid rgba(0, 0, 0, 0.06);
-  }
+  } */
   
   .mobile-card .landing2026__cardTitle {
-    margin-bottom: 9px; /* gap between header and body */
+    margin-bottom: 12px; /* gap between header and body */
+    padding-bottom: 0;
   }
   
   /* .mobile-card .landing2026__cardBody {
     text-align: center;
   } */
   
+  /*  */
+  .subtitle_gradient {
+
+    /* Apply the PNG image as the background */
+    background-image: url('../components/2026img/subtitle_grad.svg');
+    /* Optional: Adjust background size/repeat as needed */
+    background-size: cover; 
+
+    /* Clip the background to the text characters */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Make the text transparent so the background image shows through */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 700;
+    opacity: 0.75;
+    margin-bottom:0;
+    max-width: 394px;
+    text-align: left;
+  }
+
+  /* .subtitle_gradient_mobile { */
+
+    /* Apply the PNG image as the background */
+    /* background-image: url('../components/2026img/mobile_subtitle_grad.svg'); */
+    /* Optional: Adjust background size/repeat as needed */
+    /* background-size: cover;  */
+
+    /* Clip the background to the text characters */
+    /* -webkit-background-clip: text; */
+    /* background-clip: text; */
+
+    /* Make the text transparent so the background image shows through */
+    /* -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-family: "Switzer", system-ui, sans-serif;
+    font-weight: 700;
+    opacity: 0.75;
+    margin-bottom:0;
+    max-width: 316px;
+    text-align: center;
+    margin-top: 44px; */
+  /* } */
+
+
+.landing2026_subtitlebox {
+    gap:32px;
+}
+
+/* .landing2026_impact_title{
+
+    background-image: url('../components/2026img/title_grad.svg');
+    
+
+    background-size: cover; 
+
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-family: "cy", sans-serif;
+    font-feature-settings: "ss01" 1, "ss02" 1, "ss03" 1;
+    font-weight: 500;
+    font-size: 160px;
+    position: absolute;
+    top: 278px;
+    text-align: center;
+} */
+
+.landing2026_impact_title {
+    display: block;
+    /* width: 60vw;   */
+    max-width: 1054px;  
+    min-width: 300px; 
+    height: auto;
+    margin: 0 auto; 
+    position: relative; 
+    z-index: 3;
+    position: absolute;
+    top: 400px;
+    left:171px;
+  }
+
+/* .landing2026-mobile-subtitle-submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+} */
+
+  
+/* src/styles/style.css */
+/* src/components/2026img/subtitle_grad.svg */
