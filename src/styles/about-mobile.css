@@ -6,6 +6,21 @@
 @media (max-width: 768px) {
   .about-mobile { display: block; }
   .about-desktop { display: none; }
+  /* about-mobile-bg.svg */
+
+  .about-outer-cont {
+    background-image: url("../components/2026img/about-mobile-bg.svg");
+    /* background-size: 100% auto; */
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    padding-bottom: 0; /* remove desktop footer spacing */
+  }
+
+  .logistics-section {
+    gap: 24px;
+  }
 
   .about-page--mobile {
     position: relative;
@@ -40,10 +55,10 @@
   .container-about {
     max-width: 430px;
     margin: 0 auto;
-    padding: 10px 18px 24px;
+    padding: 70px 18px 24px;
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 24px;
   }
 
   .about-page--mobile .about-card {

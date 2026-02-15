@@ -7,7 +7,8 @@
     /* schedule_mobile_bg.svg */
     .schedule-page {
         background-image: url("../components/2026img/schedule_mobile_bg.svg");
-        background-size: 100% auto;
+        /* background-size: 100% auto; */
+        background-size: cover;
         background-position: top center;
         background-repeat: no-repeat;
     
@@ -181,6 +182,7 @@
       margin: 0 auto;
       padding: 0 16px;
       box-sizing: border-box;
+      padding-bottom: 20px;
     }
   
     .box4 h4 {

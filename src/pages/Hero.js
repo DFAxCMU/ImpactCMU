@@ -11,6 +11,9 @@ import Draggable from "react-draggable";
 import dots from "../components/2026img/landing_bg_v5_text.svg";
 import dotsm from "../components/2026img/landing_mobile_bg.svg";
 import titleimg from "../components/2026img/impact_title.png";
+import mobileimpacttitle from "../components/2026img/impact-mobile-title.svg";
+// landing-mobile-notext.svg
+
 // landing_bg_v3_text.svg
 // landing_mobile_bg.svg
 // landing_page_bg.svg
@@ -97,40 +100,42 @@ const Hero = () => {
         {/* -------- Mobile Version -------- */}
         {windowDimensions.width <= 768 && (
           // <img className="bg-group-hero" src={dots} alt="" />
-          <div className="hero-mobile-wrapper">
-            {/* Submit button centered */}
-            <div className="landing2026-mobile-subtitle-submit">
-              <div className="landing2026_subtitlebox">
+          <>
+            {/* // <img className="bg-group-hero" src={dots} alt="" /> */}
+            <img src={mobileimpacttitle} className="impact-title-pic-mobile" /><div className="hero-mobile-wrapper">
+              {/* Submit button centered */}
+              <div className="landing2026-mobile-subtitle-submit">
+                <div className="landing2026_subtitlebox">
                   <p className="subtitle_gradient_mobile">building a better future with CMU's annual showcase for social impact projects by Design for America.</p>
-              </div>
-              <div className="hero-mobile-submit-wrapper">
-                <a
-                  href={submitUrl}
-                  target="_blank"
-                  className="hero-submit-button hero-submit-spacing"
-                >
-                  <span className="hero-submit-text">SUBMIT YOUR PROJECT</span>
-                </a>
-              </div>
-            </div>
-
-            {/* Two stacked mobile cards */}
-            <div className="hero-mobile-cards">
-              <div className="landing2026__card mobile-card">
-                <h3 className="landing2026__cardTitle">Come Join Us!</h3>
-                <p className="landing2026__cardBody">
-                  Info sessions on March 15th 2-3PM & March 22nd 12-1PM @ Tepper 3808
-                </p>
+                </div>
+                <div className="hero-mobile-submit-wrapper">
+                  <a
+                    href={submitUrl}
+                    target="_blank"
+                    className="hero-submit-button hero-submit-spacing"
+                  >
+                    <span className="hero-submit-text">SUBMIT YOUR PROJECT</span>
+                  </a>
+                </div>
               </div>
 
-              <div className="landing2026__card mobile-card">
-                <h3 className="landing2026__cardTitle">10th Anniversary!</h3>
-                <p className="landing2026__cardBody">
-                  Free food and a chance to win prizes!
-                </p>
+              {/* Two stacked mobile cards */}
+              <div className="hero-mobile-cards">
+                <div className="landing2026__card mobile-card">
+                  <h3 className="landing2026__cardTitle">Come Join Us!</h3>
+                  <p className="landing2026__cardBody">
+                    Info sessions on March 15th 2-3PM & March 22nd 12-1PM @ Tepper 3808
+                  </p>
+                </div>
+
+                <div className="landing2026__card mobile-card">
+                  <h3 className="landing2026__cardTitle">10th Anniversary!</h3>
+                  <p className="landing2026__cardBody">
+                    Free food and a chance to win prizes!
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
+            </div></>
         )}
 
       </div>

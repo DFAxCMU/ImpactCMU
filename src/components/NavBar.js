@@ -4,9 +4,12 @@ import Navbar from "react-bootstrap/Navbar";
 import unionStroke from "../components/2026img/union-stroke.svg";
 import hamburgerImg from "../components/2026img/hamburger.svg";
 
+// import { useLocation } from "react-router-dom";
+
 export default function TopBar2026() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
+//   const location = useLocation();
 
   const NAV_ITEMS = [
     { label: "ABOUT", href: "/About" },
@@ -21,6 +24,7 @@ export default function TopBar2026() {
     typeof window !== "undefined"
       ? normalize(window.location.pathname)
       : "/";
+//   const currentPath = normalize(location.pathname);
 
   const isHome = currentPath === "/" || currentPath === "/Hero";
 
@@ -42,7 +46,7 @@ export default function TopBar2026() {
             const isActive =
               !item.external &&
               !item.disabled &&
-              normalize(item.href) === currentPath;
+              normalize(item.href) === normalize(window.location.pathname);
 
             if (item.disabled) {
               return (
