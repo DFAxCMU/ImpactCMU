@@ -1,30 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import unionStroke from "../components/2026img/union-stroke.svg";
 import hamburgerImg from "../components/2026img/hamburger.svg";
 
-// import { useLocation } from "react-router-dom";
-
 export default function TopBar2026() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentPath, setCurrentPath] = useState("/"); // SSR-safe default
+
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
-//   const location = useLocation();
 
   const NAV_ITEMS = [
-    { label: "ABOUT", href: "/About" },
-    { label: "SUBMIT", href: "/Submit" },
-    { label: "SCHEDULE", href: "/Schedule" },
+    { label: "ABOUT", href: "/About/" },
+    { label: "SUBMIT", href: "/Submit/" },
+    { label: "SCHEDULE", href: "/Schedule/" },
     { label: "PROJECTS", disabled: true },
     { label: "2025 ARCHIVE", href: "https://dfaxcmu.notion.site/", external: true },
   ];
 
+  // Normalize function to remove trailing slashes
   const normalize = (path) => (path ? path.replace(/\/+$/, "") : "/");
-  const currentPath =
-    typeof window !== "undefined"
-      ? normalize(window.location.pathname)
-      : "/";
-//   const currentPath = normalize(location.pathname);
+
+  // Run only in the browser
+  useEffect(() => {
+    setCurrentPath(normalize(window.location.pathname));
+  }, []);
 
   const isHome = currentPath === "/" || currentPath === "/Hero";
 
@@ -46,7 +46,7 @@ export default function TopBar2026() {
             const isActive =
               !item.external &&
               !item.disabled &&
-              normalize(item.href) === normalize(window.location.pathname);
+              normalize(item.href) === currentPath;
 
             if (item.disabled) {
               return (
