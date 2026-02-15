@@ -5,9 +5,9 @@ import NavBar from "../components/NavBar";
 // import plush from '../components/2026img/cat-plush.png';
 // import mug from '../components/2026img/cat-mug.png';
 
-import lamp from '../components/2026img/cat-lamp.svg';
-import plush from '../components/2026img/cat-plush.svg';
-import mug from '../components/2026img/cat-mug.svg';
+import lamp from '../components/2026img/cat-lamp.png';
+import plush from '../components/2026img/cat-plush.png';
+import mug from '../components/2026img/cat-mug.png';
 
 import 'popper.js'
 import '../dist/css/bootstrap.min.css';
@@ -18,13 +18,29 @@ import gradient from '../components/2026img/gradient-bg.png';
 import group3 from '../components/2026img/group-3.svg';
 import Footer from "../components/Footer";
 
+/* mobile style */
+// import "../styles/schedule-mobile.css";
+import "../styles/schedule-mobile-2.css";
+
+import topGradient from '../components/2026img/top-gradient-schedule.png';
+import bottomGradient from '../components/2026img/bottom-gradient-schedule.png';
+
+// import mobileNavbar from '../components/2026img/Nav_Bar_Closed.png';
 
 const Schedule = () => (
     <>
-        <img className="bg-group-schedule" src={group3} alt="" />
-        <img className="bg-gradient-schedule" src={gradient} alt="" />
-        <NavBar />
+        {/* <img className="bg-group-schedule" src={group3} alt="" /> */}
+        {/* <img className="bg-gradient-schedule" src={gradient} alt="" /> */}
+        
+        {/* NEW - Use these instead: */}
+        {/* <img className="bg-gradient-schedule-top" src={topGradient} alt="" />
+        <img className="bg-gradient-schedule-bottom" src={bottomGradient} alt="" /> */}
         <div className="schedule-page">
+        <NavBar />
+
+        {/* <img className="mobile-navbar-img" src={mobileNavbar} alt="Navigation" /> */}
+
+        {/* <div className="schedule-page"> */}
         <section className="schedule">
             <div className="container-fluid">
                 <div className="text-center omega">
@@ -70,14 +86,22 @@ const Schedule = () => (
                     </div>
                     <div className="box4">
                         <h4>Raffle Prizes</h4>
-                            <div className="newcatimg">
-                                <img src={lamp} alt="Cat Lamp" />
-                                <img src={plush} alt="Cat Plush" />
-                                <img src={mug} alt="Cat Mug" />
+                        <div className="newcatimg">
+                            <div className="raffle-item">
+                                <p className="raffle-number">1. Cat Lamp</p>
+                                <img src={lamp} alt="" />
                             </div>
+                            <div className="raffle-item">
+                                <p className="raffle-number">2. Cat Plush</p>
+                                <img src={plush} alt="" />
+                            </div>
+                            <div className="raffle-item">
+                                <p className="raffle-number">3. Cat Mug</p>
+                                <img src={mug} alt="" />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
             </div>
         </section>
         <Footer />

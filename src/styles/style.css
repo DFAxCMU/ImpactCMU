@@ -263,6 +263,16 @@
     z-index: -1;
 }
 
+.schedule-page {
+    background-image: url("../components/2026img/submit_bg_grad.svg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
 /* ABOUT 2025 */
 
 .logistics-section {
@@ -1160,6 +1170,9 @@ hr {
     margin: 0 auto 24px;
   }
   
+  .box4 p {
+    margin-left: 30px;
+  }
 
 
 .timeline-container {
@@ -1295,7 +1308,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 240px;
+    gap: 303px;
     margin: 0 auto;
   }
   
@@ -1787,6 +1800,13 @@ hr {
 
 
 @media (max-width: 768px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+
     .landing2026 {
       background-image: url("../components/2026img/landing_mobile_bg.svg");
       background-size: 100% auto;
@@ -1794,7 +1814,18 @@ hr {
       /* background-size: cover; */
       background-position: top center;
       background-repeat: no-repeat;
+
+      min-height: 100vh;
+      height: 100vh;
+      overflow: hidden; /* 🔥 prevents scroll */
+      position: relative;
+  
     }
+
+    .landing2026__stage {
+        height: 100%;
+        position: relative;
+      }
 
     /* body {
         margin: 0;
@@ -1817,7 +1848,8 @@ hr {
         
         position: relative;
         width: 100%;
-        aspect-ratio: 402 / 873;   /* match Figma */
+        height: 100%;
+        /* aspect-ratio: 402 / 873; */
         padding: 0 20px;
         box-sizing: border-box;
 

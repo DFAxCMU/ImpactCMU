@@ -412,7 +412,15 @@
         padding-right: 20px;
         align-items: center;
         gap: 0; /* we control spacing manually */
-        padding-top: 8px;
+        /* padding-top: 8px; */
+    }
+
+    .awards-title {
+        padding-top: 10px !important;
+    }
+
+    .submit-section-timeline {
+        padding-bottom: 23px;
     }
 
     /* .submit-section {
@@ -442,12 +450,13 @@
         margin-left: 0; */
 
         display: flex;
-        margin: 40px auto 0;
+        /* margin: 40px auto 0; */
     }
 
     .awards-stack {
         align-items: center;   /* centers children horizontally */
-      }
+        gap: 64px;
+    }
 
 
     /* 64px before Timeline title */

@@ -93,7 +93,7 @@ const Submit = () => {
 
 
         {/* <h2 className="section-title">Timeline</h2> */}
-        <section className="submit-section">
+        <section className="submit-section submit-section-timeline">
             <h2 className="section-title">Timeline</h2>
             <div className="submit-timeline-cards">
                 <div className={isSmallScreen ? "timeline-column" : "timeline-row"}>
