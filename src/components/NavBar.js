@@ -1,212 +1,109 @@
-// import React, { useState, useEffect } from "react";
-// import unionStroke from "../components/2026img/union-stroke.svg";
-
-// const NAV_ITEMS = [
-//   { label: "ABOUT", href: "/About" },
-//   { label: "SUBMIT", href: "/Submit" },
-//   { label: "SCHEDULE", href: "/Schedule" },
-//   { label: "PROJECTS", disabled: true },
-//   { label: "2025 ARCHIVE", href: "https://dfaxcmu.notion.site/", external: true },
-// ];
-
-// export default function NavBarSimple() {
-//   const normalize = (path) => {
-//     if (!path) return "/";
-//     return path.replace(/\/+$/, "") || "/";
-//   };
-
-//   const [currentPath, setCurrentPath] = useState(
-//     typeof window !== "undefined"
-//       ? normalize(window.location.pathname)
-//       : "/"
-//   );
-
-//   useEffect(() => {
-//     const handleLocationChange = () => {
-//       setCurrentPath(normalize(window.location.pathname));
-//     };
-
-//     window.addEventListener("popstate", handleLocationChange);
-
-//     // also update after clicks
-//     handleLocationChange();
-
-//     return () => {
-//       window.removeEventListener("popstate", handleLocationChange);
-//     };
-//   }, []);
-
-//   const isHome =
-//     currentPath === "/" ||
-//     currentPath === "/Hero" ||
-//     currentPath === "/Landing2026";
-
-//   return (
-//     <nav className="navbar">
-//       <div className="frame">
-
-//         <a
-//           href="/Hero"
-//           className={`nav-item nav-logo ${isHome ? "active" : ""}`}
-//         >
-//           <img src={unionStroke} alt="Home" />
-//         </a>
-
-//         {NAV_ITEMS.map((item) => {
-//           if (item.disabled) {
-//             return (
-//               <span
-//                 key={item.label}
-//                 className="nav-item nav-item-disabled"
-//               >
-//                 <span className="text-wrapper">{item.label}</span>
-//               </span>
-//             );
-//           }
-
-//           const isActive =
-//             !item.external &&
-//             normalize(item.href) === currentPath;
-
-//           return (
-//             <a
-//               key={item.label}
-//               href={item.href}
-//               className={`nav-item ${isActive ? "active" : ""}`}
-//               target={item.external ? "_blank" : undefined}
-//               rel={item.external ? "noopener noreferrer" : undefined}
-//             >
-//               <span className="text-wrapper">{item.label}</span>
-//             </a>
-//           );
-//         })}
-//       </div>
-//     </nav>
-//   );
-// }
-
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
-import unionStroke from "../components/2026img/union-stroke.svg"; // update path
+import Navbar from "react-bootstrap/Navbar";
+import unionStroke from "../components/2026img/union-stroke.svg";
+import hamburgerImg from "../components/2026img/hamburger.svg";
 
 export default function TopBar2026() {
-  const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
   const NAV_ITEMS = [
     { label: "ABOUT", href: "/About" },
     { label: "SUBMIT", href: "/Submit" },
     { label: "SCHEDULE", href: "/Schedule" },
-    { label: "PROJECTS", href: "/Projects" },
+    { label: "PROJECTS", disabled: true },
     { label: "2025 ARCHIVE", href: "https://dfaxcmu.notion.site/", external: true },
   ];
 
-  const normalize = (path) => {
-    if (!path) return "/";
-    return path.replace(/\/+$/, "") || "/";
-  };
-
-  const [currentPath, setCurrentPath] = useState(
+  const normalize = (path) => (path ? path.replace(/\/+$/, "") : "/");
+  const currentPath =
     typeof window !== "undefined"
       ? normalize(window.location.pathname)
-      : "/"
-  );
+      : "/";
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowDimensions({ width: window.innerWidth, height: window.innerHeight });
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const isHome =
-    currentPath === "/" ||
-    currentPath === "/Hero" ||
-    currentPath === "/Landing2026";
+  const isHome = currentPath === "/" || currentPath === "/Hero";
 
   return (
-    <div>
-      {windowDimensions.width > 768 ? (
-        // Desktop navbar
-        <nav className="navbar">
-            <div className="frame">
+    <Navbar className="topbar-2026">
+      <div className={`frame ${isMenuOpen ? "dropdown-open" : ""}`}>
 
-            <a
-            href="/Hero"
-            className={`nav-item nav-logo ${isHome ? "active" : ""}`}
-            >
-            <img src={unionStroke} alt="Home" />
-            </a>
+        {/* Logo */}
+        <Nav.Link
+          href="/Hero"
+          className={`nav-item nav-logo ${isHome ? "active" : ""}`}
+        >
+          <img src={unionStroke} alt="Home" />
+        </Nav.Link>
 
-            {NAV_ITEMS.map((item) => {
+        {/* DESKTOP NAV */}
+        <div className="desktop-nav">
+          {NAV_ITEMS.map((item) => {
+            const isActive =
+              !item.external &&
+              !item.disabled &&
+              normalize(item.href) === currentPath;
+
             if (item.disabled) {
-                return (
+              return (
                 <span
-                    key={item.label}
-                    className="nav-item nav-item-disabled"
+                  key={item.label}
+                  className="nav-item nav-item-disabled"
                 >
-                    <span className="text-wrapper">{item.label}</span>
+                  {item.label}
                 </span>
-                );
+              );
             }
 
-            const isActive =
-                !item.external &&
-                normalize(item.href) === currentPath;
-
             return (
-                <a
+              <Nav.Link
                 key={item.label}
                 href={item.href}
-                className={`nav-item ${isActive ? "active" : ""}`}
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noopener noreferrer" : undefined}
-                >
-                <span className="text-wrapper">{item.label}</span>
-                </a>
+                className={`nav-item ${isActive ? "active" : ""}`}
+              >
+                {item.label}
+              </Nav.Link>
             );
-            })}
+          })}
         </div>
-      </nav>
 
-        
-
-        
-      ) : (
-        // Mobile navbar
-        <div className="topbar-mobile">
-            <div className="mobile-nav-pill">
-                <a href="/Hero" className="logo-link">
-                    <img src={unionStroke} alt="Union Stroke" className="logo" />
-                </a>
-                <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)}>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                    <span className="bar"></span>
-                </button>
-
-                {menuOpen && (
-                    <Nav className="nav-links-mobile">
-                    {NAV_ITEMS.map((item) => (
-                        <Nav.Link
-                        key={item.label}
-                        href={item.href}
-                        target={item.external ? "_blank" : undefined}
-                        rel={item.external ? "noopener noreferrer" : undefined}
-                        className="nav-link-item"
-                        >
-                        {item.label}
-                        </Nav.Link>
-                    ))}
-                    </Nav>
-                )}
-            </div>
+        {/* MOBILE HAMBURGER */}
+        <div
+          className={`hamburger-wrapper ${isMenuOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+        >
+          <img src={hamburgerImg} alt="Menu" className="hamburger-img" />
         </div>
-      )}
-    </div>
+
+        {/* MOBILE DROPDOWN */}
+        {isMenuOpen && (
+          <div className="nav-items-container">
+            {NAV_ITEMS.map((item) =>
+              item.disabled ? (
+                <span
+                  key={item.label}
+                  className="nav-item nav-item-disabled"
+                >
+                  {item.label}
+                </span>
+              ) : (
+                <Nav.Link
+                  key={item.label}
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
+                  className="nav-item"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Nav.Link>
+              )
+            )}
+          </div>
+        )}
+      </div>
+    </Navbar>
   );
 }
-

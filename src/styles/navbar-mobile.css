@@ -1,0 +1,93 @@
+@media (max-width: 768px) {
+    .navm-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 18px 16px 10px;
+    }
+  
+    .navm-pill {
+      height: 66px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 999px;
+      box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      backdrop-filter: blur(10px);
+    }
+  
+    .navm-logo img {
+      height: 24px;
+      width: auto;
+      display: block;
+    }
+  
+    .navm-burger {
+      width: 44px;
+      height: 44px;
+      border: 0;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      padding: 0;
+      cursor: pointer;
+    }
+  
+    .navm-burger span {
+      display: block;
+      height: 2px;
+      width: 22px;
+      background: #111;
+      border-radius: 2px;
+    }
+  
+    .navm-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(6px);
+    }
+  
+    .navm-close {
+      position: absolute;
+      top: 18px;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+    }
+  
+    .navm-menu {
+      position: absolute;
+      top: 90px;
+      left: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 24px;
+      padding: 16px;
+      box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.12);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .navm-menu a {
+      color: #111;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 12px;
+      border-radius: 14px;
+    }
+  
+    .navm-menu a:active {
+      background: rgba(0, 0, 0, 0.06);
+    }
+  }

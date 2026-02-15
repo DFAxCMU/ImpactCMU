@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import who_are_we from '../components/2026img/who-are-we.svg';
 import what_is_impact from '../components/2026img/what-is-impact.svg';
 import NavBar from "../components/NavBar";
+import NavBarMobile from "../components/NavBarMobile";
 import Footer from "../components/Footer";
 import AboutCard from "../components/AboutCard";
 import gradient from "../components/2026img/gradient-bg.png";
@@ -14,60 +15,30 @@ import '../styles/style.css';
 import '../styles/page.css';
 import '../styles/fonts.css';
 import '../styles/about-card.css';
+import "../styles/about-mobile.css";
 
 const About = () => {
+    const [windowDimensions, setWindowDimensions] = useState({ width: 1000, height: 800 });
     const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     useEffect(() => {
-        const checkScreenSize = () => {
+        function handleResize() {
+            setWindowDimensions({ width: window.innerWidth, height: window.innerHeight });
             setIsSmallScreen(window.innerWidth < 769);
-        };
-
-        // check the screen size on component mount
-        checkScreenSize();
-
-        // event listener for window resize
-        window.addEventListener('resize', checkScreenSize);
-
-        // unnecessary cleanup :P
-        return () => window.removeEventListener('resize', checkScreenSize);
+        }
+        window.addEventListener("resize", handleResize);
+        handleResize();
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     return (
-        <>
+        // <>
+        <div className="about-outer-cont">
             {/* <img src={aboutBg} alt="background" className="background"/> */}
-            <img className="bg-group-about" src={group3} alt="" />
-            <img className="bg-gradient-about" src={gradient} alt="" />
+            {/* <img className="bg-group-about" src={group3} alt="" />
+            <img className="bg-gradient-about" src={gradient} alt="" /> */}
             <NavBar />
-            {isSmallScreen ? (
-                <div className="container-about">
-                    <AboutCard 
-                        title="Who Are We?" 
-                        text="Impact CMU invites undergrad and graduate students at Carnegie Mellon to showcase how they have worked with a community. Student organizations and research, personal, and hackathon projects are all welcome to contribute their work!"
-                        imageSrc={who_are_we}
-                    />
-                    <div className="what_is_impact-section">
-                        <img src={what_is_impact} alt="title-img" className="what_is_impact" />
-                        <div className="what_is_impact-text">
-                            <h3 className="aboutHDR">What is Impact?</h3>
-                            <p>
-                                You will be showcasing your work through a poster and optional demos. Attendees will
-                                view different teams, talk to you about your work, and vote to win prizes! Faculty judges
-                                will also take part in viewing work and discussing your creations! This is a great
-                                opportunity to talk to your peers, get feedback from your professors, and for student
-                                organizations to promote to a large audience.
-                            </p>
-                            <h3 className="aboutHDR">Where is it?</h3>
-                            <p>
-                            April 3rd @ Danforth Lounge &amp; Conference Room,<br />
-                            11-4 PM
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-            ) : (
-                <>
+            {/* {isSmallScreen ? <NavBarMobile /> : <NavBar />} */}
                 <div className="about-page">
                     <section id="about">
                             <div className="container-about">
@@ -98,12 +69,11 @@ const About = () => {
                                 </div>
                             </div>
                         </section>
-                        <Footer />
+                        {windowDimensions.width > 768 && <Footer />}
                 </div>
-                </>
-            )}
-        </>
+        </div>
     );
 };
 
 export default About;
+
