@@ -72,11 +72,22 @@
 
 
 .submit {
-    position: relative;
+    /* position: relative;
     min-height: 100vh;
     background: #faf8f6;
-    overflow-x: hidden;
-    padding-bottom: 120px; /* space for footer icons */
+    overflow-x: hidden; */
+    padding-bottom: 136px; /* space for footer icons */
+  
+
+
+    background-image: url("../components/2026img/submit_bg_grad.svg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    /* font-family: "Switzer", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;  */ 
   }
   
   /* background */
@@ -118,24 +129,6 @@
   }
   
   /* content */
-  /* .section {
-    position: relative;
-    z-index: 1;
-    margin: 120px auto;
-    max-width: 1200px;
-    padding: 0 24px;
-  } */
-
-  /* .section {
-    display: flex;
-    flex-direction: column; 
-    gap: 32px;
-
-    margin-top: 20px;
-    margin-left: 73px;
-    margin-right: 73px;
-  }
-*/
   .submit .submit-section {
     display: flex;
     flex-direction: column;
@@ -143,11 +136,18 @@
     gap: 23px;
 
     /* dynamic horizontal padding */
-    padding-left: clamp(50px, 8%, 126px);
-    padding-right: clamp(24px, 5%, 73px);
+    /* padding-left: clamp(50px, 8%, 126px);
+    padding-right: clamp(24px, 5%, 73px); */
+    /* padding-left: clamp(20px, 4vw, 60px);
+    padding-right: clamp(20px, 4vw, 60px); */
 
     position: relative;
     z-index: 1;    
+  }
+
+  .submit-section {
+    padding-left: clamp(20px, 5vw, 96px);
+    padding-right: clamp(20px, 5vw, 96px);
   }
 
   .section-title {
@@ -157,14 +157,20 @@
     color: var(--neutralblack);
 
     /* dynamic left indent */
-    margin-left: clamp(50px, 4%, 126px);
+    /* margin-left: clamp(50px, 4%, 126px); */
+    /* margin */
 
     position: relative;
     z-index: 2;
   
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 43px;
+    padding-top: 40px;
+    margin-left: 66px;
+  }
+
+  .awards-title {
+    padding-top: 10px;
   }
 
   
@@ -172,13 +178,14 @@
   .awards-row {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 86px;
+    flex-wrap: wrap; 
   }
 
   .awards-stack {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 86px;
   }
 
   .award-card {
@@ -206,13 +213,21 @@
     white-space: normal;
     word-break: normal;
   }
+
+
+  .award-card-title {
+    width: 248px;
+    padding-bottom: 20px;
+  }
   
 
   .card-row {
     display: flex;
     /* flex-wrap: wrap; */
-    gap: 60px;
+    gap: 67px;
     /* justify-content: flex-start; */
+    /* align-items: flex-start; */
+    flex-wrap: wrap;   
     align-items: flex-start;
   }
   
@@ -225,7 +240,9 @@
   /* timeline */
   .timeline-row {
     display: flex;
-    gap: 60px;
+    gap: 67px;
+    /* align-items: flex-start; */
+    flex-wrap: wrap; 
     align-items: flex-start;
   }
   
@@ -241,23 +258,50 @@
   } */
 
   /* Award styling */
-    .award-subtitle,
+   .award-subtitle,
     .award-amount {
     font-family: "Switzer", system-ui, sans-serif;
     font-weight: 300; /* light */
-    }
+    margin-bottom: 0px;
+   }
+
+   .award-amount {
+    margin-bottom: 6px;
+   }
 
     /* Timeline styling */
-    .timeline-location {
+   .timeline-location {
     font-family: "Switzer", system-ui, sans-serif;
     font-weight: 700; /* medium/bold */
     margin-bottom: 0 !important;
-    }
+   }
 
-    .timeline-description {
+   .timeline-description {
     font-family: "Switzer", system-ui, sans-serif;
     font-weight: 300; /* light */
-    }
+   }
+
+   .timeline-card-title {
+    padding-top: 0;
+    padding-bottom: 20px;
+    /* letter-spacing: -0.01em; */
+    width: 248px;
+   }
+
+   p.location,
+   .timeline-description {
+    margin-bottom: 0px;
+   }
+
+   p.location{
+    font-weight: 500;
+   }
+
+  .tight-date {
+    letter-spacing: -0.03em;
+  }
+
+
 
 
   /* .section-title {
@@ -284,7 +328,7 @@
   .card {
     background: white;
     border-radius: 24px;
-    padding: 32px;
+    padding: 48px 32px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 
     width: 280px;
@@ -296,7 +340,7 @@
     height: 60px;
     object-fit: cover;
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 5px;
   }
   
   /* submit button */
@@ -312,7 +356,7 @@
     align-items: center;
     justify-content: center;
   
-    padding: 18px 32px;
+    padding: 18px 24px;
     border-radius: 68.33px;
   
     cursor: pointer;
@@ -320,17 +364,20 @@
 
     width: fit-content;
     flex-shrink: 0;
-  }
-  
-  .submit-button .submit-text {
-    white-space: nowrap;
-    line-height: 1;
-    color: black;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
-  .submit-spacing {
-    margin-left: 27px;
+
+  .submit-button .submit-text {
+    white-space: nowrap;
+    line-height: 30px;
+    color: black;
   }
+  
+
+  /* .submit-spacing {
+    margin-left: 54px;
+  } */
 
   /* footer icons */
   .footer {
@@ -338,7 +385,7 @@
     bottom: 15px;
     left: 60px;
     display: flex;
-    gap: 24px;
+    gap: 48px;
     z-index: 2;
   }
   
@@ -347,6 +394,144 @@
     height: 32px;
   }
 
-/* #quill-calendar {
-    height: 40px;
-} */
+
+  /* MEDIA STYLING FOR SUBMIT */
+  @media (max-width: 768px) {
+
+    .submit {
+      background-image: url("../components/2026img/submit_bg_mobile.svg");
+      background-size: 100% auto;
+      background-position: top center;
+      background-repeat: no-repeat;
+  
+      padding-bottom: 0; /* remove desktop footer spacing */
+    }
+
+    .submit .submit-section {
+        padding-left: 20px;
+        padding-right: 20px;
+        align-items: center;
+        gap: 0; /* we control spacing manually */
+        /* padding-top: 8px; */
+    }
+
+    .awards-title {
+        padding-top: 10px !important;
+    }
+
+    .submit-section-timeline {
+        padding-bottom: 23px;
+    }
+
+    /* .submit-section {
+        width: 1321px;
+    } */
+
+
+      /* 19px below NavBar */
+    .section-title {
+        padding-top: 0px;
+        margin-left: 0;
+    }
+
+    /* 20px below Project Awards title */
+    .submit-section:first-of-type .card-column {
+        margin-top: 20px;
+    }
+
+    /* Award cards stacked */
+    .card-column {
+        gap: 24px;  /* gap between 3 award cards */
+    }
+
+    /* 64px below Faculty Favorite card */
+    .submit-button {
+        /* margin-top: 40px;
+        margin-left: 0; */
+
+        display: flex;
+        /* margin: 40px auto 0; */
+    }
+
+    .awards-stack {
+        align-items: center;   /* centers children horizontally */
+        gap: 64px;
+    }
+
+
+    /* 64px before Timeline title */
+    .submit-section:nth-of-type(2) {
+        margin-top: 64px;
+    }
+
+    /* 23px below Timeline title */
+    .submit-section:nth-of-type(2) .timeline-column {
+        margin-top: 23px;
+    }
+
+    /* 23px gap between timeline cards */
+    .timeline-column {
+        gap: 23px;
+    }
+
+    .submit-spacing {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card {
+        background: white;
+        border-radius: 24px;
+        padding: 48px 32px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    
+        width: 380px;
+        flex-shrink: 0;
+      }
+    
+    .card-gradient {
+        width: 100%;
+        height: 60px;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    .award-subtitle,
+    .award-amount {
+        font-family: "Switzer", system-ui, sans-serif;
+        font-weight: 300; /* light */
+        padding-top: 6px;
+        margin-bottom: 0;
+    }
+
+    .award-amount {
+        padding-top: 0px;
+    }
+
+    .submit-timeline-cards h3 {
+        padding-top: 0;
+        padding-bottom: 21px;
+    }
+
+    p.location {
+        margin-bottom: 0px;
+    }
+
+    p.timeline-description {
+        margin-bottom: 0px;
+    }
+
+
+    .submit-button {      
+        padding: 18px 24px;
+        border-radius: 68.33px;
+     }
+
+    .submit-button .submit-text {
+        white-space: nowrap;
+        line-height: 1.875;
+        color: black;
+    }
+  
+  }

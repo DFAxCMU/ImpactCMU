@@ -35,6 +35,7 @@
 
 .nav-link {
     cursor: pointer;
+    color: black;
 }
 
 .dark-overlay {
