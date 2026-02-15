@@ -1846,17 +1846,24 @@ hr {
         padding: 0 20px 40px;
         box-sizing: border-box;   */
         
-        position: relative;
+        /* position: relative;
         width: 100%;
-        height: 100%;
+        height: 100%; */
         /* aspect-ratio: 402 / 873; */
-        padding: 0 20px;
+        /* padding: 0 20px;
+        box-sizing: border-box; */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100%;
+        padding: 186px 20px 130px;
         box-sizing: border-box;
 
       }
 
       .landing2026-mobile-subtitle-submit {
-        position: absolute;
+        /* position: absolute; */
         top: 186px;  
         /* <-- adjust this until subtitle sits 44px below IMPACT text */
         /* top: 21.3%; */
@@ -1909,7 +1916,7 @@ hr {
         gap: 24px; /* gap between cards */
         align-items: center;
 
-        position: absolute;
+        /* position: absolute; */
         bottom: 130px; /* distance from bottom of screen */
         left: 50%;
         transform: translateX(-50%);
