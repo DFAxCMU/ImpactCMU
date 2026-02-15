@@ -1009,11 +1009,11 @@ hr {
 .container-about {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 62px;
+    gap: 60px;
     justify-content: center; 
     padding: 2rem;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1320px;
     
 }
 
