@@ -46,16 +46,18 @@ const Hero = () => {
       ) : (
           <img className="bg-group-hero" src={dotsm} alt="" />
       )} */}
-      <NavBar />
-
+      <div className="hero-navbar-wrapper">
+        <NavBar />
+      </div>
       <div className="landing2026__stage">
 
         {/* -------- Desktop Version -------- */}
         {windowDimensions.width > 768 && (
           <>
             {/* <img className="bg-group-hero" src={dots} alt="" /> */}
-            <Draggable bounds="parent" defaultPosition={{ x: 171, y: 61 }}>
-              <div className="landing2026__card">
+            <Draggable bounds="parent">
+            {/* <Draggable bounds="parent" defaultPosition={{ x: 178, y: 31 }}> */}
+              <div className="landing2026__card card-left">
                 <h3 className="landing2026__cardTitle">Come Join Us!</h3>
                 <p className="landing2026__cardBody">
                   Info sessions on March 15th
@@ -67,8 +69,9 @@ const Hero = () => {
               </div>
             </Draggable>
 
-            <Draggable bounds="parent" defaultPosition={{ x: 969, y: 163 }}>
-              <div className="landing2026__card">
+            <Draggable bounds="parent">
+            {/* <Draggable bounds="parent" defaultPosition={{ x: 959, y: 113 }}> */}
+              <div className="landing2026__card card-right">
                 <h3 className="landing2026__cardTitle">10th Anniversary!</h3>
                 <p className="landing2026__cardBody">
                   Free food and a chance to win prizes!
@@ -80,8 +83,13 @@ const Hero = () => {
 
             {/* <img src={titleimg} alt="Impact 2026" className="landing2026_impact_title"/> */}
 
-
             <div className="landing2026__wordmark">
+            {/* <div className="landing2026_title">
+                <h1 className="title_gradient">IMPACT 2026</h1>
+            </div> */}
+            <h1 className="title_gradient">
+              IMPACT 202<span className="alt_six">6</span>
+            </h1>
               {/* <img src={titleimg} alt="Impact 2026" className="landing2026_impact_title"/> */}
               <div className="landing2026_subtitlebox">
                 <p className="subtitle_gradient">building a better future with CMU's annual showcase for social impact projects by Design for America.</p>
@@ -102,7 +110,15 @@ const Hero = () => {
           // <img className="bg-group-hero" src={dots} alt="" />
           <>
             {/* // <img className="bg-group-hero" src={dots} alt="" /> */}
-            <img src={mobileimpacttitle} className="impact-title-pic-mobile" /><div className="hero-mobile-wrapper">
+            {/* <img src={mobileimpacttitle} className="impact-title-pic-mobile" /> */}
+            <h1 className="title_gradient_mobile">
+                IMPACT <br />
+                202<span className="alt_six">6</span>
+            </h1>
+            {/* <h1 className="title_gradient">
+              IMPACT 202<span className="alt_six">6</span>
+            </h1> */}
+            <div className="hero-mobile-wrapper">
               {/* Submit button centered */}
               <div className="landing2026-mobile-subtitle-submit">
                 <div className="landing2026_subtitlebox">

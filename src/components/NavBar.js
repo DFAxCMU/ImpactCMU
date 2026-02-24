@@ -6,7 +6,8 @@ import hamburgerImg from "../components/2026img/hamburger.svg";
 
 export default function TopBar2026() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentPath, setCurrentPath] = useState("/"); // SSR-safe default
+//   const [currentPath, setCurrentPath] = useState("/");
+  // SSR-safe default
 
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
@@ -22,9 +23,14 @@ export default function TopBar2026() {
   const normalize = (path) => (path ? path.replace(/\/+$/, "") : "/");
 
   // Run only in the browser
-  useEffect(() => {
-    setCurrentPath(normalize(window.location.pathname));
-  }, []);
+//   useEffect(() => {
+//     setCurrentPath(normalize(window.location.pathname));
+//   }, []);
+
+  const currentPath =
+    typeof window !== "undefined"
+        ? window.location.pathname.replace(/\/+$/, "") || "/"
+        : "/";
 
   const isHome = currentPath === "/" || currentPath === "/Hero";
 

@@ -125,7 +125,7 @@
       gap: 24px;
       width: 100%;
       margin: 0;
-      padding: 0 16px;
+      /* padding: 0 16px; */
     }
   
     .timeline-container {
@@ -137,14 +137,16 @@
   
   
     .box3 {
-      width: 100% !important;
-      max-width: 100%;
+      /* width: 100% !important;
+      max-width: 100%; */
       background-color: white;
       border-radius: 24px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 40px 28px;
-      margin: 0 !important;
+      padding: 48px 32px;
+      margin: 0 auto !important;
       box-sizing: border-box;
+      width: 380px;
+      height: 220px;
     }
   
     .box3 h6 {
@@ -152,9 +154,13 @@
       font-weight: 400;
       font-size: 24px;
       line-height: 100%;
-      margin: 0 0 16px 0;
+      margin: 0 0 21px 0;
       color: #000000;
       text-transform: none;
+    }
+
+    .open-house {
+        height: 251px;
     }
   
     .schedule-time {
@@ -162,7 +168,7 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
-      margin: 0 0 12px 0;
+      margin: 0 0 0 0;
       color: #000000;
     }
   
@@ -323,6 +329,14 @@
     .schedule-page {
       overflow-x: hidden;
       width: 100%;
+    }
+
+    .box4 p {
+        margin-left: 0px;
+    }
+
+    .catmug {
+        margin-left: 30px;
     }
   }
   

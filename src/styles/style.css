@@ -812,9 +812,12 @@ hr {
   .landing2026 {
     /* min-height: 139vh; */
 
-    background-image: url("../components/2026img/landing_bg_v7.svg");
+    /* background-image: url("../components/2026img/landing_bg_v7.svg"); */
+    /* background-image: url("../components/2026img/landing_v9.svg"); */
+    background-image: url("../components/2026img/landing_v10.svg");
     /* background-image: url("../components/2026img/landing_bg_v7.svg"); */
     /* background-image: url("../components/2026img/v8.svg"); */
+    /* landing_v9.svg */
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -831,7 +834,10 @@ hr {
   .landing2026__stage {
     position: relative;
     width: min(1440px, 100%);
-    height: 900px;
+    /* height: 900px; */
+    min-height: 900px;
+    height: 90vh;
+    max-height: 1100px;
     margin: 0 auto;
     z-index: 1;
 
@@ -853,7 +859,7 @@ hr {
   /* wordmark */
   .landing2026__wordmark {
     position: absolute;
-    top: 330px;
+    top: 240px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -864,9 +870,11 @@ hr {
     gap: 32px; /* controls space between subtitle and button */
     
     text-align: center;
-    width: 1200px;
-    max-width: calc(100% - 80px);
-    margin-top: 150px;
+    width: min(1200px, 90%);
+    /* width: 1200px;
+    max-width: calc(100% - 80px); */
+    z-index: 1;
+    /* margin-top: 150px; */
   }
   
   .landing2026__title {
@@ -951,8 +959,8 @@ hr {
   } */
   /* cards */
   .landing2026__card {
-    /* position: relative; */
-    z-index: 6; /* on top of wordmark */
+    position: relative;
+    z-index: 1000; /* on top of wordmark */
     width: 290px;
     max-width: calc(100% - 40px);
     background: var(--card);
@@ -999,6 +1007,18 @@ hr {
     position: relative;
     width: 100%;
     height: 100vh;
+  }
+
+  .card-left {
+    position: absolute;
+    top: 3%;
+    left: 12.36%;
+  }
+  
+  .card-right {
+    position: absolute;
+    top: 37%;
+    left: 66.6%;
   }
   
   
@@ -1313,6 +1333,11 @@ hr {
     align-items: center;
     gap: 303px;
     margin: 0 auto;
+  }
+
+  p.raffle-number {
+    font-family: 'Switzer', sans-serif;
+    font-weight: 300;
   }
   
   
@@ -1809,6 +1834,10 @@ hr {
       padding: 0;
       overflow-x: hidden;
     }
+
+    .landing2026 .navbar {
+        position: absolute;
+    }
   
     .landing2026 {
 
@@ -1832,6 +1861,14 @@ hr {
       height: 100%;
       position: relative;
       width: 100%;
+      padding-top: 108px;
+    }
+
+    .hero-navbar-wrapper {
+        position: relative;      /* container becomes positioning reference */
+        width: 100%;
+        display: flex;
+        justify-content: center; /* centers the navbar horizontally */
     }
   
     .hero-mobile-wrapper {
@@ -1862,7 +1899,7 @@ hr {
       flex-direction: column;
       align-items: center;
       width: 100%;
-      max-width: 360px;
+      max-width: 316px;
       margin: 0 auto 0; /* center and add spacing below for button */
     }
   
@@ -1921,7 +1958,80 @@ hr {
       line-height: 1.875;
       color: black;
     }
+
+    .title_gradient_mobile {
+        display: block;
+        margin: 44px auto 24px;
+        text-align: center;
+        line-height: 0.95;
+      
+        font-family: "Cy";
+        font-weight: 400;
+        text-transform: uppercase;
+      
+        font-size: clamp(56px, 18vw, 120px);
+      
+        /* background-image: url('../components/2026img/title_gradient_landing_v2.png'); */
+        background-image: url('../components/2026img/mobile_gradient_v1.svg');
+        /* mobile_title_gradient_v2.png */
+        /* mobile_gradient_v1.svg */
+        /* background-size: 150%; */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      
+        font-feature-settings: "salt" 1;
+      
+        transform: translateZ(0); /* prevent zoom glitches */
+      }
   
+  }
+
+
+  .title_gradient {
+    display: inline-block;
+  
+    background-image: url('../components/2026img/title_gradient_landing_v2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  
+    font-family: "Cy";
+    font-weight: 400;
+    text-transform: uppercase;
+  
+    /* font-size: clamp(72px, 11vw, 220px); */
+    font-size: clamp(72px, 11vw, 160px);
+    line-height: 1;
+    white-space: nowrap;
+  
+    font-feature-settings: "salt" 1;
+  
+    transform: translateZ(0); /* fixes zoom glitch */
+  }
+
+
+  .alt_six {
+    font-feature-settings: "salt" 0;
+  }
+
+  .landing2026_title {
+    font-family: "Cy";
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 140px;
+    /* letter-spacing: 0.055em; */
+    line-height: 1;
   }
 
   
@@ -1934,7 +2044,8 @@ hr {
   .subtitle_gradient {
 
     /* Apply the PNG image as the background */
-    background-image: url('../components/2026img/subtitle_grad.svg');
+    /* background-image: url('../components/2026img/subtitle_grad.svg'); */
+    background-image: url('../components/2026img/title_gradient_landing_v2.png');
     /* Optional: Adjust background size/repeat as needed */
     background-size: cover; 
 
@@ -1969,4 +2080,4 @@ hr {
     position: absolute;
     top: 400px;
     left:171px;
-  }
+}

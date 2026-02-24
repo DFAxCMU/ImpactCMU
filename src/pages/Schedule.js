@@ -67,8 +67,9 @@ const Schedule = () => (
                             </div>
                         {/* </div> */}
                         {/* <div class="row2"> */}
-                            <div className="box3">
-                                <h6>Open House + Voting</h6>
+                            <div className="box3 open-house">
+                                <h6>Open House +  <br />
+                                Voting</h6>
                                 <p class = "schedule-time">12:30 - 3:30PM</p>
                                 <p class = "schedule-desc">Vote for your favorite project and enter into our raffles to earn special prizes!</p>
                             </div>
@@ -97,7 +98,7 @@ const Schedule = () => (
                             </div>
                             <div className="raffle-item">
                                 <p className="raffle-number">3. Cat Mug</p>
-                                <img src={mug} alt="" />
+                                <img src={mug} alt="" className="catmug"/>
                             </div>
                         </div>
                     </div>
