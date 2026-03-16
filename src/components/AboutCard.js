@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/about-card.css';
-
-const AboutCard = ({ title, text, children, imageSrc, imageMask }) => {
+// CHANGE HERE ADD IMAGECLASSNAME ARG AND UPDATE <IMG> TAG
+const AboutCard = ({ title, text, children, imageSrc, imageMask, imageClassName }) => {
   return (
     <div className="about-card">
       {imageSrc && (
@@ -17,7 +17,7 @@ const AboutCard = ({ title, text, children, imageSrc, imageMask }) => {
               />
             </div>
           ) : (
-            <img className="about-card-image" src={imageSrc} alt="" />
+            <img className={`about-card-image ${imageClassName || ""}`} src={imageSrc} alt="" />
           )}
         </div>
       )}

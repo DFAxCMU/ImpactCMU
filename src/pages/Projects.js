@@ -85,8 +85,8 @@ const Projects = ({ data }) => {
   return (
     <>
     <div className="projects-page">
-        <img className="bg-group" src={group3} alt="" />
-        <img className="bg-gradient" src={gradient} alt="" />
+        {/* <img className="bg-group" src={group3} alt="" />
+        <img className="bg-gradient" src={gradient} alt="" /> */}
       <NavBar />
       <div className="project-header">
             <h4>Projects</h4>

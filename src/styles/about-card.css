@@ -52,7 +52,17 @@
   
   .about-card-image {
     max-width: 70%;
+    /* CHANGE HERE REMOVE THIS */
     max-height: 70%;
+    width: auto;
+    height: auto;
+    display: block;
+  }
+
+  /* CHANGE HERE ADD THIS */
+  .whatisimpact-image {
+    max-width: 70%;
+    max-height: 100%;
     width: auto;
     height: auto;
     display: block;

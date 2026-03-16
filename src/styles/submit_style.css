@@ -146,6 +146,9 @@
   }
 
   .submit-section {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: clamp(20px, 5vw, 96px);
     padding-right: clamp(20px, 5vw, 96px);
   }
@@ -170,7 +173,7 @@
   }
 
   .awards-title {
-    padding-top: 10px;
+    padding-top: 24px;
   }
 
   
@@ -224,7 +227,7 @@
   .card-row {
     display: flex;
     /* flex-wrap: wrap; */
-    gap: 67px;
+    gap: 60px;
     /* justify-content: flex-start; */
     /* align-items: flex-start; */
     flex-wrap: wrap;   
