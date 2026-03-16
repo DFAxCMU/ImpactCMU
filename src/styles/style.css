@@ -7,7 +7,8 @@
     gap: 16px;
     position: relative;
     z-index: 3;
-    padding: 2%;
+    /* padding: 2%; */
+    padding: 15px;
     font-family: "Switzer", system-ui, sans-serif;
     font-weight: 500;
 
@@ -454,7 +455,15 @@ hr {
 /* end of change */
 
 
-
+.projects-page {
+    background-image: url("../components/2026img/submit_bg_grad.svg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
 
   #projects {
     width: 100vw;
@@ -468,13 +477,13 @@ hr {
 
 
   .project-title {
-    font-family: 'Switzer', sans-serif;
+    font-family: 'Switzer';
     font-size: 16px;
     /* font-weight: 500; */
     font-weight: 300;
     text-align: center;
   
-    line-height: 1.2;
+    line-height: 24px;
     max-width: 100%;
     white-space: normal; /* allows wrapping */
   }
@@ -489,7 +498,7 @@ hr {
     justify-content: center;
     position: relative;
     width: 100%;
-    padding: 60px 0;
+    padding: 90px 0;
     overflow: hidden;
     /* 55 */
   }
@@ -594,7 +603,8 @@ hr {
   .scroll-button {
     position: absolute;
     /* Keep arrows in place */
-    top: 30%;
+    top: 195px;
+    transform: translateY(-50%);
 
     background: transparent;
     border: none;
@@ -781,8 +791,8 @@ hr {
   .project-header {
     position: relative;
     z-index: 2;
-    padding-top: 146px;
-    padding-bottom: 53px;
+    padding-top: 130px;
+    /* padding-bottom: 53px; */
     text-align: center !important;
   }
 
@@ -840,6 +850,7 @@ hr {
     max-height: 1100px;
     margin: 0 auto;
     z-index: 1;
+    padding-top: 7px;
 
   }
   
@@ -1011,13 +1022,13 @@ hr {
 
   .card-left {
     position: absolute;
-    top: 3%;
+    /* top: 3%; */
     left: 12.36%;
   }
   
   .card-right {
     position: absolute;
-    top: 37%;
+    top: 36%;
     left: 66.6%;
   }
   
@@ -1155,7 +1166,8 @@ hr {
 }
 
 .omega {
-    padding: 1%;
+    padding-top: 24px;
+    padding-bottom: 12px;
 }
 
 .boxes1 {
@@ -1164,7 +1176,7 @@ hr {
     align-items: flex-start;
     flex-wrap: wrap;
     /* gap: 20px; control the space between the boxes */
-    margin-bottom: 20px; /* add some bottom margin */
+    margin-bottom: 60px; /* add some bottom margin */
 }
 
 
@@ -1179,8 +1191,7 @@ hr {
   
     /* EXACT spacing */
     padding: 48px 32px;
-  
-    margin: 10px;
+
     box-sizing: border-box;
   }
   
@@ -1193,9 +1204,9 @@ hr {
     margin: 0 auto 24px;
   }
   
-  .box4 p {
+  /* .box4 p {
     margin-left: 30px;
-  }
+  } */
 
 
 .timeline-container {
@@ -1316,7 +1327,7 @@ hr {
 
   .box4 h4 {
     padding-bottom: 44px;
-    padding-top: 46px;
+    /* padding-top: 46px; */
     margin-bottom: 0px;
   }
 
@@ -1331,13 +1342,37 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 303px;
+    gap: 240px;
     margin: 0 auto;
+    align-self: flex-start;
   }
 
   p.raffle-number {
     font-family: 'Switzer', sans-serif;
     font-weight: 300;
+  }
+
+  p.raffle-number.catplush {
+    align-self: center;
+  }
+
+   /* new css class raffle-item and img*/
+   .raffle-item {
+    width: 280px;
+    height: 204px;
+
+    display: flex;
+    flex-direction: column;
+  
+    position: relative;
+  }
+
+
+  .raffle-item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
   }
   
   

@@ -114,7 +114,7 @@ const Submit = () => {
                     description="Impact Poster Workshop (Poster Submissions Due Sunday 3/29, 11:59PM)"
                     />
                     <TimelineItem
-                    date="April 3, 11-4PM"
+                    date="April 9, 11-4PM"
                     location="Danforth Lounge & Conference Room"
                     description="Impact CMU Date!"
                     />

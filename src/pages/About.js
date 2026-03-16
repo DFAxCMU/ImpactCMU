@@ -50,11 +50,12 @@ const About = () => {
                                 <AboutCard
                                     title="What is Impact?"
                                     text="You will be showcasing your work through a poster and optional demos. Attendees will view different teams, talk to you about your work, and vote to win prizes! Faculty judges will also take part in viewing work and discussing your creations! This is a great opportunity to talk to your peers, get feedback from your professors, and for student organizations to promote to a large audience!"
-                                    imageSrc={what_is_impact} />
+                                    imageSrc={what_is_impact} 
+                                    imageClassName="whatisimpact-image" />
                                 <div className="logistics-section">
                                     <AboutCard
                                         title="Where is it?"
-                                        text="April 3rd @ Danforth Lounge & Conference Room, 11-4 PM" />
+                                        text="April 9th @ Danforth Lounge & Conference Room, 11-4 PM" />
                                     <AboutCard>
                                         <>
                                             <strong>Logistics:</strong> Chloe Xu, Sara Laman, Inseo Kim, Eunice Lee, Rebecca Sucgang<br />
