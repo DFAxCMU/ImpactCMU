@@ -108,7 +108,7 @@
   }
 
 
-  /* PROJECTS PAGE DISABLED UNTIL REGISTRATION */
+  /* Non-link nav labels (use sparingly; blocks clicks via pointer-events) */
   .nav-item-disabled {
     cursor: not-allowed;
     pointer-events: none;

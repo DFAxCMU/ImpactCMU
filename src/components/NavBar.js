@@ -14,7 +14,7 @@ export default function TopBar2026() {
     { label: "ABOUT", href: "/About/" },
     { label: "SUBMIT", href: "/Submit/" },
     { label: "SCHEDULE", href: "/Schedule/" },
-    { label: "PROJECTS", disabled: true },
+    { label: "PROJECTS", href: "/Projects/" },
     { label: "2025 ARCHIVE", href: "https://dfaxcmu.notion.site/", external: true },
   ];
 
