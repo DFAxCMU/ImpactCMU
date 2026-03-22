@@ -1223,7 +1223,11 @@ hr {
 .timeline-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    /* CHANGES HERE changed justify added gap */
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    gap: 60px;
+
     align-items: flex-start;
     width: 100%;
     flex-wrap: wrap;
