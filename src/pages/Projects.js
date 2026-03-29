@@ -85,7 +85,7 @@ const Projects = ({ data }) => {
 
   const maxStart = Math.max(projects.length - itemCount, 0);
 
-  /* gray out arrows */
+  /*for graying out the arrows*/
   const canGoLeft = startIndex > 0;
   const canGoRight = startIndex < maxStart;
 
@@ -169,12 +169,12 @@ const Projects = ({ data }) => {
       <Footer />
      </div>
 
-      {/* Modal */}
+      {/*modal*/}
       {isModalOpen && (
         <div className="modal-backdrop">
           <div className="modal-frame">
             
-            {/* Header and close button*/}
+            {/*header and close button*/}
             <div className="modal-header">
               <div className="modal-project-name">
                 {modalContent.title}
@@ -187,7 +187,7 @@ const Projects = ({ data }) => {
                 &times;
               </button>
             </div>
-            {/* Cube gradient picture*/}
+            {/*cube gradient pic*/}
             <div className="modal-cube-wrapper">
               <img
                 src={modalContent.cubeImage}
@@ -195,15 +195,15 @@ const Projects = ({ data }) => {
                 className="modal-cube"
               />
             </div>
-            {/* Org name*/}
+            {/*org name*/}
             <div className="modal-org">
               {modalContent.org}
             </div>
-            {/* Members */}
+            {/*members */}
             <div className="modal-members">
               {modalContent.members}
             </div>
-            {/* Problem */}
+            {/*problem */}
             <div className="modal-problem">
               {modalContent.problem}
             </div>

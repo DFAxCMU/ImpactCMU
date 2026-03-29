@@ -3,7 +3,7 @@
 @media (max-width: 768px) {
   .projects-page {
     position: relative;
-    /* Same as desktop: gradient SVG only (large dot grid is in the asset — no extra small-dot overlay) */
+  
     background-image: url("../components/2026img/submit_bg_grad.svg");
     background-size: cover;
     background-position: top center;
@@ -50,7 +50,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /* Bleed past .projects-main horizontal padding so arrows sit near screen edges */
+    /*horizontal padding so arrows are close to edges of screen*/
     width: calc(100% + 32px);
     margin-left: -16px;
     margin-right: -16px;
@@ -76,7 +76,7 @@
     gap: 0;
   }
 
-  /* Title moves below carousel per mobile design */
+  /*title */
   .projects-container .project-title {
     display: none;
   }
@@ -94,10 +94,7 @@
     object-fit: contain;
   }
 
-  /*
-   * Arrow SVGs already include a white circle + drop shadow.
-   * Keep the button chrome transparent so there is only one circle (not CSS + SVG).
-   */
+  
   .projects-container .scroll-button {
     position: static;
     top: auto;
@@ -119,7 +116,7 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* Full asset (~65×65 viewBox); larger display = bigger arrow inside the single circle */
+ 
   .projects-container .scroll-button img {
     width: 76px;
     height: auto;
@@ -180,7 +177,7 @@
 
 }
 
-/* Modal: comfortable on small phones */
+
 @media (max-width: 768px) {
   .modal-frame {
     width: 100% !important;
