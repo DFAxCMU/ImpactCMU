@@ -40,6 +40,9 @@ import cube24 from "../components/2026img/cubegradients/cube12.svg";
 
 const MOBILE_MAX = 768;
 
+
+
+
 const Projects = ({ data }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({});
@@ -57,6 +60,8 @@ const Projects = ({ data }) => {
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
   }, []);
+
+
 
   const itemCount = isMobile ? 1 : 6;
   const [startIndex, setStartIndex] = useState(0);
