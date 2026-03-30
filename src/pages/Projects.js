@@ -73,7 +73,8 @@ const Projects = ({ data }) => {
   };
 
   // const [itemCount, setItemCount] = useState(getItemCount());
-  const [itemCount, setItemCount] = useState(6);
+  // const [itemCount, setItemCount] = useState(6);
+  const [itemCount, setItemCount] = useState(getItemCount);
 
   useEffect(() => {
     const handleResize = () => setItemCount(getItemCount());
@@ -86,10 +87,12 @@ const Projects = ({ data }) => {
 
   const visibleProjects = projects.slice(startIndex, startIndex + itemCount);
   const maxStart = Math.max(projects.length - itemCount, 0);
+  
 
   useEffect(() => {
     const maxStart = Math.max(projects.length - itemCount, 0);
     setStartIndex((prev) => Math.min(prev, maxStart));
+    console.log(maxStart);
   }, [itemCount, projects.length]);
 
 
@@ -118,8 +121,11 @@ const Projects = ({ data }) => {
   const canGoRight = startIndex < (projects.length - itemCount);
 
   const scrollProjects = (direction) => {
-    const step = isMobile ? 1 : itemCount;
+    // const step = isMobile ? 1 : itemCount;
+    const step = itemCount;
     const currentMaxStart = Math.max(projects.length - itemCount, 0);
+    console.log("currenMaxStart");
+    console.log(currentMaxStart);
   
     if (direction === "right") {
       setStartIndex(prev => Math.min(prev + step, currentMaxStart));
@@ -158,7 +164,7 @@ const Projects = ({ data }) => {
 
                 return (
                   <div
-                    key={project.title}
+                    key={i}
                     className="project-box"
                     onClick={() => {
                       if (!isMobile) openModal(project, cubeImage);
