@@ -36,7 +36,7 @@ import cube21 from "../components/2026img/cubegradients/cube21.svg";
 import cube22 from "../components/2026img/cubegradients/cube22.svg";
 import cube23 from "../components/2026img/cubegradients/cube23.svg";
 import cube24 from "../components/2026img/cubegradients/cube24.svg";
-
+import cube25 from "../components/2026img/cubegradients/cube1.svg";
 
 const MOBILE_MAX = 768;
 
@@ -51,7 +51,7 @@ const Projects = ({ data }) => {
   const cubeImages = [
     cube1, cube2, cube3, cube4, cube5, cube6, cube7, cube8, 
     cube9, cube10, cube11, cube12, cube13, cube14, cube15, cube16, 
-    cube17, cube18, cube19, cube20, cube21, cube22, cube23, cube24
+    cube17, cube18, cube19, cube20, cube21, cube22, cube23, cube24, cube25
   ];
 
   useEffect(() => {
