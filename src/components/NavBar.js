@@ -6,7 +6,7 @@ import hamburgerImg from "../components/2026img/hamburger.svg";
 
 export default function TopBar2026() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentPath, setCurrentPath] = useState("/"); // SSR-safe default
+//   const [currentPath, setCurrentPath] = useState("/"); 
 
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
@@ -14,17 +14,30 @@ export default function TopBar2026() {
     { label: "ABOUT", href: "/About/" },
     { label: "SUBMIT", href: "/Submit/" },
     { label: "SCHEDULE", href: "/Schedule/" },
-    { label: "PROJECTS", disabled: true },
+    { label: "PROJECTS", href: "/Projects/" },
     { label: "2025 ARCHIVE", href: "https://dfaxcmu.notion.site/", external: true },
   ];
 
   // Normalize function to remove trailing slashes
   const normalize = (path) => (path ? path.replace(/\/+$/, "") : "/");
 
-  // Run only in the browser
+  const [currentPath, setCurrentPath] = useState(null);
+  
   useEffect(() => {
-    setCurrentPath(normalize(window.location.pathname));
+    const updatePath = () => {
+      setCurrentPath(normalize(window.location.pathname));
+    };
+  
+    updatePath();
+    window.addEventListener("popstate", updatePath);
+  
+    return () => window.removeEventListener("popstate", updatePath);
   }, []);
+
+  // Run only in the browser
+//   useEffect(() => {
+//     setCurrentPath(normalize(window.location.pathname));
+//   }, []);
 
   const isHome = currentPath === "/" || currentPath === "/Hero";
 

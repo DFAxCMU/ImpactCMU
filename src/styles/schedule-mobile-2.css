@@ -233,6 +233,10 @@
       margin: 0;
       text-align: center;
       color: #000000;
+      /* align-self: center; */
+    }
+    p.raffle-number {
+      align-self: center;
     }
   
     .cat {
@@ -342,12 +346,22 @@
   
   @media (min-width: 769px) and (max-width: 1024px) {
     .timeline-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      /* display: grid;
+      grid-template-columns: repeat(2, 1fr); */
       gap: 24px;
     }
     
+    /* .newcatimg {
+      gap: 60px;
+    } */
+
+  
+  }
+
+  @media (min-width: 769px) and (max-width: 1300px) {    
     .newcatimg {
       gap: 60px;
     }
+
+  
   }

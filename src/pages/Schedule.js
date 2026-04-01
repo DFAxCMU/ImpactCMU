@@ -1,13 +1,13 @@
 
 import React from 'react';
 import NavBar from "../components/NavBar";
+import lamp from '../components/2026img/cat-lamp.svg';
+import plush from '../components/2026img/cat-plush.svg';
+import mug from '../components/2026img/cat-mug.svg';
+
 // import lamp from '../components/2026img/cat-lamp.png';
 // import plush from '../components/2026img/cat-plush.png';
 // import mug from '../components/2026img/cat-mug.png';
-
-import lamp from '../components/2026img/cat-lamp.png';
-import plush from '../components/2026img/cat-plush.png';
-import mug from '../components/2026img/cat-mug.png';
 
 import 'popper.js'
 import '../dist/css/bootstrap.min.css';
@@ -45,7 +45,7 @@ const Schedule = () => (
             <div className="container-fluid">
                 <div className="text-center omega">
                     <h4>Event Schedule</h4>
-                    <h5 style={{fontWeight: 300}}>April 9th @ the UC (Danforth Lounge & Conference Room), 11-4 PM</h5>
+                    <h5 style={{fontWeight: 300}}>April 9rd @ the UC (Danforth Lounge & Conference Room), 11-4 PM</h5>
                     {/* <div className="navbar-brand">
                         <img src={schedule} alt="title-img" class="title-img"/>
                     </div> */}
