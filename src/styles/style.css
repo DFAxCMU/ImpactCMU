@@ -1240,26 +1240,6 @@ text-transform: none;
 }
 
 
-/* .catlist {
-  display: flex;
-  justify-content: space-around; 
-  align-items: center; 
-  gap: 30px;
-  padding: 10px;
-}
-
-.catlist p {
-  font-family: "Switzer", system-ui, sans-serif;
-  font-weight: 300; 
-}
-
-.catimg {
-  margin-top: 8px;
-  display: flex;
-  justify-content: space-around;
-  gap: 240px;
-} */
-
 .cat {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1341,10 +1321,15 @@ text-transform: none;
 .newcatimg {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   /* trying to adjust gap */
   /* gap: 303px; */
-  gap: 240px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* flex-wrap: nowrap; */
+  gap: clamp(40px, 16.67vw, 240px);
+
+  /* gap: 240px; */
   margin: 0 auto;
 }
 
@@ -1360,8 +1345,11 @@ p.raffle-number.catplush {
 
 /* new css class raffle-item and img*/
 .raffle-item {
-  width: 280px;
-  height: 204px;
+  /* width: 280px;
+  height: 204px; */
+  /* flex: 1 1 220px; */
+  flex: 0 0 280px;
+  max-width: 280px;
 
   display: flex;
   flex-direction: column;

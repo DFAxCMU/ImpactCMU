@@ -18,23 +18,12 @@ import gradient from '../components/2026img/gradient-bg.png';
 import group3 from '../components/2026img/group-3.svg';
 import Footer from "../components/Footer";
 
-/* mobile style */
-// import "../styles/schedule-mobile.css";
 import "../styles/schedule-mobile-2.css";
 
-// import topGradient from '../components/2026img/top-gradient-schedule.png';
-// import bottomGradient from '../components/2026img/bottom-gradient-schedule.png';
-
-// import mobileNavbar from '../components/2026img/Nav_Bar_Closed.png';
 
 const Schedule = () => (
     <>
-        {/* <img className="bg-group-schedule" src={group3} alt="" /> */}
-        {/* <img className="bg-gradient-schedule" src={gradient} alt="" /> */}
-        
-        {/* NEW - Use these instead: */}
-        {/* <img className="bg-gradient-schedule-top" src={topGradient} alt="" />
-        <img className="bg-gradient-schedule-bottom" src={bottomGradient} alt="" /> */}
+
         <div className="schedule-page">
         <NavBar />
 
